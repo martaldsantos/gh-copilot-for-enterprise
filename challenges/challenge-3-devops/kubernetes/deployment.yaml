@@ -1,0 +1,12 @@
+# TODO: Use Copilot to create Kubernetes Deployment
+# Ask: "Create a Kubernetes Deployment for a Node.js app with 3 replicas, resource limits, and health checks"
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  # TODO: Add replicas, selector, and template
+  # TODO: Configure resource limits
+  # TODO: Add liveness and readiness probes
+  # TODO: Configure rolling update strategy
