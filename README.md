@@ -1,29 +1,43 @@
 # GitHub Copilot Enterprise Hackathon 🚀
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains 5 hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **5 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
 
 ## 🎯 Hackathon Overview
 
-This hackathon is designed for diverse teams including:
-- **Web Development Teams** - Backend and API developers
-- **ML/AI Engineers** - Data scientists and machine learning practitioners
-- **DevOps/Infrastructure Teams** - Platform and infrastructure engineers
-- **Frontend Developers** - UI/UX focused engineers
-- **Cross-functional Teams** - Full-stack developers
+This hackathon is organized into **role-based tracks** for different team types:
+
+### 🗺️ Choose Your Track
+
+- **[🌐 Backend Developer Track](./tracks/backend-developer-track.md)** - REST APIs, authentication, testing
+- **[🤖 Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
+- **[🏗️ DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
+- **[🎨 Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
+- **[🚀 Full-Stack Developer Track](./tracks/full-stack-developer-track.md)** - End-to-end application development
+
+👉 **[View All Tracks & Choose Yours](./tracks/README.md)**
+
+Each track provides a curated path through the challenges based on your role, with specific guidance, tips, and learning objectives.
 
 ## ⏱️ Duration
 
-**1 Day** (6-8 hours) - Each challenge is designed to take 1-1.5 hours
+**6-8 hours** per track (Full-Stack track: 8 hours)  
+Each challenge is designed to take 1-1.5 hours
 
 ## 🛠️ Getting Started
 
-### Prerequisites
+### Step 1: Choose Your Track
+
+**Not sure which track?** See the **[Track Selection Guide](./tracks/README.md)** for help choosing.
+
+### Step 2: Set Up Environment
+
+#### Prerequisites
 
 - GitHub account with Copilot access
 - GitHub Codespaces enabled (recommended) OR
 - Local development environment with VS Code and GitHub Copilot extension
 
-### Launch in GitHub Codespaces
+#### Launch in GitHub Codespaces (Recommended)
 
 1. Click the green "Code" button at the top of this repository
 2. Select "Codespaces" tab
@@ -37,6 +51,15 @@ The devcontainer is pre-configured with:
 - Terraform
 - kubectl
 - All necessary VS Code extensions
+
+### Step 3: Start Your Track
+
+Once your environment is ready:
+1. Open your chosen track guide (e.g., `tracks/backend-developer-track.md`)
+2. Follow the recommended challenge sequence
+3. Use the track-specific tips and guidance
+
+**Quick Start:** 👉 [Quick Start Guide](./QUICKSTART.md)
 
 ## 📚 Key GitHub Copilot Features You'll Learn
 
@@ -66,6 +89,10 @@ Throughout these challenges, you'll master:
 - Ghost text navigation
 
 ## 🎮 Challenges
+
+**💡 Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
+
+All 5 challenges are available, and each track recommends a specific sequence:
 
 ### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/README.md)
 **Team**: Backend/Web Developers  
@@ -139,8 +166,20 @@ Build a complete application that integrates with external services through MCP 
 
 ## 🏆 Hackathon Format
 
-### Individual Challenges (3-4 hours)
-- Choose 2-3 challenges based on your team's focus
+### Track-Based Learning (Recommended)
+
+**Choose a track** based on your role and follow the curated path:
+- Each track provides a recommended sequence of challenges
+- Track-specific tips and guidance
+- Clear learning objectives
+- Estimated time for completion
+
+See **[Tracks Overview](./tracks/README.md)** to choose your path.
+
+### Alternative: Individual Challenges
+
+Prefer to explore on your own?
+- Choose 2-3 challenges based on your interests
 - Each challenge includes starter code and objectives
 - Progressive difficulty with bonus tasks
 
@@ -148,6 +187,7 @@ Build a complete application that integrates with external services through MCP 
 - Present your solutions
 - Share interesting Copilot interactions
 - Discuss productivity gains and learnings
+- Compare experiences across different tracks
 
 ### Best Practices Session (1 hour)
 - Review common patterns
@@ -157,11 +197,12 @@ Build a complete application that integrates with external services through MCP 
 ## 📊 Success Metrics
 
 Track your progress:
-- [ ] Completed at least 2 challenges
+- [ ] Chose and started your track
+- [ ] Completed at least 2 challenges (or all required challenges in your track)
 - [ ] Used all major chat commands (`/explain`, `/fix`, `/test`, `/doc`)
 - [ ] Created reusable prompt collections
-- [ ] Integrated MCP server (Challenge 5)
 - [ ] Documented learnings and productivity wins
+- [ ] Can explain Copilot's impact on your workflow
 
 ## 🤝 Collaboration
 
@@ -190,12 +231,14 @@ After the hackathon:
 ## 📞 Support & Resources
 
 ### Quick Links
+- 🗺️ **[Choose Your Track](./tracks/README.md)** - Role-based learning paths
 - 🚀 **[Quick Start Guide](./QUICKSTART.md)** - Get up and running in minutes
 - 🔧 **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - 👥 **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers
 - 🤝 **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
 
 ### Need Help?
+- **Which track?** See [Track Selection Guide](./tracks/README.md)
 - **Technical Issues**: Check [Troubleshooting Guide](./TROUBLESHOOTING.md)
 - **Copilot Questions**: Use Copilot Chat in VS Code
 - **General Help**: Review the `/docs` folder
@@ -205,9 +248,9 @@ After the hackathon:
 
 **Ready to get started?** 
 
-1. 👉 Read the [Quick Start Guide](./QUICKSTART.md)
-2. 🎯 Pick your challenge
-3. 🚀 Launch your Codespace
-4. 💻 Start coding with Copilot!
+1. 👉 **[Choose Your Track](./tracks/README.md)** - Find the best path for your role
+2. 🚀 Read the [Quick Start Guide](./QUICKSTART.md)
+3. 🎯 Start your first challenge
+4. 💻 Code with Copilot!
 
 Happy Hacking! 💻✨

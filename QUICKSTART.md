@@ -2,6 +2,24 @@
 
 Get up and running with the GitHub Copilot Hackathon in minutes!
 
+## Step 1: Choose Your Track 🗺️
+
+**New to this hackathon?** We've organized it into role-based tracks!
+
+- **[🌐 Backend Developer](./tracks/backend-developer-track.md)** - APIs, testing, authentication
+- **[🤖 Data Science & ML](./tracks/data-science-ml-track.md)** - Data analysis, ML models
+- **[🏗️ DevOps & Platform](./tracks/devops-platform-track.md)** - Infrastructure, containers, CI/CD
+- **[🎨 Frontend Developer](./tracks/frontend-developer-track.md)** - React, TypeScript, UI
+- **[🚀 Full-Stack Developer](./tracks/full-stack-developer-track.md)** - Complete applications
+
+**👉 [View Track Details & Comparison](./tracks/README.md)**
+
+**Not sure?** Start with the [Backend Track](./tracks/backend-developer-track.md) - it's the most beginner-friendly!
+
+---
+
+## Step 2: Set Up Your Environment
+
 ## Option 1: GitHub Codespaces (Recommended) ☁️
 
 **Fastest way to get started - everything pre-configured!**
@@ -72,39 +90,43 @@ Look at the bottom-right of VS Code:
 2. Type: `function calculateArea(`
 3. Copilot should suggest parameters and implementation
 
-## Choose Your First Challenge
+## Step 3: Start Your First Challenge
 
-### New to Copilot? Start here:
-👉 **[Challenge 1: Web API](./challenges/challenge-1-web-api/README.md)**
-- Beginner-friendly
-- Learn core Copilot features
-- Clear step-by-step guide
+Now that Copilot is working, jump into your track!
 
-### Data Scientist/ML Engineer?
-👉 **[Challenge 2: ML/AI](./challenges/challenge-2-ml-ai/README.md)**
-- Copilot in Jupyter notebooks
-- Data analysis workflow
-- Model development
+### Following a Track (Recommended)
 
-### DevOps/Platform Engineer?
-👉 **[Challenge 3: Infrastructure](./challenges/challenge-3-devops/README.md)**
-- Terraform and Docker
-- Infrastructure as Code
-- Kubernetes
+Go to your chosen track guide:
+- **[Backend Track](./tracks/backend-developer-track.md)** → Start with Challenge 1
+- **[Data Science Track](./tracks/data-science-ml-track.md)** → Start with Challenge 2
+- **[DevOps Track](./tracks/devops-platform-track.md)** → Start with Challenge 3
+- **[Frontend Track](./tracks/frontend-developer-track.md)** → Start with Challenge 4
+- **[Full-Stack Track](./tracks/full-stack-developer-track.md)** → Complete all challenges
 
-### Frontend Developer?
-👉 **[Challenge 4: React UI](./challenges/challenge-4-frontend/README.md)**
-- React components
-- TypeScript
-- Modern UI development
+Each track provides specific guidance and tips!
 
-### Want Advanced Features?
-👉 **[Challenge 5: MCP Integration](./challenges/challenge-5-fullstack-mcp/README.md)**
-- Model Context Protocol
-- Full-stack development
-- Advanced Copilot features
+### Exploring Individual Challenges
 
-## First Steps in Your Challenge
+Prefer to choose your own path? Pick any challenge:
+
+**New to Copilot? Start here:**
+👉 **[Challenge 1: Web API](./challenges/challenge-1-web-api/README.md)** - Beginner-friendly
+
+**Data Scientist/ML Engineer?**
+👉 **[Challenge 2: ML/AI](./challenges/challenge-2-ml-ai/README.md)** - Jupyter notebooks & models
+
+**DevOps/Platform Engineer?**
+👉 **[Challenge 3: Infrastructure](./challenges/challenge-3-devops/README.md)** - Terraform, Docker, K8s
+
+**Frontend Developer?**
+👉 **[Challenge 4: React UI](./challenges/challenge-4-frontend/README.md)** - React, TypeScript, modern UI
+
+**Want Advanced Features?**
+👉 **[Challenge 5: MCP Integration](./challenges/challenge-5-fullstack-mcp/README.md)** - Model Context Protocol
+
+---
+
+## Step 4: First Steps in Your Challenge
 
 1. **Read the Challenge README** completely
 2. **Review starter code** provided
@@ -211,22 +233,21 @@ First suggestion not perfect?
 
 ## Ready to Start? 🎉
 
+**Quick Checklist:**
 1. ✅ Setup complete (Codespace or local)
-2. ✅ Copilot working
-3. ✅ Challenge selected
+2. ✅ Copilot working and tested
+3. ✅ **Track selected** from [Tracks Guide](./tracks/README.md)
 4. ✅ Documentation bookmarked
 
-**You're all set!** Head to your chosen challenge and start building with Copilot!
+**You're all set!** Head to your chosen track or challenge and start building with Copilot!
 
 ---
 
 **Quick Links:**
+- **[🗺️ Choose Your Track](./tracks/README.md)** - Recommended starting point
 - [Main README](./README.md)
-- [Challenge 1: Web API](./challenges/challenge-1-web-api/README.md)
-- [Challenge 2: ML/AI](./challenges/challenge-2-ml-ai/README.md)
-- [Challenge 3: DevOps](./challenges/challenge-3-devops/README.md)
-- [Challenge 4: Frontend](./challenges/challenge-4-frontend/README.md)
-- [Challenge 5: MCP](./challenges/challenge-5-fullstack-mcp/README.md)
+- [All Challenges](./challenges/)
 - [Documentation](./docs/)
+- [Troubleshooting](./TROUBLESHOOTING.md)
 
 **Happy Hacking! 💻✨**
