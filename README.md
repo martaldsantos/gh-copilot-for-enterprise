@@ -187,14 +187,27 @@ After the hackathon:
 4. Share knowledge with your organization
 5. Measure and track productivity improvements
 
-## 📞 Support
+## 📞 Support & Resources
 
-- **Technical Issues**: Create an issue in this repository
+### Quick Links
+- 🚀 **[Quick Start Guide](./QUICKSTART.md)** - Get up and running in minutes
+- 🔧 **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
+- 👥 **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers
+- 🤝 **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
+
+### Need Help?
+- **Technical Issues**: Check [Troubleshooting Guide](./TROUBLESHOOTING.md)
 - **Copilot Questions**: Use Copilot Chat in VS Code
-- **General Help**: Check the `/docs` folder
+- **General Help**: Review the `/docs` folder
+- **Found a Bug**: Create an issue in this repository
 
 ---
 
-**Ready to get started?** Pick a challenge and launch your Codespace! 🚀
+**Ready to get started?** 
+
+1. 👉 Read the [Quick Start Guide](./QUICKSTART.md)
+2. 🎯 Pick your challenge
+3. 🚀 Launch your Codespace
+4. 💻 Start coding with Copilot!
 
 Happy Hacking! 💻✨
