@@ -1,5 +1,9 @@
 # Facilitator Guide 📋
 
+## Overview
+
+This hackathon is organized into **5 role-based tracks** to provide structured learning paths for different team roles. As a facilitator, you'll guide participants to choose the right track and support them through their journey.
+
 ## Pre-Hackathon Setup (1 week before)
 
 ### 1. **Verify Prerequisites**
@@ -16,9 +20,18 @@
 # Run the post-create script
 ```
 
-### 3. **Communication**
+### 3. **Understand the Track Structure**
+Review the five tracks:
+- [ ] [Backend Developer Track](./tracks/backend-developer-track.md)
+- [ ] [Data Science & ML Track](./tracks/data-science-ml-track.md)
+- [ ] [DevOps & Platform Track](./tracks/devops-platform-track.md)
+- [ ] [Frontend Developer Track](./tracks/frontend-developer-track.md)
+- [ ] [Full-Stack Developer Track](./tracks/full-stack-developer-track.md)
+
+### 4. **Communication**
 Send participants:
 - [ ] Repository link
+- [ ] **[Tracks Overview](./tracks/README.md)** - Ask them to review before the event
 - [ ] Hackathon schedule
 - [ ] Pre-reading: `docs/copilot-basics.md`
 - [ ] Setup instructions
@@ -30,8 +43,9 @@ Send participants:
 
 **Welcome & Introduction (10 min)**
 - Introduce GitHub Copilot
-- Explain hackathon format
+- **Explain the track-based format** ⭐ NEW
 - Review schedule
+- Show the [Tracks Overview](./tracks/README.md)
 
 **Demo: Copilot Basics (15 min)**
 - Show inline suggestions
@@ -39,15 +53,19 @@ Send participants:
 - Quick example of workspace context
 - Show MCP servers (briefly)
 
-**Questions (5 min)**
+**Track Selection (5 min)** ⭐ NEW
+- Help participants choose their track
+- Suggest track based on their role
+- Point them to [Tracks Guide](./tracks/README.md)
 
 ### Challenge Time (4-5 hours)
 
-**Recommended Flow:**
-1. Participants choose 2-3 challenges based on their role
-2. Work individually or in pairs
-3. Facilitators rotate to help teams
-4. Encourage using Copilot Chat for help
+**Recommended Flow (Track-Based):** ⭐ UPDATED
+1. Participants choose their track based on their role
+2. Each track provides a curated sequence of challenges
+3. Work individually or in pairs
+4. Facilitators rotate to help teams
+5. Encourage using Copilot Chat for help
 
 **Tips for Facilitators:**
 - Don't solve problems directly
@@ -58,27 +76,34 @@ Send participants:
 ### Mid-Day Check-in (15 min)
 
 Around lunch, gather everyone:
-- Quick poll: What are you working on?
-- Share 2-3 "aha!" moments
+- Quick poll: What track are you on? What challenge?
+- Share 2-3 "aha!" moments from different tracks
 - Address common issues
-- Encourage trying different challenges
+- **Track-specific tips**: Share insights relevant to each track
 
 ### Showcase Session (1-2 hours)
 
 **Format Options:**
 
-**Option A: Demo Stations**
-- Set up tables for each challenge
+**Option A: Track-Based Demos** ⭐ RECOMMENDED
+- Group participants by track
+- Each track presents their solutions
+- Compare approaches across similar challenges
+- Share track-specific Copilot insights
+
+**Option B: Demo Stations**
+- Set up tables for each track (or challenge)
 - Participants showcase their work
 - Informal walk-around format
+- Cross-track learning
 
-**Option B: Presentations**
+**Option C: Presentations**
 - Each person/team presents (5 min each)
 - Show their solution
 - Highlight best Copilot interactions
-- Lessons learned
+- Track-specific learnings
 
-**Option C: Lightning Talks**
+**Option D: Lightning Talks**
 - 2-minute rapid-fire presentations
 - Focus on most interesting Copilot use
 
@@ -131,25 +156,92 @@ Around lunch, gather everyone:
 - Review together with participant
 
 **Issue: "Challenge is too hard/easy"**
-- Suggest different challenge
-- Point to bonus challenges
-- Encourage helping others
+- Suggest different challenge within their track
+- Point to bonus challenges in track guide
+- Consider switching tracks if significantly mismatched
+- Encourage helping others on same track
+
+**Issue: "I picked the wrong track"** ⭐ NEW
+- It's okay to switch tracks!
+- Help them find a better fit
+- Suggest starting the recommended challenge for new track
 
 ### Time Management
 
 **If running behind:**
-- Skip some challenges
+- Focus on required challenges in the track
+- Skip optional challenges
 - Focus on quality over quantity
 - Extend showcase if needed
 
 **If ahead of schedule:**
-- Try bonus challenges
+- Complete bonus challenges from track
+- Try challenges from another track
 - Explore advanced features
-- Start on another challenge
-- Deep dive into MCP servers
+- Deep dive into MCP servers (Challenge 5)
 
-## Challenge Difficulty Guide
+## Track-Specific Facilitation Guide ⭐ NEW
 
+### Backend Developer Track
+**Common challenges:**
+- Authentication complexity
+- Testing setup
+**Facilitation tips:**
+- Show JWT debugging techniques
+- Demo test generation with `/test`
+- Most beginner-friendly track
+
+### Data Science & ML Track
+**Common challenges:**
+- Data cleaning decisions
+- Feature engineering choices
+**Facilitation tips:**
+- Encourage using `/explain` for algorithms
+- Show Copilot in Jupyter notebooks
+- Requires intermediate Python skills
+
+### DevOps & Platform Track
+**Common challenges:**
+- Cloud credentials/access
+- Terraform syntax
+**Facilitation tips:**
+- Ensure sandbox accounts available
+- Demo infrastructure code generation
+- Most complex track technically
+
+### Frontend Developer Track
+**Common challenges:**
+- TypeScript errors
+- State management
+**Facilitation tips:**
+- Show component generation
+- Demo type inference
+- Good for visual learners
+
+### Full-Stack Developer Track
+**Common challenges:**
+- Integration between layers
+- Time management
+**Facilitation tips:**
+- Recommend for experienced developers
+- Help with prioritization
+- Requires full day
+
+## Challenge & Track Difficulty Guide ⭐ UPDATED
+
+### By Track Difficulty
+**Beginner-Friendly Tracks:**
+- Backend Developer Track (recommended starting point)
+- Frontend Developer Track
+
+**Intermediate Tracks:**
+- Data Science & ML Track
+- DevOps & Platform Track
+
+**Advanced Track:**
+- Full-Stack Developer Track (requires full day)
+
+### By Individual Challenge
 **Beginner-Friendly:**
 - Challenge 1: Web API (with Node.js)
 - Challenge 4: Frontend (start with components)
@@ -166,10 +258,12 @@ Around lunch, gather everyone:
 ## Metrics to Track
 
 Ask participants to note:
+- **Which track they chose**
 - Time spent per challenge
 - Percentage of code generated by Copilot
 - Number of chat interactions
 - Most helpful feature
+- Track-specific learnings
 - Time saved (estimate)
 
 ## Post-Hackathon
@@ -178,12 +272,14 @@ Ask participants to note:
 
 **Send to Participants:**
 - [ ] Thank you email
-- [ ] Feedback survey
+- [ ] Feedback survey (include track-specific questions)
 - [ ] Additional resources
 - [ ] Link to solutions (if available)
 - [ ] Next steps for continued learning
 
 **Collect Feedback on:**
+- Track structure effectiveness ⭐ NEW
+- Track difficulty and guidance ⭐ NEW
 - Challenge quality
 - Difficulty levels
 - Time allocation
