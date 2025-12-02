@@ -2,242 +2,280 @@
 
 ## What is GitHub Copilot?
 
-GitHub Copilot is your AI pair programmer that helps you write code faster and with less effort. It suggests whole lines or entire functions right in your editor.
+GitHub Copilot is your **AI-powered development partner** that goes far beyond simple code completion. In VS Code, Copilot offers a complete agentic experience—it can understand your entire project, make multi-file changes, run terminal commands, and iterate autonomously to complete complex tasks.
 
-## Key Features
+## The Copilot Experience in VS Code
 
-### 1. **Inline Code Suggestions**
-As you type, Copilot suggests code completions based on:
-- Your current file context
-- Comments and function names
-- Patterns in your codebase
-- Millions of public repositories
+### Three Ways to Interact
 
-**How to use:**
-- Start typing or write a comment
-- Copilot shows suggestions in gray text
-- Press `Tab` to accept
-- Press `Esc` to dismiss
-- `Alt+]` for next suggestion
-- `Alt+[` for previous suggestion
+| Method | Access | Best For |
+|--------|--------|----------|
+| **Chat View** | `Ctrl+Alt+I` (Win/Linux) / `Cmd+Shift+I` (Mac) | Complex tasks, multi-file changes |
+| **Inline Chat** | `Ctrl+I` / `Cmd+I` | Quick edits within a file |
+| **Inline Suggestions** | Automatic as you type | Code completions while coding |
 
-### 2. **Copilot Chat**
-Interactive chat interface for:
-- Asking coding questions
-- Explaining code
-- Generating tests
-- Debugging issues
-- Learning new concepts
+## Agents: The Heart of Modern Copilot
 
-**How to open:**
-- `Ctrl+Shift+I` (Windows/Linux)
-- `Cmd+Shift+I` (Mac)
-- Click Copilot icon in sidebar
-- Right-click → "Copilot Chat"
+### What Are Agents?
 
-### 3. **Inline Chat**
-Quick chat directly in your file:
-- `Ctrl+I` to open inline chat
-- Ask questions about selected code
-- Make quick edits
-- Get explanations
+Agents define how Copilot behaves during a conversation. VS Code includes four built-in agents:
+
+| Agent | Description | Capabilities |
+|-------|-------------|--------------|
+| **Agent** | Full autonomous mode | Edit files, run commands, self-correct |
+| **Plan** | Planning mode | Read-only, generates implementation plans |
+| **Ask** | Q&A mode | Answers questions, explains code |
+| **Edit** | Focused editing | Makes targeted changes to files |
+
+### Using Agent Mode 🤖
+
+**Agent mode** is the most powerful way to use Copilot. It can:
+
+- ✅ Create and modify multiple files
+- ✅ Run terminal commands automatically
+- ✅ Recognize errors and fix them
+- ✅ Iterate until your task is complete
+- ✅ Infer additional work needed
+
+**Example:**
+```
+Create a REST API for task management with:
+- CRUD endpoints
+- JWT authentication  
+- Input validation
+- Unit tests
+```
+
+Agent mode will create all necessary files, install dependencies, and verify the implementation works.
+
+### Switching Agents
+
+1. Open Chat View (`Ctrl+Alt+I`)
+2. Click the agent picker (next to the model selector)
+3. Choose: Agent, Plan, Ask, or Edit
 
 ## Getting Started
 
 ### Installation
 
-1. **Install VS Code Extension**
-   - Open VS Code Extensions (Ctrl+Shift+X)
+1. **Install VS Code Extensions**
+   - Open Extensions (`Ctrl+Shift+X`)
    - Search "GitHub Copilot"
-   - Install "GitHub Copilot" and "GitHub Copilot Chat"
+   - Install **GitHub Copilot** and **GitHub Copilot Chat**
 
 2. **Sign In**
-   - Click on Copilot icon
+   - Click Copilot icon in the Activity Bar
    - Sign in with your GitHub account
-   - Ensure you have Copilot access
+   - Ensure you have Copilot access (Individual, Business, or Enterprise)
 
-3. **Verify Installation**
-   - Open any code file
-   - Start typing - you should see suggestions
-   - Open Copilot Chat (Ctrl+Shift+I)
+3. **Verify Setup**
+   - Open Chat View (`Ctrl+Alt+I`)
+   - Select **Agent** from the agent picker
+   - Type: "Hello, confirm you can see my workspace"
 
-### Your First Copilot Code
+### Your First Agentic Task
 
-Try this:
+Try this with Agent mode:
 
-1. Create a new file `hello.js`
-2. Type this comment:
-   ```javascript
-   // Function to calculate factorial of a number
+1. Open Chat View (`Ctrl+Alt+I`)
+2. Select **Agent** from the agent picker
+3. Type:
    ```
-3. Press Enter and watch Copilot suggest the implementation!
-4. Press Tab to accept
+   Create a simple Express server with a /health endpoint that returns JSON status
+   ```
+4. Watch Copilot:
+   - Create the file
+   - Write the code
+   - Offer to run it
 
-## Best Practices
+## Adding Context with # Mentions
 
-### 1. **Write Clear Comments**
+Use `#` to give Copilot specific context:
 
-❌ Bad:
+| Mention | Purpose | Example |
+|---------|---------|---------|
+| `#file` | Reference a specific file | `#file:src/auth.ts explain this` |
+| `#codebase` | Search your project | `#codebase how is auth implemented?` |
+| `#selection` | Reference selected code | `#selection add error handling` |
+| `#terminalSelection` | Reference terminal output | `#terminalSelection what's this error?` |
+| `#problems` | Access editor errors | `Fix the issues in #problems` |
+
+**Example with context:**
+```
+Using the patterns in #file:src/services/UserService.ts, 
+create a ProductService with similar error handling
+```
+
+## Tools in Chat
+
+Tools extend what Copilot can do. Access them via the **Configure Tools** button in Agent mode:
+
+### Built-in Tools
+
+- **`#fetch`** - Fetch web content
+- **`#githubRepo`** - Search GitHub repositories
+- **`#usages`** - Find code usages
+- **`#changes`** - Access git changes
+
+### MCP Tools
+
+Install additional capabilities through MCP (Model Context Protocol) servers:
+- **Playwright** - Browser automation
+- **GitHub** - GitHub API access
+- **Database** - Query databases
+
+## Inline Suggestions
+
+While typing, Copilot suggests completions:
+
+- **Accept**: Press `Tab`
+- **Dismiss**: Press `Esc`
+- **Next suggestion**: `Alt+]` / `Option+]`
+- **Previous suggestion**: `Alt+[` / `Option+[`
+
+💡 **Tip**: Write a comment describing what you need, then press Enter:
+
 ```javascript
-// calc
-```
-
-✅ Good:
-```javascript
-// Calculate the total price with tax and discount applied
-```
-
-### 2. **Use Descriptive Names**
-
-❌ Bad:
-```javascript
-function x(a, b) {
-```
-
-✅ Good:
-```javascript
-function calculateMonthlyPayment(principal, interestRate) {
-```
-
-### 3. **Provide Context**
-
-Give Copilot examples of your patterns:
-```javascript
-// Following the pattern in UserService.js, create a ProductService
-class ProductService {
-```
-
-### 4. **Iterate and Refine**
-
-- First suggestion not perfect? 
-- Try `Alt+]` for alternatives
-- Modify your prompt/comment
-- Use Copilot Chat to refine
-
-## Common Use Cases
-
-### Generate Functions
-```python
-# Create a function that validates email addresses using regex
-```
-
-### Create Classes
-```typescript
-// User class with name, email, and authentication methods
-```
-
-### Write Tests
-```javascript
-// Unit tests for the calculateTotal function
-```
-
-### Database Queries
-```sql
--- Select all users who registered in the last 30 days and have verified emails
-```
-
-### API Endpoints
-```python
-# FastAPI endpoint to create a new user with validation
+// Function to validate email format using regex
 ```
 
 ## Keyboard Shortcuts
 
 | Action | Windows/Linux | Mac |
 |--------|---------------|-----|
-| Accept suggestion | Tab | Tab |
-| Dismiss suggestion | Esc | Esc |
-| Next suggestion | Alt+] | Option+] |
-| Previous suggestion | Alt+[ | Option+[ |
-| Open Copilot Chat | Ctrl+Shift+I | Cmd+Shift+I |
-| Inline Chat | Ctrl+I | Cmd+I |
-| Trigger suggestion | Alt+\ | Option+\ |
+| Open Chat View | `Ctrl+Alt+I` | `Cmd+Shift+I` |
+| Inline Chat | `Ctrl+I` | `Cmd+I` |
+| Accept suggestion | `Tab` | `Tab` |
+| Dismiss suggestion | `Esc` | `Esc` |
+| Next suggestion | `Alt+]` | `Option+]` |
+| Previous suggestion | `Alt+[` | `Option+[` |
 
-## Settings
+## Customizing Copilot
 
-Customize Copilot in VS Code settings:
+### Custom Instructions
 
-```json
-{
-  // Enable/disable Copilot
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": false
-  },
-  
-  // Auto-trigger suggestions
-  "editor.inlineSuggest.enabled": true,
-  
-  // Show suggestion on typing
-  "github.copilot.editor.enableAutoCompletions": true
-}
+Create a `.github/copilot-instructions.md` file to set project-wide guidelines:
+
+```markdown
+# Project Guidelines
+
+- Use TypeScript strict mode
+- Follow the repository patterns for error handling
+- Write unit tests for all new functions
+- Use ESLint and Prettier formatting
 ```
 
-## Tips for Success
+### Custom Agents
 
-1. **Start with Comments**: Describe what you want in natural language
-2. **Break Down Complex Tasks**: Smaller pieces get better suggestions
-3. **Review Suggestions**: Always understand the code before accepting
-4. **Learn from Copilot**: See new patterns and approaches
-5. **Combine with Your Knowledge**: Copilot assists, you architect
+Create specialized agents in `.github/agents/` for specific workflows:
 
-## Limitations
+```markdown
+---
+name: API Designer
+description: Design REST API endpoints
+tools: ['search', 'fetch']
+---
 
-Understand what Copilot can and cannot do:
+Design RESTful APIs following OpenAPI 3.0 specification...
+```
 
-✅ **Can:**
-- Generate boilerplate code
-- Suggest implementations
-- Complete patterns
-- Write tests
-- Explain code
+### Prompt Files
 
-❌ **Cannot:**
-- Replace your judgment
-- Guarantee bug-free code
-- Access external systems
-- Know your business logic
+Create reusable prompts in `.github/prompts/`:
+
+```markdown
+---
+name: create-component
+description: Generate a React component
+agent: agent
+---
+
+Create a React component with TypeScript, tests, and Tailwind styling...
+```
+
+## Working with Agent Mode
+
+### Reviewing Changes
+
+When Agent makes changes:
+
+1. **Review inline** - Changes appear highlighted in editor
+2. **Accept/Reject** - Accept good changes, reject others
+3. **Iterate** - Ask for modifications
+4. **Undo** - Use Chat's undo to revert
+
+### Tool Approvals
+
+Agent may request permission to:
+- Modify files
+- Run terminal commands
+- Access MCP tools
+
+Review the action before approving.
+
+## Language Models
+
+Choose different AI models for different tasks:
+
+1. Click the model picker in Chat
+2. Select from available models:
+   - **GPT-4o** - Balanced performance
+   - **Claude Sonnet** - Strong reasoning
+   - **Gemini** - Fast responses
+   - **o1/o3** - Complex reasoning
+
+## Best Practices
+
+### 1. Choose the Right Agent
+- Complex, multi-file tasks → **Agent**
+- Planning and architecture → **Plan**
+- Quick questions → **Ask**
+- Focused file edits → **Edit**
+
+### 2. Provide Context
+- Use `#file` to reference relevant code
+- Use `#codebase` for project-wide understanding
+- Include examples of desired patterns
+
+### 3. Iterate
+- Don't expect perfection first try
+- Ask follow-up questions
+- Refine with additional instructions
+
+### 4. Review Everything
+- Agent makes real changes
+- Always review before committing
+- Run tests to verify
+
+## What Copilot Can Do
+
+✅ **Capabilities:**
+- Generate multi-file implementations
+- Refactor across your codebase
+- Run terminal commands
+- Debug and fix errors
+- Write comprehensive tests
+- Explain complex code
+- Create documentation
+
+## What Requires Your Judgment
+
+❌ **You should:**
 - Make architectural decisions
-
-## Security and Privacy
-
-- Copilot is trained on public code
-- Your code stays private
-- Suggestions filtered for security
-- Review all generated code
-- Don't commit secrets
+- Verify security implications
+- Understand the generated code
+- Review for business logic correctness
+- Decide what to accept or reject
 
 ## Next Steps
 
-Now that you understand the basics:
-
-1. Try the [Chat Modes Guide](./chat-modes.md)
-2. Learn [Prompt Engineering](./prompt-engineering.md)
-3. Explore [MCP Servers](./mcp-servers.md)
-4. Check [Best Practices](./best-practices.md)
-
-## Troubleshooting
-
-### Copilot Not Suggesting?
-- Check status icon in bottom right
-- Verify you're signed in
-- Check network connection
-- Restart VS Code
-
-### Suggestions Not Relevant?
-- Add more context in comments
-- Provide examples
-- Use more descriptive names
-- Try Copilot Chat instead
-
-### Performance Issues?
-- Disable in large files if needed
-- Check VS Code performance
-- Update extensions
+1. 📖 [Chat Modes & Agents Guide](./chat-modes.md) - Master agent workflows
+2. 🎯 [Prompt Engineering](./prompt-engineering.md) - Write effective prompts
+3. 🔌 [MCP Servers](./mcp-servers.md) - Extend capabilities
+4. 🌟 [Best Practices](./best-practices.md) - Production-ready patterns
 
 ---
 
-**Happy Coding with Copilot! 🤖**
+**Embrace the agentic workflow and accelerate your development! 🤖**
 
 [Back to Main README](../README.md)

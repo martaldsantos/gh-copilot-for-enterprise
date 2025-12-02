@@ -6,15 +6,16 @@
 
 ## 🎯 Objective
 
-Build a fully functional REST API for a task management system using GitHub Copilot. Learn how to use Copilot's inline suggestions, chat commands, and workspace context to accelerate API development.
+Build a fully functional REST API for a task management system using GitHub Copilot's **Agent mode**. Learn how to leverage Copilot's agentic capabilities to create multi-file implementations, run tests automatically, and iterate on your code.
 
 ## 📚 What You'll Learn
 
-- Using Copilot inline suggestions for rapid API development
-- Leveraging `/tests` command to generate comprehensive tests
-- Using `/explain` to understand generated code
-- Using `/fix` to debug issues
-- Workspace-aware prompts for consistent patterns
+- Using **Agent mode** for autonomous multi-file development
+- Creating **custom agents** for API development workflows
+- Using **prompt files** for reusable API patterns
+- Leveraging **MCP tools** for enhanced capabilities
+- Using `#` context mentions for precise guidance
+- Iterative development with Agent mode
 
 ## 🛠️ Technology Stack
 
@@ -72,40 +73,106 @@ Open the starter files and familiarize yourself with the structure:
 - `app.js` or `main.py` - Main application file
 - `models/` - Data models
 
-### Step 3: Use Copilot to Build
+### Step 3: Set Up Your Copilot Environment
 
-## 💡 Copilot Tips for This Challenge
+Before starting, configure your workspace for optimal Copilot assistance.
 
-### 1. Inline Suggestions
+## 💡 Copilot Agentic Tips for This Challenge
 
-**Write a comment describing what you need:**
-```javascript
-// Create a POST endpoint to register a new user with email and password validation
+### 1. Use Agent Mode for Multi-File Development
+
+Open Chat View (`Ctrl+Alt+I`) and select **Agent** from the agent picker. Then:
+
+```
+Create a complete user authentication system with:
+- User model with password hashing
+- Registration endpoint with email validation
+- Login endpoint returning JWT tokens
+- Auth middleware for protected routes
+- Unit tests for all components
 ```
 
-Then press Enter and let Copilot suggest the implementation!
+Agent mode will:
+- Create all necessary files
+- Install dependencies
+- Implement the code
+- Run tests to verify
 
-### 2. Chat Commands
+### 2. Create a Custom Agent for API Development
 
-**Use `/tests` to generate tests:**
-1. Highlight your function
-2. Open Copilot Chat (Ctrl+Shift+I)
-3. Type: `/tests create unit tests for this function`
+Create `.github/agents/api-developer.agent.md`:
 
-**Use `/explain` to understand code:**
-1. Highlight complex code
-2. Type: `/explain how does this authentication work?`
+```markdown
+---
+name: API Developer
+description: Expert in REST API development
+tools: ['codebase', 'editFiles', 'runTerminal']
+---
 
-**Use `/fix` for debugging:**
-1. When you encounter an error
-2. Type: `/fix error: cannot read property of undefined`
+You are an expert API developer. When building APIs:
+- Follow REST best practices
+- Use proper HTTP status codes
+- Include input validation
+- Add comprehensive error handling
+- Generate OpenAPI documentation
+- Write tests for all endpoints
 
-### 3. Workspace Context
+Always reference existing patterns in #codebase.
+```
 
-Ask Copilot questions about your entire project:
-- "What authentication pattern am I using in this project?"
-- "Generate a new endpoint following the pattern in routes/tasks.js"
-- "Create tests similar to the ones in tests/auth.test.js"
+### 3. Use Context with # Mentions
+
+```
+Using the patterns in #file:models/data.js, create a Task model 
+with validation for title (required, 3-100 chars), description, 
+status (enum), and priority (enum).
+
+Reference #codebase for existing error handling patterns.
+```
+
+### 4. Create Reusable Prompt Files
+
+Create `.github/prompts/create-endpoint.prompt.md`:
+
+```markdown
+---
+name: create-endpoint
+description: Generate a REST API endpoint
+agent: agent
+---
+
+Create a ${input:method} endpoint at /api/${input:resource} that:
+- Follows REST conventions
+- Includes input validation
+- Has proper error handling
+- Returns appropriate status codes
+- Includes unit tests
+- Uses patterns from #file:app.js
+```
+
+Then use: `/create-endpoint`
+
+### 5. Iterative Development with Agent
+
+Have a conversation with Copilot:
+
+```
+You: Create the basic Express app structure with error handling
+
+[Agent creates files]
+
+You: Now add the User model with bcrypt password hashing
+
+[Agent adds User model]
+
+You: Create registration and login endpoints
+
+[Agent implements auth]
+
+You: Run npm test to verify
+
+[Agent runs tests, fixes any issues]
+```
 
 ## 📝 Step-by-Step Guide
 
@@ -125,105 +192,131 @@ Ask Copilot questions about your entire project:
 
 ### Phase 2: User Authentication (20 min)
 
-1. **Create User Model**
-   - Use Copilot to define user schema
-   - Add password hashing
-   
-   💡 **Try this prompt in Copilot Chat:**
-   ```
-   Create a User model with email, password (hashed), and timestamps. 
-   Include methods for password hashing and verification using bcrypt.
-   ```
+Use Agent mode with comprehensive prompts:
 
-2. **Implement Registration**
-   - Create `/api/auth/register` endpoint
+```
+Create a complete user authentication system:
+
+1. User Model:
+   - email: required, unique, valid email format
+   - password: hashed with bcrypt, min 8 chars
+   - timestamps: createdAt, updatedAt
+
+2. POST /api/auth/register:
    - Validate email format and password strength
-   - Hash passwords before saving
-   
-   💡 **Comment-driven development:**
-   ```javascript
-   // POST /api/auth/register
-   // Validate email and password, hash password, create user, return success
-   ```
+   - Check email uniqueness
+   - Hash password before storing
+   - Return 201 with user (exclude password)
+   - Return 400 for validation errors
+   - Return 409 for duplicate email
 
-3. **Implement Login**
-   - Create `/api/auth/login` endpoint
-   - Verify credentials
-   - Generate JWT token
-   
-   💡 **Use the pattern:**
-   ```
-   Ask Copilot: "Generate login endpoint that validates credentials 
-   and returns a JWT token with 24-hour expiration"
-   ```
+3. POST /api/auth/login:
+   - Validate credentials
+   - Return JWT token (24-hour expiry)
+   - Return 401 for invalid credentials
 
-4. **Test Authentication**
-   - Use `/tests` command on your auth functions
-   - Run tests: `npm test` or `pytest`
+4. Auth Middleware:
+   - Verify JWT token
+   - Attach user to request
+   - Return 401 for invalid/expired tokens
+
+5. Tests:
+   - Registration success and validation errors
+   - Login success and failure
+   - Protected route access
+
+Run tests after implementation to verify.
+```
 
 ### Phase 3: Task Management (30 min)
 
-1. **Create Task Model**
-   ```
-   Prompt: "Create a Task model with title (required), description, 
-   status (todo/in-progress/done), priority (low/medium/high), 
-   due_date, and user_id as foreign key"
-   ```
+Continue with Agent mode:
 
-2. **Implement CRUD Endpoints**
-   
-   Start with comments, let Copilot generate code:
-   ```javascript
-   // GET /api/tasks - Get all tasks for authenticated user with filtering
-   // POST /api/tasks - Create new task with validation
-   // GET /api/tasks/:id - Get specific task
-   // PUT /api/tasks/:id - Update task
-   // DELETE /api/tasks/:id - Delete task
-   // PATCH /api/tasks/:id/complete - Mark task as complete
-   ```
+```
+Create complete Task CRUD operations:
 
-3. **Add Filtering and Search**
-   ```
-   Ask Copilot: "Add query parameters to filter tasks by status and priority,
-   and search by title or description"
-   ```
+Task Model:
+- id: auto-generated
+- title: required, 3-100 chars
+- description: optional
+- status: enum (todo, in-progress, done)
+- priority: enum (low, medium, high)
+- dueDate: optional date
+- userId: foreign key to User
 
-4. **Add Pagination**
-   ```
-   "Implement pagination with page and limit query parameters, 
-   return total count and page info"
-   ```
+Endpoints (all protected):
+- GET /api/tasks - List all tasks for user
+  - Filter by: status, priority
+  - Search by: title, description
+  - Pagination: page, limit (default 10)
+  
+- POST /api/tasks - Create new task
+  - Validate all inputs
+  - Return 201 with created task
+  
+- GET /api/tasks/:id - Get specific task
+  - Return 404 if not found
+  
+- PUT /api/tasks/:id - Update task
+  - Validate inputs
+  - Return 404 if not found
+  
+- DELETE /api/tasks/:id - Delete task
+  - Return 404 if not found
+  - Return 204 on success
+
+- PATCH /api/tasks/:id/complete - Mark task complete
+  - Set status to 'done'
+  - Return updated task
+
+Include integration tests for all endpoints.
+```
 
 ### Phase 4: Testing (15 min)
 
-1. **Generate Unit Tests**
-   - Highlight each function
-   - Use `/tests` in Copilot Chat
-   - Review and customize generated tests
+Ask Agent to enhance tests:
 
-2. **Create Integration Tests**
-   ```
-   Ask: "Create integration tests for the task CRUD endpoints,
-   including authentication flow"
-   ```
-
-3. **Run Test Suite**
-   ```bash
-   npm test -- --coverage
-   # or
-   pytest --cov
-   ```
+```
+Review the current test coverage using #problems and:
+1. Add missing test cases for edge cases
+2. Add tests for error scenarios
+3. Ensure >80% coverage
+4. Run all tests and fix any failures
+```
 
 ### Phase 5: Documentation (10 min)
 
-1. **Generate API Documentation**
-   ```
-   Ask Copilot: "Generate OpenAPI/Swagger documentation for all endpoints"
-   ```
+Generate API documentation:
 
-2. **Add README**
-   - Ask Copilot: "Add JSDoc/docstring comments to this file"
-   - Document API endpoints, setup instructions
+```
+Generate comprehensive API documentation:
+1. OpenAPI/Swagger specification
+2. README with setup instructions
+3. JSDoc/docstring comments for all endpoints
+4. Example requests/responses for each endpoint
+```
+
+## 🛠️ Optional: Set Up MCP Tools
+
+For enhanced capabilities, configure MCP servers:
+
+**`.vscode/mcp.json`**:
+```json
+{
+  "servers": {
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+    }
+  }
+}
+```
+
+Now you can:
+```
+Use #fetch to get the Express.js documentation for middleware,
+then implement rate limiting following their patterns.
+```
 
 ## ✅ Completion Checklist
 
@@ -242,48 +335,50 @@ Ask Copilot questions about your entire project:
 
 ## 🎁 Bonus Challenges
 
-If you finish early, try these:
+If you finish early, try these with Agent mode:
 
-1. **Task Assignment**: Add ability to assign tasks to other users
-2. **Task Comments**: Add commenting system for tasks
-3. **File Uploads**: Allow attaching files to tasks
-4. **Email Notifications**: Send reminders for due tasks
-5. **Rate Limiting**: Implement rate limiting for API endpoints
-6. **WebSocket Support**: Real-time task updates
+1. **Task Assignment**: "Add ability to assign tasks to other users with email notifications"
+2. **Task Comments**: "Create a commenting system for tasks with CRUD operations"
+3. **File Uploads**: "Allow attaching files to tasks using multer/S3"
+4. **Rate Limiting**: "Implement rate limiting with Redis"
+5. **WebSocket Updates**: "Add real-time task updates using Socket.io"
 
 ## 🧪 Testing Your API
 
-Use tools like:
-- Postman
-- Thunder Client (VS Code extension)
-- cURL commands
+Use Agent mode to help with testing:
+
+```
+Create a Postman collection or Thunder Client requests 
+for all API endpoints with example data.
+```
 
 ## 📊 Success Metrics
 
-Rate your experience:
-- How much code did Copilot generate vs manual? ____%
-- How many times did you use chat commands? _____
-- Most useful Copilot feature? _______________
+Track your Copilot usage:
+- How much did Agent mode handle vs manual coding? ____%
+- Number of iterations needed for complex features? _____
+- Most useful agent workflow? _______________
 - Time saved (estimated)? _____ minutes
 
 ## 🎓 Key Learnings
 
 Document your discoveries:
-1. What prompts worked best?
-2. When did Copilot suggestions need modification?
-3. How did workspace context help?
-4. Any surprising capabilities?
+1. What prompts worked best with Agent mode?
+2. How did custom agents help your workflow?
+3. When did you need to intervene vs let Agent iterate?
+4. What context (#file, #codebase) was most helpful?
 
 ## 📚 Resources
 
 - [Express.js Documentation](https://expressjs.com/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Copilot Chat Commands](../docs/chat-modes.md)
+- [Copilot Agents Guide](../docs/chat-modes.md)
+- [Prompt Engineering](../docs/prompt-engineering.md)
 
 ---
 
 **Need Help?**
-- Ask Copilot! Use chat to debug issues
+- Use Agent mode to debug: "Analyze #problems and fix all errors"
 - Check the `/docs` folder for guides
 
 Good luck! 🚀

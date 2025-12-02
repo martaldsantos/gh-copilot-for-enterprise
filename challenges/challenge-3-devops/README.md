@@ -6,15 +6,15 @@
 
 ## 🎯 Objective
 
-Design and implement cloud infrastructure using Terraform and containerize applications with Docker. Learn how GitHub Copilot can accelerate infrastructure coding, provide best practices, and help with complex configurations.
+Design and implement cloud infrastructure using Terraform and containerize applications with Docker. Learn how GitHub Copilot's **Agent mode** can accelerate infrastructure coding, provide best practices, and help with complex multi-file configurations.
 
 ## 📚 What You'll Learn
 
-- Using Copilot for Infrastructure as Code (Terraform)
-- Containerization best practices with Docker
-- Kubernetes manifest generation
-- CI/CD pipeline configuration
-- Using Copilot for infrastructure documentation
+- Using **Agent mode** for Infrastructure as Code
+- Creating **custom agents** for DevOps workflows
+- Using **prompt files** for reusable infrastructure patterns
+- Leveraging `#` context mentions for precise guidance
+- Multi-file infrastructure generation with Agent mode
 - Security and compliance patterns
 
 ## 🛠️ Technology Stack
@@ -30,6 +30,7 @@ Design and implement cloud infrastructure using Terraform and containerize appli
 Build a complete infrastructure setup for a web application:
 
 ### Core Features
+
 1. **Cloud Infrastructure (Terraform)**
    - Network configuration
    - Compute instances/containers
@@ -58,6 +59,7 @@ Build a complete infrastructure setup for a web application:
    - Rollback strategies
 
 ### Quality Requirements
+
 - Infrastructure security best practices
 - Cost optimization
 - High availability setup
@@ -86,229 +88,298 @@ Structure:
 └── kubernetes/
 ```
 
-## 💡 Copilot Tips for This Challenge
+## 💡 Copilot Agentic Tips for This Challenge
 
-### 1. Infrastructure Patterns
+### 1. Use Agent Mode for Multi-File Infrastructure
 
-**Ask Copilot for complete configurations:**
-```
-"Create a Terraform configuration for an Azure VNet with public and private subnets 
-across 3 availability zones, with NAT gateway and proper routing"
-```
-
-### 2. Use Copilot for Documentation
-
-Highlight Terraform resources and ask:
-```
-Explain this infrastructure setup and its components
-```
-
-### 3. Security Best Practices
+Open Chat View (`Ctrl+Alt+I`), select **Agent**, and ask:
 
 ```
-Ask: "What security best practices should I follow for this infrastructure?"
+Create a complete Terraform configuration for Azure with:
+- Virtual Network with public and private subnets
+- Network Security Groups for web, app, and database tiers
+- Application Load Balancer
+- Virtual Machine Scale Set
+- Azure Database for PostgreSQL
+
+Create separate files: main.tf, network.tf, security.tf, 
+compute.tf, database.tf, outputs.tf, and variables.tf
 ```
 
-### 4. Docker Optimization
+Agent mode will create all files and show you its plan!
 
-```python
-# Comment-driven Docker development:
-# Create a multi-stage Dockerfile for a Node.js app
-# Use alpine base, install only production dependencies
-# Run as non-root user, optimize layer caching
+### 2. Create a DevOps Custom Agent
+
+Create `.github/agents/devops-engineer.agent.md`:
+
+```markdown
+---
+name: DevOps Engineer
+description: Expert in IaC, Docker, and Kubernetes
+tools: ['codebase', 'editFiles', 'runTerminal']
+---
+
+You are an expert DevOps engineer. When working on infrastructure:
+- Always follow security best practices
+- Use modular Terraform patterns
+- Optimize Docker images for production
+- Include resource limits in Kubernetes
+- Document all configurations
+- Validate before applying
+
+Reference #file:terraform/azure/main.tf for existing patterns.
+Check #problems for any validation errors after changes.
+```
+
+### 3. Use Context Mentions for Specific Guidance
+
+```
+Review #file:terraform/azure/main.tf and add 
+monitoring resources using Azure Monitor, following 
+the patterns from #codebase.
+```
+
+### 4. Create Reusable Prompt Files
+
+Create `.github/prompts/k8s-deploy.prompt.md`:
+
+```markdown
+---
+name: k8s-deploy
+description: Create Kubernetes deployment manifests
+agent: agent
+---
+
+Create Kubernetes manifests for ${input:appName}:
+1. Deployment with:
+   - ${input:replicas} replicas
+   - Resource limits (CPU: 200m, Memory: 256Mi)
+   - Liveness and readiness probes at /health
+   - Rolling update strategy
+
+2. Service with type ${input:serviceType}
+
+3. ConfigMap for environment configuration
+
+4. Secret for sensitive data
+
+5. HorizontalPodAutoscaler targeting 70% CPU
+
+Validate all manifests after creation.
+```
+
+Use with: `/k8s-deploy`
+
+### 5. Iterative Infrastructure Development
+
+Have a conversation with Copilot:
+
+```
+You: Create a Terraform module for Azure VNet with subnets
+
+[Agent creates network.tf]
+
+You: Add network security groups for the subnets
+
+[Agent updates files, adds NSG rules]
+
+You: Check for any validation errors in the Terraform files
+
+[Agent runs terraform validate, fixes issues]
+
+You: Now add a PostgreSQL database in the private subnet
+
+[Agent creates database.tf with proper configuration]
 ```
 
 ## 📝 Step-by-Step Guide
 
 ### Phase 1: Cloud Infrastructure with Terraform (30 min)
 
-1. **Initialize Terraform Project**
-   
-   💡 **Copilot Prompt:**
-   ```
-   "Create a Terraform main.tf file with provider configuration for Azure,
-   including backend for state management in Azure Storage"
-   ```
+Use Agent mode with comprehensive prompts:
 
-2. **Network Configuration**
-   ```hcl
-   # Create VNET with CIDR 10.0.0.0/16
-   # Add public subnets in 2 zones (10.0.1.0/24, 10.0.2.0/24)
-   # Add private subnets in 2 zones (10.0.10.0/24, 10.0.11.0/24)
-   # Configure NAT Gateway for outbound internet access
-   ```
-   
-   Let Copilot generate the complete network setup!
+```
+Create a complete Azure infrastructure with Terraform:
 
-3. **Security Groups**
-   ```
-   Ask Copilot: "Create security groups for:
-   - ALB: Allow HTTP(80) and HTTPS(443) from internet
-   - App servers: Allow traffic only from ALB
-   - Database: Allow PostgreSQL(5432) only from app servers"
-   ```
+1. Provider Configuration (main.tf):
+   - Azure provider with latest version
+   - Backend for state in Azure Storage
+   - Resource group named "webapp-rg" in East US
 
-4. **Compute Resources**
-   ```hcl
-   # Create Virtual Machine Scale Set
-   # Use Standard_B1s instances with Ubuntu 22.04
-   # Min: 2, Max: 6, Desired: 2
-   # Include custom_data script to install Docker
-   ```
+2. Network (network.tf):
+   - VNet with CIDR 10.0.0.0/16
+   - Public subnets: 10.0.1.0/24, 10.0.2.0/24 (2 zones)
+   - Private subnets: 10.0.10.0/24, 10.0.11.0/24
+   - NAT Gateway for outbound internet
 
-5. **Load Balancer**
-   ```
-   "Create Application Load Balancer with:
-   - Listeners for HTTP (redirect to HTTPS) and HTTPS
-   - Target group for app servers on port 8080
-   - Health check endpoint /health"
-   ```
+3. Security (security.tf):
+   - NSG for ALB: Allow HTTP/HTTPS from internet
+   - NSG for App: Allow from ALB only
+   - NSG for DB: Allow PostgreSQL from App only
 
-6. **Database**
-   ```hcl
-   # Create Azure Database for PostgreSQL
-   # Zone-redundant deployment, B_Gen5_1 tier
-   # Automated backups, encryption enabled
-   # Place in private subnet
-   ```
+4. Compute (compute.tf):
+   - VM Scale Set with Standard_B1s
+   - Ubuntu 22.04, min: 2, max: 6 instances
+   - Custom data script to install Docker
+
+5. Database (database.tf):
+   - Azure Database for PostgreSQL Flexible Server
+   - Zone-redundant, B_Standard_B1ms tier
+   - Automated backups enabled
+
+6. Variables and Outputs:
+   - Create variables.tf with all configurable values
+   - Create outputs.tf with important values
+
+Run terraform validate when done to check for errors.
+```
 
 ### Phase 2: Containerization with Docker (20 min)
 
-1. **Create Optimized Dockerfile**
-   
-   💡 **Ask Copilot:**
-   ```
-   "Create a multi-stage Dockerfile for a Node.js Express app:
-   - Stage 1: Build with dependencies
-   - Stage 2: Production with minimal footprint
-   - Use node:18-alpine base
-   - Run as non-root user
-   - Optimize for layer caching"
-   ```
+```
+Create optimized Docker configuration:
 
-2. **Docker Compose for Local Dev**
-   ```yaml
-   # Create docker-compose.yml with:
-   # - App service (build from Dockerfile)
-   # - PostgreSQL database
-   # - Redis cache
-   # - Volume mounts for development
-   ```
+1. Multi-stage Dockerfile in docker/app/:
+   - Stage 1: node:18-alpine for building
+   - Stage 2: node:18-alpine for production
+   - Install only production dependencies
+   - Run as non-root user (node:node)
+   - Optimize layer caching
+   - Add HEALTHCHECK for /health endpoint
 
-3. **Health Checks**
-   ```dockerfile
-   # Add HEALTHCHECK instruction to Dockerfile
-   # Check HTTP endpoint every 30s
-   ```
+2. Create docker-compose.yml:
+   - App service building from Dockerfile
+   - PostgreSQL 15 service
+   - Redis 7 for caching
+   - Proper networking
+   - Volume mounts for development
 
-4. **Security Scanning**
-   ```
-   "Create .dockerignore file to exclude unnecessary files
-   Add labels for metadata following OCI standards"
-   ```
+3. Create .dockerignore:
+   - Exclude node_modules, .git, logs
+   - Exclude development files
+
+Add OCI labels for metadata.
+```
 
 ### Phase 3: Kubernetes Manifests (25 min)
 
-1. **Deployment Configuration**
-   ```yaml
-   # Create Deployment manifest with:
-   # - 3 replicas
-   # - Resource limits: CPU 200m, Memory 256Mi
-   # - Liveness and readiness probes
-   # - Rolling update strategy
-   ```
-   
-   💡 **Copilot will generate the complete YAML!**
+```
+Create Kubernetes manifests in kubernetes/:
 
-2. **Service Definition**
-   ```
-   Ask: "Create a Kubernetes Service of type LoadBalancer
-   exposing port 80 to container port 8080"
-   ```
+1. deployment.yaml:
+   - 3 replicas
+   - Resource limits: CPU 200m, Memory 256Mi
+   - Liveness probe: GET /health every 10s
+   - Readiness probe: GET /ready every 5s
+   - Rolling update: maxSurge 1, maxUnavailable 0
+   - Security context: runAsNonRoot
 
-3. **ConfigMap and Secrets**
-   ```yaml
-   # Create ConfigMap for app configuration
-   # Create Secret for database credentials (base64 encoded)
-   # Mount both as environment variables in Deployment
-   ```
+2. service.yaml:
+   - ClusterIP service for internal
+   - LoadBalancer service for external
+   - Port 80 → 8080
 
-4. **Horizontal Pod Autoscaler**
-   ```
-   "Create HPA for the deployment:
-   - Min: 3, Max: 10 replicas
-   - Target CPU utilization: 70%"
-   ```
+3. configmap.yaml:
+   - Environment variables for app config
+   - Non-sensitive configuration only
 
-5. **Ingress Configuration**
-   ```yaml
-   # Create Ingress with:
-   # - Host-based routing
-   # - TLS termination
-   # - Path-based routing for /api and /web
-   ```
+4. secret.yaml:
+   - Database credentials (use placeholder values)
+   - Template for actual secrets
+
+5. hpa.yaml:
+   - Min 3, Max 10 replicas
+   - Target 70% CPU utilization
+
+6. ingress.yaml:
+   - Host-based routing
+   - TLS termination
+   - Path-based routing for /api and /web
+
+Validate all manifests with kubectl --dry-run.
+```
 
 ### Phase 4: CI/CD Pipeline (20 min)
 
-1. **GitHub Actions Workflow**
-   
-   💡 **Copilot Prompt:**
-   ```
-   "Create a GitHub Actions workflow that:
-   1. Runs on push to main
-   2. Runs tests
-   3. Builds Docker image
-   4. Pushes to Docker Hub
-   5. Deploys to Kubernetes using kubectl"
-   ```
+```
+Create GitHub Actions workflows in .github/workflows/:
 
-2. **Testing Stage**
-   ```yaml
-   # Add job for:
-   # - Terraform validate and plan
-   # - Dockerfile linting with hadolint
-   # - Kubernetes manifest validation
-   ```
+1. ci.yml (on push to any branch):
+   - Run Terraform validate and fmt check
+   - Lint Dockerfiles with hadolint
+   - Validate Kubernetes manifests
+   - Run unit tests
 
-3. **Infrastructure Deployment**
-   ```
-   "Add a job to apply Terraform changes:
-   - Use Terraform GitHub Actions
+2. cd.yml (on push to main):
+   - Build Docker image with cache
+   - Push to Azure Container Registry
+   - Deploy to Kubernetes (dev first, then prod)
    - Require manual approval for production
-   - Show plan before apply"
-   ```
+   - Notify on success/failure
 
-4. **Rollback Strategy**
-   ```yaml
-   # Create a separate workflow for rollback
-   # Allow manual trigger with version input
-   # Use kubectl rollout undo
-   ```
+3. rollback.yml (manual trigger):
+   - Input for version/revision
+   - Rollback Kubernetes deployment
+   - Notification
+
+Include proper secrets management using GitHub secrets.
+```
 
 ### Phase 5: Monitoring & Documentation (15 min)
 
-1. **Add Monitoring**
-   ```
-   Ask Copilot: "Add Prometheus monitoring:
-   - ServiceMonitor for app metrics
-   - Grafana dashboard ConfigMap"
-   ```
+```
+Add monitoring and documentation:
 
-2. **Logging Configuration**
-   ```yaml
-   # Configure centralized logging
-   # Use Fluentd DaemonSet to collect logs
-   ```
+1. Monitoring (kubernetes/monitoring/):
+   - ServiceMonitor for Prometheus
+   - Alert rules for CPU/memory/errors
+   - Grafana dashboard ConfigMap
 
-3. **Documentation**
-   - Ask Copilot to document Terraform files
-   - Document architecture decisions
-   - Create deployment runbook
+2. Documentation:
+   - Update README with architecture diagram
+   - Document deployment procedures
+   - Create runbook for common operations
+
+3. Validation:
+   - Run terraform plan for final check
+   - Validate all Kubernetes manifests
+   - Test Docker build locally
+```
+
+## 🛠️ Optional: MCP Tools for DevOps
+
+Configure MCP servers for enhanced capabilities:
+
+**`.vscode/mcp.json`**:
+
+```json
+{
+  "servers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-filesystem", "${workspaceFolder}"]
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+    }
+  }
+}
+```
+
+Use it:
+
+```
+Use #fetch to get the latest Azure Terraform provider 
+documentation, then update my provider configuration to 
+use the newest features.
+```
 
 ## ✅ Completion Checklist
 
 ### Infrastructure (Terraform)
-- [ ] VNET with public/private subnets created
+
+- [ ] VNet with public/private subnets created
 - [ ] Network Security groups configured properly
 - [ ] Auto Scaling Group deployed
 - [ ] Load Balancer configured
@@ -317,6 +388,7 @@ Ask: "What security best practices should I follow for this infrastructure?"
 - [ ] Variables and outputs defined
 
 ### Containerization (Docker)
+
 - [ ] Multi-stage Dockerfile created
 - [ ] Image size optimized (<100MB for Node.js)
 - [ ] Non-root user configured
@@ -325,6 +397,7 @@ Ask: "What security best practices should I follow for this infrastructure?"
 - [ ] .dockerignore configured
 
 ### Kubernetes
+
 - [ ] Deployment manifest created
 - [ ] Service configured
 - [ ] ConfigMap and Secrets created
@@ -333,6 +406,7 @@ Ask: "What security best practices should I follow for this infrastructure?"
 - [ ] Resource limits set
 
 ### CI/CD
+
 - [ ] GitHub Actions workflow created
 - [ ] Automated tests running
 - [ ] Docker build and push working
@@ -341,52 +415,49 @@ Ask: "What security best practices should I follow for this infrastructure?"
 
 ## 🎁 Bonus Challenges
 
-1. **Multi-Region Setup**: Deploy to multiple Azure regions
-2. **Blue-Green Deployment**: Implement blue-green deployment strategy
-3. **Service Mesh**: Add Istio for service mesh
-4. **GitOps**: Implement ArgoCD for GitOps workflow
-5. **Cost Optimization**: Add auto-shutdown for dev environments
-6. **Disaster Recovery**: Implement backup and restore procedures
+Using Agent mode, try these:
+
+1. **Multi-Region Setup**: "Deploy to multiple Azure regions with traffic manager"
+2. **Blue-Green Deployment**: "Implement blue-green deployment with Kubernetes"
+3. **Service Mesh**: "Add Istio service mesh configuration"
+4. **GitOps**: "Set up ArgoCD for GitOps workflow"
+5. **Cost Optimization**: "Add auto-shutdown for dev environments"
+6. **Disaster Recovery**: "Implement cross-region backup and restore"
 
 ## 🧪 Testing Your Infrastructure
 
-```bash
-# Validate Terraform
-terraform validate
-terraform plan
+Use Agent mode to help validate:
 
-# Test Docker build
-docker build -t myapp:test .
-docker run -p 8080:8080 myapp:test
-
-# Validate Kubernetes manifests
-kubectl apply --dry-run=client -f kubernetes/
-
-# Run pipeline locally with act
-act -j build
+```
+Run these validation commands and fix any errors:
+- terraform validate
+- terraform fmt -check
+- hadolint docker/app/Dockerfile
+- kubectl apply --dry-run=client -f kubernetes/
 ```
 
 ## 📊 Success Metrics
 
-- Infrastructure deployment time: _____ minutes
-- Number of manual steps vs automated: _____
-- Copilot code generation percentage: ____%
+- Infrastructure files generated by Agent: ____%
+- Number of iterations for correct config: _____
 - Security best practices implemented: _____/10
+- Most helpful agent workflow: _______________
 
 ## 🎓 Key Learnings
 
-Document:
-1. How did Copilot help with Terraform?
+Document your experience:
+
+1. How did Agent mode help with multi-file Terraform?
 2. Were Docker suggestions production-ready?
 3. Did Copilot suggest good security practices?
-4. What infrastructure patterns did you learn?
+4. How effective was iterative development?
 
 ## 📚 Resources
 
 - [Terraform Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
 - [Docker Documentation](https://docs.docker.com/)
 - [Kubernetes Documentation](https://kubernetes.io/docs/)
-- [Copilot Best Practices](../docs/best-practices.md)
+- [Copilot Agents Guide](../docs/chat-modes.md)
 
 ## 🏗️ Architecture Diagram
 
@@ -405,8 +476,8 @@ Internet
 ---
 
 **Need Help?**
-- Ask Copilot for infrastructure best practices
-- Use `/explain` on complex configurations
+
+- Use Agent mode: "Review #problems and fix infrastructure issues"
 - Check the `/docs` folder for guides
 
 Build with confidence! 🏗️☁️

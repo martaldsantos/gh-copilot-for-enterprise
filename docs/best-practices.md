@@ -1,58 +1,169 @@
 # GitHub Copilot Best Practices 🌟
 
-A comprehensive guide to getting the most out of GitHub Copilot while maintaining code quality and security.
+A comprehensive guide to getting the most out of GitHub Copilot's **agentic capabilities** while maintaining code quality and security.
 
 ## General Principles
 
-### 1. **Copilot is a Tool, Not a Replacement**
+### 1. **Copilot is an AI Partner, Not a Replacement**
+
+With Agent mode, Copilot can now:
+- Make multi-file changes autonomously
+- Run terminal commands
+- Iterate on its own work
+- Self-correct errors
+
+But you still need to:
 
 ✅ **Do:**
-- Use Copilot to accelerate development
-- Let it handle boilerplate and patterns
-- Learn from its suggestions
-- Verify and understand all generated code
+- Review all changes before accepting
+- Understand the code being generated
+- Verify security implications
+- Make architectural decisions
+- Test thoroughly
 
 ❌ **Don't:**
-- Blindly accept all suggestions
-- Skip code reviews
-- Ignore security implications
-- Abdicate architectural decisions
+- Accept changes without reviewing
+- Let Agent mode run unchecked
+- Skip security review
+- Ignore failing tests
 
-### 2. **Review Everything**
+### 2. **Choose the Right Agent**
 
-Always review generated code for:
-- Correctness
-- Security vulnerabilities
-- Performance implications
-- Consistency with your codebase
-- Edge cases
+| Task | Best Agent | Why |
+|------|------------|-----|
+| Multi-file feature | **Agent** | Can create/edit files, run commands |
+| Architecture planning | **Plan** | Read-only, focuses on planning |
+| Quick questions | **Ask** | Lightweight, conversational |
+| Focused edits | **Edit** | Targeted file modifications |
 
-### 3. **Context is King**
+### 3. **Provide Rich Context**
 
-Copilot works best when it understands:
-- Your project structure
-- Existing patterns
-- Coding standards
-- Business logic
+Use `#` mentions to give Copilot the context it needs:
+
+```
+Using the patterns in #file:src/services/UserService.ts,
+create a ProductService with similar error handling.
+Reference #codebase for existing validation utilities.
+```
+
+## Working with Agent Mode
+
+### Reviewing Multi-File Changes
+
+Agent mode can modify many files at once. Best practices:
+
+1. **Review each file** - Don't bulk-accept
+2. **Check dependencies** - Are imports correct?
+3. **Verify patterns** - Does it match your codebase?
+4. **Run tests** - Let tests catch issues
+5. **Use git diff** - See the full picture
+
+### Managing Tool Approvals
+
+Agent requests permission for:
+- File modifications
+- Terminal commands
+- MCP tool invocations
+
+**Approval strategies:**
+- **One-time**: For unfamiliar operations
+- **Session**: For trusted repetitive tasks
+- **Workspace**: For safe, common operations
+
+### Terminal Command Safety
+
+Configure auto-approval for safe commands:
+
+```json
+{
+  "chat.tools.terminal.autoApprove": {
+    "mkdir": true,
+    "npm test": true,
+    "git status": true,
+    "/^npm (install|run build)$/": true,
+    "rm -rf": false,
+    "sudo": false
+  }
+}
+```
+
+### Iterative Development
+
+Agent mode excels at iteration:
+
+```
+1. You: Create a REST API for tasks with CRUD endpoints
+2. Agent: [Creates initial implementation]
+3. You: Add input validation
+4. Agent: [Adds validation]
+5. You: Now add unit tests
+6. Agent: [Writes tests, runs them, fixes failures]
+```
+
+## Custom Agents and Workflows
+
+### Creating Specialized Agents
+
+Define custom agents for your team's workflows:
+
+**Security Reviewer Agent:**
+```markdown
+---
+name: Security Review
+description: Review code for security vulnerabilities
+tools: ['codebase', 'search', 'problems']
+---
+
+Analyze code for:
+- SQL injection
+- XSS vulnerabilities
+- Authentication issues
+- Sensitive data exposure
+
+Do NOT make changes. Only report findings.
+```
+
+**Planning Agent:**
+```markdown
+---
+name: Planner
+tools: ['search', 'fetch', 'githubRepo']
+handoffs:
+  - label: Implement
+    agent: agent
+    prompt: Implement the plan above.
+---
+
+Generate implementation plans only. Do not write code.
+```
+
+### Using Handoffs
+
+Create guided workflows between agents:
+
+1. **Plan** → Generate architecture
+2. **Agent** → Implement the plan
+3. **Security Review** → Check for issues
+4. **Agent** → Address findings
 
 ## Code Quality
 
 ### Write Clear Prompts
 
 **Before:**
-```javascript
-// function
+```
+create api
 ```
 
 **After:**
-```javascript
-/**
- * Calculate the monthly payment for a loan
- * @param {number} principal - Loan amount in dollars
- * @param {number} annualRate - Annual interest rate (as percentage, e.g., 5.5)
- * @param {number} years - Loan term in years
- * @returns {number} Monthly payment amount
- */
+```
+Create a REST API for task management with:
+- CRUD endpoints (GET, POST, PUT, DELETE)
+- JWT authentication middleware
+- Input validation using Zod
+- Error handling with proper status codes
+- OpenAPI documentation
+- Unit tests with >80% coverage
 ```
 
 ### Use Type Systems

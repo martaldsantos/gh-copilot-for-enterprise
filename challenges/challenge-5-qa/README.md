@@ -6,21 +6,21 @@
 
 ## 🎯 Objective
 
-Learn how to use GitHub Copilot to accelerate test automation. You will work with **real-world open-source applications**, implement comprehensive testing strategies, and use the **Playwright MCP Server** to enable AI-driven browser automation.
+Learn how to use GitHub Copilot's **Agent mode** to accelerate test automation. You will work with **real-world open-source applications**, implement comprehensive testing strategies, and use the **Playwright MCP Server** for AI-driven browser automation.
 
 ## 📚 What You'll Learn
 
-- Setting up professional test automation environments
-- Using Copilot to generate unit tests with high coverage
-- Implementing Page Object Model with Playwright
-- Configuring Playwright MCP for AI-driven testing
-- Using `/tests` command for test generation
-- Using `/explain` to understand complex test scenarios
+- Using **Agent mode** for test generation
+- Creating **custom agents** for QA workflows
+- Using **prompt files** for reusable test patterns
+- Leveraging `#` context mentions for precise guidance
+- Configuring **Playwright MCP** for AI-controlled browser testing
+- Iterative test development with Agent mode
 
 ## 🛠️ Technology Stack
 
 - **Application Under Test**: Choose from Node.js/React, Python/FastAPI, or Java/Spring
-- **E2E Testing**: Playwright
+- **E2E Testing**: Playwright + Playwright MCP Server
 - **AI Integration**: Playwright MCP Server (`@playwright/mcp`)
 - **Unit Testing**: Jest (Node.js), Pytest (Python), or JUnit (Java)
 - **Environment**: Docker & DevContainers
@@ -31,7 +31,7 @@ This challenge is **different from other challenges**. Instead of building an ap
 
 1. **Clone a real-world open-source application**
 2. **Analyze its existing test coverage**
-3. **Implement comprehensive unit tests**
+3. **Implement comprehensive unit tests using Agent mode**
 4. **Create E2E tests with Playwright**
 5. **Configure AI-driven testing with Playwright MCP**
 
@@ -48,6 +48,7 @@ Select **ONE** of the following open-source applications to test.
 **Best for**: Testers comfortable with JavaScript/TypeScript and modern React UIs.
 
 **Testing Challenges**:
+
 - Complex UI interactions (drag & drop)
 - Rich state management with React
 - Real-time updates
@@ -64,6 +65,7 @@ cd qa-target-app
 **Best for**: Testers who prefer Python and backend API testing.
 
 **Testing Challenges**:
+
 - Comprehensive REST API surface
 - Database state management
 - Authentication flows
@@ -80,6 +82,7 @@ cd qa-target-app
 **Best for**: Enterprise Java testers familiar with Spring ecosystem.
 
 **Testing Challenges**:
+
 - Server-side rendering
 - Classic enterprise patterns
 - Database interactions
@@ -100,7 +103,49 @@ cd qa-target-app
 3. When prompted, click "Reopen in Container" (if using DevContainer)
 4. Wait for the environment to set up
 
-### Step 2: Verify Setup
+### Step 2: Configure Playwright MCP Server
+
+Add to your VS Code settings (`.vscode/mcp.json`):
+
+```json
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
+```
+
+Restart VS Code after adding this configuration.
+
+### Step 3: Create a QA Custom Agent
+
+Create `.github/agents/qa-engineer.agent.md`:
+
+```markdown
+---
+name: QA Engineer
+description: Expert in test automation and quality assurance
+tools: ['codebase', 'editFiles', 'runTerminal', 'playwright']
+---
+
+You are an expert QA engineer. When writing tests:
+- Follow AAA pattern (Arrange, Act, Assert)
+- Use Page Object Model for E2E tests
+- Include edge cases and error scenarios
+- Write descriptive test names
+- Check #problems for test failures
+- Reference existing tests in #codebase for patterns
+
+For E2E tests:
+- Use data-testid attributes for selectors
+- Add proper waits and assertions
+- Handle async operations correctly
+```
+
+### Step 4: Verify Setup
 
 ```bash
 # Verify Playwright is installed
@@ -112,55 +157,90 @@ npm start  # or appropriate command for your app
 
 ---
 
-## 📝 Phase 3: Unit Testing with Copilot
+## 📝 Phase 3: Unit Testing with Agent Mode
 
 ### Goal: Increase unit test coverage to >80%
 
 ### Step 1: Analyze Current Coverage
 
-```bash
-# Node.js
-npm run test -- --coverage
-
-# Python
-pytest --cov=. --cov-report=html
-
-# Java
-./mvnw test jacoco:report
-```
-
-### Step 2: Identify Gaps
-
-Ask Copilot to analyze coverage gaps:
+Use Agent mode:
 
 ```
-@workspace Analyze the test coverage report and identify the top 5 files 
-that need more unit tests. Focus on business logic and critical paths.
+Analyze the test coverage in #codebase:
+1. Run the coverage command (npm run test -- --coverage)
+2. Identify the top 5 files with lowest coverage
+3. Focus on business logic and critical paths
+4. Create a prioritized list of files to test
 ```
 
-### Step 3: Generate Unit Tests
+### Step 2: Create Reusable Test Prompt File
 
-Use the `/tests` command on uncovered files:
+Create `.github/prompts/create-tests.prompt.md`:
 
-1. Open a file with low coverage
-2. Select the function/class to test
-3. Use `/tests` in Copilot Chat
-4. Review and refine generated tests
+```markdown
+---
+name: create-tests
+description: Generate comprehensive unit tests
+agent: agent
+---
 
-**Example prompt**:
+Generate unit tests for ${input:fileName}:
+
+1. Analyze the file and identify all testable functions
+2. Create tests with:
+   - Happy path scenarios
+   - Edge cases (null, empty, boundary values)
+   - Error handling scenarios
+3. Use AAA pattern (Arrange, Act, Assert)
+4. Mock all external dependencies
+5. Follow patterns from existing tests in #codebase
+6. Run the tests to verify they pass
+
+Check #problems after creating tests.
 ```
-Generate comprehensive unit tests for this function including:
-- Happy path scenarios
-- Edge cases (null, empty, boundary values)
-- Error handling scenarios
-Follow AAA (Arrange, Act, Assert) pattern.
+
+### Step 3: Generate Unit Tests with Agent Mode
+
+Open Chat View (`Ctrl+Alt+I`), select **Agent**, and ask:
+
+```
+Generate comprehensive unit tests for #file:src/services/userService.ts
+
+Include:
+- Happy path for all methods
+- Edge cases (null inputs, empty arrays, boundary values)
+- Error handling (network failures, validation errors)
+- Mocks for database and external services
+
+Follow the testing patterns in #codebase
+Run npm test after creating to verify they pass
+```
+
+### Step 4: Iterate on Coverage
+
+```
+You: Check the current test coverage for userService.ts
+
+[Agent runs coverage command]
+
+You: The updateUser function is not fully covered - add tests for validation errors
+
+[Agent adds more tests]
+
+You: Run the tests and fix any failures
+
+[Agent runs tests, fixes issues]
 ```
 
 ### Copilot Tips for Unit Testing
 
-- **Pattern recognition**: After writing one good test, Copilot will suggest similar patterns
-- **Mock generation**: Ask "Generate mocks for all external dependencies in this test file"
-- **Edge cases**: Ask "What edge cases am I missing for this function?"
+Use context mentions for better results:
+
+```
+Based on #file:tests/example.test.ts patterns, generate 
+tests for #file:src/services/orderService.ts covering 
+all edge cases shown in #problems
+```
 
 ---
 
@@ -168,215 +248,278 @@ Follow AAA (Arrange, Act, Assert) pattern.
 
 ### Goal: Implement E2E tests for critical user flows
 
-### Step 1: Initialize Playwright
-
-```bash
-npm init playwright@latest
-```
-
-### Step 2: Create Page Objects
-
-Ask Copilot to generate Page Object Model classes:
+### Step 1: Initialize Playwright with Agent Mode
 
 ```
-Create a Page Object class for the login page with:
-- Selectors for username, password, submit button
-- Methods: login(username, password), getErrorMessage()
-- Use Playwright best practices
+Set up Playwright for E2E testing:
+1. Run npm init playwright@latest
+2. Create a tests/e2e directory structure
+3. Create a tests/pages directory for Page Objects
+4. Generate a base Page Object class
+5. Configure playwright.config.ts for this application
 ```
 
-**Example Page Object** (`pages/LoginPage.ts`):
+### Step 2: Create Page Objects with Agent Mode
 
-```typescript
-import { Page, Locator } from '@playwright/test';
+```
+Create Page Object classes for the application:
 
-export class LoginPage {
-  readonly page: Page;
-  readonly usernameInput: Locator;
-  readonly passwordInput: Locator;
-  readonly submitButton: Locator;
-  readonly errorMessage: Locator;
+1. tests/pages/BasePage.ts - Base class with common methods
+2. tests/pages/LoginPage.ts - Login page interactions
+3. tests/pages/DashboardPage.ts - Main dashboard
+4. tests/pages/SettingsPage.ts - User settings
 
-  constructor(page: Page) {
-    this.page = page;
-    this.usernameInput = page.locator('[data-testid="username"]');
-    this.passwordInput = page.locator('[data-testid="password"]');
-    this.submitButton = page.locator('[data-testid="login-submit"]');
-    this.errorMessage = page.locator('.error-message');
-  }
+Each should have:
+- Locators using data-testid
+- Methods for common interactions
+- Proper TypeScript types
+- JSDoc comments
 
-  async login(username: string, password: string) {
-    await this.usernameInput.fill(username);
-    await this.passwordInput.fill(password);
-    await this.submitButton.click();
-  }
-
-  async getErrorMessage(): Promise<string> {
-    return await this.errorMessage.textContent() ?? '';
-  }
-}
+Follow Playwright best practices.
 ```
 
-### Step 3: Implement Critical Flow Tests
+**Example interaction**:
 
-Create tests for these critical flows:
+```
+You: Create a LoginPage Page Object class
 
-1. **User Registration & Login**
-2. **Main CRUD Operations** (create, read, update, delete)
-3. **Search & Filter Functionality**
-4. **Error Handling** (invalid inputs, unauthorized access)
+[Agent creates LoginPage.ts]
 
-### Step 4: Run Tests
+You: Add a method to check for validation errors on the form
 
-```bash
-# Run all tests
-npx playwright test
+[Agent updates the page object]
 
-# Run with UI mode for debugging
-npx playwright test --ui
+You: Now create a test file that uses this page object for login flows
 
-# Generate HTML report
-npx playwright show-report
+[Agent creates login.spec.ts]
+```
+
+### Step 3: Generate E2E Tests with Prompt File
+
+Create `.github/prompts/e2e-test.prompt.md`:
+
+```markdown
+---
+name: e2e-test
+description: Generate Playwright E2E tests
+agent: agent
+---
+
+Create Playwright E2E tests for ${input:feature}:
+
+1. Use Page Objects from tests/pages/
+2. Test these scenarios:
+   - Happy path user flow
+   - Validation error handling
+   - Edge cases
+3. Include proper waits and assertions
+4. Add descriptive test names
+5. Use test.describe for grouping
+
+Run npx playwright test after creating to verify.
+```
+
+### Step 4: Implement Critical Flow Tests
+
+Use Agent mode:
+
+```
+Create E2E tests for these critical flows:
+
+1. User Registration & Login
+   - Successful registration
+   - Login with valid credentials
+   - Login with invalid credentials
+   - Logout
+
+2. Main CRUD Operations
+   - Create a new item
+   - View item details
+   - Update an item
+   - Delete an item
+
+3. Search & Filter
+   - Search by keyword
+   - Filter by category
+   - Sort results
+
+4. Error Handling
+   - Invalid form submissions
+   - Unauthorized access attempts
+
+Use Page Objects and follow patterns in #codebase
+```
+
+### Step 5: Run and Debug Tests
+
+```
+Run the Playwright tests:
+1. Execute npx playwright test
+2. If any fail, analyze the error in #problems
+3. Use npx playwright test --ui for debugging
+4. Fix failing tests and re-run
 ```
 
 ---
 
 ## 🤖 Phase 5: AI-Driven Testing with Playwright MCP
 
-### Goal: Configure Playwright MCP Server to enable AI-controlled browser testing
+### Goal: Use Playwright MCP for AI-controlled browser exploration
 
-The **Playwright MCP Server** allows GitHub Copilot to control a browser, navigate pages, and interact with elements autonomously.
+With Playwright MCP configured, Copilot can actually control the browser!
 
-### Step 1: Install Playwright MCP Server
+### Step 1: Verify MCP is Working
 
-The Playwright MCP server is provided by Microsoft and can be run directly via npx:
+In Copilot Chat, check that Playwright tools are available:
 
-```bash
-# No installation needed - run directly with npx
-npx @playwright/mcp@latest
+```
+What Playwright MCP tools do you have access to?
 ```
 
-### Step 2: Configure MCP in VS Code
+### Step 2: AI-Driven Exploration
 
-Add to your VS Code settings (`.vscode/settings.json`):
+Ask Copilot to explore the application:
 
-```json
-{
-  "mcp": {
-    "servers": {
-      "playwright": {
-        "command": "npx",
-        "args": ["@playwright/mcp@latest"]
-      }
-    }
-  }
-}
+```
+Using Playwright MCP, navigate to http://localhost:3000 and:
+1. Take a screenshot of the homepage
+2. List all clickable elements
+3. Describe the main navigation structure
+4. Identify any forms on the page
 ```
 
-Alternatively, install via VS Code CLI:
+### Step 3: Generate Tests from Exploration
 
-```bash
-code --add-mcp '{"name":"playwright","command":"npx","args":["@playwright/mcp@latest"]}'
 ```
-```
-
-### Step 3: Restart VS Code
-
-After configuration, restart VS Code for the MCP server to be recognized.
-
-### Step 4: Use AI-Driven Testing
-
-Now you can ask Copilot to explore and test the application:
-
-**Exploration prompts**:
-```
-Navigate to the login page at http://localhost:3000/login and describe 
-all the interactive elements you find.
+Using Playwright MCP:
+1. Navigate to the login page at http://localhost:3000/login
+2. Identify all form fields and buttons
+3. Try submitting an empty form and capture the error
+4. Generate a Playwright test that covers this validation behavior
 ```
 
-**Test generation prompts**:
+### Step 4: Bug Hunting with AI
+
 ```
-Go to the dashboard page, identify all the main features, and generate 
-Playwright tests for the top 3 user workflows you observe.
+Using Playwright MCP, explore the user registration flow:
+1. Navigate through each step
+2. Take screenshots at each stage
+3. Report any usability issues:
+   - Missing form labels
+   - Unclear error messages
+   - Broken links
+   - Accessibility issues
+4. Create tickets for each issue found
 ```
 
-**Bug hunting prompts**:
-```
-Navigate through the user registration flow and report any usability 
-issues or potential bugs you encounter.
-```
+### Step 5: Visual Regression Setup
 
-### Step 5: Review and Refine
-
-AI-generated tests are a starting point. Always:
-- Review for correctness
-- Add proper assertions
-- Improve selector robustness
-- Add meaningful test descriptions
+```
+Set up visual regression testing:
+1. Navigate to key pages using Playwright MCP
+2. Take baseline screenshots
+3. Create a test that compares against baselines
+4. Configure in playwright.config.ts
+```
 
 ---
 
-## 📊 Success Metrics
+## ✅ Completion Checklist
 
-Track your progress:
+### Setup
 
 - [ ] Environment set up with DevContainer
 - [ ] Application running locally
-- [ ] Unit test coverage increased to >80%
+- [ ] Playwright MCP configured in `.vscode/mcp.json`
+- [ ] QA custom agent created
+
+### Unit Testing
+
+- [ ] Unit test coverage analyzed
 - [ ] At least 5 new unit test files created
+- [ ] Coverage increased to >80%
+- [ ] All tests passing
+
+### E2E Testing
+
 - [ ] Playwright initialized with Page Objects
+- [ ] Base Page Object class created
 - [ ] E2E tests for 4+ critical user flows
-- [ ] Playwright MCP configured and working
-- [ ] AI successfully navigated and identified elements
-- [ ] Generated at least 3 tests using AI-driven approach
-- [ ] All tests passing in CI-ready format
+- [ ] All E2E tests passing
+
+### AI-Driven Testing
+
+- [ ] Playwright MCP verified working
+- [ ] AI successfully navigated application
+- [ ] Generated at least 3 tests using AI exploration
+- [ ] Visual regression baselines captured
 
 ---
 
 ## 🎁 Bonus Challenges
 
-If you finish early:
+Using Agent mode, try these:
 
-1. **Visual Regression Testing**: Set up Playwright visual comparisons
-2. **Performance Testing**: Add performance assertions to E2E tests
-3. **Accessibility Testing**: Use Playwright's accessibility scanning
-4. **API Testing**: Combine API and E2E tests for faster feedback
-5. **Test Data Factory**: Create reusable test data generators
-6. **CI Pipeline**: Set up GitHub Actions to run tests automatically
+1. **Visual Regression**: "Set up Playwright visual comparisons for all main pages"
+2. **Performance Testing**: "Add performance assertions measuring load times"
+3. **Accessibility Testing**: "Use Playwright's axe-core integration for accessibility scanning"
+4. **API + E2E**: "Create hybrid tests that set up data via API then verify in UI"
+5. **Test Data Factory**: "Create a reusable test data generator module"
+6. **CI Pipeline**: "Create GitHub Actions workflow to run tests on every PR"
 
 ---
 
-## 💡 Copilot Tips for QA
+## 💡 Copilot Agentic Tips for QA
 
-### Generating Tests
+### Iterative Test Development
 
 ```
-# Good prompt
-Generate Playwright tests for the checkout flow including:
-- Adding items to cart
-- Updating quantities
-- Applying discount codes
-- Completing purchase
-Include proper waits and assertions.
+You: Create a test for the checkout flow
 
-# Better prompt (with context)
-@workspace Based on the existing page objects in /tests/pages, 
-generate E2E tests for the checkout flow following our established patterns.
+[Agent creates initial test]
+
+You: The test is flaky - add better waits
+
+[Agent improves the test]
+
+You: Add negative test cases for invalid credit cards
+
+[Agent adds more scenarios]
+
+You: Run all checkout tests and fix any failures
+
+[Agent runs and fixes]
+```
+
+### Using Context for Better Tests
+
+```
+Based on the Page Objects in #file:tests/pages/CartPage.ts 
+and the patterns in #file:tests/specs/login.spec.ts, 
+generate comprehensive E2E tests for the shopping cart 
+feature. Check #problems for any test failures.
 ```
 
 ### Debugging Failures
 
 ```
-This Playwright test is failing with timeout. Analyze the test and 
-suggest more robust selectors and wait strategies.
+This test in #file:tests/specs/checkout.spec.ts is 
+failing with a timeout. Analyze the test, run it with 
+trace enabled, and suggest more robust selectors and 
+wait strategies.
 ```
 
-### Test Maintenance
+---
 
-```
-Refactor these tests to use the Page Object Model pattern, 
-extracting common selectors and actions into reusable classes.
-```
+## 📊 Success Metrics
+
+Track your Copilot usage:
+
+- Tests generated by Agent mode: ____%
+- Number of iterations for passing tests: _____
+- Coverage increase achieved: _____% → _____%
+- Bugs found with AI exploration: _____
+- Most helpful agent workflow: _______________
 
 ---
 
@@ -384,18 +527,18 @@ extracting common selectors and actions into reusable classes.
 
 - **Setup issues?** Check the DevContainer logs
 - **Playwright problems?** Run `npx playwright install` to ensure browsers are installed
-- **MCP not working?** Verify VS Code settings and restart
-- **Test failures?** Use Playwright's trace viewer: `npx playwright test --trace on`
-- **Stuck?** Check [Troubleshooting Guide](../../TROUBLESHOOTING.md)
+- **MCP not working?** Verify `.vscode/mcp.json` configuration and restart VS Code
+- **Test failures?** Use `npx playwright test --trace on` for debugging
+- **Agent issues?** Check `#problems` for errors in generated code
 
 ---
 
 ## 📚 Additional Resources
 
 - [Playwright Documentation](https://playwright.dev/)
-- [Playwright MCP Server](https://github.com/anthropics/anthropic-cookbook/tree/main/misc/mcp_playwright)
+- [Playwright MCP Server Guide](../docs/playwright-mcp-guide.md)
 - [Page Object Model Pattern](https://playwright.dev/docs/pom)
-- [Best Practices Guide](../../docs/best-practices.md)
+- [Copilot Agents Guide](../docs/chat-modes.md)
 
 ---
 
