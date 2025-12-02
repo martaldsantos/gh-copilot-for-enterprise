@@ -34,92 +34,134 @@ You'll work with:
 - matplotlib, seaborn for visualization
 - Optional: TensorFlow/PyTorch for deep learning
 
+## ⚡ First Steps: Configure Your AI Environment
+
+**Before starting any challenge**, set up your personalized Copilot environment:
+
+### 1. Create a `.github/copilot-instructions.md` File
+
+This file tells Copilot about your data science context and preferences.
+
+```markdown
+# Copilot Instructions for Data Science & ML
+
+## Project Context
+- Python 3.11+ with Jupyter Notebooks
+- Data manipulation: pandas, numpy
+- ML Framework: scikit-learn (primary), TensorFlow/PyTorch (optional)
+- Visualization: matplotlib, seaborn, plotly
+
+## Coding Standards
+- Use type hints for all functions
+- Include docstrings with parameter descriptions
+- Follow PEP 8 style guidelines
+- Use meaningful variable names (no single letters except loop indices)
+
+## Data Science Best Practices
+- Always explore data before modeling (EDA)
+- Document data assumptions and transformations
+- Use pipelines for reproducible preprocessing
+- Include model evaluation metrics and visualizations
+
+## Notebook Standards
+- Use markdown cells to explain each step
+- Keep cells focused on single tasks
+- Include visualizations for key insights
+```
+
+### 2. Create Custom Agents (`.github/agents/`)
+
+Create specialized agents for different tasks:
+
+**`.github/agents/data-scientist.md`**:
+```markdown
+# Data Scientist Agent
+
+You are an expert data scientist specializing in ML pipelines.
+
+## Your Expertise
+- Exploratory Data Analysis (EDA)
+- Feature engineering and selection
+- Model selection and hyperparameter tuning
+- Statistical analysis and hypothesis testing
+
+## When Generating Code
+- Always include data validation steps
+- Add visualizations to support insights
+- Explain statistical decisions in comments
+- Use scikit-learn pipelines for reproducibility
+```
+
+**`.github/agents/ml-engineer.md`**:
+```markdown
+# ML Engineer Agent
+
+You are an expert in productionizing ML models.
+
+## Your Focus
+- Model optimization and performance
+- Feature preprocessing pipelines
+- Model serialization and deployment
+- Monitoring and evaluation metrics
+```
+
+> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+
+---
+
 ## 🗺️ Track Structure
 
-### Challenge 2: ML/AI - Data Analysis & Model Development (Required)
-**Duration:** 1.5-2 hours  
-**Focus:** Complete ML pipeline
+### Your Challenge: ML/AI - Data Analysis & Model Development
+**Duration:** 4-6 hours  
+**Focus:** Complete ML pipeline in Jupyter notebooks
+
+> 🎯 **This is YOUR dedicated challenge.** Focus entirely on data science and ML. No web development or infrastructure knowledge required.
 
 Build an end-to-end machine learning solution:
-- Exploratory data analysis
-- Data cleaning and preprocessing
-- Feature engineering
-- Model training and evaluation
-- Performance optimization
+- Exploratory data analysis (EDA) with visualizations
+- Data cleaning and preprocessing pipelines
+- Feature engineering and selection
+- Model training with multiple algorithms
+- Hyperparameter tuning
+- Model evaluation and comparison
+- Results visualization and interpretation
 
 **Copilot Skills You'll Learn:**
 - Code generation in Jupyter notebooks
-- `/explain` for complex algorithms
+- `/explain` for complex algorithms and statistics
+- `/newNotebook` for creating structured notebooks
 - Data visualization assistance
 - Feature engineering suggestions
 - Model selection guidance
+- `/doc` for documenting your analysis
 
 📖 [Start Challenge 2](../challenges/challenge-2-ml-ai/README.md)
 
----
-
-### Challenge 5: Full Stack - MCP Server Integration (Advanced, Optional)
-**Duration:** 2 hours  
-**Focus:** ML model deployment
-
-Learn to deploy and integrate ML models:
-- Model serving with APIs
-- MCP servers for ML context
-- Integration with external services
-- Production ML patterns
-
-**Copilot Skills You'll Learn:**
-- API development for ML models
-- MCP server creation
-- Advanced integration patterns
-- Full-stack ML development
-
-📖 [Start Challenge 5](../challenges/challenge-5-fullstack-mcp/README.md)
-
----
-
-### Challenge 1: Web Development - REST API (Optional)
-**Duration:** 1.5 hours  
-**Focus:** ML API deployment
-
-If you want to learn about deploying models as APIs:
-- Build REST API for model serving
-- Input validation for predictions
-- Response formatting
-- API testing
-
-**Copilot Skills You'll Learn:**
-- API development basics
-- Testing frameworks
-- Documentation generation
-
-📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
-
 ## ⏱️ Recommended Schedule
 
-### Full Day (8 hours)
+### Full Day (6 hours)
 
 ```
-09:00 - 09:30   Setup & Introduction to Copilot for Data Science
-09:30 - 11:00   Challenge 2: Data Exploration & Visualization
-11:00 - 11:15   Break
-11:15 - 12:30   Challenge 2: Feature Engineering & Model Training
-12:30 - 13:30   Lunch
-13:30 - 15:00   Challenge 2: Model Evaluation & Optimization
-15:00 - 15:15   Break
-15:15 - 17:00   Challenge 5: ML Model Deployment (or bonus tasks)
-17:00 - 17:30   Review & Showcase
+09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
+09:30 - 10:30   Data Exploration & Visualization
+10:30 - 10:45   Break
+10:45 - 12:00   Feature Engineering
+12:00 - 13:00   Lunch
+13:00 - 14:30   Model Training & Evaluation
+14:30 - 14:45   Break
+14:45 - 16:00   Hyperparameter Tuning & Results
+16:00 - 16:30   Review & Showcase
 ```
 
 ### Half Day (4 hours)
 
 ```
-09:00 - 09:15   Setup & Introduction
-09:15 - 10:30   Data Exploration & Visualization
+09:00 - 09:30   Setup & First Steps
+09:30 - 10:30   Data Exploration & Visualization
 10:30 - 10:45   Break
 10:45 - 12:00   Feature Engineering & Model Training
-12:00 - 12:45   Model Evaluation & Documentation
-12:45 - 13:00   Review & Wrap-up
+12:00 - 12:30   Model Evaluation & Documentation
+12:30 - 13:00   Review & Wrap-up
 ```
 
 ## 🎓 Learning Outcomes
@@ -127,13 +169,13 @@ If you want to learn about deploying models as APIs:
 By completing this track, you will:
 
 ### Technical Skills
+
 - ✅ Perform comprehensive exploratory data analysis
 - ✅ Handle missing data and outliers effectively
 - ✅ Engineer meaningful features from raw data
 - ✅ Train and evaluate multiple ML models
 - ✅ Optimize model hyperparameters
 - ✅ Interpret model results and generate insights
-- ✅ Deploy ML models as APIs (optional)
 
 ### Copilot Mastery
 - ✅ Use Copilot effectively in Jupyter notebooks

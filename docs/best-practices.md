@@ -211,7 +211,7 @@ def get_user_profile(user_id):
  * - Rounding behavior
  */
 describe('calculateDiscount', () => {
-  // Use /test command for better results
+  // Use /tests command for better results
 });
 ```
 

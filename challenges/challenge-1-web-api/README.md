@@ -11,7 +11,7 @@ Build a fully functional REST API for a task management system using GitHub Copi
 ## 📚 What You'll Learn
 
 - Using Copilot inline suggestions for rapid API development
-- Leveraging `/test` command to generate comprehensive tests
+- Leveraging `/tests` command to generate comprehensive tests
 - Using `/explain` to understand generated code
 - Using `/fix` to debug issues
 - Workspace-aware prompts for consistent patterns
@@ -89,10 +89,10 @@ Then press Enter and let Copilot suggest the implementation!
 
 ### 2. Chat Commands
 
-**Use `/test` to generate tests:**
+**Use `/tests` to generate tests:**
 1. Highlight your function
 2. Open Copilot Chat (Ctrl+Shift+I)
-3. Type: `/test create unit tests for this function`
+3. Type: `/tests create unit tests for this function`
 
 **Use `/explain` to understand code:**
 1. Highlight complex code
@@ -160,7 +160,7 @@ Ask Copilot questions about your entire project:
    ```
 
 4. **Test Authentication**
-   - Use `/test` command on your auth functions
+   - Use `/tests` command on your auth functions
    - Run tests: `npm test` or `pytest`
 
 ### Phase 3: Task Management (30 min)
@@ -200,7 +200,7 @@ Ask Copilot questions about your entire project:
 
 1. **Generate Unit Tests**
    - Highlight each function
-   - Use `/test` in Copilot Chat
+   - Use `/tests` in Copilot Chat
    - Review and customize generated tests
 
 2. **Create Integration Tests**

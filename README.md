@@ -1,6 +1,6 @@
 # GitHub Copilot Enterprise Hackathon 🚀
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **5 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
 
 ## 🎯 Hackathon Overview
 
@@ -12,6 +12,7 @@ This hackathon is organized into **role-based tracks** for different team types:
 - **[🤖 Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
 - **[🏗️ DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
 - **[🎨 Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
+- **[🧪 QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, comprehensive testing
 - **[🚀 Full-Stack Developer Track](./tracks/full-stack-developer-track.md)** - End-to-end application development
 
 👉 **[View All Tracks & Choose Yours](./tracks/README.md)**
@@ -68,8 +69,7 @@ Throughout these challenges, you'll master:
 ### 1. **Chat Modes**
 - `/explain` - Understand complex code
 - `/fix` - Debug and fix issues
-- `/test` - Generate test cases
-- `/doc` - Create documentation
+- `/tests` - Generate test cases
 - Workspace context chat
 
 ### 2. **Prompt Engineering**
@@ -92,12 +92,12 @@ Throughout these challenges, you'll master:
 
 **💡 Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 5 challenges are available, and each track recommends a specific sequence:
+All 6 challenges are available, and each track has a dedicated challenge:
 
 ### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/README.md)
 **Team**: Backend/Web Developers  
 **Skills**: Express.js/FastAPI, API design, error handling, testing  
-**Copilot Focus**: Inline completion, `/test` command, workspace chat
+**Copilot Focus**: Inline completion, `/tests` command, workspace chat
 
 Build a fully functional REST API with authentication, CRUD operations, and comprehensive testing using Copilot to accelerate development.
 
@@ -122,6 +122,7 @@ Design and implement cloud infrastructure using Terraform, containerize applicat
 ---
 
 ### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/README.md)
+
 **Team**: Frontend Developers  
 **Skills**: React, TypeScript, Component design, State management  
 **Copilot Focus**: Component scaffolding, TypeScript types, CSS styling
@@ -131,11 +132,22 @@ Create a modern, responsive web application with reusable components, leveraging
 ---
 
 ### [Challenge 5: Full Stack - MCP Server Integration](./challenges/challenge-5-fullstack-mcp/README.md)
+
 **Team**: Full-stack Developers, Advanced Users  
 **Skills**: Node.js, MCP Protocol, API integration, Full-stack architecture  
 **Copilot Focus**: MCP server creation, advanced context, multi-file editing
 
 Build a complete application that integrates with external services through MCP servers, showcasing how to enhance Copilot with custom context and tools.
+
+---
+
+### [Challenge 6: QA & Test Automation](./challenges/challenge-6-qa/README.md)
+
+**Team**: QA Engineers, SDETs, Test Automation Engineers  
+**Skills**: Playwright, Jest/Pytest, Page Object Model, E2E testing  
+**Copilot Focus**: Test generation with `/tests`, Playwright MCP for AI-driven testing
+
+Work with real-world open-source applications to implement comprehensive test automation, including unit tests, E2E tests with Playwright, and AI-driven testing using Playwright MCP.
 
 ---
 
@@ -155,7 +167,7 @@ Build a complete application that integrates with external services through MCP 
 1. **Be Specific**: Detailed prompts yield better results
 2. **Provide Context**: Reference existing code and patterns
 3. **Iterate**: Refine suggestions through conversation
-4. **Use Chat Commands**: Leverage `/explain`, `/fix`, `/test`, `/doc`
+4. **Use Chat Commands**: Leverage `/explain`, `/fix`, `/tests`, `/doc`
 5. **Review Suggestions**: Always understand generated code
 6. **Keyboard Shortcuts**: 
    - `Tab` - Accept suggestion
@@ -199,7 +211,7 @@ Prefer to explore on your own?
 Track your progress:
 - [ ] Chose and started your track
 - [ ] Completed at least 2 challenges (or all required challenges in your track)
-- [ ] Used all major chat commands (`/explain`, `/fix`, `/test`, `/doc`)
+- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`, `/doc`)
 - [ ] Created reusable prompt collections
 - [ ] Documented learnings and productivity wins
 - [ ] Can explain Copilot's impact on your workflow

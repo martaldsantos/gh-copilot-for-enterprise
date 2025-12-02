@@ -86,17 +86,15 @@ npm install
 Add to your VS Code settings (`.vscode/settings.json`):
 ```json
 {
-  "github.copilot.advanced": {
-    "mcp": {
-      "servers": {
-        "github-integration": {
-          "command": "node",
-          "args": ["./mcp-servers/github-server.js"]
-        },
-        "database": {
-          "command": "node",
-          "args": ["./mcp-servers/database-server.js"]
-        }
+  "mcp": {
+    "servers": {
+      "github-integration": {
+        "command": "node",
+        "args": ["./mcp-servers/github-server.js"]
+      },
+      "database": {
+        "command": "node",
+        "args": ["./mcp-servers/database-server.js"]
       }
     }
   }

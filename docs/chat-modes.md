@@ -72,7 +72,7 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 
 ---
 
-### `/test` - Generate Tests
+### `/tests` - Generate Tests
 
 **Purpose:** Create unit tests, integration tests, or test cases for your code.
 
@@ -86,22 +86,22 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 
 1. **Generate unit tests:**
    ```
-   Select function → "/test create unit tests for this function"
+   Select function → "/tests create unit tests for this function"
    ```
 
 2. **Test with specific framework:**
    ```
-   /test create Jest tests for the UserService class
+   /tests create Jest tests for the UserService class
    ```
 
 3. **Generate test data:**
    ```
-   /test create mock data for testing user authentication
+   /tests create mock data for testing user authentication
    ```
 
 **Pro Tips:**
 - Specify testing framework (Jest, Pytest, etc.)
-- Ask for edge cases: `/test include edge cases`
+- Ask for edge cases: `/tests include edge cases`
 - Request specific test types (unit, integration, e2e)
 
 ---
@@ -140,9 +140,44 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 
 ---
 
-### `/optimize` - Performance Improvements
+### `/newNotebook` - Create Jupyter Notebooks
 
-**Purpose:** Optimize code for better performance, efficiency, or readability.
+**Purpose:** Create a new Jupyter notebook with specified content and structure.
+
+**When to use:**
+- Starting a new data analysis project
+- Creating tutorial notebooks
+- Setting up ML experiment notebooks
+- Building documentation notebooks
+
+**Examples:**
+
+1. **Create analysis notebook:**
+   ```
+   /newNotebook create a data analysis notebook for exploring a CSV dataset
+   ```
+
+2. **ML experiment notebook:**
+   ```
+   /newNotebook create a machine learning notebook with data loading, 
+   preprocessing, model training, and evaluation sections
+   ```
+
+3. **Tutorial notebook:**
+   ```
+   /newNotebook create a Python pandas tutorial with examples
+   ```
+
+**Pro Tips:**
+- Be specific about the notebook structure you want
+- Mention libraries you plan to use
+- Request markdown explanations between code cells
+
+---
+
+### Asking for Optimization (Natural Language)
+
+**Note:** There is no `/optimize` slash command in GitHub Copilot. Instead, ask naturally for performance improvements.
 
 **When to use:**
 - Improving algorithm efficiency
@@ -154,17 +189,17 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 
 1. **Optimize performance:**
    ```
-   /optimize this function for better time complexity
+   Can you optimize this function for better time complexity?
    ```
 
 2. **Memory optimization:**
    ```
-   /optimize reduce memory usage in this data processing
+   How can I reduce memory usage in this data processing code?
    ```
 
 3. **Code refactoring:**
    ```
-   /optimize this code for readability and maintainability
+   Refactor this code for better readability and maintainability
    ```
 
 ---
@@ -209,7 +244,7 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 You can be more specific with slash commands:
 
 ```
-/test create integration tests for the user registration flow, 
+/tests create integration tests for the user registration flow, 
 mocking the database and email service
 
 /fix the race condition in the async function, ensuring 
@@ -239,7 +274,7 @@ You: /fix implement an LRU eviction policy
 Be explicit about language/framework:
 
 ```
-/test create Pytest tests with fixtures and parametrize
+/tests create Pytest tests with fixtures and parametrize
 
 /doc add Python docstrings following Google style
 
@@ -255,11 +290,11 @@ Be explicit about language/framework:
 ✅ `/fix the null pointer exception in line 42`
 
 ### 2. **Provide Context**
-❌ `/test`  
-✅ `/test create unit tests for authentication, including invalid credentials and token expiration`
+❌ `/tests`  
+✅ `/tests create unit tests for authentication, including invalid credentials and token expiration`
 
 ### 3. **Select Code First**
-For `/explain`, `/fix`, `/test`, `/doc` - select relevant code before using the command
+For `/explain`, `/fix`, `/tests`, `/doc` - select relevant code before using the command
 
 ### 4. **Iterate**
 Don't accept the first suggestion blindly:
@@ -278,16 +313,16 @@ Don't accept the first suggestion blindly:
 |---------|-------|--------|----------|
 | `/explain` | Code/concept | Explanation | Learning, understanding |
 | `/fix` | Buggy code | Fixed code | Debugging |
-| `/test` | Function/class | Test code | Testing |
+| `/tests` | Function/class | Test code | Testing |
 | `/doc` | Code | Documentation | Docs, comments |
-| `/optimize` | Code | Improved code | Performance |
+| `/newNotebook` | Description | Jupyter notebook | Data science, tutorials |
 | `@workspace` | Question | Answer + references | Discovery |
 
 ## Examples from Challenges
 
 ### Challenge 1: Web API
 ```
-/test create integration tests for the user registration endpoint, 
+/tests create integration tests for the user registration endpoint, 
 including validation errors and duplicate email handling
 
 /explain how JWT authentication works in this implementation
@@ -301,7 +336,7 @@ including validation errors and duplicate email handling
 
 /fix the data type mismatch in this pandas operation
 
-/test create tests for the feature engineering functions
+/tests create tests for the feature engineering functions
 ```
 
 ### Challenge 3: DevOps
@@ -315,18 +350,18 @@ including validation errors and duplicate email handling
 
 ### Challenge 4: Frontend
 ```
-/test create unit tests for this React component with user interactions
+/tests create unit tests for this React component with user interactions
 
 /explain the useEffect dependencies in this hook
 
-/optimize this component to prevent unnecessary re-renders
+How can I optimize this component to prevent unnecessary re-renders?
 ```
 
 ### Challenge 5: MCP
 ```
 /explain how this MCP server communicates with Copilot
 
-/test create integration tests for all MCP tools
+/tests create integration tests for all MCP tools
 
 /doc document the MCP server API and available tools
 ```
@@ -353,12 +388,12 @@ including validation errors and duplicate email handling
 ## Quick Reference Card
 
 ```
-📖 /explain  - Understand code
-🔧 /fix      - Debug issues  
-✅ /test     - Generate tests
-📝 /doc      - Create docs
-⚡ /optimize - Improve performance
-🔍 @workspace - Search project
+📖 /explain     - Understand code
+🔧 /fix         - Debug issues  
+✅ /tests       - Generate tests
+📝 /doc         - Create docs
+📓 /newNotebook - Create Jupyter notebook
+🔍 @workspace   - Search project
 ```
 
 ---

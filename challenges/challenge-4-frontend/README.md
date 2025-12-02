@@ -14,7 +14,7 @@ Build a modern, responsive web application with interactive UI components using 
 - TypeScript type safety with AI assistance
 - CSS/Tailwind styling suggestions
 - React hooks and state management
-- Testing React components with `/test`
+- Testing React components with `/tests`
 - Accessibility best practices
 
 ## 🛠️ Technology Stack
@@ -245,10 +245,10 @@ with React Query and local state"
 
 1. **Component Tests**
    
-   Use `/test` command:
+   Use `/tests` command:
    ```
    Highlight TaskCard component
-   "/test create unit tests for this component including all user interactions"
+   "/tests create unit tests for this component including all user interactions"
    ```
 
 2. **Accessibility**
@@ -343,7 +343,7 @@ Document:
 1. How did Copilot help with React components?
 2. Were TypeScript suggestions accurate?
 3. Did Copilot suggest good patterns?
-4. How helpful was `/test` for component testing?
+4. How helpful was `/tests` for component testing?
 
 ## 📚 Resources
 

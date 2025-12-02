@@ -156,17 +156,21 @@ Add to `.vscode/settings.json`:
 
 ```json
 {
-  "github.copilot.advanced": {
-    "mcp": {
-      "servers": {
-        "my-server": {
-          "command": "node",
-          "args": ["path/to/your/mcp-server.js"]
-        }
+  "mcp": {
+    "servers": {
+      "my-server": {
+        "command": "node",
+        "args": ["path/to/your/mcp-server.js"]
       }
     }
   }
 }
+```
+
+Or install via VS Code CLI:
+
+```bash
+code --add-mcp '{"name":"my-server","command":"node","args":["path/to/your/mcp-server.js"]}'
 ```
 
 ## Example: GitHub MCP Server

@@ -33,92 +33,131 @@ You'll work with:
 - **State Management** - Context API or Redux
 - **Testing** - Jest and React Testing Library
 
+## ⚡ First Steps: Configure Your AI Environment
+
+**Before starting any challenge**, set up your personalized Copilot environment:
+
+### 1. Create a `.github/copilot-instructions.md` File
+
+This file tells Copilot about your project context and coding preferences.
+
+```markdown
+# Copilot Instructions for Frontend Development
+
+## Project Context
+- This is a React 18+ application with TypeScript
+- We use [CSS Modules/Tailwind/Styled Components] for styling
+- State management: [Context API/Redux/Zustand]
+
+## Coding Standards
+- All components must be functional components with hooks
+- Use TypeScript interfaces for all props
+- Components should be in PascalCase
+- Keep components small and focused (single responsibility)
+
+## Accessibility Requirements
+- All interactive elements must be keyboard accessible
+- Include proper ARIA labels
+- Maintain color contrast ratios
+
+## Testing Requirements  
+- Write tests using React Testing Library
+- Test user interactions, not implementation details
+- Include accessibility tests
+```
+
+### 2. Create Custom Agents (`.github/agents/`)
+
+Create specialized agents for different tasks:
+
+**`.github/agents/react-developer.md`**:
+```markdown
+# React Developer Agent
+
+You are an expert React developer specializing in modern UI development.
+
+## Your Expertise
+- React 18+ with hooks and functional components
+- TypeScript for type-safe development
+- Modern CSS (Flexbox, Grid, CSS-in-JS)
+- Accessibility best practices
+
+## When Generating Code
+- Always use TypeScript with proper types
+- Create reusable, composable components
+- Include proper error boundaries
+- Follow React best practices (memo, useCallback when needed)
+```
+
+**`.github/agents/ui-stylist.md`**:
+```markdown
+# UI Stylist Agent
+
+You are an expert in CSS and UI design implementation.
+
+## Your Focus
+- Responsive design (mobile-first)
+- Modern CSS techniques
+- Animation and transitions
+- Design system consistency
+```
+
+> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+
+---
+
 ## 🗺️ Track Structure
 
-### Challenge 4: Frontend - Interactive UI Components (Required)
-**Duration:** 2 hours  
+### Your Challenge: Frontend - Interactive UI Components
+**Duration:** 4-6 hours  
 **Focus:** Modern React development
 
+> 🎯 **This is YOUR dedicated challenge.** Focus entirely on frontend development. A mock API is provided so you don't need backend knowledge.
+
 Build a complete frontend application with:
-- Reusable React components
-- TypeScript type safety
-- Responsive design
-- State management
+- Reusable React components with TypeScript
+- Responsive design (mobile-first)
+- State management (Context API or Redux)
 - Form handling and validation
-- Testing
+- Accessibility (ARIA, keyboard navigation)
+- Component testing with React Testing Library
+- Styling with modern CSS (your choice of approach)
 
 **Copilot Skills You'll Learn:**
-- Component scaffolding
-- TypeScript type generation
+- Component scaffolding and patterns
+- TypeScript type and interface generation
 - CSS/styling suggestions
 - Event handler patterns
-- Test generation with `/test`
+- Test generation with `/tests`
+- `/explain` for understanding React patterns
 
 📖 [Start Challenge 4](../challenges/challenge-4-frontend/README.md)
 
----
-
-### Challenge 1: Web Development - REST API (Recommended)
-**Duration:** 1.5 hours  
-**Focus:** Backend integration
-
-Build or understand the API your frontend will consume:
-- REST API endpoints
-- Data structures
-- Authentication patterns
-- API documentation
-
-**Copilot Skills You'll Learn:**
-- API integration patterns
-- Data fetching strategies
-- Error handling
-
-📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
-
----
-
-### Challenge 5: Full Stack - MCP Server Integration (Advanced, Optional)
-**Duration:** 2 hours  
-**Focus:** Advanced frontend integration
-
-Enhance your application with:
-- External service integration
-- Advanced state management
-- Real-time features
-- Full-stack patterns
-
-**Copilot Skills You'll Learn:**
-- Complex integrations
-- MCP server usage
-- Advanced React patterns
-
-📖 [Start Challenge 5](../challenges/challenge-5-fullstack-mcp/README.md)
-
 ## ⏱️ Recommended Schedule
 
-### Full Day (8 hours)
+### Full Day (6 hours)
 
 ```
-09:00 - 09:30   Setup & Introduction to Copilot for React
-09:30 - 11:00   Challenge 4: Component Architecture & Setup
-11:00 - 11:15   Break
-11:15 - 12:30   Challenge 4: Building Core Components
-12:30 - 13:30   Lunch
-13:30 - 15:00   Challenge 4: State Management & Forms
-15:00 - 15:15   Break
-15:15 - 17:00   Challenge 4: Testing & Polish (or Challenge 5)
-17:00 - 17:30   Review & Showcase
+09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
+09:30 - 10:30   Component Architecture & Setup
+10:30 - 10:45   Break
+10:45 - 12:00   Building Core Components
+12:00 - 13:00   Lunch
+13:00 - 14:30   State Management & Forms
+14:30 - 14:45   Break
+14:45 - 16:00   Testing, Accessibility & Polish
+16:00 - 16:30   Review & Showcase
 ```
 
 ### Half Day (4 hours)
 
 ```
-09:00 - 09:15   Setup & Introduction
-09:15 - 10:30   Core Components Development
+09:00 - 09:30   Setup & First Steps
+09:30 - 10:30   Core Components Development
 10:30 - 10:45   Break
 10:45 - 12:00   State & Forms Implementation
-12:00 - 12:45   Styling & Responsive Design
-12:45 - 13:00   Review & Wrap-up
+12:00 - 12:30   Styling & Responsive Design
+12:30 - 13:00   Review & Wrap-up
 ```
 
 ## 🎓 Learning Outcomes
@@ -139,7 +178,7 @@ By completing this track, you will:
 - ✅ Generate React components quickly
 - ✅ Create TypeScript types and interfaces
 - ✅ Get styling suggestions
-- ✅ Generate test cases with `/test`
+- ✅ Generate test cases with `/tests`
 - ✅ Refactor code efficiently
 - ✅ Debug issues with `/fix`
 - ✅ Document components with `/doc`
@@ -220,7 +259,7 @@ By completing this track, you will:
 
 **Generate tests:**
 1. Highlight your component
-2. Use `/test create tests for this component`
+2. Use `/tests create tests for this component`
 3. Review and add edge cases
 
 **Example prompt:**

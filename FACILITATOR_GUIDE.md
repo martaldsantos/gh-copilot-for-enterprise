@@ -21,12 +21,13 @@ This hackathon is organized into **5 role-based tracks** to provide structured l
 ```
 
 ### 3. **Understand the Track Structure**
-Review the five tracks:
+Review the six tracks:
 - [ ] [Backend Developer Track](./tracks/backend-developer-track.md)
 - [ ] [Data Science & ML Track](./tracks/data-science-ml-track.md)
 - [ ] [DevOps & Platform Track](./tracks/devops-platform-track.md)
 - [ ] [Frontend Developer Track](./tracks/frontend-developer-track.md)
 - [ ] [Full-Stack Developer Track](./tracks/full-stack-developer-track.md)
+- [ ] [QA & Test Automation Track](./tracks/qa-test-automation-track.md)
 
 ### 4. **Communication**
 Send participants:
@@ -49,7 +50,7 @@ Send participants:
 
 **Demo: Copilot Basics (15 min)**
 - Show inline suggestions
-- Demonstrate chat commands (`/explain`, `/fix`, `/test`)
+- Demonstrate chat commands (`/explain`, `/fix`, `/tests`)
 - Quick example of workspace context
 - Show MCP servers (briefly)
 
@@ -188,7 +189,7 @@ Around lunch, gather everyone:
 - Testing setup
 **Facilitation tips:**
 - Show JWT debugging techniques
-- Demo test generation with `/test`
+- Demo test generation with `/tests`
 - Most beginner-friendly track
 
 ### Data Science & ML Track

@@ -30,91 +30,124 @@ You'll work with:
 - Testing frameworks (Jest/Mocha or pytest)
 - OpenAPI/Swagger for documentation
 
+## ⚡ First Steps: Configure Your AI Environment
+
+**Before starting any challenge**, set up your personalized Copilot environment:
+
+### 1. Create a `.github/copilot-instructions.md` File
+
+This file tells Copilot about your project context and coding preferences.
+
+```markdown
+# Copilot Instructions for Backend Development
+
+## Project Context
+- This is a REST API project using [Node.js/Express OR Python/FastAPI]
+- We follow RESTful conventions and use JWT for authentication
+- Database: PostgreSQL with [TypeORM/SQLAlchemy]
+
+## Coding Standards
+- Use async/await for all asynchronous operations
+- All endpoints must have input validation
+- Include JSDoc/docstrings for all functions
+- Follow the existing error handling patterns
+
+## Testing Requirements
+- Write unit tests for all service functions
+- Include integration tests for API endpoints
+- Aim for >80% code coverage
+```
+
+### 2. Create Custom Agents (`.github/agents/`)
+
+Create specialized agents for different tasks:
+
+**`.github/agents/api-developer.md`**:
+```markdown
+# API Developer Agent
+
+You are an expert backend developer specializing in REST APIs.
+
+## Your Expertise
+- RESTful API design and best practices
+- Authentication and authorization (JWT, OAuth)
+- Database design and optimization
+- Input validation and error handling
+
+## When Generating Code
+- Always include proper error handling
+- Add input validation for all endpoints
+- Include appropriate HTTP status codes
+- Generate OpenAPI/Swagger documentation
+```
+
+**`.github/agents/test-writer.md`**:
+```markdown
+# Test Writer Agent
+
+You are an expert in writing comprehensive tests.
+
+## Your Focus
+- Unit tests with high coverage
+- Integration tests for API endpoints
+- Mock external dependencies
+- Test edge cases and error scenarios
+```
+
+> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+
+---
+
 ## 🗺️ Track Structure
 
-### Challenge 1: Web Development - REST API Builder (Required)
-**Duration:** 1.5 hours  
+### Your Challenge: Web Development - REST API Builder
+**Duration:** 4-6 hours  
 **Focus:** Core backend skills
+
+> 🎯 **This is YOUR dedicated challenge.** Focus entirely on backend development without needing frontend, DevOps, or data science knowledge.
 
 Build a complete task management API with:
 - User authentication (JWT)
-- CRUD operations
-- Input validation
-- Error handling
-- Comprehensive testing
+- CRUD operations for tasks and users
+- Input validation and sanitization
+- Comprehensive error handling
+- Database integration
+- API documentation (OpenAPI/Swagger)
+- Unit and integration testing
 
 **Copilot Skills You'll Learn:**
-- Inline code completion for rapid development
-- `/test` command for generating test cases
+- Inline code completion for rapid API development
+- `/tests` command for generating test cases
 - `/explain` to understand generated patterns
-- Workspace-aware prompts
+- `/doc` for API documentation
+- Workspace-aware prompts for consistent patterns
 
 📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
 
----
-
-### Challenge 3: DevOps - Infrastructure as Code (Recommended)
-**Duration:** 1.5 hours  
-**Focus:** Backend infrastructure
-
-Learn to deploy and manage your backend services:
-- Containerize applications with Docker
-- Infrastructure as Code with Terraform
-- CI/CD pipeline setup
-- Deployment automation
-
-**Copilot Skills You'll Learn:**
-- Infrastructure code generation
-- Docker optimization patterns
-- `/doc` for infrastructure documentation
-- Security best practices
-
-📖 [Start Challenge 3](../challenges/challenge-3-devops/README.md)
-
----
-
-### Challenge 5: Full Stack - MCP Server Integration (Advanced)
-**Duration:** 2 hours  
-**Focus:** Advanced backend integration
-
-Build a backend with external service integration:
-- Model Context Protocol (MCP) servers
-- API gateway patterns
-- Service orchestration
-- Advanced Copilot features
-
-**Copilot Skills You'll Learn:**
-- MCP server creation
-- Advanced context management
-- Multi-file editing
-- Complex integration patterns
-
-📖 [Start Challenge 5](../challenges/challenge-5-fullstack-mcp/README.md)
-
 ## ⏱️ Recommended Schedule
 
-### Full Day (8 hours)
+### Full Day (6 hours)
 
 ```
-09:00 - 09:30   Setup & Introduction
-09:30 - 11:00   Challenge 1: REST API (Part 1)
-11:00 - 11:15   Break
-11:15 - 12:30   Challenge 1: REST API (Part 2)
-12:30 - 13:30   Lunch
-13:30 - 15:00   Challenge 3: Infrastructure
-15:00 - 15:15   Break
-15:15 - 17:00   Challenge 5: MCP Integration (or continue Challenge 3)
-17:00 - 17:30   Review & Showcase
+09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
+09:30 - 10:30   API Design & Core Endpoints
+10:30 - 10:45   Break
+10:45 - 12:00   Authentication & Authorization
+12:00 - 13:00   Lunch
+13:00 - 14:30   Database Integration & Validation
+14:30 - 14:45   Break
+14:45 - 16:00   Testing & Documentation
+16:00 - 16:30   Review & Showcase
 ```
 
 ### Half Day (4 hours)
 
 ```
-09:00 - 09:15   Setup & Introduction
-09:15 - 11:00   Challenge 1: REST API
+09:00 - 09:30   Setup & First Steps
+09:30 - 11:00   API Design & Core Endpoints
 11:00 - 11:15   Break
-11:15 - 12:45   Challenge 3: Infrastructure (basics)
-12:45 - 13:00   Review & Wrap-up
+11:15 - 12:30   Authentication & Testing
+12:30 - 13:00   Review & Wrap-up
 ```
 
 ## 🎓 Learning Outcomes
@@ -122,16 +155,17 @@ Build a backend with external service integration:
 By completing this track, you will:
 
 ### Technical Skills
+
 - ✅ Build production-ready REST APIs with authentication
 - ✅ Implement comprehensive error handling and validation
 - ✅ Create automated test suites with high coverage
-- ✅ Containerize backend applications
-- ✅ Set up infrastructure as code
-- ✅ Configure CI/CD pipelines
+- ✅ Design clean API architecture
+- ✅ Write clear API documentation
 
 ### Copilot Mastery
+
 - ✅ Use inline suggestions effectively for backend code
-- ✅ Generate tests automatically with `/test`
+- ✅ Generate tests automatically with `/tests`
 - ✅ Debug issues efficiently with `/fix`
 - ✅ Document code and APIs with `/doc`
 - ✅ Leverage workspace context for consistent patterns
@@ -156,7 +190,7 @@ By completing this track, you will:
 
 **Generate comprehensive tests:**
 1. Highlight your API function
-2. Use `/test create unit and integration tests`
+2. Use `/tests create unit and integration tests`
 3. Review and customize for edge cases
 
 **Prompt examples:**
@@ -180,7 +214,7 @@ Track your progress:
 - [ ] Achieved >80% test coverage
 - [ ] Successfully containerized application
 - [ ] Set up working CI/CD pipeline
-- [ ] Used all major chat commands (`/explain`, `/fix`, `/test`, `/doc`)
+- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`, `/doc`)
 - [ ] Can explain productivity gains from Copilot
 
 ## 🚀 Getting Started

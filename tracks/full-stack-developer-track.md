@@ -6,7 +6,7 @@
 
 ## 🎯 Track Overview
 
-This track is designed for full-stack developers who want to master GitHub Copilot across the entire development stack. You'll learn how Copilot can accelerate development from database to frontend, including APIs, infrastructure, and advanced integrations with MCP servers.
+This track is designed for full-stack developers who want to master GitHub Copilot across the entire development stack. You'll learn how Copilot can accelerate development from database to frontend, building a complete application with backend API and React frontend.
 
 ## 👥 Who Is This For?
 
@@ -31,121 +31,155 @@ You'll work with the full stack:
 - **Frontend**: React, TypeScript, modern CSS
 - **Backend**: Node.js/Express or Python/FastAPI
 - **Database**: PostgreSQL or similar
-- **Infrastructure**: Docker, Kubernetes (optional)
-- **CI/CD**: GitHub Actions
-- **Advanced**: MCP (Model Context Protocol) servers
+- **Testing**: Jest, React Testing Library
+
+## ⚡ First Steps: Configure Your AI Environment
+
+**Before starting any challenge**, set up your personalized Copilot environment:
+
+### 1. Create a `.github/copilot-instructions.md` File
+
+This file tells Copilot about your full-stack project context.
+
+```markdown
+# Copilot Instructions for Full-Stack Development
+
+## Project Context
+- Frontend: React 18+ with TypeScript
+- Backend: [Node.js/Express OR Python/FastAPI]
+- Database: PostgreSQL
+- Infrastructure: Docker, GitHub Actions
+
+## Architecture
+- RESTful API design
+- JWT-based authentication
+- Repository pattern for data access
+- Component-based frontend architecture
+
+## Coding Standards
+- TypeScript strict mode enabled
+- ESLint + Prettier for code formatting
+- All functions must have proper types/interfaces
+- Use async/await for asynchronous code
+
+## Testing Requirements
+- Unit tests for business logic
+- Integration tests for API endpoints
+- Component tests for React components
+- E2E tests for critical user flows
+```
+
+### 2. Create Custom Agents (`.github/agents/`)
+
+Create specialized agents for different tasks:
+
+**`.github/agents/fullstack-architect.md`**:
+```markdown
+# Full-Stack Architect Agent
+
+You are an expert full-stack developer with deep knowledge of modern web architecture.
+
+## Your Expertise
+- Frontend: React, TypeScript, state management
+- Backend: Node.js/Python, REST APIs, databases
+- DevOps: Docker, CI/CD, cloud deployment
+- Architecture: Microservices, monoliths, design patterns
+
+## When Generating Code
+- Consider both frontend and backend implications
+- Ensure type safety across the stack
+- Include proper error handling on both ends
+- Think about security at every layer
+```
+
+**`.github/agents/api-integrator.md`**:
+```markdown
+# API Integrator Agent
+
+You are an expert in connecting frontend and backend systems.
+
+## Your Focus
+- API client generation and typing
+- Error handling and retry logic
+- Data transformation and validation
+- Optimistic updates and caching
+```
+
+> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+
+---
 
 ## 🗺️ Track Structure
 
-### Challenge 1: Web Development - REST API Builder (Required)
-**Duration:** 1.5 hours  
+### Your Challenges: Backend + Frontend Integration
+
+> 🎯 **This track combines TWO challenges** to build a complete application. You'll create both the API and the UI that consumes it.
+
+---
+
+### Part 1: Web Development - REST API Builder
+**Duration:** 2-3 hours  
 **Focus:** Backend foundation
 
 Build the API layer:
-- RESTful API design
-- Authentication & authorization
+- RESTful API design with proper endpoints
+- Authentication & authorization (JWT)
 - Database integration
-- Testing and documentation
+- Input validation and error handling
+- API documentation
 
 **Copilot Skills You'll Learn:**
 - Backend code generation
-- Test creation with `/test`
-- API documentation
+- Test creation with `/tests`
+- `/doc` for API documentation
 
 📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
 
 ---
 
-### Challenge 4: Frontend - Interactive UI Components (Required)
-**Duration:** 1.5 hours  
-**Focus:** Frontend layer
+### Part 2: Frontend - Interactive UI Components
+**Duration:** 2-3 hours  
+**Focus:** Frontend layer consuming your API
 
 Build the user interface:
-- React components
-- TypeScript types
+- React components with TypeScript
 - State management
-- API integration
+- API integration (connecting to YOUR backend)
 - Responsive design
+- Form handling
 
 **Copilot Skills You'll Learn:**
 - Component scaffolding
 - Frontend patterns
-- Type safety
+- Type safety across the stack
 
 📖 [Start Challenge 4](../challenges/challenge-4-frontend/README.md)
 
----
-
-### Challenge 3: DevOps - Infrastructure as Code (Recommended)
-**Duration:** 1.5 hours  
-**Focus:** Deployment & infrastructure
-
-Deploy your full-stack application:
-- Containerization with Docker
-- Infrastructure as Code
-- CI/CD pipeline
-- Production deployment
-
-**Copilot Skills You'll Learn:**
-- Infrastructure automation
-- Docker optimization
-- Pipeline creation
-
-📖 [Start Challenge 3](../challenges/challenge-3-devops/README.md)
-
----
-
-### Challenge 5: Full Stack - MCP Server Integration (Advanced)
-**Duration:** 2 hours  
-**Focus:** Advanced integration
-
-Enhance with external services:
-- MCP server development
-- Service orchestration
-- Advanced Copilot features
-- Production patterns
-
-**Copilot Skills You'll Learn:**
-- MCP protocol mastery
-- Complex integrations
-- Advanced context usage
-
-📖 [Start Challenge 5](../challenges/challenge-5-fullstack-mcp/README.md)
-
 ## ⏱️ Recommended Schedule
 
-### Full Day (8 hours) - Comprehensive Track
+### Full Day (6 hours)
 
 ```
-09:00 - 09:30   Setup & Full-Stack Architecture Overview
-09:30 - 11:00   Challenge 1: Backend API Development
-11:00 - 11:15   Break
-11:15 - 12:30   Challenge 4: Frontend Development
-12:30 - 13:30   Lunch & API-Frontend Integration
-13:30 - 15:00   Challenge 3: Containerization & Deployment
-15:00 - 15:15   Break
-15:15 - 17:00   Challenge 5: MCP Integration & Advanced Features
-17:00 - 17:30   Full Application Demo & Showcase
+09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
+09:30 - 10:30   Backend: API Design & Core Endpoints
+10:30 - 10:45   Break
+10:45 - 12:00   Backend: Authentication & Database
+12:00 - 13:00   Lunch
+13:00 - 14:30   Frontend: Components & State Management
+14:30 - 14:45   Break
+14:45 - 16:00   Frontend-Backend Integration & Testing
+16:00 - 16:30   Full Application Demo & Showcase
 ```
 
-### Alternative: Two Half Days
+### Half Day (4 hours)
 
-**Day 1: Backend & Frontend**
 ```
-09:00 - 09:15   Setup & Overview
-09:15 - 11:00   Backend API (Challenge 1)
-11:00 - 11:15   Break
-11:15 - 12:45   Frontend UI (Challenge 4)
-12:45 - 13:00   Integration & Wrap-up
-```
-
-**Day 2: Infrastructure & Advanced**
-```
-09:00 - 09:15   Review & Setup
-09:15 - 11:00   DevOps & Deployment (Challenge 3)
-11:00 - 11:15   Break
-11:15 - 12:45   MCP Integration (Challenge 5)
-12:45 - 13:00   Final Demo & Learnings
+09:00 - 09:30   Setup & First Steps
+09:30 - 10:30   Backend API Development
+10:30 - 10:45   Break
+10:45 - 12:00   Frontend UI Development
+12:00 - 12:30   Integration & Testing
+12:30 - 13:00   Review & Wrap-up
 ```
 
 ## 🎓 Learning Outcomes
@@ -153,28 +187,27 @@ Enhance with external services:
 By completing this track, you will:
 
 ### Technical Skills
+
 - ✅ Build complete full-stack applications
 - ✅ Design and implement REST APIs
 - ✅ Create modern React frontends
 - ✅ Integrate frontend with backend
-- ✅ Containerize applications
-- ✅ Set up CI/CD pipelines
-- ✅ Deploy to production environments
-- ✅ Implement advanced MCP integrations
+- ✅ Write end-to-end tests
+- ✅ Maintain type safety across the stack
 
 ### Copilot Mastery
+
 - ✅ Use Copilot across entire stack
-- ✅ Leverage all chat commands (`/explain`, `/fix`, `/test`, `/doc`)
+- ✅ Leverage all chat commands (`/explain`, `/fix`, `/tests`, `/doc`)
 - ✅ Generate code for different layers
 - ✅ Maintain consistency across codebase
-- ✅ Create and use MCP servers
 - ✅ Optimize development workflow
 
 ### Architecture Skills
+
 - ✅ Design scalable application architecture
-- ✅ Make technology stack decisions
+- ✅ Plan API contracts between frontend and backend
 - ✅ Implement security best practices
-- ✅ Plan deployment strategies
 
 ## 💡 Track-Specific Tips
 
@@ -217,36 +250,24 @@ and authentication strategy."
 - E2E test critical user journeys"
 ```
 
-### 4. Deployment Strategy
+### 4. End-to-End Testing
 
-**Containerize everything:**
-```dockerfile
-# Create docker-compose.yml with:
-# - Frontend container (React build served by nginx)
-# - Backend container (Node.js/Python API)
-# - Database container (PostgreSQL)
-# - Proper networking and volumes
-```
-
-### 5. Using MCP for Enhanced Development
-
-**Build custom tools:**
-- Database query MCP server
-- API documentation MCP server
-- Deployment status checker
-- Log analyzer
+**Test the full flow:**
+- User registration and login
+- CRUD operations through UI
+- Error handling and validation
+- Responsive design across devices
 
 ## 📊 Success Metrics
 
 Track your complete journey:
+
 - [ ] Backend API fully functional with auth
 - [ ] Frontend UI complete and responsive
 - [ ] Frontend-backend integration working
-- [ ] Application containerized
-- [ ] CI/CD pipeline deploying successfully
-- [ ] MCP server created and functional
+- [ ] Type safety across the stack
 - [ ] End-to-end tests passing
-- [ ] Application deployed and accessible
+- [ ] API documentation complete
 - [ ] Used Copilot in every layer
 - [ ] Can demo complete application
 
@@ -292,7 +313,7 @@ If you finish early or want to go further:
 
 **Copilot strategy:**
 - Use comments to drive development
-- Generate tests with `/test`
+- Generate tests with `/tests`
 - Document with `/doc`
 
 ### Phase 3: Frontend (1.5 hours)
@@ -305,7 +326,7 @@ If you finish early or want to go further:
 **Copilot strategy:**
 - Generate TypeScript types from API
 - Create components with descriptions
-- Use `/test` for component tests
+- Use `/tests` for component tests
 
 ### Phase 4: Integration (30 min during lunch)
 
@@ -314,35 +335,30 @@ If you finish early or want to go further:
 3. Fix any integration issues
 
 **Copilot can help:**
+
 - Debug CORS issues
 - Fix type mismatches
 - Handle errors gracefully
 
-### Phase 5: DevOps (1.5 hours)
+### Phase 5: Testing & Polish (1 hour)
 
-1. Proceed to Challenge 3
-2. Containerize both apps
-3. Set up CI/CD
-4. Deploy
+1. Write integration tests
+2. Add API documentation
+3. Improve error handling
+4. Polish the user experience
 
 **Copilot assists with:**
-- Docker configurations
-- CI/CD workflows
-- Deployment scripts
 
-### Phase 6: Advanced (2 hours)
-
-1. Complete Challenge 5
-2. Build MCP server
-3. Enhance application
-4. Polish and optimize
+- Test generation
+- Documentation
+- Edge case handling
 
 ## 📚 Additional Resources
 
 ### Full-Stack Development
+
 - [Best Practices](../docs/best-practices.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-- [MCP Servers Guide](../docs/mcp-servers.md)
 - [Chat Modes Reference](../docs/chat-modes.md)
 
 ### Architecture Patterns
@@ -410,7 +426,7 @@ Full-stack testing pyramid:
 ```
 
 **Use Copilot to generate:**
-- Unit tests: `/test` command
+- Unit tests: `/tests` command
 - Integration tests: "Create integration tests for auth flow"
 - E2E tests: "Generate Playwright tests for user registration"
 
@@ -425,19 +441,20 @@ Full-stack testing pyramid:
 ## 🎯 Track Completion
 
 You've successfully completed the Full-Stack track when you:
-- ✅ Built and deployed a complete application
+
+- ✅ Built a complete application with frontend and backend
 - ✅ Integrated frontend and backend seamlessly
 - ✅ Implemented authentication and security
-- ✅ Containerized and deployed the application
-- ✅ Created MCP server for advanced features
-- ✅ Achieved good test coverage across stack
+- ✅ Achieved type safety across the stack
+- ✅ Achieved good test coverage
 - ✅ Can demonstrate the full application
 - ✅ Mastered Copilot across all layers
 
 ## 🌟 Showcase Your Work
 
 At the end, you should be able to demonstrate:
-1. **Live application** running in production
+
+1. **Working application** with frontend and backend integrated
 2. **Code quality** with tests and documentation
 3. **Copilot usage** with examples from each layer
 4. **Productivity gains** - time saved, lines generated

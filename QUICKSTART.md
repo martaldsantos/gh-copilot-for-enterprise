@@ -11,6 +11,7 @@ Get up and running with the GitHub Copilot Hackathon in minutes!
 - **[🏗️ DevOps & Platform](./tracks/devops-platform-track.md)** - Infrastructure, containers, CI/CD
 - **[🎨 Frontend Developer](./tracks/frontend-developer-track.md)** - React, TypeScript, UI
 - **[🚀 Full-Stack Developer](./tracks/full-stack-developer-track.md)** - Complete applications
+- **[🧪 QA Tester](./tracks/qa-tester-track.md)** - Test automation, quality assurance
 
 **👉 [View Track Details & Comparison](./tracks/README.md)**
 
@@ -124,6 +125,9 @@ Prefer to choose your own path? Pick any challenge:
 **Want Advanced Features?**
 👉 **[Challenge 5: MCP Integration](./challenges/challenge-5-fullstack-mcp/README.md)** - Model Context Protocol
 
+**Tester?**
+👉 **[Challenge 6: QA Testing](./challenges/challenge-6-qa-testing/README.md)** - Test automation with Jest, Pytest, Cypress
+
 ---
 
 ## Step 4: First Steps in Your Challenge
@@ -146,7 +150,7 @@ Prefer to choose your own path? Pick any challenge:
 ### Chat Commands
 - `/explain` - Understand code
 - `/fix` - Debug issues
-- `/test` - Generate tests
+- `/tests` - Generate tests
 - `/doc` - Create documentation
 
 ### Getting Help

@@ -1,0 +1,47 @@
+{
+	"name": "QA Track - Python FastAPI",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"ms-azuretools.vscode-docker",
+				"redhat.vscode-yaml",
+				"ms-playwright.playwright"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.python",
+					"editor.formatOnSave": true
+				},
+				"github.copilot.enable": {
+					"*": true
+				}
+			}
+		}
+	},
+
+	"postCreateCommand": "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi && pip install pytest-playwright && playwright install --with-deps",
+
+	"remoteUser": "codespace"
+}

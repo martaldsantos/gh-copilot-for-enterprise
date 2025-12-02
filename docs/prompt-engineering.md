@@ -287,7 +287,7 @@ Create reusable prompt templates for common tasks:
 ### Test Generation Template
 
 ```
-/test create [framework] tests for this [component/function/class]
+/tests create [framework] tests for this [component/function/class]
 Include:
 - Happy path scenarios
 - Edge cases ([specific cases])

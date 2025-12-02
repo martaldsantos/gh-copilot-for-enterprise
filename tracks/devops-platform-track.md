@@ -33,91 +33,133 @@ You'll work with:
 - **GitHub Actions** - CI/CD pipelines
 - **Azure** - Cloud platform
 
+## ⚡ First Steps: Configure Your AI Environment
+
+**Before starting any challenge**, set up your personalized Copilot environment:
+
+### 1. Create a `.github/copilot-instructions.md` File
+
+This file tells Copilot about your infrastructure context and standards.
+
+```markdown
+# Copilot Instructions for DevOps & Platform Engineering
+
+## Project Context
+- Cloud Provider: Azure
+- Infrastructure as Code: Terraform
+- Container Orchestration: Kubernetes (AKS)
+- CI/CD: GitHub Actions
+
+## Infrastructure Standards
+- All resources must be tagged with: environment, project, owner
+- Use Azure naming conventions (e.g., rg-project-env-region)
+- Enable encryption at rest for all storage
+- Follow least-privilege access principles
+
+## Terraform Standards
+- Use modules for reusable components
+- Always define variables with descriptions and types
+- Include outputs for important resource attributes
+- Use remote state with Azure Storage backend
+
+## Security Requirements
+- No hardcoded secrets (use Azure Key Vault)
+- Enable network security groups on all subnets
+- Use managed identities where possible
+```
+
+### 2. Create Custom Agents (`.github/agents/`)
+
+Create specialized agents for different tasks:
+
+**`.github/agents/terraform-expert.md`**:
+```markdown
+# Terraform Expert Agent
+
+You are an expert in Infrastructure as Code with Terraform.
+
+## Your Expertise
+- Terraform best practices and patterns
+- Azure resource provisioning
+- Module design and composition
+- State management and workspaces
+
+## When Generating Code
+- Always use variables for configurable values
+- Include proper resource dependencies
+- Add meaningful descriptions to all variables
+- Follow Azure naming conventions
+- Include proper tagging for all resources
+```
+
+**`.github/agents/kubernetes-engineer.md`**:
+```markdown
+# Kubernetes Engineer Agent
+
+You are an expert in container orchestration with Kubernetes.
+
+## Your Focus
+- Kubernetes manifest best practices
+- Resource limits and requests
+- Security contexts and policies
+- Helm chart development
+```
+
+> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+
+---
+
 ## 🗺️ Track Structure
 
-### Challenge 3: DevOps - Infrastructure as Code (Required)
-**Duration:** 2 hours  
+### Your Challenge: DevOps - Infrastructure as Code
+**Duration:** 4-6 hours  
 **Focus:** Complete infrastructure automation
 
+> 🎯 **This is YOUR dedicated challenge.** Focus entirely on infrastructure and DevOps. A sample application is provided so you don't need to write application code.
+
 Build production-ready infrastructure:
-- Cloud infrastructure with Terraform
-- Multi-stage Docker containers
-- Kubernetes deployments
-- CI/CD pipeline setup
-- Monitoring and logging
+- Azure cloud infrastructure with Terraform
+- Multi-stage Docker containers (optimized)
+- Kubernetes deployments and services
+- CI/CD pipeline with GitHub Actions
+- Security groups and network configuration
+- Monitoring and logging setup
 
 **Copilot Skills You'll Learn:**
-- Infrastructure code generation
-- Best practices and patterns
+- Infrastructure code generation from descriptions
+- Terraform best practices and patterns
 - `/doc` for configuration documentation
 - Security and compliance guidance
-- Docker optimization
+- Docker optimization techniques
+- `/explain` for understanding infrastructure patterns
 
 📖 [Start Challenge 3](../challenges/challenge-3-devops/README.md)
 
----
-
-### Challenge 1: Web Development - REST API (Recommended)
-**Duration:** 1.5 hours  
-**Focus:** Application to deploy
-
-Build the application you'll containerize and deploy:
-- REST API development
-- Testing infrastructure
-- API documentation
-- Production configurations
-
-**Copilot Skills You'll Learn:**
-- Application code generation
-- Testing frameworks
-- Configuration management
-
-📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
-
----
-
-### Challenge 5: Full Stack - MCP Server Integration (Advanced, Optional)
-**Duration:** 2 hours  
-**Focus:** Advanced integration and automation
-
-Enhance your platform capabilities:
-- MCP servers for infrastructure context
-- Service orchestration
-- Advanced deployment patterns
-- Platform automation
-
-**Copilot Skills You'll Learn:**
-- MCP server development
-- Complex integrations
-- Advanced automation patterns
-
-📖 [Start Challenge 5](../challenges/challenge-5-fullstack-mcp/README.md)
-
 ## ⏱️ Recommended Schedule
 
-### Full Day (8 hours)
+### Full Day (6 hours)
 
 ```
-09:00 - 09:30   Setup & Introduction to IaC with Copilot
-09:30 - 11:00   Challenge 3: Terraform & Cloud Infrastructure
-11:00 - 11:15   Break
-11:15 - 12:30   Challenge 3: Docker & Containerization
-12:30 - 13:30   Lunch
-13:30 - 15:00   Challenge 3: Kubernetes & Orchestration
-15:00 - 15:15   Break
-15:15 - 17:00   Challenge 3: CI/CD Pipelines & Automation
-17:00 - 17:30   Review & Showcase
+09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
+09:30 - 10:30   Terraform & Azure Infrastructure
+10:30 - 10:45   Break
+10:45 - 12:00   Docker & Containerization
+12:00 - 13:00   Lunch
+13:00 - 14:30   Kubernetes & Orchestration
+14:30 - 14:45   Break
+14:45 - 16:00   CI/CD Pipelines & Automation
+16:00 - 16:30   Review & Showcase
 ```
 
 ### Half Day (4 hours)
 
 ```
-09:00 - 09:15   Setup & Introduction
-09:15 - 10:30   Terraform Basics & Docker
+09:00 - 09:30   Setup & First Steps
+09:30 - 10:30   Terraform & Docker Basics
 10:30 - 10:45   Break
 10:45 - 12:00   Kubernetes Deployment
-12:00 - 12:45   Basic CI/CD Pipeline
-12:45 - 13:00   Review & Wrap-up
+12:00 - 12:30   CI/CD Pipeline Setup
+12:30 - 13:00   Review & Wrap-up
 ```
 
 ## 🎓 Learning Outcomes
@@ -125,16 +167,16 @@ Enhance your platform capabilities:
 By completing this track, you will:
 
 ### Technical Skills
+
 - ✅ Write infrastructure as code with Terraform
-- ✅ Create multi-cloud configurations
+- ✅ Create Azure cloud configurations
 - ✅ Build optimized Docker containers
 - ✅ Deploy applications to Kubernetes
 - ✅ Set up automated CI/CD pipelines
 - ✅ Implement infrastructure security best practices
-- ✅ Configure monitoring and logging
-- ✅ Design for high availability
 
 ### Copilot Mastery
+
 - ✅ Generate infrastructure code from descriptions
 - ✅ Get security and compliance suggestions
 - ✅ Document complex configurations

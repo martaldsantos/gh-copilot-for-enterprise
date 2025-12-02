@@ -1,20 +1,17 @@
 # Hackathon Tracks Overview 🎯
 
-Welcome! This hackathon is organized into **5 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **6 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## 🗺️ Choose Your Track
 
 ### [🌐 Backend Developer Track](./backend-developer-track.md)
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
-**Focus:** REST API development, authentication, testing, and backend infrastructure
+**Focus:** REST API development, authentication, testing, and database integration
 
-**Challenges:** 
-- Challenge 1: REST API Builder (Required)
-- Challenge 3: Infrastructure as Code (Recommended)
-- Challenge 5: MCP Integration (Advanced)
+**Your Challenge:** Challenge 1 - REST API Builder
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
 
 ---
 
@@ -23,26 +20,20 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Focus:** Data analysis, feature engineering, model development, and ML pipelines
 
-**Challenges:**
-- Challenge 2: ML & Data Analysis (Required)
-- Challenge 5: MCP Integration (Advanced, Optional)
-- Challenge 1: REST API for ML Deployment (Optional)
+**Your Challenge:** Challenge 2 - ML & Data Analysis (Jupyter Notebooks)
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
 
 ---
 
 ### [🏗️ DevOps & Platform Track](./devops-platform-track.md)
 **Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
 
-**Focus:** Infrastructure as Code, containerization, Kubernetes, and CI/CD automation
+**Focus:** Infrastructure as Code with Terraform (Azure), Docker, Kubernetes, and CI/CD
 
-**Challenges:**
-- Challenge 3: Infrastructure as Code (Required)
-- Challenge 1: Application to Deploy (Recommended)
-- Challenge 5: Advanced Automation (Advanced)
+**Your Challenge:** Challenge 3 - Infrastructure as Code
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
 
 ---
 
@@ -51,27 +42,33 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Focus:** React components, TypeScript, modern UI development, and state management
 
-**Challenges:**
-- Challenge 4: Interactive UI Components (Required)
-- Challenge 1: Backend Integration (Recommended)
-- Challenge 5: Advanced Features (Advanced)
+**Your Challenge:** Challenge 4 - Interactive UI Components
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
+
+---
+
+### [🧪 QA Tester Track](./qa-tester-track.md)
+
+**Best for:** QA Engineers, Test Automation Engineers, Quality Assurance Specialists, SDETs
+
+**Focus:** Test automation with Playwright MCP, testing real-world open-source applications
+
+**Your Challenge:** Challenge 6 - QA & Test Automation
+
+**Duration:** 4-6 hours
 
 ---
 
 ### [🚀 Full-Stack Developer Track](./full-stack-developer-track.md)
+
 **Best for:** Full-Stack Developers, Software Engineers, Technical Leads
 
-**Focus:** End-to-end application development from database to deployment
+**Focus:** End-to-end application development - Backend API + Frontend UI
 
-**Challenges:**
-- Challenge 1: REST API (Required)
-- Challenge 4: Frontend UI (Required)
-- Challenge 3: Infrastructure & Deployment (Recommended)
-- Challenge 5: MCP Integration (Advanced)
+**Your Challenges:** Challenge 1 (Backend) + Challenge 4 (Frontend)
 
-**Duration:** 8 hours (Full Day)
+**Duration:** 4-6 hours
 
 ---
 
@@ -84,19 +81,21 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
    - Data Scientist/ML → Data Science Track
    - DevOps/Infrastructure → DevOps Track
    - Frontend/UI Developer → Frontend Track
+   - QA/Test Engineer → QA Tester Track
    - Full-Stack Developer → Full-Stack Track
 
 2. **What do you want to learn?**
-   - Building APIs → Backend Track
+   - Building REST APIs → Backend Track
    - Data analysis & ML → Data Science Track
    - Infrastructure automation → DevOps Track
    - User interfaces → Frontend Track
-   - Everything → Full-Stack Track
+   - Test automation → QA Tester Track
+   - Full applications (API + UI) → Full-Stack Track
 
 3. **How much time do you have?**
-   - 4 hours → Choose one track, complete core challenges
-   - 6-8 hours → Complete recommended track path
-   - Full day → Full-Stack Track or multiple tracks
+   - 4 hours → Choose any track, complete core tasks
+   - 6 hours → Complete full track with extras
+   - Full day → Full-Stack Track or explore multiple tracks
 
 ### Not Sure? Start Here:
 
@@ -106,21 +105,23 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 ## 📋 Track Comparison
 
-| Track | Difficulty | Duration | Technologies | Best For |
-|-------|-----------|----------|--------------|----------|
-| **Backend** | ⭐⭐ Beginner-Int | 6-8h | Node.js/Python, REST APIs | API development |
-| **Data Science** | ⭐⭐⭐ Intermediate | 6-8h | Python, pandas, ML | Data analysis |
-| **DevOps** | ⭐⭐⭐ Int-Advanced | 6-8h | Terraform, Docker, K8s | Infrastructure |
-| **Frontend** | ⭐⭐ Beginner-Int | 6-8h | React, TypeScript | UI development |
-| **Full-Stack** | ⭐⭐⭐⭐ Advanced | 8h | All of the above | Complete apps |
+| Track | Difficulty | Duration | Technologies | Challenge |
+|-------|-----------|----------|--------------|-----------|
+| **Backend** | ⭐⭐ Beginner-Int | 4-6h | Node.js/Python, REST APIs | Challenge 1 |
+| **Data Science** | ⭐⭐⭐ Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
+| **DevOps** | ⭐⭐⭐ Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
+| **Frontend** | ⭐⭐ Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
+| **QA Tester** | ⭐⭐ Beginner-Int | 4-6h | Playwright, Jest, Pytest | Challenge 6 |
+| **Full-Stack** | ⭐⭐⭐ Intermediate | 4-6h | Node.js/Python + React | Challenge 1+4 |
 
 ## 🎯 What You'll Learn in Every Track
 
 All tracks teach you:
+
 - ✅ GitHub Copilot core features (inline suggestions, chat)
 - ✅ Effective prompt engineering
-- ✅ Using chat commands (`/explain`, `/fix`, `/test`, `/doc`)
-- ✅ Workspace context awareness
+- ✅ Using chat commands (`/explain`, `/fix`, `/tests`, `/doc`, `/newNotebook`)
+- ✅ Workspace context awareness (`@workspace`)
 - ✅ Code generation and acceleration
 - ✅ Testing and documentation with Copilot
 
@@ -254,6 +255,7 @@ Track your progress across any track:
 - [Data Science & ML Track](./data-science-ml-track.md)
 - [DevOps & Platform Track](./devops-platform-track.md)
 - [Frontend Developer Track](./frontend-developer-track.md)
+- [QA Tester Track](./qa-tester-track.md)
 - [Full-Stack Developer Track](./full-stack-developer-track.md)
 
 ### General Resources
