@@ -23,7 +23,7 @@ Design and implement cloud infrastructure using Terraform and containerize appli
 - **Docker** - Containerization
 - **Kubernetes** - Container orchestration
 - **GitHub Actions** - CI/CD
-- **AWS/Azure/GCP** - Cloud providers (examples for all)
+- **Azure** - Cloud platform
 
 ## 📋 Requirements
 
@@ -66,12 +66,10 @@ Build a complete infrastructure setup for a web application:
 
 ## 🚀 Getting Started
 
-### Step 1: Choose Your Cloud Provider
+### Step 1: Azure Cloud Setup
 
-Pick one (or try all!):
-- AWS (recommended for beginners)
-- Azure
-- Google Cloud Platform
+This challenge uses Azure as the cloud platform.
+Ensure you have access to an Azure subscription.
 
 ### Step 2: Review Starter Files
 
@@ -82,9 +80,7 @@ cd challenges/challenge-3-devops/
 Structure:
 ```
 ├── terraform/
-│   ├── aws/
-│   ├── azure/
-│   └── gcp/
+│   └── azure/
 ├── docker/
 │   └── app/
 ├── kubernetes/
@@ -98,8 +94,8 @@ Structure:
 
 **Ask Copilot for complete configurations:**
 ```
-"Create a Terraform configuration for an AWS VPC with public and private subnets 
-across 3 availability zones, with NAT gateways and proper routing"
+"Create a Terraform configuration for an Azure VNet with public and private subnets 
+across 3 availability zones, with NAT gateway and proper routing"
 ```
 
 ### 2. Use `/doc` for Explanations
@@ -132,8 +128,8 @@ Ask: "What security best practices should I follow for this infrastructure?"
    
    💡 **Copilot Prompt:**
    ```
-   "Create a Terraform main.tf file with provider configuration for AWS,
-   including backend for state management in S3"
+   "Create a Terraform main.tf file with provider configuration for Azure,
+   including backend for state management in Azure Storage"
    ```
 
 2. **Network Configuration**
@@ -156,10 +152,10 @@ Ask: "What security best practices should I follow for this infrastructure?"
 
 4. **Compute Resources**
    ```hcl
-   # Create Auto Scaling Group with Launch Template
-   # Use t3.micro instances with Amazon Linux 2
+   # Create Virtual Machine Scale Set
+   # Use Standard_B1s instances with Ubuntu 22.04
    # Min: 2, Max: 6, Desired: 2
-   # Include user_data script to install Docker
+   # Include custom_data script to install Docker
    ```
 
 5. **Load Balancer**
@@ -172,10 +168,10 @@ Ask: "What security best practices should I follow for this infrastructure?"
 
 6. **Database**
    ```hcl
-   # Create RDS PostgreSQL instance
-   # Multi-AZ deployment, db.t3.micro
+   # Create Azure Database for PostgreSQL
+   # Zone-redundant deployment, B_Gen5_1 tier
    # Automated backups, encryption enabled
-   # Place in private subnets
+   # Place in private subnet
    ```
 
 ### Phase 2: Containerization with Docker (20 min)
@@ -318,7 +314,7 @@ Ask: "What security best practices should I follow for this infrastructure?"
 - [ ] Security groups configured properly
 - [ ] Auto Scaling Group deployed
 - [ ] Load Balancer configured
-- [ ] RDS database provisioned
+- [ ] Azure Database for PostgreSQL provisioned
 - [ ] State management configured
 - [ ] Variables and outputs defined
 
@@ -347,7 +343,7 @@ Ask: "What security best practices should I follow for this infrastructure?"
 
 ## 🎁 Bonus Challenges
 
-1. **Multi-Region Setup**: Deploy to multiple AWS regions
+1. **Multi-Region Setup**: Deploy to multiple Azure regions
 2. **Blue-Green Deployment**: Implement blue-green deployment strategy
 3. **Service Mesh**: Add Istio for service mesh
 4. **GitOps**: Implement ArgoCD for GitOps workflow
@@ -399,11 +395,11 @@ Document:
 ```
 Internet
     ↓
-[Application Load Balancer]
+[Azure Load Balancer]
     ↓
-[Auto Scaling Group]
+[Virtual Machine Scale Set]
     ↓
-[ECS/EKS Cluster] ← [RDS PostgreSQL]
+[Azure Kubernetes Service] ← [Azure Database for PostgreSQL]
     ↓
 [Container Instances]
 ```

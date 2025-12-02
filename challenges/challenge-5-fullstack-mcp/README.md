@@ -344,9 +344,8 @@ await server.connect(transport);
 
 4. **Additional Integrations**
    - Jira MCP server
-   - Slack MCP server
-   - AWS/Cloud provider MCP server
-   - Database migration MCP server
+   - Confluence MCP server
+   - Azure cloud provider MCP server
 
 ## 🧪 Testing
 

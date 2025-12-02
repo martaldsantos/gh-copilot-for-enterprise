@@ -18,7 +18,7 @@ This track is designed for DevOps engineers and platform engineers who want to m
 
 ## 📋 Prerequisites
 
-- Basic understanding of cloud platforms (AWS, Azure, or GCP)
+- Basic understanding of Azure cloud platform
 - Familiarity with Docker containers
 - Understanding of infrastructure concepts
 - Basic knowledge of YAML and HCL (Terraform)
@@ -31,7 +31,7 @@ You'll work with:
 - **Docker** - Containerization
 - **Kubernetes** - Container orchestration
 - **GitHub Actions** - CI/CD pipelines
-- Cloud platforms (AWS/Azure/GCP examples provided)
+- **Azure** - Cloud platform
 
 ## 🗺️ Track Structure
 
@@ -148,14 +148,14 @@ By completing this track, you will:
 
 **Describe infrastructure in comments:**
 ```hcl
-# Create an AWS VPC with CIDR 10.0.0.0/16
+# Create an Azure VNet with CIDR 10.0.0.0/16
 # Add public subnets in us-east-1a and us-east-1b
 # Add private subnets in the same AZs
 # Configure NAT gateway and routing tables
 ```
 
 **Ask for complete modules:**
-- "Create a Terraform module for an RDS PostgreSQL instance with multi-AZ"
+- "Create a Terraform module for an Azure Database for PostgreSQL with zone redundancy"
 - "Generate security group for a web application with ALB"
 
 ### 2. Docker Optimization
@@ -233,7 +233,7 @@ If you finish early:
 
 ## 🚀 Getting Started
 
-1. **Choose Cloud Provider**: Select AWS, Azure, or GCP
+1. **Use Azure**: This track uses Azure as the cloud provider
 2. **Set Up Credentials**: Configure cloud access (use sandbox/test account)
 3. **Verify Tools**: Ensure Terraform, Docker, kubectl installed
 4. **Start Challenge 3**: Begin with infrastructure basics

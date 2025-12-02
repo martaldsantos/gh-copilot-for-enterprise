@@ -272,9 +272,9 @@ docker ps
 # May need to wait for startup
 ```
 
-**AWS Credentials Missing**
+**Azure Credentials Missing**
 ```
-# For hackathon: No real AWS needed
+# For hackathon: No real Azure deployment needed
 # Terraform validate/plan only
 # Don't actually apply!
 ```
