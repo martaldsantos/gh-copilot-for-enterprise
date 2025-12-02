@@ -57,7 +57,24 @@ git clone https://github.com/martaldsantos/gh-copilot-for-enterprise.git
 cd gh-copilot-for-enterprise
 ```
 
-2. **Install GitHub Copilot:**
+2. **Use the setup script (Recommended):**
+```bash
+# Make the script executable
+chmod +x scripts/setup-challenge.sh
+
+# Run the setup wizard
+./scripts/setup-challenge.sh
+```
+
+This interactive script will:
+- Ask you to choose a challenge (1-5)
+- Create a fresh project directory
+- Copy all starter files
+- Set up DevContainer configuration
+- Create a custom `.github/copilot-instructions.md`
+- Initialize git
+
+3. **Install GitHub Copilot:**
 - Open VS Code
 - Go to Extensions (Ctrl+Shift+X)
 - Search "GitHub Copilot"
@@ -66,12 +83,10 @@ cd gh-copilot-for-enterprise
   - GitHub Copilot Chat
 - Sign in when prompted
 
-3. **Verify Copilot is working:**
+4. **Verify Copilot is working:**
 - Create a test file: `test.js`
 - Type: `// function to add two numbers`
 - You should see suggestions appear!
-
-4. **Choose a challenge** and navigate to its folder
 
 ## Verify Your Setup ✓
 

@@ -260,7 +260,7 @@ Add the Playwright MCP server to your VS Code configuration.
 ```json
 "playwright": {
     "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-playwright"]
+    "args": ["-y", "@playwright/mcp@latest"]
 }
 ```
 *Restart VS Code or Reload Window after adding this.*

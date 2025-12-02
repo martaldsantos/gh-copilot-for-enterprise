@@ -1,7 +1,7 @@
 # Challenge 3: DevOps - Infrastructure as Code 🏗️
 
 **Difficulty**: Intermediate  
-**Duration**: 1-1.5 hours  
+**Duration**: 4-6 hours  
 **Team**: DevOps Engineers, Platform Engineers
 
 ## 🎯 Objective
@@ -133,9 +133,9 @@ Ask: "What security best practices should I follow for this infrastructure?"
 2. **Network Configuration**
    ```hcl
    # Create VNET with CIDR 10.0.0.0/16
-   # Add public subnets in 2 AZs (10.0.1.0/24, 10.0.2.0/24)
-   # Add private subnets in 2 AZs (10.0.10.0/24, 10.0.11.0/24)
-   # Configure Internet Gateway and NAT Gateway
+   # Add public subnets in 2 zones (10.0.1.0/24, 10.0.2.0/24)
+   # Add private subnets in 2 zones (10.0.10.0/24, 10.0.11.0/24)
+   # Configure NAT Gateway for outbound internet access
    ```
    
    Let Copilot generate the complete network setup!

@@ -1,7 +1,7 @@
 # Challenge 1: Web Development - REST API Builder 🌐
 
 **Difficulty**: Beginner to Intermediate  
-**Duration**: 1-1.5 hours  
+**Duration**: 4-6 hours  
 **Team**: Backend/Web Developers
 
 ## 🎯 Objective

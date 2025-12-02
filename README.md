@@ -42,7 +42,28 @@ Each challenge is designed to take 1-1.5 hours
 
 > **Do NOT work directly in this hackathon repository!** This repo contains a `.github/copilot-instructions.md` file designed for hackathon maintainers—not for your project work. If you work here, Copilot will receive confusing context.
 
-**Recommended Setup:**
+**Recommended Setup (Easy Way):**
+
+Use our setup script to create a fresh project with everything you need:
+
+```bash
+# Clone the hackathon repo first
+git clone https://github.com/martaldsantos/gh-copilot-for-enterprise.git
+cd gh-copilot-for-enterprise
+
+# Run the interactive setup wizard
+chmod +x scripts/setup-challenge.sh
+./scripts/setup-challenge.sh
+```
+
+The script will:
+- Ask you to choose a challenge (1-5)
+- Create a fresh project directory
+- Copy all starter files and DevContainer config
+- Set up a custom `.github/copilot-instructions.md` for your project
+- Initialize git
+
+**Manual Setup:**
 
 1. **Create a new repository** for your challenge work
 2. **Copy these files from this repo:**

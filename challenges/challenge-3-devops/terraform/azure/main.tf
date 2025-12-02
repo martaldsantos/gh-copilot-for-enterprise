@@ -4,11 +4,14 @@
 # TODO: Configure Azure provider
 # Hint: Ask Copilot "Configure Azure provider with required version constraints"
 
+# TODO: Create Resource Group
+# Hint: Comment "Create a resource group in East US region"
+
 # TODO: Create VNet
-# Hint: Comment "Create VNet with CIDR 10.0.0.0/16 in a resource group"
+# Hint: Comment "Create VNet with CIDR 10.0.0.0/16 in the resource group"
 
 # TODO: Create subnets
-# Hint: "Create 2 public and 2 private subnets in different availability zones"
+# Hint: "Create 2 public and 2 private subnets in different zones"
 
 # TODO: Create NAT Gateway
 # TODO: Create Route Tables

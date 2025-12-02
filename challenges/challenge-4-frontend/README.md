@@ -1,7 +1,7 @@
 # Challenge 4: Frontend - Interactive UI Components ⚛️
 
 **Difficulty**: Beginner to Intermediate  
-**Duration**: 1-1.5 hours  
+**Duration**: 4-6 hours  
 **Team**: Frontend Developers
 
 ## 🎯 Objective

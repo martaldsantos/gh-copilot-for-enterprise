@@ -1,7 +1,7 @@
 # Challenge 2: ML/AI - Data Analysis & Model Development 🤖
 
 **Difficulty**: Intermediate  
-**Duration**: 1-1.5 hours  
+**Duration**: 4-6 hours  
 **Team**: Data Scientists, ML Engineers
 
 ## 🎯 Objective
