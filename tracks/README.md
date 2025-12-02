@@ -1,6 +1,6 @@
 # Hackathon Tracks Overview 🎯
 
-Welcome! This hackathon is organized into **6 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **5 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## 🗺️ Choose Your Track
 
@@ -60,18 +60,6 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
 
 ---
 
-### [🚀 Full-Stack Developer Track](./full-stack-developer-track.md)
-
-**Best for:** Full-Stack Developers, Software Engineers, Technical Leads
-
-**Focus:** End-to-end application development - Backend API + Frontend UI
-
-**Your Challenges:** Challenge 1 (Backend) + Challenge 4 (Frontend)
-
-**Duration:** 4-6 hours
-
----
-
 ## 🤔 Which Track Should I Choose?
 
 ### Answer These Questions:
@@ -82,7 +70,6 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
    - DevOps/Infrastructure → DevOps Track
    - Frontend/UI Developer → Frontend Track
    - QA/Test Engineer → QA Tester Track
-   - Full-Stack Developer → Full-Stack Track
 
 2. **What do you want to learn?**
    - Building REST APIs → Backend Track
@@ -90,29 +77,28 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
    - Infrastructure automation → DevOps Track
    - User interfaces → Frontend Track
    - Test automation → QA Tester Track
-   - Full applications (API + UI) → Full-Stack Track
+   - Full applications (API + UI) → Combine Backend + Frontend Tracks
 
 3. **How much time do you have?**
    - 4 hours → Choose any track, complete core tasks
    - 6 hours → Complete full track with extras
-   - Full day → Full-Stack Track or explore multiple tracks
+   - Full day → Combine multiple tracks (e.g., Backend + Frontend)
 
 ### Not Sure? Start Here:
 
 - **New to Copilot?** → Backend Track (most beginner-friendly)
-- **Want breadth?** → Full-Stack Track
+- **Want breadth?** → Combine Backend + Frontend Tracks
 - **Want depth?** → Choose your specialty track
 
 ## 📋 Track Comparison
 
 | Track | Difficulty | Duration | Technologies | Challenge |
-|-------|-----------|----------|--------------|-----------|
+|-------|-----------|----------|--------------|----------|
 | **Backend** | ⭐⭐ Beginner-Int | 4-6h | Node.js/Python, REST APIs | Challenge 1 |
 | **Data Science** | ⭐⭐⭐ Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
 | **DevOps** | ⭐⭐⭐ Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
 | **Frontend** | ⭐⭐ Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
 | **QA Tester** | ⭐⭐ Beginner-Int | 4-6h | Playwright, Jest, Pytest | Challenge 5 |
-| **Full-Stack** | ⭐⭐⭐ Intermediate | 4-6h | Node.js/Python + React | Challenge 1+4 |
 
 ## 🎯 What You'll Learn in Every Track
 
@@ -131,19 +117,9 @@ Plus track-specific skills!
 
 ### ⚠️ IMPORTANT: Create a Fresh Repository
 
-> **Critical:** Do NOT work directly in this hackathon repository! The `.github/copilot-instructions.md` file here is designed for the hackathon maintainers, not for your project work. If you work here directly, Copilot will receive context about "hackathon organization" instead of your actual project.
+> **Critical:** Do NOT work directly in this hackathon repository! See the **[Setup Instructions in the main README](../README.md#%EF%B8%8F-important-create-your-own-repository)** for why this matters and how to set up your workspace properly.
 
-**Recommended Setup:**
-
-1. **Create a new repository** for your challenge work
-2. **Copy these files from this repo:**
-   - The `.devcontainer/` folder (for consistent development environment)
-   - Your challenge's starter code (e.g., `challenges/challenge-1-web-api/node-express/`)
-   - Any relevant documentation
-3. **Create your own `.github/copilot-instructions.md`** (examples provided in each track guide)
-4. **Do NOT copy** this repository's `.github/copilot-instructions.md`
-
-This ensures Copilot understands YOUR project context and gives you the best suggestions!
+👉 **[Follow the Setup Instructions](../README.md#step-2-set-up-environment)** - includes an interactive setup script!
 
 ---
 
@@ -153,14 +129,10 @@ Click on the track link above to read the detailed guide.
 ### 2. Review Prerequisites
 Each track lists required knowledge and tools.
 
-### 3. Set Up Your Fresh Repository
-Follow the steps above to create your workspace with the proper structure.
+### 3. Set Up Your Workspace
+Follow the **[Setup Instructions](../README.md#step-2-set-up-environment)** to create your fresh repository.
 
-### 4. Set Up Environment
-- **Recommended:** Launch GitHub Codespace in YOUR new repository (devcontainer is pre-configured)
-- **Alternative:** Local setup with VS Code and Copilot
-
-### 5. Follow the Track Guide
+### 4. Follow the Track Guide
 Each track provides:
 - Recommended challenge sequence
 - Time allocation
@@ -168,13 +140,13 @@ Each track provides:
 - Tips specific to that domain
 - **Example `.github/copilot-instructions.md`** for your project
 
-### 6. Start Your First Challenge
+### 5. Start Your First Challenge
 Begin with the required challenge for your track!
 
 ## ⏱️ Sample Schedules
 
 ### Full Day (8 hours)
-Perfect for Full-Stack track or completing multiple challenges in depth.
+Perfect for combining multiple tracks (e.g., Backend + Frontend) or completing challenges in depth.
 
 ### Half Day (4 hours)
 Focus on the core required challenge in your chosen track.
@@ -191,7 +163,7 @@ Mix and match challenges across tracks based on your interests!
 
 ### 2. Branch Out Later
 - Finished your track early? Try another!
-- Full-stack developers: Do multiple tracks
+- Want full-stack experience? Combine Backend + Frontend tracks
 - Mix challenges that interest you
 
 ### 3. Use Track Resources
@@ -235,9 +207,9 @@ Plus access to:
 - Present different perspectives
 
 **Option 3: Full-Stack Together**
-- All do Full-Stack track
+- Combine Backend + Frontend tracks
 - Divide challenges among team members
-- Integrate at the end
+- Integrate API and UI at the end
 
 ## 📊 Success Metrics
 
@@ -278,11 +250,9 @@ Track your progress across any track:
 - [DevOps & Platform Track](./devops-platform-track.md)
 - [Frontend Developer Track](./frontend-developer-track.md)
 - [QA Tester Track](./qa-tester-track.md)
-- [Full-Stack Developer Track](./full-stack-developer-track.md)
 
 ### General Resources
 - [Main README](../README.md)
-- [Quick Start Guide](../QUICKSTART.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
 - [Documentation](../docs/)
 

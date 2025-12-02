@@ -257,7 +257,7 @@ proper error handling
 /explain the authentication flow from login to JWT token 
 generation, including refresh token logic
 
-/doc create comprehensive API documentation with request/response 
+Create comprehensive API documentation with request/response 
 examples and error codes
 ```
 
@@ -280,7 +280,7 @@ Be explicit about language/framework:
 ```
 /tests create Pytest tests with fixtures and parametrize
 
-/doc add Python docstrings following Google style
+Add Python docstrings following Google style
 
 /fix this React hook dependency issue
 
@@ -347,7 +347,7 @@ Generate OpenAPI specification for all task endpoints
 ```
 /explain this Terraform resource and its dependencies
 
-/doc create deployment runbook with rollback procedures
+Create deployment runbook with rollback procedures
 
 /fix the Docker build failing on layer 4
 ```
@@ -367,7 +367,7 @@ How can I optimize this component to prevent unnecessary re-renders?
 
 /explain the Page Object Model pattern in this test suite
 
-/doc document the test coverage and testing strategy
+Document the test coverage and testing strategy
 ```
 
 ## Troubleshooting

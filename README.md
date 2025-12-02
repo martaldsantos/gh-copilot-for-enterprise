@@ -1,6 +1,6 @@
 # GitHub Copilot Enterprise Hackathon 🚀
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **5 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
 
 ## 🎯 Hackathon Overview
 
@@ -13,7 +13,6 @@ This hackathon is organized into **role-based tracks** for different team types:
 - **[🏗️ DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
 - **[🎨 Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
 - **[🧪 QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, comprehensive testing
-- **[🚀 Full-Stack Developer Track](./tracks/full-stack-developer-track.md)** - End-to-end application development
 
 👉 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -21,7 +20,7 @@ Each track provides a curated path through the challenges based on your role, wi
 
 ## ⏱️ Duration
 
-**6-8 hours** per track (Full-Stack track: 8 hours)  
+**6-8 hours** per track
 Each challenge is designed to take 1-1.5 hours
 
 ## 🛠️ Getting Started
@@ -91,14 +90,30 @@ The devcontainer is pre-configured with:
 - kubectl
 - All necessary VS Code extensions
 
-### Step 3: Start Your Track
+### Step 3: Verify Your Setup
+
+Before starting, make sure Copilot is working:
+
+**Check Copilot Status:**
+- Look at the bottom-right of VS Code
+- Copilot icon should be visible and say "Ready"
+
+**Test Inline Suggestions:**
+1. Create a new file (e.g., `test.js`)
+2. Type: `// function to add two numbers`
+3. You should see Copilot suggestions appear!
+
+**Test Chat:**
+1. Press `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Shift+I` (Mac)
+2. Type: "Hello, are you working?"
+3. Copilot should respond!
+
+### Step 4: Start Your Track
 
 Once your environment is ready:
 1. Open your chosen track guide (e.g., `tracks/backend-developer-track.md`)
 2. Follow the recommended challenge sequence
 3. Use the track-specific tips and guidance
-
-**Quick Start:** 👉 [Quick Start Guide](./QUICKSTART.md)
 
 ## 📚 Key GitHub Copilot Features You'll Learn
 
@@ -203,7 +218,29 @@ Work with real-world open-source applications to implement comprehensive test au
    - `Esc` - Dismiss suggestion
    - `Alt+]` - Next suggestion
    - `Alt+[` - Previous suggestion
-   - `Ctrl+Enter` - Open Copilot inline chat
+   - `Ctrl+Shift+I` - Open Copilot Chat
+
+### Tips for Success
+
+1. **Write Clear Comments**
+   ```javascript
+   // ❌ Bad: "do stuff"
+   // ✅ Good: "Validate email format and return true if valid, false otherwise"
+   ```
+
+2. **Use Chat Freely** - Ask Copilot: "What does this code do?", "How can I improve this?"
+
+3. **Review Everything** - Understand all generated code, test thoroughly
+
+4. **Iterate** - First suggestion not perfect? Refine your prompt or try different approaches
+
+### Common Issues
+
+| Problem | Solution |
+|---------|----------|
+| Copilot not suggesting | Check status icon, ensure signed in, restart VS Code |
+| Wrong suggestions | Be more specific, provide more context, try chat instead |
+| Environment issues | Codespaces: rebuild container; Local: check tool versions |
 
 ## 🏆 Hackathon Format
 
@@ -273,7 +310,6 @@ After the hackathon:
 
 ### Quick Links
 - 🗺️ **[Choose Your Track](./tracks/README.md)** - Role-based learning paths
-- 🚀 **[Quick Start Guide](./QUICKSTART.md)** - Get up and running in minutes
 - 🔧 **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - 👥 **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers
 - 🤝 **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
@@ -290,8 +326,8 @@ After the hackathon:
 **Ready to get started?** 
 
 1. 👉 **[Choose Your Track](./tracks/README.md)** - Find the best path for your role
-2. 🚀 Read the [Quick Start Guide](./QUICKSTART.md)
-3. 🎯 Start your first challenge
-4. 💻 Code with Copilot!
+2. 🛠️ Follow the [Setup Instructions](#step-2-set-up-environment) above
+3. ✅ [Verify Your Setup](#step-3-verify-your-setup)
+4. 🎯 Start your first challenge!
 
 Happy Hacking! 💻✨

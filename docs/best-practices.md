@@ -241,8 +241,8 @@ jest.mock('./api/github', () => ({
 ### 1. **Document Complex Logic**
 
 ```javascript
-// Use /doc command on complex functions
-// Copilot generates comprehensive documentation
+// Ask Copilot: "Add comprehensive JSDoc documentation to this function"
+// Copilot generates detailed documentation
 
 /**
  * Implements exponential backoff retry logic

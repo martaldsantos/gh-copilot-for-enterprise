@@ -10,7 +10,6 @@ Get up and running with the GitHub Copilot Hackathon in minutes!
 - **[🤖 Data Science & ML](./tracks/data-science-ml-track.md)** - Data analysis, ML models
 - **[🏗️ DevOps & Platform](./tracks/devops-platform-track.md)** - Infrastructure, containers, CI/CD
 - **[🎨 Frontend Developer](./tracks/frontend-developer-track.md)** - React, TypeScript, UI
-- **[🚀 Full-Stack Developer](./tracks/full-stack-developer-track.md)** - Complete applications
 - **[🧪 QA Tester](./tracks/qa-tester-track.md)** - Test automation, quality assurance
 
 **👉 [View Track Details & Comparison](./tracks/README.md)**
@@ -117,7 +116,7 @@ Go to your chosen track guide:
 - **[Data Science Track](./tracks/data-science-ml-track.md)** → Start with Challenge 2
 - **[DevOps Track](./tracks/devops-platform-track.md)** → Start with Challenge 3
 - **[Frontend Track](./tracks/frontend-developer-track.md)** → Start with Challenge 4
-- **[Full-Stack Track](./tracks/full-stack-developer-track.md)** → Complete all challenges
+- **[QA Tester Track](./tracks/qa-tester-track.md)** → Start with Challenge 5
 
 Each track provides specific guidance and tips!
 

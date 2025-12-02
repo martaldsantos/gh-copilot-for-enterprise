@@ -483,4 +483,4 @@ If this guide doesn't help:
 
 Most issues have simple solutions. Stay calm and debug systematically!
 
-[Back to Main](./README.md) | [Quick Start](./QUICKSTART.md)
+[Back to Main](./README.md) | [Tracks](./tracks/README.md)

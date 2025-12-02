@@ -25,16 +25,13 @@ This track is designed for QA Engineers and Test Automation specialists. Unlike 
 
 ### ⚠️ IMPORTANT: Create a Fresh Repository First!
 
-> **Do NOT work directly in the hackathon repository!** The `.github/copilot-instructions.md` file there is for hackathon maintainers, not your project. Working there will confuse Copilot about your context.
+> **Do NOT work directly in the hackathon repository!** See the **[Setup Instructions](../README.md#%EF%B8%8F-important-create-your-own-repository)** for why and how to set up properly.
 
-**Set up your workspace:**
+👉 **[Follow the Setup Instructions](../README.md#step-2-set-up-environment)** - use the interactive setup script to copy:
+- `.devcontainer/` folder
+- `challenges/challenge-5-qa/` starter code and test templates
 
-1. **Create a new repository** for your challenge work
-2. **Copy from the hackathon repo:**
-   - `.devcontainer/` folder (for consistent dev environment)
-   - `challenges/challenge-5-qa/` (starter code and test templates)
-3. **Create your own `.github/copilot-instructions.md`** using the example below
-4. **Launch Codespace** in YOUR new repository
+Then create your own `.github/copilot-instructions.md` using the example below.
 
 ---
 

@@ -98,9 +98,9 @@ across 3 availability zones, with NAT gateway and proper routing"
 
 ### 2. Use Copilot for Documentation
 
-Highlight Terraform resources and use:
+Highlight Terraform resources and ask:
 ```
-/doc explain this infrastructure setup and its components
+Explain this infrastructure setup and its components
 ```
 
 ### 3. Security Best Practices
