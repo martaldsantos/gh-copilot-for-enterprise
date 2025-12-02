@@ -142,11 +142,11 @@ Build an end-to-end machine learning solution:
 **Copilot Skills You'll Learn:**
 - Code generation in Jupyter notebooks
 - `/explain` for complex algorithms and statistics
-- `/newNotebook` for creating structured notebooks
+- `/new` for creating new projects and files
 - Data visualization assistance
 - Feature engineering suggestions
 - Model selection guidance
-- `/doc` for documenting your analysis
+- Natural language prompts for documenting your analysis
 
 📖 [Start Challenge 2](../challenges/challenge-2-ml-ai/README.md)
 
@@ -338,7 +338,7 @@ df = pd.read_csv('customer_churn.csv')
    - Create evaluation metrics
 
 4. **Documentation**
-   - Use `/doc` to explain complex functions
+   - Ask Copilot to "add docstrings" to explain complex functions
    - Generate markdown summaries
    - Create reproducible notebooks
 

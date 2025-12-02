@@ -143,6 +143,7 @@ Build a complete frontend application with:
 - Event handler patterns
 - Test generation with `/tests`
 - `/explain` for understanding React patterns
+- Natural language for documentation
 
 📖 [Start Challenge 4](../challenges/challenge-4-frontend/README.md)
 
@@ -194,7 +195,7 @@ By completing this track, you will:
 - ✅ Generate test cases with `/tests`
 - ✅ Refactor code efficiently
 - ✅ Debug issues with `/fix`
-- ✅ Document components with `/doc`
+- ✅ Document components using natural language prompts
 
 ## 💡 Track-Specific Tips
 

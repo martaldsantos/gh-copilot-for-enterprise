@@ -132,7 +132,7 @@ Build a complete task management API with:
 - Inline code completion for rapid API development
 - `/tests` command for generating test cases
 - `/explain` to understand generated patterns
-- `/doc` for API documentation
+- Natural language prompts for API documentation
 - Workspace-aware prompts for consistent patterns
 
 📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
@@ -180,7 +180,7 @@ By completing this track, you will:
 - ✅ Use inline suggestions effectively for backend code
 - ✅ Generate tests automatically with `/tests`
 - ✅ Debug issues efficiently with `/fix`
-- ✅ Document code and APIs with `/doc`
+- ✅ Document code and APIs using natural language prompts
 - ✅ Leverage workspace context for consistent patterns
 - ✅ Create and use MCP servers (advanced)
 
@@ -227,7 +227,7 @@ Track your progress:
 - [ ] Achieved >80% test coverage
 - [ ] Successfully containerized application
 - [ ] Set up working CI/CD pipeline
-- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`, `/doc`)
+- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`)
 - [ ] Can explain productivity gains from Copilot
 
 ## 🚀 Getting Started

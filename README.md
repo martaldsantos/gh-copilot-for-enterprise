@@ -153,7 +153,7 @@ Perform exploratory data analysis and build a machine learning model with Copilo
 ### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/README.md)
 **Team**: DevOps, Platform Engineers  
 **Skills**: Terraform, Docker, Kubernetes, CI/CD  
-**Copilot Focus**: Infrastructure patterns, `/doc` for configurations, best practices
+**Copilot Focus**: Infrastructure patterns, documentation generation, best practices
 
 Design and implement cloud infrastructure using Terraform, containerize applications, and set up deployment pipelines with Copilot's infrastructure expertise.
 
@@ -196,7 +196,7 @@ Work with real-world open-source applications to implement comprehensive test au
 1. **Be Specific**: Detailed prompts yield better results
 2. **Provide Context**: Reference existing code and patterns
 3. **Iterate**: Refine suggestions through conversation
-4. **Use Chat Commands**: Leverage `/explain`, `/fix`, `/tests`, `/doc`
+4. **Use Chat Commands**: Leverage `/explain`, `/fix`, `/tests`, and natural language for documentation
 5. **Review Suggestions**: Always understand generated code
 6. **Keyboard Shortcuts**: 
    - `Tab` - Accept suggestion
@@ -240,7 +240,7 @@ Prefer to explore on your own?
 Track your progress:
 - [ ] Chose and started your track
 - [ ] Completed at least 2 challenges (or all required challenges in your track)
-- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`, `/doc`)
+- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`)
 - [ ] Created reusable prompt collections
 - [ ] Documented learnings and productivity wins
 - [ ] Can explain Copilot's impact on your workflow

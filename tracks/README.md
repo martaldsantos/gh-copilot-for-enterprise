@@ -120,7 +120,7 @@ All tracks teach you:
 
 - ✅ GitHub Copilot core features (inline suggestions, chat)
 - ✅ Effective prompt engineering
-- ✅ Using chat commands (`/explain`, `/fix`, `/tests`, `/doc`, `/newNotebook`)
+- ✅ Using chat commands (`/explain`, `/fix`, `/tests`, `/new`)
 - ✅ Workspace context awareness (`@workspace`)
 - ✅ Code generation and acceleration
 - ✅ Testing and documentation with Copilot

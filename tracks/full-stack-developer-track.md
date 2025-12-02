@@ -145,7 +145,7 @@ Build the API layer:
 **Copilot Skills You'll Learn:**
 - Backend code generation
 - Test creation with `/tests`
-- `/doc` for API documentation
+- Natural language prompts for API documentation
 
 📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
 
@@ -212,7 +212,7 @@ By completing this track, you will:
 ### Copilot Mastery
 
 - ✅ Use Copilot across entire stack
-- ✅ Leverage all chat commands (`/explain`, `/fix`, `/tests`, `/doc`)
+- ✅ Leverage all chat commands (`/explain`, `/fix`, `/tests`)
 - ✅ Generate code for different layers
 - ✅ Maintain consistency across codebase
 - ✅ Optimize development workflow
@@ -328,7 +328,7 @@ If you finish early or want to go further:
 **Copilot strategy:**
 - Use comments to drive development
 - Generate tests with `/tests`
-- Document with `/doc`
+- Ask Copilot to add documentation
 
 ### Phase 3: Frontend (1.5 hours)
 

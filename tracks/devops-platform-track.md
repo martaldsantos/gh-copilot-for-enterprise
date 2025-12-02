@@ -141,7 +141,7 @@ Build production-ready infrastructure:
 **Copilot Skills You'll Learn:**
 - Infrastructure code generation from descriptions
 - Terraform best practices and patterns
-- `/doc` for configuration documentation
+- Natural language prompts for configuration documentation
 - Security and compliance guidance
 - Docker optimization techniques
 - `/explain` for understanding infrastructure patterns
@@ -254,11 +254,11 @@ By completing this track, you will:
 # 5. Run smoke tests
 ```
 
-### 5. Using `/doc` for Infrastructure
+### 5. Documenting Infrastructure
 
 Document your infrastructure:
 1. Highlight Terraform resources
-2. Use `/doc explain this infrastructure setup`
+2. Ask Copilot: "Explain this infrastructure setup and add documentation"
 3. Generate architecture documentation
 
 ## 📊 Success Metrics

@@ -106,7 +106,9 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 
 ---
 
-### `/doc` - Generate Documentation
+### Generating Documentation (Natural Language)
+
+**Note:** While some environments may support a `/doc` command, it's not officially documented. Use natural language prompts instead.
 
 **Purpose:** Create documentation, comments, README files, or API docs.
 
@@ -120,27 +122,29 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 
 1. **Document function:**
    ```
-   Select function → "/doc add JSDoc comments"
+   Select function → "Add JSDoc comments to this function"
    ```
 
 2. **Create README:**
    ```
-   /doc create a README for this project with setup instructions
+   Create a README for this project with setup instructions
    ```
 
 3. **API documentation:**
    ```
-   /doc generate OpenAPI specification for these endpoints
+   Generate OpenAPI specification for these endpoints
    ```
 
 **Pro Tips:**
 - Specify documentation format (JSDoc, Sphinx, etc.)
-- Include usage examples: `/doc with examples`
+- Include usage examples in your request
 - Request specific sections
 
 ---
 
-### `/newNotebook` - Create Jupyter Notebooks
+### Creating Jupyter Notebooks (Natural Language)
+
+**Note:** Use the `/new` command or natural language prompts to create notebooks.
 
 **Purpose:** Create a new Jupyter notebook with specified content and structure.
 
@@ -154,18 +158,18 @@ GitHub Copilot Chat provides specialized commands (slash commands) that help you
 
 1. **Create analysis notebook:**
    ```
-   /newNotebook create a data analysis notebook for exploring a CSV dataset
+   Create a data analysis notebook for exploring a CSV dataset
    ```
 
 2. **ML experiment notebook:**
    ```
-   /newNotebook create a machine learning notebook with data loading, 
+   Create a machine learning notebook with data loading, 
    preprocessing, model training, and evaluation sections
    ```
 
 3. **Tutorial notebook:**
    ```
-   /newNotebook create a Python pandas tutorial with examples
+   Create a Python pandas tutorial notebook with examples
    ```
 
 **Pro Tips:**
@@ -294,7 +298,7 @@ Be explicit about language/framework:
 ✅ `/tests create unit tests for authentication, including invalid credentials and token expiration`
 
 ### 3. **Select Code First**
-For `/explain`, `/fix`, `/tests`, `/doc` - select relevant code before using the command
+For `/explain`, `/fix`, `/tests` - select relevant code before using the command
 
 ### 4. **Iterate**
 Don't accept the first suggestion blindly:
@@ -314,9 +318,9 @@ Don't accept the first suggestion blindly:
 | `/explain` | Code/concept | Explanation | Learning, understanding |
 | `/fix` | Buggy code | Fixed code | Debugging |
 | `/tests` | Function/class | Test code | Testing |
-| `/doc` | Code | Documentation | Docs, comments |
-| `/newNotebook` | Description | Jupyter notebook | Data science, tutorials |
+| `/new` | Description | New project/file | Scaffolding |
 | `@workspace` | Question | Answer + references | Discovery |
+| Natural language | Any request | Varied | Documentation, notebooks |
 
 ## Examples from Challenges
 
@@ -327,7 +331,7 @@ including validation errors and duplicate email handling
 
 /explain how JWT authentication works in this implementation
 
-/doc generate OpenAPI specification for all task endpoints
+Generate OpenAPI specification for all task endpoints
 ```
 
 ### Challenge 2: ML/AI
@@ -391,9 +395,9 @@ How can I optimize this component to prevent unnecessary re-renders?
 📖 /explain     - Understand code
 🔧 /fix         - Debug issues  
 ✅ /tests       - Generate tests
-📝 /doc         - Create docs
-📓 /newNotebook - Create Jupyter notebook
+🆕 /new         - Create new project
 🔍 @workspace   - Search project
+💬 Natural lang - Documentation, notebooks, more
 ```
 
 ---

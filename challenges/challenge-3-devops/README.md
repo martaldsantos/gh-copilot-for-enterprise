@@ -14,7 +14,7 @@ Design and implement cloud infrastructure using Terraform and containerize appli
 - Containerization best practices with Docker
 - Kubernetes manifest generation
 - CI/CD pipeline configuration
-- Using `/doc` for infrastructure documentation
+- Using Copilot for infrastructure documentation
 - Security and compliance patterns
 
 ## 🛠️ Technology Stack
@@ -96,7 +96,7 @@ Structure:
 across 3 availability zones, with NAT gateway and proper routing"
 ```
 
-### 2. Use `/doc` for Explanations
+### 2. Use Copilot for Documentation
 
 Highlight Terraform resources and use:
 ```
@@ -301,7 +301,7 @@ Ask: "What security best practices should I follow for this infrastructure?"
    ```
 
 3. **Documentation**
-   - Use `/doc` on Terraform files
+   - Ask Copilot to document Terraform files
    - Document architecture decisions
    - Create deployment runbook
 

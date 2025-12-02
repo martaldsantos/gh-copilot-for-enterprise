@@ -222,7 +222,7 @@ Ask Copilot questions about your entire project:
    ```
 
 2. **Add README**
-   - Use `/doc` command on main file
+   - Ask Copilot: "Add JSDoc/docstring comments to this file"
    - Document API endpoints, setup instructions
 
 ## ✅ Completion Checklist

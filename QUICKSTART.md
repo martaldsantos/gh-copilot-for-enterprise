@@ -163,7 +163,7 @@ Prefer to choose your own path? Pick any challenge:
 - `/explain` - Understand code
 - `/fix` - Debug issues
 - `/tests` - Generate tests
-- `/doc` - Create documentation
+- Ask naturally: "Add documentation to this code"
 
 ### Getting Help
 Open Copilot Chat (`Ctrl+Shift+I`) and ask:
