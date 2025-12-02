@@ -21,9 +21,22 @@ This track is designed for QA Engineers and Test Automation specialists. Unlike 
 - **AI Integration**: Playwright MCP Server
 - **Environment**: Docker & DevContainers
 
-## ⚡ First Steps: Configure Your AI Environment
+## ⚡ First Steps: Set Up Your Workspace
 
-**Before starting any phase**, set up your personalized Copilot environment:
+### ⚠️ IMPORTANT: Create a Fresh Repository First!
+
+> **Do NOT work directly in the hackathon repository!** The `.github/copilot-instructions.md` file there is for hackathon maintainers, not your project. Working there will confuse Copilot about your context.
+
+**Set up your workspace:**
+
+1. **Create a new repository** for your challenge work
+2. **Copy from the hackathon repo:**
+   - `.devcontainer/` folder (for consistent dev environment)
+   - `challenges/challenge-5-qa/` (starter code and test templates)
+3. **Create your own `.github/copilot-instructions.md`** using the example below
+4. **Launch Codespace** in YOUR new repository
+
+---
 
 ### 1. Create a `.github/copilot-instructions.md` File
 
@@ -105,7 +118,7 @@ You are an expert in browser automation with Playwright.
 
 > 🎯 **This is YOUR dedicated challenge.** You'll work with real open-source applications and learn professional test automation techniques.
 
-📖 [Start Challenge 6](../challenges/challenge-6-qa/README.md)
+📖 [Start Challenge 5](../challenges/challenge-5-qa/README.md)
 
 ---
 

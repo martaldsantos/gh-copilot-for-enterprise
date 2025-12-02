@@ -122,11 +122,8 @@ Prefer to choose your own path? Pick any challenge:
 **Frontend Developer?**
 👉 **[Challenge 4: React UI](./challenges/challenge-4-frontend/README.md)** - React, TypeScript, modern UI
 
-**Want Advanced Features?**
-👉 **[Challenge 5: MCP Integration](./challenges/challenge-5-fullstack-mcp/README.md)** - Model Context Protocol
-
-**Tester?**
-👉 **[Challenge 6: QA Testing](./challenges/challenge-6-qa-testing/README.md)** - Test automation with Jest, Pytest, Cypress
+**QA Tester?**
+👉 **[Challenge 5: QA Testing](./challenges/challenge-5-qa/README.md)** - Test automation with Playwright, Jest, Pytest
 
 ---
 

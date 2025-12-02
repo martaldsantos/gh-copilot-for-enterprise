@@ -54,7 +54,7 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
 
 **Focus:** Test automation with Playwright MCP, testing real-world open-source applications
 
-**Your Challenge:** Challenge 6 - QA & Test Automation
+**Your Challenge:** Challenge 5 - QA & Test Automation
 
 **Duration:** 4-6 hours
 
@@ -111,7 +111,7 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
 | **Data Science** | ⭐⭐⭐ Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
 | **DevOps** | ⭐⭐⭐ Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
 | **Frontend** | ⭐⭐ Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
-| **QA Tester** | ⭐⭐ Beginner-Int | 4-6h | Playwright, Jest, Pytest | Challenge 6 |
+| **QA Tester** | ⭐⭐ Beginner-Int | 4-6h | Playwright, Jest, Pytest | Challenge 5 |
 | **Full-Stack** | ⭐⭐⭐ Intermediate | 4-6h | Node.js/Python + React | Challenge 1+4 |
 
 ## 🎯 What You'll Learn in Every Track
@@ -129,24 +129,46 @@ Plus track-specific skills!
 
 ## 🚀 Getting Started
 
+### ⚠️ IMPORTANT: Create a Fresh Repository
+
+> **Critical:** Do NOT work directly in this hackathon repository! The `.github/copilot-instructions.md` file here is designed for the hackathon maintainers, not for your project work. If you work here directly, Copilot will receive context about "hackathon organization" instead of your actual project.
+
+**Recommended Setup:**
+
+1. **Create a new repository** for your challenge work
+2. **Copy these files from this repo:**
+   - The `.devcontainer/` folder (for consistent development environment)
+   - Your challenge's starter code (e.g., `challenges/challenge-1-web-api/node-express/`)
+   - Any relevant documentation
+3. **Create your own `.github/copilot-instructions.md`** (examples provided in each track guide)
+4. **Do NOT copy** this repository's `.github/copilot-instructions.md`
+
+This ensures Copilot understands YOUR project context and gives you the best suggestions!
+
+---
+
 ### 1. Choose Your Track
 Click on the track link above to read the detailed guide.
 
 ### 2. Review Prerequisites
 Each track lists required knowledge and tools.
 
-### 3. Set Up Environment
-- **Recommended:** Launch GitHub Codespace (everything pre-configured)
+### 3. Set Up Your Fresh Repository
+Follow the steps above to create your workspace with the proper structure.
+
+### 4. Set Up Environment
+- **Recommended:** Launch GitHub Codespace in YOUR new repository (devcontainer is pre-configured)
 - **Alternative:** Local setup with VS Code and Copilot
 
-### 4. Follow the Track Guide
+### 5. Follow the Track Guide
 Each track provides:
 - Recommended challenge sequence
 - Time allocation
 - Learning objectives
 - Tips specific to that domain
+- **Example `.github/copilot-instructions.md`** for your project
 
-### 5. Start Your First Challenge
+### 6. Start Your First Challenge
 Begin with the required challenge for your track!
 
 ## ⏱️ Sample Schedules

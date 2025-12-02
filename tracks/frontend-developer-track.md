@@ -33,9 +33,22 @@ You'll work with:
 - **State Management** - Context API or Redux
 - **Testing** - Jest and React Testing Library
 
-## ⚡ First Steps: Configure Your AI Environment
+## ⚡ First Steps: Set Up Your Workspace
 
-**Before starting any challenge**, set up your personalized Copilot environment:
+### ⚠️ IMPORTANT: Create a Fresh Repository First!
+
+> **Do NOT work directly in the hackathon repository!** The `.github/copilot-instructions.md` file there is for hackathon maintainers, not your project. Working there will confuse Copilot about your context.
+
+**Set up your workspace:**
+
+1. **Create a new repository** for your challenge work
+2. **Copy from the hackathon repo:**
+   - `.devcontainer/` folder (for consistent dev environment)
+   - `challenges/challenge-4-frontend/` (starter code)
+3. **Create your own `.github/copilot-instructions.md`** using the example below
+4. **Launch Codespace** in YOUR new repository
+
+---
 
 ### 1. Create a `.github/copilot-instructions.md` File
 

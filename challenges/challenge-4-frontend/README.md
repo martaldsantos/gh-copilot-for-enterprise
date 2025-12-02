@@ -78,10 +78,8 @@ npm run dev
 ### Step 2: Review Starter Code
 
 The project is bootstrapped with Vite + React + TypeScript:
-- `src/components/` - React components
-- `src/hooks/` - Custom hooks
-- `src/types/` - TypeScript types
-- `src/styles/` - Global styles
+- `src/App.tsx` - Main application component
+- `src/types/` - TypeScript type definitions
 
 ## 💡 Copilot Tips for This Challenge
 
@@ -350,17 +348,13 @@ Document:
 - [React Documentation](https://react.dev/)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Component Patterns Guide](../docs/react-patterns.md)
-
-## 🎨 Design System
-
-Reference the provided Figma/design mockups in `/designs` folder
+- [Copilot Best Practices](../docs/best-practices.md)
 
 ---
 
 **Need Help?**
 - Ask Copilot for component structure
 - Use `/explain` on complex React patterns
-- Check `/solutions/challenge-4/` for reference
+- Check the `/docs` folder for guides
 
 Build beautiful UIs! ⚛️✨

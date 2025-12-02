@@ -31,7 +31,7 @@ Build a complete infrastructure setup for a web application:
 
 ### Core Features
 1. **Cloud Infrastructure (Terraform)**
-   - VPC/Network configuration
+   - Network configuration
    - Compute instances/containers
    - Load balancer
    - Database resources
@@ -83,9 +83,7 @@ Structure:
 │   └── azure/
 ├── docker/
 │   └── app/
-├── kubernetes/
-└── .github/
-    └── workflows/
+└── kubernetes/
 ```
 
 ## 💡 Copilot Tips for This Challenge
@@ -134,7 +132,7 @@ Ask: "What security best practices should I follow for this infrastructure?"
 
 2. **Network Configuration**
    ```hcl
-   # Create VPC with CIDR 10.0.0.0/16
+   # Create VNET with CIDR 10.0.0.0/16
    # Add public subnets in 2 AZs (10.0.1.0/24, 10.0.2.0/24)
    # Add private subnets in 2 AZs (10.0.10.0/24, 10.0.11.0/24)
    # Configure Internet Gateway and NAT Gateway
@@ -310,8 +308,8 @@ Ask: "What security best practices should I follow for this infrastructure?"
 ## ✅ Completion Checklist
 
 ### Infrastructure (Terraform)
-- [ ] VPC with public/private subnets created
-- [ ] Security groups configured properly
+- [ ] VNET with public/private subnets created
+- [ ] Network Security groups configured properly
 - [ ] Auto Scaling Group deployed
 - [ ] Load Balancer configured
 - [ ] Azure Database for PostgreSQL provisioned
@@ -385,10 +383,10 @@ Document:
 
 ## 📚 Resources
 
-- [Terraform Best Practices](../docs/terraform-best-practices.md)
-- [Docker Security Guide](../docs/docker-security.md)
-- [Kubernetes Patterns](../docs/k8s-patterns.md)
-- [CI/CD with GitHub Actions](../docs/github-actions.md)
+- [Terraform Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Docker Documentation](https://docs.docker.com/)
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Copilot Best Practices](../docs/best-practices.md)
 
 ## 🏗️ Architecture Diagram
 
@@ -409,6 +407,6 @@ Internet
 **Need Help?**
 - Ask Copilot for infrastructure best practices
 - Use `/explain` on complex configurations
-- Check `/solutions/challenge-3/` for reference
+- Check the `/docs` folder for guides
 
 Build with confidence! 🏗️☁️

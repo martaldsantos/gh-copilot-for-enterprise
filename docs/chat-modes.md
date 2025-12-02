@@ -357,13 +357,13 @@ including validation errors and duplicate email handling
 How can I optimize this component to prevent unnecessary re-renders?
 ```
 
-### Challenge 5: MCP
+### Challenge 5: QA & Test Automation
 ```
-/explain how this MCP server communicates with Copilot
+/tests create comprehensive E2E tests for the login flow using Playwright
 
-/tests create integration tests for all MCP tools
+/explain the Page Object Model pattern in this test suite
 
-/doc document the MCP server API and available tools
+/doc document the test coverage and testing strategy
 ```
 
 ## Troubleshooting

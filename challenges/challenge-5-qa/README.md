@@ -1,4 +1,4 @@
-# Challenge 6: QA & Test Automation 🧪
+# Challenge 5: QA & Test Automation 🧪
 
 **Difficulty**: Intermediate  
 **Duration**: 4-6 hours  
@@ -93,24 +93,14 @@ cd qa-target-app
 
 ## 🛠️ Phase 2: Environment Setup
 
-### Step 1: Apply DevContainer Configuration
+### Step 1: Set Up Your Testing Environment
 
-Copy the appropriate DevContainer configuration from this repository:
+1. Open the cloned `qa-target-app` folder in VS Code
+2. If using the hackathon's DevContainer, copy the `.devcontainer` folder from the hackathon repository root
+3. When prompted, click "Reopen in Container" (if using DevContainer)
+4. Wait for the environment to set up
 
-```bash
-# From the hackathon root, copy the devcontainer for your chosen app
-cp -r .devcontainer/qa-node-react/ qa-target-app/.devcontainer/    # For Jira Clone
-cp -r .devcontainer/qa-python-fastapi/ qa-target-app/.devcontainer/ # For FastAPI
-cp -r .devcontainer/qa-java-spring/ qa-target-app/.devcontainer/   # For PetClinic
-```
-
-### Step 2: Open in DevContainer
-
-1. Open the `qa-target-app` folder in VS Code
-2. When prompted, click "Reopen in Container"
-3. Wait for the container to build (includes Playwright browsers)
-
-### Step 3: Verify Setup
+### Step 2: Verify Setup
 
 ```bash
 # Verify Playwright is installed

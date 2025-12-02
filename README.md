@@ -38,9 +38,26 @@ Each challenge is designed to take 1-1.5 hours
 - GitHub Codespaces enabled (recommended) OR
 - Local development environment with VS Code and GitHub Copilot extension
 
+#### ⚠️ IMPORTANT: Create Your Own Repository
+
+> **Do NOT work directly in this hackathon repository!** This repo contains a `.github/copilot-instructions.md` file designed for hackathon maintainers—not for your project work. If you work here, Copilot will receive confusing context.
+
+**Recommended Setup:**
+
+1. **Create a new repository** for your challenge work
+2. **Copy these files from this repo:**
+   - `.devcontainer/` folder (for consistent dev environment)
+   - Your challenge's starter code folder
+3. **Create your own `.github/copilot-instructions.md`** (examples in each track guide)
+4. **Do NOT copy** this repo's `.github/copilot-instructions.md`
+
+See your track guide for specific files to copy and example custom instructions.
+
 #### Launch in GitHub Codespaces (Recommended)
 
-1. Click the green "Code" button at the top of this repository
+After creating your own repository with the copied files:
+
+1. Click the green "Code" button at the top of YOUR repository
 2. Select "Codespaces" tab
 3. Click "Create codespace on main" (or your branch)
 4. Wait for the environment to set up (2-3 minutes)
@@ -92,7 +109,7 @@ Throughout these challenges, you'll master:
 
 **💡 Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 6 challenges are available, and each track has a dedicated challenge:
+All 5 challenges are available, and each track has a dedicated challenge:
 
 ### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/README.md)
 **Team**: Backend/Web Developers  
@@ -131,19 +148,10 @@ Create a modern, responsive web application with reusable components, leveraging
 
 ---
 
-### [Challenge 5: Full Stack - MCP Server Integration](./challenges/challenge-5-fullstack-mcp/README.md)
-
-**Team**: Full-stack Developers, Advanced Users  
-**Skills**: Node.js, MCP Protocol, API integration, Full-stack architecture  
-**Copilot Focus**: MCP server creation, advanced context, multi-file editing
-
-Build a complete application that integrates with external services through MCP servers, showcasing how to enhance Copilot with custom context and tools.
-
----
-
-### [Challenge 6: QA & Test Automation](./challenges/challenge-6-qa/README.md)
+### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/README.md)
 
 **Team**: QA Engineers, SDETs, Test Automation Engineers  
+**Duration**: 4-6 hours (extended challenge with real-world apps)  
 **Skills**: Playwright, Jest/Pytest, Page Object Model, E2E testing  
 **Copilot Focus**: Test generation with `/tests`, Playwright MCP for AI-driven testing
 

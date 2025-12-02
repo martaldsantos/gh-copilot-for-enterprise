@@ -21,8 +21,7 @@ This repository contains materials for a GitHub Copilot for Enterprise hackathon
 │   ├── challenge-2-ml-ai/         → Data Science Track
 │   ├── challenge-3-devops/        → DevOps Track
 │   ├── challenge-4-frontend/      → Frontend Track
-│   ├── challenge-5-fullstack-mcp/ → (Advanced/Optional)
-│   └── challenge-6-qa/            → QA Tester Track
+│   └── challenge-5-qa/            → QA Tester Track
 │
 ├── docs/                      # Documentation and guides
 │   ├── best-practices.md
@@ -45,7 +44,7 @@ Each track has a dedicated challenge. **Keep tracks and challenges in sync!**
 | DevOps & Platform | Challenge 3 (devops) | Terraform, Docker, K8s |
 | Data Science & ML | Challenge 2 (ml-ai) | Jupyter notebooks, ML |
 | Full-Stack Developer | Challenge 1 + 4 | API + Frontend integration |
-| QA Tester | Challenge 6 (qa) | Test automation, Playwright MCP |
+| QA Tester | Challenge 5 (qa) | Test automation, Playwright MCP |
 
 ## Important Guidelines
 
@@ -57,6 +56,9 @@ When modifying tracks or challenges:
 2. **Challenge changes** → Update the track that references it
 3. **New features** → Add to both track and challenge documentation
 4. **Duration changes** → Sync across track, challenge, and README.md
+5. **Root README.md** → Always keep `/README.md` updated with any structural changes, new tracks, challenge updates, or feature additions
+
+> ⚠️ **Critical:** The root `README.md` is the entry point for all participants. Any changes to tracks, challenges, or documentation structure **must** be reflected there.
 
 ### Cloud Provider
 
@@ -92,3 +94,36 @@ This hackathon uses **Azure** as the cloud provider. Do not reference AWS, GCP, 
 - Provide starter code and clear objectives
 - Include success metrics/checkboxes
 - Add bonus challenges for advanced participants
+
+## ⚠️ Participant Workspace Setup (Critical)
+
+### Important: This Repository Contains Hackathon Instructions for Copilot
+
+This repository has a `.github/copilot-instructions.md` file that provides context to GitHub Copilot about the **hackathon structure itself**—not about participant projects.
+
+### Recommended Approach for Participants
+
+**Participants should NOT work directly in this repository.** Instead:
+
+1. **Create a fresh repository** for your challenge work
+2. **Copy only the needed files** from this repo:
+   - The `.devcontainer/` folder (for consistent development environment)
+   - The challenge starter code (e.g., `challenges/challenge-1-web-api/node-express/`)
+   - Any relevant documentation files
+3. **Create your own `.github/copilot-instructions.md`** customized for your project (see the track guides for examples)
+4. **Delete or do not copy** this repository's `.github/copilot-instructions.md` as it will confuse Copilot about your project context
+
+### Why This Matters
+
+If participants work directly in this repository without customizing the Copilot instructions:
+- Copilot will receive context about "hackathon organization" instead of the participant's actual project
+- Code suggestions may be influenced by the hackathon's documentation structure
+- Participants won't get the full benefit of project-specific Copilot customization
+
+### Each Track Should Instruct Participants To:
+
+1. Start with a fresh repository or fork
+2. Copy the `.devcontainer/` folder for environment consistency
+3. Copy their challenge's starter code
+4. Create a custom `.github/copilot-instructions.md` (examples provided in each track)
+5. Optionally create custom agents in `.github/agents/`

@@ -179,7 +179,6 @@ Around lunch, gather everyone:
 - Complete bonus challenges from track
 - Try challenges from another track
 - Explore advanced features
-- Deep dive into MCP servers (Challenge 5)
 
 ## Track-Specific Facilitation Guide ⭐ NEW
 
@@ -254,7 +253,7 @@ Around lunch, gather everyone:
 
 **Advanced:**
 - Challenge 3: DevOps (full stack)
-- Challenge 5: MCP Integration
+- Challenge 5: QA (advanced automation patterns)ation
 
 ## Metrics to Track
 

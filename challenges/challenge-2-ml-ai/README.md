@@ -291,15 +291,10 @@ If you finish early, try these:
 
 ## 🧪 Testing Your Work
 
-Run the validation script:
-```bash
-python validate_model.py
-```
-
-This checks:
-- Model performance metrics
-- Code quality
-- Documentation completeness
+After completing the notebook, verify that:
+- All cells execute without errors
+- Model achieves reasonable performance metrics
+- Visualizations are clear and informative
 
 ## 📊 Success Metrics
 
@@ -321,8 +316,7 @@ Document your experience:
 
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [Scikit-learn Guide](https://scikit-learn.org/stable/user_guide.html)
-- [Feature Engineering Guide](../docs/feature-engineering.md)
-- [Model Selection Guide](../docs/model-selection.md)
+- [Copilot Best Practices](../docs/best-practices.md)
 
 ## 📈 Dataset Information
 
@@ -344,7 +338,6 @@ Document your experience:
 
 **Need Help?**
 - Use Copilot Chat to debug issues
-- Check `/docs/ml-best-practices.md`
-- Review solution in `/solutions/challenge-2/`
+- Check the `/docs` folder for guides
 
 Happy Analyzing! 📊🤖

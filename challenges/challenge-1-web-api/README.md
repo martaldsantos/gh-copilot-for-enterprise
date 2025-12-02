@@ -19,7 +19,7 @@ Build a fully functional REST API for a task management system using GitHub Copi
 ## 🛠️ Technology Stack
 
 Choose one:
-- **Node.js**: Express.js + TypeScript
+- **Node.js**: Express.js + JavaScript
 - **Python**: FastAPI + Pydantic
 
 Both starter templates are provided!
@@ -71,8 +71,6 @@ cd python-fastapi/
 Open the starter files and familiarize yourself with the structure:
 - `app.js` or `main.py` - Main application file
 - `models/` - Data models
-- `routes/` - API endpoints
-- `tests/` - Test files
 
 ### Step 3: Use Copilot to Build
 
@@ -255,16 +253,7 @@ If you finish early, try these:
 
 ## 🧪 Testing Your API
 
-Use the provided test scripts:
-
-```bash
-# Test all endpoints
-node test-api.js
-# or
-python test_api.py
-```
-
-Or use tools like:
+Use tools like:
 - Postman
 - Thunder Client (VS Code extension)
 - cURL commands
@@ -289,7 +278,6 @@ Document your discoveries:
 
 - [Express.js Documentation](https://expressjs.com/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [JWT Authentication Guide](../docs/jwt-auth.md)
 - [Copilot Chat Commands](../docs/chat-modes.md)
 
 ---
@@ -297,6 +285,5 @@ Document your discoveries:
 **Need Help?**
 - Ask Copilot! Use chat to debug issues
 - Check the `/docs` folder for guides
-- Review the solution in `/solutions/challenge-1/`
 
 Good luck! 🚀
