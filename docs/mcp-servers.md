@@ -114,10 +114,78 @@ For MCP servers you want across all workspaces, use MCP: Open User Configuration
 |--------|---------|--------------|
 | **Playwright** | Browser automation for testing | `npx @playwright/mcp@latest` |
 | **GitHub** | GitHub API access | `npx @modelcontextprotocol/server-github` |
+| **Atlassian Rovo** | Jira, Confluence, Compass access | Remote server (see below) |
 | **Filesystem** | Enhanced file operations | `npx @modelcontextprotocol/server-filesystem` |
 | **PostgreSQL** | Database queries | `npx @modelcontextprotocol/server-postgres` |
 | **Fetch** | HTTP requests | `npx @modelcontextprotocol/server-fetch` |
 | **Memory** | Persistent memory | `npx @modelcontextprotocol/server-memory` |
+
+---
+
+## Atlassian Rovo MCP Server (Jira & Confluence)
+
+The **Atlassian Rovo MCP Server** is a cloud-based remote MCP server that connects your Atlassian Cloud products (Jira, Confluence, and Compass) to AI assistants like GitHub Copilot.
+
+### What You Can Do
+
+- **Jira**: Search issues, create/update work items, bulk create from notes
+- **Confluence**: Summarize pages, create documentation, navigate spaces
+- **Compass**: Query service dependencies, create components
+- **Cross-product**: Link Jira tickets to Confluence pages, find related docs
+
+### Example Workflows
+
+```
+"Find all open bugs in Project Alpha"
+"Create a story titled 'Redesign onboarding' in Jira"
+"Summarize the Q2 planning page in Confluence"
+"What depends on the api-gateway service in Compass?"
+"Link these Jira tickets to the Release Plan page"
+```
+
+### Setup for VS Code / GitHub Copilot
+
+The Atlassian Rovo MCP Server is a **remote server** that requires the `mcp-remote` proxy:
+
+**Prerequisites**:
+- Atlassian Cloud site with Jira and/or Confluence
+- Node.js v18+ installed
+- Modern browser for OAuth authentication
+
+**Configuration** (`.vscode/mcp.json`):
+
+```json
+{
+  "servers": {
+    "atlassian": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
+    }
+  }
+}
+```
+
+### Authentication
+
+1. When you first use the Atlassian MCP tools, a browser window opens
+2. Complete the OAuth 2.1 authorization flow
+3. Grant permissions for the requested Atlassian products
+4. Tokens are session-based and respect your existing Jira/Confluence permissions
+
+### Security Features
+
+- **OAuth 2.1**: Secure authentication with scoped tokens
+- **Permission-based**: Only accesses data you have permission to view
+- **HTTPS/TLS 1.2+**: All traffic encrypted
+- **Audit logging**: Actions logged for compliance
+
+### Beta Limitations
+
+- Rate limits apply (higher for Premium/Enterprise plans)
+- Some custom Jira fields may not be recognized
+- Workspace switching not available in single session
+
+For full documentation: [Atlassian Rovo MCP Server Guide](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/)
 
 ---
 
