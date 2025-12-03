@@ -151,7 +151,7 @@ Build a Task Dashboard application with:
 - `/explain` for understanding React patterns
 - Natural language for documentation
 
-📖 [Start Challenge 4](../challenges/challenge-4-frontend/README.md)
+📖 [Start Challenge 4](../challenges/challenge-4-frontend/)
 
 ## ⏱️ Recommended Schedule
 

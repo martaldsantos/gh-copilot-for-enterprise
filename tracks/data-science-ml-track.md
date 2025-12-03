@@ -148,7 +148,7 @@ Build a complete ML pipeline for customer churn prediction:
 - Model selection guidance
 - Natural language prompts for documenting your analysis
 
-📖 [Start Challenge 2](../challenges/challenge-2-ml-ai/README.md)
+📖 [Start Challenge 2](../challenges/challenge-2-ml-ai/)
 
 ## ⏱️ Recommended Schedule
 

@@ -1,0 +1,9 @@
+# TODO: Use Copilot to create a ConfigMap
+# Ask: "Create a Kubernetes ConfigMap named 'quote-config' with a key 'MESSAGE_PREFIX' and value 'Quote:'"
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: quote-config
+data:
+  # TODO: Add data key-value pairs

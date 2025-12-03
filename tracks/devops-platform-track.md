@@ -93,35 +93,29 @@ Design and implement cloud infrastructure using Terraform and containerize appli
 
 #### 📋 Requirements
 
-Build a complete infrastructure setup for a web application:
+Build a complete infrastructure stack for a "Quote of the Day" web application (Node.js):
 
 **Core Features**
-1. **Cloud Infrastructure (Terraform)**
-   - Network configuration
-   - Compute instances/containers
-   - Load balancer
-   - Database resources
-   - Security groups/firewall rules
-   - Storage buckets
+1. **Containerization (Docker)**
+   - Create a **multi-stage** Dockerfile for the Node.js app
+   - Optimize image size (Alpine)
+   - Build and run locally
 
-2. **Containerization (Docker)**
-   - Multi-stage Dockerfile
-   - Docker Compose for local development
-   - Optimized image size
-   - Security best practices
+2. **Kubernetes Orchestration**
+   - Create Deployment with 3 replicas
+   - Create LoadBalancer Service
+   - Create **ConfigMap** for environment variables
+   - Configure health checks (liveness probes)
 
-3. **Kubernetes Deployment**
-   - Deployment manifests
-   - Service definitions
-   - ConfigMaps and Secrets
-   - Ingress configuration
-   - Resource limits
+3. **Cloud Infrastructure (Terraform)**
+   - Provision Azure Resource Group
+   - Provision Azure Container Registry (ACR)
+   - Provision Azure Kubernetes Service (AKS)
+   - (Bonus) Provision **Azure Key Vault** for secrets
 
-4. **CI/CD Pipeline**
-   - Automated testing
-   - Container build and push
-   - Infrastructure deployment
-   - Rollback strategies
+4. **CI/CD Pipeline (Bonus)**
+   - Build and push Docker image to ACR
+   - Deploy to Kubernetes
 
 **Quality Requirements**
 - Infrastructure security best practices
@@ -132,15 +126,22 @@ Build a complete infrastructure setup for a web application:
 
 #### 🚀 Getting Started
 
-1. **Setup**: Navigate to `challenges/challenge-3-devops/`.
-2. **Review Starter Files**: Explore `terraform/`, `docker/`, and `kubernetes/` folders.
-3. **Start Building**: Use Copilot to generate infrastructure code.
+### Step 1: Explore the Starter Code
+- `app/`: Contains the source code for the web application.
+- `docker/`: Place your Dockerfile here (or in `app/`).
+- `kubernetes/`: Place your Kubernetes manifests here.
+- `terraform/`: Place your Terraform configuration here.
+
+### Step 2: Use Copilot to Build
+- **Docker**: Open `app/Dockerfile` and ask Copilot: "Create a multi-stage Dockerfile for a Node.js application."
+- **Kubernetes**: Open `kubernetes/deployment.yaml` and ask: "Create a Kubernetes deployment for the quote-app with 3 replicas, ConfigMap env vars, and a LoadBalancer service."
+- **Terraform**: Open `terraform/azure/main.tf` and ask: "Create an Azure Resource Group, ACR, and AKS cluster using Terraform."
 
 #### 💡 Copilot Tips
 
-- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to generate multi-file infrastructure configurations.
-- **Iterate**: Ask Copilot to "Create a Terraform configuration for Azure" and then refine it.
-- **Security**: Ask Copilot to "Review this Terraform code for security vulnerabilities".
+- **Infrastructure Explanations**: Use `/explain` to understand complex Terraform modules or Kubernetes manifests.
+- **Security Checks**: Ask Copilot "Are there any security issues in this Dockerfile?" or "How can I secure this S3 bucket in Terraform?"
+- **Translation**: Ask Copilot to translate a `docker-compose.yml` file into Kubernetes manifests.
 
 **Copilot Skills You'll Learn:**
 - Infrastructure code generation from descriptions
@@ -150,7 +151,7 @@ Build a complete infrastructure setup for a web application:
 - Docker optimization techniques
 - `/explain` for understanding infrastructure patterns
 
-📖 [Start Challenge 3](../challenges/challenge-3-devops/README.md)
+📖 [Start Challenge 3](../challenges/challenge-3-devops/)
 
 ## ⏱️ Recommended Schedule
 

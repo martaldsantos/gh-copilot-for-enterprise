@@ -16,7 +16,7 @@ This repository contains materials for a GitHub Copilot for Enterprise hackathon
 │   ├── qa-tester-track.md
 │   └── README.md
 │
-├── challenges/                # Hands-on coding challenges
+├── challenges/                # Hands-on coding challenges (Starter code ONLY)
 │   ├── challenge-1-web-api/       → Backend Track
 │   ├── challenge-2-ml-ai/         → Data Science Track
 │   ├── challenge-3-devops/        → DevOps Track
@@ -92,6 +92,7 @@ This hackathon uses **Azure** as the cloud provider. Do not reference AWS, GCP, 
 
 - Each challenge should be completable in 4-6 hours
 - Provide starter code and clear objectives
+- **Do NOT include README.md files in challenge folders** - all instructions must be in the corresponding track file
 - Include success metrics/checkboxes
 - Add bonus challenges for advanced participants
 

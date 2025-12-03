@@ -7,21 +7,14 @@
 # TODO: Create Resource Group
 # Hint: Comment "Create a resource group in East US region"
 
-# TODO: Create VNet
-# Hint: Comment "Create VNet with CIDR 10.0.0.0/16 in the resource group"
+# TODO: Create Azure Container Registry (ACR)
+# Hint: "Create an Azure Container Registry with Basic sku"
 
-# TODO: Create subnets
-# Hint: "Create 2 public and 2 private subnets in different zones"
+# TODO: Create Azure Kubernetes Service (AKS)
+# Hint: "Create a managed Kubernetes cluster with 1 node pool"
 
-# TODO: Create NAT Gateway
-# TODO: Create Route Tables
-
-# TODO: Create Network Security Groups
-# Hint: Ask Copilot to create NSGs for Load Balancer, app servers, and database
-
-# TODO: Create Azure Load Balancer
-# TODO: Create Virtual Machine Scale Set
-# TODO: Create Azure Database for PostgreSQL
+# TODO: Create Azure Key Vault (Bonus)
+# Hint: "Create an Azure Key Vault to store application secrets"
 
 # Outputs
-# TODO: Output important values like Load Balancer IP, database endpoint
+# TODO: Output important values like ACR login server, AKS kube config command, Key Vault URI

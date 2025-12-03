@@ -149,7 +149,7 @@ Throughout these challenges, you'll master:
 
 All 5 challenges are available, and each track has a dedicated challenge:
 
-### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/README.md)
+### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/)
 **Team**: Backend/Web Developers  
 **Skills**: Express.js/FastAPI, API design, error handling, testing  
 **Copilot Focus**: Inline completion, `/tests` command, workspace chat
@@ -158,7 +158,7 @@ Build a fully functional REST API with authentication, CRUD operations, and comp
 
 ---
 
-### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/README.md)
+### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/)
 **Team**: Data Scientists, ML Engineers  
 **Skills**: Python, pandas, scikit-learn, data visualization  
 **Copilot Focus**: Jupyter notebooks integration, `/explain` for algorithms, code generation
@@ -167,7 +167,7 @@ Perform exploratory data analysis and build a machine learning model with Copilo
 
 ---
 
-### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/README.md)
+### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/)
 **Team**: DevOps, Platform Engineers  
 **Skills**: Terraform, Docker, Kubernetes, CI/CD  
 **Copilot Focus**: Infrastructure patterns, documentation generation, best practices
@@ -176,7 +176,7 @@ Design and implement cloud infrastructure using Terraform, containerize applicat
 
 ---
 
-### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/README.md)
+### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/)
 
 **Team**: Frontend Developers  
 **Skills**: React, TypeScript, Component design, State management  
@@ -186,7 +186,7 @@ Create a modern, responsive web application with reusable components, leveraging
 
 ---
 
-### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/README.md)
+### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/)
 
 **Team**: QA Engineers, SDETs, Test Automation Engineers  
 **Duration**: 4-6 hours (extended challenge with real-world apps)  

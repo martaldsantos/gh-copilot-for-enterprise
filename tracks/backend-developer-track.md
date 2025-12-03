@@ -138,7 +138,7 @@ Build a Task Management API with the following features:
 - Natural language prompts for API documentation
 - Workspace-aware prompts for consistent patterns
 
-📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
+📖 [Start Challenge 1](../challenges/challenge-1-web-api/)
 
 ## ⏱️ Recommended Schedule
 
