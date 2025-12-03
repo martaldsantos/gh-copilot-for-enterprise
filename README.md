@@ -121,10 +121,10 @@ Once your environment is ready:
 
 Throughout these challenges, you'll master:
 
-### 1. **Chat Modes**
-- `/explain` - Understand complex code
-- `/fix` - Debug and fix issues
-- `/tests` - Generate test cases
+### 1. **Chat & Agentic Capabilities**
+- `/explain`, `/fix`, `/tests` commands
+- **Agentic Mode** - Autonomous multi-step task execution
+- **Planning Mode** - High-level architectural reasoning
 - Workspace context chat
 
 ### 2. **Prompt Engineering**
@@ -133,9 +133,9 @@ Throughout these challenges, you'll master:
 - Iterative refinement
 - Collections and reusable prompts
 
-### 3. **MCP Servers** (Model Context Protocol)
-- Connecting external tools and data sources
-- Custom integrations
+### 3. **Extensibility & Custom Agents**
+- **MCP Servers** - Connect external tools and data
+- **Custom Agents** - Build and use specialized assistants
 - Enhanced context for Copilot
 
 ### 4. **Inline Suggestions**

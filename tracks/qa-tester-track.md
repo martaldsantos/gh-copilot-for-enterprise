@@ -75,8 +75,6 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 **Duration:** 4-6 hours  
 **Focus:** Professional test automation with real-world applications
 
-> 🎯 **This is YOUR dedicated challenge.** You'll work with real open-source applications and learn professional test automation techniques.
-
 #### 🎯 Objective
 
 Learn how to use GitHub Copilot's **Agent mode** to accelerate test automation. You will work with **real-world open-source applications**, implement comprehensive testing strategies, and use the **Playwright MCP Server** for AI-driven browser automation.

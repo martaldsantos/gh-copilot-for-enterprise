@@ -86,8 +86,6 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 **Duration:** 4-6 hours  
 **Focus:** Complete ML pipeline in Jupyter notebooks
 
-> 🎯 **This is YOUR dedicated challenge.** Focus entirely on data science and ML. No web development or infrastructure knowledge required.
-
 #### 🎯 Objective
 
 Perform exploratory data analysis and build a machine learning model using GitHub Copilot's **Agent mode** in Jupyter Notebooks. Learn how Copilot's agentic capabilities can accelerate data science workflows, from data exploration to model deployment.

@@ -82,8 +82,6 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 **Duration:** 4-6 hours  
 **Focus:** Core backend skills
 
-> 🎯 **This is YOUR dedicated challenge.** Focus entirely on backend development without needing frontend, DevOps, or data science knowledge.
-
 #### 🎯 Objective
 
 Build a fully functional REST API for a task management system using GitHub Copilot's **Agent mode**. Learn how to leverage Copilot's agentic capabilities to create multi-file implementations, run tests automatically, and iterate on your code.

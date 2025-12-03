@@ -85,8 +85,6 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 **Duration:** 4-6 hours  
 **Focus:** Modern React development
 
-> 🎯 **This is YOUR dedicated challenge.** Focus entirely on frontend development. A mock API is provided so you don't need backend knowledge.
-
 #### 🎯 Objective
 
 Build a modern, responsive web application with interactive UI components using React and TypeScript. Learn how GitHub Copilot's **Agent mode** accelerates frontend development through component scaffolding, multi-file generation, TypeScript types, styling, and state management.

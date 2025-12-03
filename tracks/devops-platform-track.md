@@ -85,8 +85,6 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 **Duration:** 4-6 hours  
 **Focus:** Complete infrastructure automation
 
-> 🎯 **This is YOUR dedicated challenge.** Focus entirely on infrastructure and DevOps. A sample application is provided so you don't need to write application code.
-
 #### 🎯 Objective
 
 Design and implement cloud infrastructure using Terraform and containerize applications with Docker. Learn how GitHub Copilot's **Agent mode** can accelerate infrastructure coding, provide best practices, and help with complex multi-file configurations.
