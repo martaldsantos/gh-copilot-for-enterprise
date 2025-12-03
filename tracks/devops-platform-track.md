@@ -127,8 +127,7 @@ Build a complete infrastructure stack for a "Quote of the Day" web application (
 #### 🚀 Getting Started
 
 ### Step 1: Explore the Starter Code
-- `app/`: Contains the source code for the web application.
-- `docker/`: Place your Dockerfile here (or in `app/`).
+- `app/`: Contains the source code and Dockerfile for the web application.
 - `kubernetes/`: Place your Kubernetes manifests here.
 - `terraform/`: Place your Terraform configuration here.
 
