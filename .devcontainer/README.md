@@ -38,16 +38,17 @@ The default configuration suitable for most challenges. Includes:
 
 These configurations are designed for **Challenge 5: QA & Test Automation**, where you work with real-world open-source applications.
 
-#### 🟢 qa-node-react
+#### 🟢 qa-csharp-eshop
 
-**Folder**: `qa-node-react/`
+**Folder**: `qa-csharp-eshop/`
 
-For testing **Node.js/React applications** (like Jira Clone).
+For testing **eShopOnWeb** (.NET 8.0).
 
 Includes:
-- Node.js LTS with npm/yarn
+- .NET 8.0 SDK
 - Playwright pre-installed
-- Jest and testing utilities
+- C# Dev Kit
+- Docker-in-Docker
 - React DevTools support
 
 **Usage**:

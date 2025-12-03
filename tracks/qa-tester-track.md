@@ -16,8 +16,10 @@ This track is designed for QA Engineers and Test Automation specialists. Unlike 
 
 ## 🛠️ Technology Stack
 
-- **Application**: Choose between Node.js/React, Python/FastAPI, or Java/Spring
-- **E2E Testing**: Playwright
+- **Application**: .NET 8.0 / ASP.NET Core (eShopOnWeb)
+- **Language**: C#
+- **Unit Testing**: xUnit
+- **E2E Testing**: Playwright (Node.js or .NET)
 - **AI Integration**: Playwright MCP Server
 - **Environment**: Docker & DevContainers
 
@@ -28,8 +30,8 @@ This track is designed for QA Engineers and Test Automation specialists. Unlike 
 > **Do NOT work directly in the hackathon repository!** See the **[Setup Instructions](../README.md#%EF%B8%8F-important-create-your-own-repository)** for why and how to set up properly.
 
 👉 **[Follow the Setup Instructions](../README.md#step-2-set-up-environment)** - use the interactive setup script to copy:
-- `.devcontainer/` folder
-- `challenges/challenge-5-qa/` starter code and test templates
+- `.devcontainer/` folder (Select the **QA - C# eShopOnWeb** configuration)
+- `challenges/challenge-5-qa/` starter code
 
 Then create your own `.github/copilot-instructions.md` using the example below.
 
@@ -83,50 +85,70 @@ Learn how to use GitHub Copilot's **Agent mode** to accelerate test automation. 
 
 This challenge is **different from other challenges**. Instead of building an application, you will:
 
-1. **Clone a real-world open-source application**
-2. **Analyze its existing test coverage**
-3. **Implement comprehensive unit tests using Agent mode**
-4. **Create E2E tests with Playwright**
-5. **Configure AI-driven testing with Playwright MCP**
+1.  **Clone the eShopOnWeb application**
+2.  **Remove existing tests** (to simulate a legacy app without coverage)
+3.  **Implement comprehensive unit tests using Agent mode**
+4.  **Create E2E tests with Playwright**
+5.  **Configure AI-driven testing with Playwright MCP**
 
-#### 🚀 Phase 1: Choose Your Target Application
+#### 🚀 Phase 1: Setup Target Application
 
-Select **ONE** of the following open-source applications to test.
+You will be testing **eShopOnWeb**, a reference .NET application.
 
-**Option A: Node.js & React (Jira Clone) 🟢**
-- **Repository**: `https://github.com/oldboyxx/jira_clone`
-- **Best for**: Testers comfortable with JavaScript/TypeScript and modern React UIs.
-- **Challenges**: Complex UI interactions, rich state management.
+1.  **Clone the Repository**:
+    In your challenge repository, clone the eShopOnWeb app:
+    ```bash
+    git clone https://github.com/NimblePros/eShopOnWeb.git app
+    ```
 
-**Option B: Python (FastAPI RealWorld) 🔵**
-- **Repository**: `https://github.com/nsidnev/fastapi-realworld-example-app`
-- **Best for**: Testers who prefer Python and backend API testing.
-- **Challenges**: REST API surface, database state, authentication.
+2.  **Clean Up Existing Tests**:
+    We want YOU to write the tests. Delete the existing test folder:
+    ```bash
+    rm -rf app/tests
+    ```
 
-**Option C: Java (Spring PetClinic) 🟠**
-- **Repository**: `https://github.com/spring-projects/spring-petclinic`
-- **Best for**: Enterprise Java testers familiar with Spring ecosystem.
-- **Challenges**: Server-side rendering, enterprise patterns.
+3.  **Verify Application Runs**:
+    ```bash
+    cd app
+    dotnet restore
+    dotnet run --project src/Web/Web.csproj
+    ```
+    (Verify it runs on localhost:5001 or similar)
 
-#### 🛠️ Phase 2: Environment Setup
+#### 🚀 Phase 2: Unit Testing with Copilot
 
-1. **Clone**: Clone your chosen repository.
-2. **Setup**: Follow the repository's setup instructions to get the app running.
-3. **Configure**: Set up your testing framework (Jest, Pytest, or JUnit).
+**Goal**: Add unit tests for the `Core` project (Domain logic).
 
-#### 🧪 Phase 3: Testing Strategy
+1.  **Create Test Project**:
+    Ask Copilot: "Create a new xUnit test project named 'UnitTests' in the 'tests' folder and add a reference to the 'ApplicationCore' project."
 
-**Unit Testing**
-- Analyze existing coverage.
-- Use Copilot to generate unit tests for critical components.
+2.  **Generate Tests**:
+    Open `src/ApplicationCore/Services/BasketService.cs` (or similar service).
+    Ask Copilot: "Generate comprehensive unit tests for BasketService, covering edge cases and mocking dependencies."
 
-**E2E Testing with Playwright**
-- Install Playwright.
-- Create E2E tests for critical user flows (Login, CRUD operations).
+#### 🚀 Phase 3: E2E Testing with Playwright
 
-**AI-Driven Testing with MCP**
-- Configure the **Playwright MCP Server**.
-- Use Copilot to control the browser and generate tests autonomously.
+**Goal**: Create end-to-end tests for the shopping flow.
+
+1.  **Setup Playwright**:
+    Ask Copilot: "How do I initialize a Playwright project for .NET (or Node.js) in a 'tests/e2e' folder?"
+
+2.  **Generate E2E Tests**:
+    Ask Copilot: "Create a Playwright test that:
+    1. Goes to the homepage
+    2. Adds an item to the basket
+    3. Logs in with default credentials
+    4. Verifies the item is in the basket"
+
+#### 🚀 Phase 4: AI-Driven Testing (MCP)
+
+**Goal**: Use the Playwright MCP server to let Copilot explore the app.
+
+1.  **Configure MCP**:
+    Ensure the Playwright MCP server is configured in your VS Code settings (see instructions below).
+
+2.  **Autonomous Testing**:
+    Ask Copilot: "Use Playwright to navigate to the homepage, take a screenshot, and check if the 'Login' button is visible."
 
 #### 💡 Copilot Tips
 
@@ -137,158 +159,6 @@ Select **ONE** of the following open-source applications to test.
 **Copilot Skills You'll Learn:**
 - Test generation and refactoring
 - AI-driven browser automation
-
-## 🚀 Phase 1: Choose Your Target Application
-
-Select **ONE** of the following open-source applications to test.
-
-### Option A: Node.js & React (Jira Clone) 🟢
-
-- **Repo**: `https://github.com/oldboyxx/jira_clone`
-*   **Best for**: Testers comfortable with JavaScript/TypeScript and modern React UIs.
-*   **Challenge**: Complex UI interactions (drag & drop), rich state management.
-
-### Option B: Python (FastAPI RealWorld) 🔵
-*   **Repo**: `https://github.com/nsidnev/fastapi-realworld-example-app`
-*   **Best for**: Testers who prefer Python and backend API testing.
-*   **Challenge**: Comprehensive API surface, database state management.
-
-### Option C: Java (Spring PetClinic) 🟠
-*   **Repo**: `https://github.com/spring-projects/spring-petclinic`
-*   **Best for**: Enterprise Java testers.
-*   **Challenge**: Server-side rendering, classic enterprise patterns.
-
-### 🛠️ Setup Instructions
-
-1.  **Clone the Repository** (locally):
-    ```bash
-    # For Node.js/React
-    git clone https://github.com/oldboyxx/jira_clone qa-challenge
-    
-    # OR for Python
-    git clone https://github.com/nsidnev/fastapi-realworld-example-app qa-challenge
-    
-    # OR for Java
-    git clone https://github.com/spring-projects/spring-petclinic qa-challenge
-    ```
-
-2.  **Apply DevContainer Configuration**:
-    Copy the appropriate `devcontainer.json` from this repository to your cloned folder.
-    
-    *From the `gh-copilot-for-enterprise` folder:*
-    ```bash
-    # If you chose Node.js/React
-    cp -r .devcontainer/qa-node-react/. qa-challenge/.devcontainer/
-    
-    # If you chose Python
-    cp -r .devcontainer/qa-python-fastapi/. qa-challenge/.devcontainer/
-    
-    # If you chose Java
-    cp -r .devcontainer/qa-java-spring/. qa-challenge/.devcontainer/
-    ```
-    *(Note: Create the `.devcontainer` folder in `qa-challenge` if it doesn't exist)*
-
-3.  **Open in DevContainer**:
-    - Open the `qa-challenge` folder in VS Code.
-    - When prompted "Folder contains a Dev Container configuration file...", click **Reopen in Container**.
-    - *Or press F1 -> "Dev Containers: Reopen in Container"*
-
----
-
-## 🧪 Phase 2: Unit Testing
-
-**Goal**: Improve the test coverage of the application.
-
-1.  **Analyze the Code**:
-    Use `@workspace` to understand the project structure.
-    ```
-    @workspace Explain the project structure and identify key business logic files that lack unit tests.
-    ```
-
-2.  **Generate Tests**:
-    Open a key file (e.g., a service or controller) and use `/tests`.
-    ```
-    /tests generate unit tests for this file using [Jest/Pytest/JUnit]. Mock external dependencies.
-    ```
-
-3.  **Refine & Run**:
-    - Run the tests to ensure they pass.
-    - Use `/fix` if any tests fail.
-
----
-
-## 🎭 Phase 3: Playwright Automation
-
-**Goal**: Implement E2E tests for a critical user flow (e.g., "Create an Issue" or "Add a Pet").
-
-1.  **Install Playwright** (if not already installed):
-    *   **Node**: `npx playwright install`
-    *   **Python**: `pip install pytest-playwright && playwright install`
-    *   **Java**: Follow Playwright Java docs.
-
-2.  **Generate Test Scenarios**:
-    Ask Copilot to create a test plan.
-    ```
-    Create a Playwright test plan for the "User Login and Profile Update" flow.
-    Include positive and negative test cases.
-    ```
-
-3.  **Write the Test**:
-    ```typescript
-    // Create a Playwright test that:
-    // 1. Navigates to the login page
-    // 2. Enters valid credentials
-    // 3. Verifies redirection to dashboard
-    // 4. Checks for the "Welcome" message
-    ```
-
----
-
-## 🤖 Phase 4: AI-Driven Testing with MCP
-
-**Goal**: Use the **Playwright MCP Server** to let Copilot control the browser.
-
-### 1. Configure MCP Server
-Add the Playwright MCP server to your VS Code configuration.
-
-1.  Open VS Code Settings (`Ctrl+,`).
-2.  Search for "MCP" or edit `settings.json`.
-3.  Add the following to `"github.copilot.mcpServers"` (or equivalent config):
-
-```json
-"playwright": {
-    "command": "npx",
-    "args": ["-y", "@playwright/mcp@latest"]
-}
-```
-*Restart VS Code or Reload Window after adding this.*
-
-### 2. Autonomous Testing
-Now, use Copilot Chat to interact with the browser!
-
-**Example Prompts:**
-
-*   **Exploration**:
-    ```
-    Use the Playwright tool to navigate to http://localhost:3000 (or app port).
-    Take a screenshot of the homepage.
-    Click on the "Login" button.
-    ```
-
-*   **Test Generation**:
-    ```
-    Navigate to the "Create Issue" page.
-    Fill in the form with test data.
-    Submit the form.
-    If successful, generate a Playwright test script based on the actions you just took.
-    ```
-
-*   **Visual Validation**:
-    ```
-    Go to the dashboard.
-    Check if the "Project Settings" button is visible.
-    Take a screenshot and analyze if the layout looks correct.
-    ```
 
 ## 📊 Success Metrics
 
@@ -303,6 +173,10 @@ Now, use Copilot Chat to interact with the browser!
 - **Context is King**: When asking Copilot to write tests, keep the file you want to test open.
 - **MCP Debugging**: If the MCP tool fails, check the "Output" panel in VS Code and select "GitHub Copilot MCP" to see logs.
 - **Port Forwarding**: Ensure the application port is forwarded in the DevContainer so the headless browser (and you) can access it.
+
+---
+
+**Ready to start?** [Clone the app](#phase-1-setup-target-application) and begin! 🚀
 
 ---
 
