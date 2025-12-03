@@ -35,19 +35,23 @@ You'll work with:
 
 ## ⚡ First Steps: Set Up Your Workspace
 
-### ⚠️ IMPORTANT: Create a Fresh Repository First!
+### 1. Configure Copilot Context (CRITICAL)
 
-> **Do NOT work directly in the hackathon repository!** See the **[Setup Instructions](../README.md#%EF%B8%8F-important-create-your-own-repository)** for why and how to set up properly.
+The file `.github/copilot-instructions.md` currently contains instructions for the hackathon organizers. **You must overwrite this file** with instructions relevant to your specific project.
 
-👉 **[Follow the Setup Instructions](../README.md#step-2-set-up-environment)** - use the interactive setup script to copy:
-- `.devcontainer/` folder
-- `challenges/challenge-4-frontend/` starter code
+1. Open `.github/copilot-instructions.md`.
+2. **Delete its entire contents.**
+3. Use the example below as a starting point for your new instructions.
 
-Then create your own `.github/copilot-instructions.md` using the example below.
+> 💡 **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
+
+### 2. Navigate to Your Challenge
+
+Open the folder `challenges/challenge-4-frontend/` in your workspace. This is where you will be working.
 
 ---
 
-### 1. Create a `.github/copilot-instructions.md` File
+### 3. Create Your Custom Instructions
 
 This file tells Copilot about your project context and coding preferences. **Your goal is to create your own custom instructions file.**
 

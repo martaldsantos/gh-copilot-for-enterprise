@@ -38,55 +38,26 @@ Each track provides a curated path through the challenges based on your role, wi
 - GitHub Codespaces enabled (recommended) OR
 - Local development environment with VS Code and GitHub Copilot extension
 
-#### ⚠️ IMPORTANT: Create Your Own Repository
+#### 🚀 Start Hacking
 
-> **Do NOT work directly in this hackathon repository!** This repo contains a `.github/copilot-instructions.md` file designed for hackathon maintainers—not for your project work. If you work here, Copilot will receive confusing context.
+**Option A: GitHub Codespaces (Recommended)**
 
-**Recommended Setup (Easy Way):**
+1. Click the green **"Code"** button at the top of this repository.
+2. Select the **"Codespaces"** tab.
+3. Click **"Create codespace on main"**.
+4. Wait for the environment to set up (2-3 minutes).
 
-Use our setup script to create a fresh project with everything you need:
+**Option B: Local Development**
 
-```bash
-# Clone the hackathon repo first
-git clone https://github.com/martaldsantos/gh-copilot-for-enterprise.git
-cd gh-copilot-for-enterprise
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/martaldsantos/gh-copilot-for-enterprise.git
+   cd gh-copilot-for-enterprise
+   ```
+2. Open the folder in VS Code.
+3. When prompted, click **"Reopen in Container"** (requires Docker and Dev Containers extension).
 
-# Run the interactive setup wizard
-chmod +x scripts/setup-challenge.sh
-./scripts/setup-challenge.sh
-```
-
-The script will:
-- Ask you to choose a challenge (1-5)
-- Create a fresh project directory
-- Copy all starter files and DevContainer config
-- Set up a custom `.github/copilot-instructions.md` for your project
-- Initialize git
-
-**Manual Setup:**
-
-1. **Create a new repository** for your challenge work
-2. **Copy these files from this repo:**
-   - `.devcontainer/` folder (for consistent dev environment)
-   - Your challenge's starter code folder
-3. **Create your own `.github/copilot-instructions.md`** tailored to your project
-4. **Create custom agents and prompts** based on your workflow needs
-5. **Do NOT copy** this repo's `.github/copilot-instructions.md`
-
-> 💡 **Looking for examples?** Check out the **[github/awesome-copilot](https://github.com/github/awesome-copilot)** repository for real-world examples of custom instructions, agents, and prompts.
-
-See your track guide for specific files to copy and guidance on what to create.
-
-#### Launch in GitHub Codespaces (Recommended)
-
-After creating your own repository with the copied files:
-
-1. Click the green "Code" button at the top of YOUR repository
-2. Select "Codespaces" tab
-3. Click "Create codespace on main" (or your branch)
-4. Wait for the environment to set up (2-3 minutes)
-
-The devcontainer is pre-configured with:
+The environment is pre-configured with:
 - Node.js (LTS)
 - Python 3.11
 - Docker
@@ -94,7 +65,18 @@ The devcontainer is pre-configured with:
 - kubectl
 - All necessary VS Code extensions
 
-### Step 3: Verify Your Setup
+### Step 3: Configure Copilot Context (CRITICAL)
+
+The file `.github/copilot-instructions.md` currently contains instructions for the hackathon organizers. **You must overwrite this file** with instructions relevant to your specific project.
+
+1. Open `.github/copilot-instructions.md`.
+2. **Delete its entire contents.**
+3. Add instructions specific to your challenge (see your Track guide for examples).
+4. Save the file.
+
+> 💡 **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
+
+### Step 4: Verify Your Setup
 
 Before starting, make sure Copilot is working:
 
@@ -112,7 +94,7 @@ Before starting, make sure Copilot is working:
 2. Type: "Hello, are you working?"
 3. Copilot should respond!
 
-### Step 4: Start Your Track
+### Step 5: Start Your Track
 
 Once your environment is ready:
 1. Open your chosen track guide (e.g., `tracks/backend-developer-track.md`)
