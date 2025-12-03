@@ -1,5 +1,7 @@
 # GitHub Copilot Enterprise Hackathon 🚀
 
+![Hackathon Banner](docs/images/hackathon-banner.jpg)
+
 Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **5 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
 
 ## 🎯 Hackathon Overview
