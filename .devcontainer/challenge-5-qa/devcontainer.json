@@ -1,5 +1,5 @@
 {
-	"name": "QA - C# eShopOnWeb",
+	"name": "Challenge 5 - QA (eShopOnWeb)",
 	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
