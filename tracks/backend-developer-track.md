@@ -84,14 +84,52 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 
 > 🎯 **This is YOUR dedicated challenge.** Focus entirely on backend development without needing frontend, DevOps, or data science knowledge.
 
-Build a complete task management API with:
-- User authentication (JWT)
-- CRUD operations for tasks and users
-- Input validation and sanitization
+#### 🎯 Objective
+
+Build a fully functional REST API for a task management system using GitHub Copilot's **Agent mode**. Learn how to leverage Copilot's agentic capabilities to create multi-file implementations, run tests automatically, and iterate on your code.
+
+#### 📋 Requirements
+
+Build a Task Management API with the following features:
+
+**Core Features**
+1. **User Authentication**
+   - Register new users
+   - Login with JWT tokens
+   - Protected routes
+
+2. **Task CRUD Operations**
+   - Create tasks (title, description, status, priority, due_date)
+   - Read all tasks (with filtering)
+   - Update task details
+   - Delete tasks
+   - Mark tasks as complete
+
+3. **Advanced Features**
+   - Filter tasks by status/priority
+   - Search tasks by title/description
+   - Pagination support
+   - Input validation
+   - Error handling
+
+**Quality Requirements**
 - Comprehensive error handling
-- Database integration
+- Input validation
 - API documentation (OpenAPI/Swagger)
-- Unit and integration testing
+- Unit tests (>80% coverage)
+- Integration tests for key endpoints
+
+#### 🚀 Getting Started
+
+1. **Choose Your Stack**: Navigate to `challenges/challenge-1-web-api/` and choose either `node-express` or `python-fastapi`.
+2. **Review Starter Code**: Open the starter files (`app.js` or `main.py`, `models/`) to understand the structure.
+3. **Start Building**: Use Copilot to implement the features.
+
+#### 💡 Copilot Tips
+
+- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to create multi-file implementations.
+- **Iterate**: Ask Copilot to "Create a user authentication system" and then refine it.
+- **Test**: Use Copilot to generate tests for your new endpoints.
 
 **Copilot Skills You'll Learn:**
 - Inline code completion for rapid API development

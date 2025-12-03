@@ -87,13 +87,60 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 
 > 🎯 **This is YOUR dedicated challenge.** Focus entirely on infrastructure and DevOps. A sample application is provided so you don't need to write application code.
 
-Build production-ready infrastructure:
-- Azure cloud infrastructure with Terraform
-- Multi-stage Docker containers (optimized)
-- Kubernetes deployments and services
-- CI/CD pipeline with GitHub Actions
-- Security groups and network configuration
-- Monitoring and logging setup
+#### 🎯 Objective
+
+Design and implement cloud infrastructure using Terraform and containerize applications with Docker. Learn how GitHub Copilot's **Agent mode** can accelerate infrastructure coding, provide best practices, and help with complex multi-file configurations.
+
+#### 📋 Requirements
+
+Build a complete infrastructure setup for a web application:
+
+**Core Features**
+1. **Cloud Infrastructure (Terraform)**
+   - Network configuration
+   - Compute instances/containers
+   - Load balancer
+   - Database resources
+   - Security groups/firewall rules
+   - Storage buckets
+
+2. **Containerization (Docker)**
+   - Multi-stage Dockerfile
+   - Docker Compose for local development
+   - Optimized image size
+   - Security best practices
+
+3. **Kubernetes Deployment**
+   - Deployment manifests
+   - Service definitions
+   - ConfigMaps and Secrets
+   - Ingress configuration
+   - Resource limits
+
+4. **CI/CD Pipeline**
+   - Automated testing
+   - Container build and push
+   - Infrastructure deployment
+   - Rollback strategies
+
+**Quality Requirements**
+- Infrastructure security best practices
+- Cost optimization
+- High availability setup
+- Monitoring and logging
+- Documentation
+
+#### 🚀 Getting Started
+
+1. **Setup**: Navigate to `challenges/challenge-3-devops/`.
+2. **Review Starter Files**: Explore `terraform/`, `docker/`, and `kubernetes/` folders.
+3. **Start Building**: Use Copilot to generate infrastructure code.
+
+#### 💡 Copilot Tips
+
+- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to generate multi-file infrastructure configurations.
+- **Iterate**: Ask Copilot to "Create a Terraform configuration for Azure" and then refine it.
+- **Security**: Ask Copilot to "Review this Terraform code for security vulnerabilities".
 
 **Copilot Skills You'll Learn:**
 - Infrastructure code generation from descriptions
@@ -161,7 +208,7 @@ By completing this track, you will:
 **Describe infrastructure in comments:**
 ```hcl
 # Create an Azure VNet with CIDR 10.0.0.0/16
-# Add public subnets in us-east-1a and us-east-1b
+# Add public subnets in swedencentral
 # Add private subnets in the same AZs
 # Configure NAT gateway and routing tables
 ```

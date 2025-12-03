@@ -87,14 +87,60 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 
 > 🎯 **This is YOUR dedicated challenge.** Focus entirely on frontend development. A mock API is provided so you don't need backend knowledge.
 
-Build a complete frontend application with:
-- Reusable React components with TypeScript
-- Responsive design (mobile-first)
-- State management (Context API or Redux)
-- Form handling and validation
-- Accessibility (ARIA, keyboard navigation)
-- Component testing with React Testing Library
-- Styling with modern CSS (your choice of approach)
+#### 🎯 Objective
+
+Build a modern, responsive web application with interactive UI components using React and TypeScript. Learn how GitHub Copilot's **Agent mode** accelerates frontend development through component scaffolding, multi-file generation, TypeScript types, styling, and state management.
+
+#### 📋 Requirements
+
+Build a Task Dashboard application with:
+
+**Core Features**
+1. **Dashboard Overview**
+   - Task statistics cards
+   - Recent activity feed
+   - Quick actions menu
+   - Responsive grid layout
+
+2. **Task List Component**
+   - Filterable task list
+   - Sort by priority/date
+   - Search functionality
+   - Pagination
+   - Drag-and-drop reordering
+
+3. **Task Form**
+   - Create/Edit task modal
+   - Form validation
+   - Date picker
+   - Priority selector
+   - Rich text editor for description
+
+4. **User Interface**
+   - Dark/Light theme toggle
+   - Responsive design (mobile-first)
+   - Loading states
+   - Error boundaries
+   - Toast notifications
+
+**Quality Requirements**
+- TypeScript strict mode
+- Component testing (>80% coverage)
+- Accessibility (WCAG 2.1 AA)
+- Performance optimization
+- Clean, reusable components
+
+#### 🚀 Getting Started
+
+1. **Setup**: Navigate to `challenges/challenge-4-frontend/`, install dependencies (`npm install`), and start the dev server (`npm run dev`).
+2. **Review Starter Code**: Explore `src/App.tsx` and `src/types/` to understand the project structure.
+3. **Start Building**: Use Copilot to generate components and logic.
+
+#### 💡 Copilot Tips
+
+- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to generate complete components (component, test, styles, export).
+- **Iterate**: Ask Copilot to "Create a TaskCard component" and then refine it.
+- **Accessibility**: Ask Copilot to "Ensure this component is accessible" or "Add ARIA labels".
 
 **Copilot Skills You'll Learn:**
 - Component scaffolding and patterns

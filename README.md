@@ -20,8 +20,7 @@ Each track provides a curated path through the challenges based on your role, wi
 
 ## ⏱️ Duration
 
-**6-8 hours** per track
-Each challenge is designed to take 1-1.5 hours
+**6-8 hours** per track.
 
 ## 🛠️ Getting Started
 

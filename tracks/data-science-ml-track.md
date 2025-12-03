@@ -88,14 +88,56 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 
 > 🎯 **This is YOUR dedicated challenge.** Focus entirely on data science and ML. No web development or infrastructure knowledge required.
 
-Build an end-to-end machine learning solution:
-- Exploratory data analysis (EDA) with visualizations
-- Data cleaning and preprocessing pipelines
-- Feature engineering and selection
-- Model training with multiple algorithms
-- Hyperparameter tuning
-- Model evaluation and comparison
-- Results visualization and interpretation
+#### 🎯 Objective
+
+Perform exploratory data analysis and build a machine learning model using GitHub Copilot's **Agent mode** in Jupyter Notebooks. Learn how Copilot's agentic capabilities can accelerate data science workflows, from data exploration to model deployment.
+
+#### 📋 Requirements
+
+Build a complete ML pipeline for customer churn prediction:
+
+**Core Features**
+1. **Data Exploration**
+   - Load and inspect dataset
+   - Handle missing values
+   - Statistical analysis
+   - Data quality checks
+
+2. **Data Visualization**
+   - Distribution plots
+   - Correlation analysis
+   - Feature relationships
+   - Class balance visualization
+
+3. **Feature Engineering**
+   - Create new features
+   - Encode categorical variables
+   - Scale numerical features
+   - Feature selection
+
+4. **Model Development**
+   - Train/test split
+   - Multiple model comparison
+   - Hyperparameter tuning
+   - Cross-validation
+
+5. **Evaluation & Insights**
+   - Performance metrics
+   - Feature importance
+   - Model interpretation
+   - Business recommendations
+
+#### 🚀 Getting Started
+
+1. **Setup**: Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip install -r requirements.txt`).
+2. **Open Notebook**: Open `customer_churn_analysis.ipynb` in VS Code.
+3. **Start Analysis**: Use Copilot to analyze the data and build models.
+
+#### 💡 Copilot Tips
+
+- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to analyze data and generate notebook cells.
+- **Iterate**: Ask Copilot to "Analyze the customer_churn.csv dataset" and then refine the analysis.
+- **Visualize**: Ask Copilot to "Create visualizations showing churn distribution".
 
 **Copilot Skills You'll Learn:**
 - Code generation in Jupyter notebooks

@@ -70,33 +70,73 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 ## 🗺️ Track Structure
 
 ### Your Challenge: QA & Test Automation
-
 **Duration:** 4-6 hours  
 **Focus:** Professional test automation with real-world applications
 
 > 🎯 **This is YOUR dedicated challenge.** You'll work with real open-source applications and learn professional test automation techniques.
 
-📖 [Start Challenge 5](../challenges/challenge-5-qa/README.md)
+#### 🎯 Objective
 
----
+Learn how to use GitHub Copilot's **Agent mode** to accelerate test automation. You will work with **real-world open-source applications**, implement comprehensive testing strategies, and use the **Playwright MCP Server** for AI-driven browser automation.
 
-### Phase 1: Environment Setup (30 min)
+#### 📋 Challenge Structure
 
-Choose your target application and set up the development environment using provided DevContainers.
+This challenge is **different from other challenges**. Instead of building an application, you will:
 
-### Phase 2: Unit Testing Strategy (1.5 hours)
+1. **Clone a real-world open-source application**
+2. **Analyze its existing test coverage**
+3. **Implement comprehensive unit tests using Agent mode**
+4. **Create E2E tests with Playwright**
+5. **Configure AI-driven testing with Playwright MCP**
 
-Analyze the existing codebase and use Copilot to increase unit test coverage.
+#### 🚀 Phase 1: Choose Your Target Application
 
-### Phase 3: Playwright Automation (2 hours)
+Select **ONE** of the following open-source applications to test.
 
-Set up Playwright and implement robust End-to-End (E2E) tests for critical user flows.
+**Option A: Node.js & React (Jira Clone) 🟢**
+- **Repository**: `https://github.com/oldboyxx/jira_clone`
+- **Best for**: Testers comfortable with JavaScript/TypeScript and modern React UIs.
+- **Challenges**: Complex UI interactions, rich state management.
 
-### Phase 4: AI-Driven Testing with MCP (2 hours)
+**Option B: Python (FastAPI RealWorld) 🔵**
+- **Repository**: `https://github.com/nsidnev/fastapi-realworld-example-app`
+- **Best for**: Testers who prefer Python and backend API testing.
+- **Challenges**: REST API surface, database state, authentication.
 
-Configure the **Playwright MCP Server** to allow GitHub Copilot to control the browser, explore the app, and generate tests autonomously.
+**Option C: Java (Spring PetClinic) 🟠**
+- **Repository**: `https://github.com/spring-projects/spring-petclinic`
+- **Best for**: Enterprise Java testers familiar with Spring ecosystem.
+- **Challenges**: Server-side rendering, enterprise patterns.
 
----
+#### 🛠️ Phase 2: Environment Setup
+
+1. **Clone**: Clone your chosen repository.
+2. **Setup**: Follow the repository's setup instructions to get the app running.
+3. **Configure**: Set up your testing framework (Jest, Pytest, or JUnit).
+
+#### 🧪 Phase 3: Testing Strategy
+
+**Unit Testing**
+- Analyze existing coverage.
+- Use Copilot to generate unit tests for critical components.
+
+**E2E Testing with Playwright**
+- Install Playwright.
+- Create E2E tests for critical user flows (Login, CRUD operations).
+
+**AI-Driven Testing with MCP**
+- Configure the **Playwright MCP Server**.
+- Use Copilot to control the browser and generate tests autonomously.
+
+#### 💡 Copilot Tips
+
+- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to generate test suites.
+- **Iterate**: Ask Copilot to "Create a test plan for the login flow" and then implement it.
+- **MCP**: Use the Playwright MCP to let Copilot interact with the browser directly.
+
+**Copilot Skills You'll Learn:**
+- Test generation and refactoring
+- AI-driven browser automation
 
 ## 🚀 Phase 1: Choose Your Target Application
 

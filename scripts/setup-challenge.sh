@@ -118,7 +118,6 @@ case $CHALLENGE in
             cp -r "$HACKATHON_ROOT/challenges/challenge-1-web-api/python-fastapi/"* .
         fi
         
-        cp "$HACKATHON_ROOT/challenges/challenge-1-web-api/README.md" ./CHALLENGE.md
         cp -r "$HACKATHON_ROOT/.devcontainer" .
         ;;
     2)
