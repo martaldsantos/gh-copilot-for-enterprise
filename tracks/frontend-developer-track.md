@@ -49,70 +49,33 @@ Then create your own `.github/copilot-instructions.md` using the example below.
 
 ### 1. Create a `.github/copilot-instructions.md` File
 
-This file tells Copilot about your project context and coding preferences.
+This file tells Copilot about your project context and coding preferences. **Your goal is to create your own custom instructions file.**
 
-```markdown
-# Copilot Instructions for Frontend Development
+**What to include:**
+- Project context (React version, TypeScript, styling approach)
+- Component standards and patterns
+- Accessibility requirements (WCAG compliance level)
+- Testing approach and coverage goals
 
-## Project Context
-- This is a React 18+ application with TypeScript
-- We use [CSS Modules/Tailwind/Styled Components] for styling
-- State management: [Context API/Redux/Zustand]
-
-## Coding Standards
-- All components must be functional components with hooks
-- Use TypeScript interfaces for all props
-- Components should be in PascalCase
-- Keep components small and focused (single responsibility)
-
-## Accessibility Requirements
-- All interactive elements must be keyboard accessible
-- Include proper ARIA labels
-- Maintain color contrast ratios
-
-## Testing Requirements  
-- Write tests using React Testing Library
-- Test user interactions, not implementation details
-- Include accessibility tests
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
 
 ### 2. Create Custom Agents (`.github/agents/`)
 
-Create specialized agents for different tasks:
+Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
 
-**`.github/agents/react-developer.md`**:
-```markdown
-# React Developer Agent
+**Agents to consider creating:**
+- **React Developer Agent** - Expert in React patterns, hooks, and TypeScript
+- **UI Stylist Agent** - Specialized in CSS, responsive design, and animations
+- **Accessibility Expert Agent** - Focused on WCAG compliance and keyboard navigation
 
-You are an expert React developer specializing in modern UI development.
+**What to include in each agent:**
+- Clear description of the agent's expertise area
+- Specific instructions for component generation
+- References to your design system and patterns
 
-## Your Expertise
-- React 18+ with hooks and functional components
-- TypeScript for type-safe development
-- Modern CSS (Flexbox, Grid, CSS-in-JS)
-- Accessibility best practices
-
-## When Generating Code
-- Always use TypeScript with proper types
-- Create reusable, composable components
-- Include proper error boundaries
-- Follow React best practices (memo, useCallback when needed)
-```
-
-**`.github/agents/ui-stylist.md`**:
-```markdown
-# UI Stylist Agent
-
-You are an expert in CSS and UI design implementation.
-
-## Your Focus
-- Responsive design (mobile-first)
-- Modern CSS techniques
-- Animation and transitions
-- Design system consistency
-```
-
-> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+>
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
 
 ---
 

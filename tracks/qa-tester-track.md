@@ -37,72 +37,33 @@ Then create your own `.github/copilot-instructions.md` using the example below.
 
 ### 1. Create a `.github/copilot-instructions.md` File
 
-This file tells Copilot about your testing context and standards.
+This file tells Copilot about your testing context and standards. **Your goal is to create your own custom instructions file.**
 
-```markdown
-# Copilot Instructions for QA & Test Automation
+**What to include:**
+- Testing frameworks in use (Jest, Pytest, Playwright, etc.)
+- Testing standards (AAA pattern, naming conventions)
+- Coverage goals and quality metrics
+- E2E testing approach and patterns
 
-## Project Context
-- Testing Framework: [Jest/Pytest/JUnit] for unit tests
-- E2E Framework: Playwright
-- Application Under Test: [Jira Clone/FastAPI RealWorld/Spring PetClinic]
-
-## Testing Standards
-- Follow AAA pattern (Arrange, Act, Assert)
-- Use descriptive test names that explain the scenario
-- One assertion concept per test
-- Mock external dependencies
-
-## Playwright Standards
-- Use page object model for maintainability
-- Include proper waits (avoid arbitrary timeouts)
-- Take screenshots on failure
-- Test across multiple browsers when relevant
-
-## Coverage Goals
-- Unit tests: >80% code coverage
-- E2E tests: All critical user flows
-- Include positive and negative test cases
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
 
 ### 2. Create Custom Agents (`.github/agents/`)
 
-Create specialized agents for different tasks:
+Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
 
-**`.github/agents/test-architect.md`**:
-```markdown
-# Test Architect Agent
+**Agents to consider creating:**
+- **Test Architect Agent** - Expert in test strategy, coverage, and automation frameworks
+- **Playwright Expert Agent** - Specialized in browser automation and E2E testing
+- **Performance Tester Agent** - Focused on load testing and performance analysis
 
-You are an expert in test strategy and automation architecture.
+**What to include in each agent:**
+- Clear description of the agent's testing expertise
+- Specific instructions for test generation and patterns
+- References to your test infrastructure and standards
 
-## Your Expertise
-- Test pyramid and coverage strategies
-- Unit, integration, and E2E testing
-- Test data management
-- CI/CD test integration
-
-## When Generating Tests
-- Always follow AAA pattern
-- Include edge cases and error scenarios  
-- Use meaningful test descriptions
-- Consider test maintainability
-```
-
-**`.github/agents/playwright-expert.md`**:
-```markdown
-# Playwright Expert Agent
-
-You are an expert in browser automation with Playwright.
-
-## Your Focus
-- Page Object Model implementation
-- Cross-browser testing
-- Visual regression testing
-- Performance testing with Playwright
-- Handling dynamic content and waits
-```
-
-> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+>
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
 
 ---
 

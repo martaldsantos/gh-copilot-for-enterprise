@@ -178,44 +178,29 @@ Set up a new feature:
 
 ### Creating Prompt Files
 
-Store reusable prompts in `.github/prompts/`:
+Store reusable prompts in `.github/prompts/` directory.
 
-```markdown
----
-name: create-service
-description: Create a new service with tests
-agent: agent
-tools: ['codebase', 'editFiles']
----
+**Key elements of prompt files:**
+- YAML frontmatter with name, description, and optional settings
+- Use `${input:variableName}` for dynamic user inputs
+- Use `#file:path` references to include codebase context
+- Specify an agent for execution
 
-Create a new service called ${input:serviceName} that:
-- Follows patterns in #file:src/services/UserService.ts
-- Includes comprehensive error handling
-- Has unit tests with >80% coverage
-- Uses dependency injection
-```
+**Invoke with:** `/prompt-name` in chat
 
-Invoke with: `/create-service`
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
 
 ### Custom Agent Instructions
 
-Define specialized agents for common workflows:
+Define specialized agents for common workflows in `.github/agents/`.
 
-```markdown
----
-name: API Designer
-description: Design REST API endpoints
-tools: ['search', 'fetch', 'githubRepo']
----
+**What to include in agent files:**
+- Clear expertise description
+- Behavioral guidelines
+- Tool preferences
+- Code generation rules
 
-You are an API design expert. When asked to design APIs:
-- Follow REST best practices
-- Use consistent naming conventions
-- Include request/response examples
-- Consider authentication requirements
-- Document error codes
-- Generate OpenAPI spec
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
 
 ## Context Management
 

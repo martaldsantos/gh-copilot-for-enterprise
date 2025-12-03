@@ -49,73 +49,33 @@ Then create your own `.github/copilot-instructions.md` using the example below.
 
 ### 1. Create a `.github/copilot-instructions.md` File
 
-This file tells Copilot about your infrastructure context and standards.
+This file tells Copilot about your infrastructure context and standards. **Your goal is to create your own custom instructions file.**
 
-```markdown
-# Copilot Instructions for DevOps & Platform Engineering
+**What to include:**
+- Cloud provider and services in use (Azure)
+- Infrastructure as Code tool preferences (Terraform)
+- Naming conventions and tagging standards
+- Security requirements and compliance needs
 
-## Project Context
-- Cloud Provider: Azure
-- Infrastructure as Code: Terraform
-- Container Orchestration: Kubernetes (AKS)
-- CI/CD: GitHub Actions
-
-## Infrastructure Standards
-- All resources must be tagged with: environment, project, owner
-- Use Azure naming conventions (e.g., rg-project-env-region)
-- Enable encryption at rest for all storage
-- Follow least-privilege access principles
-
-## Terraform Standards
-- Use modules for reusable components
-- Always define variables with descriptions and types
-- Include outputs for important resource attributes
-- Use remote state with Azure Storage backend
-
-## Security Requirements
-- No hardcoded secrets (use Azure Key Vault)
-- Enable network security groups on all subnets
-- Use managed identities where possible
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
 
 ### 2. Create Custom Agents (`.github/agents/`)
 
-Create specialized agents for different tasks:
+Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
 
-**`.github/agents/terraform-expert.md`**:
-```markdown
-# Terraform Expert Agent
+**Agents to consider creating:**
+- **Terraform Expert Agent** - Specialized in IaC best practices, module design, and Azure resources
+- **Kubernetes Engineer Agent** - Focused on container orchestration, manifests, and Helm charts
+- **Security Reviewer Agent** - Expert in infrastructure security and compliance
 
-You are an expert in Infrastructure as Code with Terraform.
+**What to include in each agent:**
+- Clear description of the agent's infrastructure expertise
+- Specific instructions for resource creation and naming
+- References to your organization's security standards
 
-## Your Expertise
-- Terraform best practices and patterns
-- Azure resource provisioning
-- Module design and composition
-- State management and workspaces
-
-## When Generating Code
-- Always use variables for configurable values
-- Include proper resource dependencies
-- Add meaningful descriptions to all variables
-- Follow Azure naming conventions
-- Include proper tagging for all resources
-```
-
-**`.github/agents/kubernetes-engineer.md`**:
-```markdown
-# Kubernetes Engineer Agent
-
-You are an expert in container orchestration with Kubernetes.
-
-## Your Focus
-- Kubernetes manifest best practices
-- Resource limits and requests
-- Security contexts and policies
-- Helm chart development
-```
-
-> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+>
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
 
 ---
 

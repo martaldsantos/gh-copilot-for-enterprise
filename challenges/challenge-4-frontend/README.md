@@ -107,27 +107,17 @@ Agent mode will create all files with proper structure!
 
 ### 2. Create a Frontend Custom Agent
 
-Create `.github/agents/react-developer.agent.md`:
+**Your goal:** Create a custom agent file at `.github/agents/react-developer.agent.md` that specializes in React and TypeScript development.
 
-```markdown
----
-name: React Developer
-description: Expert in React, TypeScript, and modern frontend
-tools: ['codebase', 'editFiles', 'runTerminal']
----
-
-You are an expert React developer. When creating components:
-- Follow the existing patterns in #codebase
-- Use TypeScript strict mode (no any types)
-- Create barrel exports (index.ts) for components
+**What your agent should do:**
+- Follow existing patterns in your codebase
+- Use TypeScript strict mode with proper types
+- Create barrel exports for clean imports
 - Include unit tests with Vitest
-- Use Tailwind CSS for styling
-- Ensure accessibility (ARIA labels, keyboard nav)
-- Add loading and error states
+- Ensure accessibility (ARIA labels, keyboard navigation)
+- Add loading and error states to components
 
-Reference #file:src/types for existing type definitions.
-Check #problems after creating files.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
 
 ### 3. Use Context Mentions for Precise Guidance
 
@@ -141,33 +131,19 @@ Include filtering, search, and pagination.
 
 ### 4. Create Reusable Prompt Files
 
-Create `.github/prompts/create-component.prompt.md`:
+**Your goal:** Create a prompt file at `.github/prompts/create-component.prompt.md` that helps you quickly scaffold new React components.
 
-```markdown
----
-name: create-component
-description: Scaffold a new React component
-agent: agent
----
+**What your prompt file should do:**
+- Accept an input for the component name
+- Generate the component with proper TypeScript props interface
+- Include unit tests with Vitest
+- Create a barrel export (index.ts)
+- Follow your project's styling approach (Tailwind, CSS Modules, etc.)
+- Reference existing patterns in your codebase
 
-Create a React component called ${input:componentName}:
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates.
 
-1. src/components/${input:componentName}/${input:componentName}.tsx
-   - TypeScript with proper props interface
-   - Tailwind CSS styling
-   - Accessibility attributes
-
-2. src/components/${input:componentName}/${input:componentName}.test.tsx
-   - Unit tests with Vitest
-   - Test user interactions
-
-3. src/components/${input:componentName}/index.ts
-   - Barrel export
-
-Follow patterns from #codebase and check #problems after.
-```
-
-Use with: `/create-component`
+Once created, use it with: `/create-component`
 
 ### 5. Iterative Component Development
 

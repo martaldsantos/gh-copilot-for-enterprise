@@ -110,26 +110,16 @@ Agent mode will create all files and show you its plan!
 
 ### 2. Create a DevOps Custom Agent
 
-Create `.github/agents/devops-engineer.agent.md`:
+**Your goal:** Create a custom agent file at `.github/agents/devops-engineer.agent.md` that specializes in infrastructure as code.
 
-```markdown
----
-name: DevOps Engineer
-description: Expert in IaC, Docker, and Kubernetes
-tools: ['codebase', 'editFiles', 'runTerminal']
----
+**What your agent should do:**
+- Follow security best practices for infrastructure
+- Use modular Terraform patterns and proper state management
+- Optimize Docker images for production environments
+- Include resource limits and health checks in Kubernetes
+- Validate configurations before applying
 
-You are an expert DevOps engineer. When working on infrastructure:
-- Always follow security best practices
-- Use modular Terraform patterns
-- Optimize Docker images for production
-- Include resource limits in Kubernetes
-- Document all configurations
-- Validate before applying
-
-Reference #file:terraform/azure/main.tf for existing patterns.
-Check #problems for any validation errors after changes.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
 
 ### 3. Use Context Mentions for Specific Guidance
 
@@ -141,34 +131,18 @@ the patterns from #codebase.
 
 ### 4. Create Reusable Prompt Files
 
-Create `.github/prompts/k8s-deploy.prompt.md`:
+**Your goal:** Create a prompt file at `.github/prompts/k8s-deploy.prompt.md` that helps you quickly generate Kubernetes manifests.
 
-```markdown
----
-name: k8s-deploy
-description: Create Kubernetes deployment manifests
-agent: agent
----
+**What your prompt file should do:**
+- Accept inputs for application name, replicas, and service type
+- Generate Deployment with resource limits and health probes
+- Include Service, ConfigMap, and HPA resources
+- Follow Kubernetes best practices for security
+- Validate manifests after creation
 
-Create Kubernetes manifests for ${input:appName}:
-1. Deployment with:
-   - ${input:replicas} replicas
-   - Resource limits (CPU: 200m, Memory: 256Mi)
-   - Liveness and readiness probes at /health
-   - Rolling update strategy
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates.
 
-2. Service with type ${input:serviceType}
-
-3. ConfigMap for environment configuration
-
-4. Secret for sensitive data
-
-5. HorizontalPodAutoscaler targeting 70% CPU
-
-Validate all manifests after creation.
-```
-
-Use with: `/k8s-deploy`
+Once created, use it with: `/k8s-deploy`
 
 ### 5. Iterative Infrastructure Development
 

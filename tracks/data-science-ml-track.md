@@ -50,72 +50,33 @@ Then create your own `.github/copilot-instructions.md` using the example below.
 
 ### 1. Create a `.github/copilot-instructions.md` File
 
-This file tells Copilot about your data science context and preferences.
+This file tells Copilot about your data science context and preferences. **Your goal is to create your own custom instructions file.**
 
-```markdown
-# Copilot Instructions for Data Science & ML
+**What to include:**
+- Python version and key libraries (pandas, scikit-learn, etc.)
+- Coding standards (PEP 8, type hints, docstrings)
+- Data science best practices (EDA, validation, pipelines)
+- Notebook documentation standards
 
-## Project Context
-- Python 3.11+ with Jupyter Notebooks
-- Data manipulation: pandas, numpy
-- ML Framework: scikit-learn (primary), TensorFlow/PyTorch (optional)
-- Visualization: matplotlib, seaborn, plotly
-
-## Coding Standards
-- Use type hints for all functions
-- Include docstrings with parameter descriptions
-- Follow PEP 8 style guidelines
-- Use meaningful variable names (no single letters except loop indices)
-
-## Data Science Best Practices
-- Always explore data before modeling (EDA)
-- Document data assumptions and transformations
-- Use pipelines for reproducible preprocessing
-- Include model evaluation metrics and visualizations
-
-## Notebook Standards
-- Use markdown cells to explain each step
-- Keep cells focused on single tasks
-- Include visualizations for key insights
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
 
 ### 2. Create Custom Agents (`.github/agents/`)
 
-Create specialized agents for different tasks:
+Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
 
-**`.github/agents/data-scientist.md`**:
-```markdown
-# Data Scientist Agent
+**Agents to consider creating:**
+- **Data Scientist Agent** - Expert in EDA, feature engineering, and model development
+- **ML Engineer Agent** - Focused on model optimization, pipelines, and deployment
+- **Visualization Expert Agent** - Specialized in creating insightful charts and dashboards
 
-You are an expert data scientist specializing in ML pipelines.
+**What to include in each agent:**
+- Clear description of the agent's data science expertise
+- Specific instructions for analysis and modeling
+- References to your preferred libraries and patterns
 
-## Your Expertise
-- Exploratory Data Analysis (EDA)
-- Feature engineering and selection
-- Model selection and hyperparameter tuning
-- Statistical analysis and hypothesis testing
-
-## When Generating Code
-- Always include data validation steps
-- Add visualizations to support insights
-- Explain statistical decisions in comments
-- Use scikit-learn pipelines for reproducibility
-```
-
-**`.github/agents/ml-engineer.md`**:
-```markdown
-# ML Engineer Agent
-
-You are an expert in productionizing ML models.
-
-## Your Focus
-- Model optimization and performance
-- Feature preprocessing pipelines
-- Model serialization and deployment
-- Monitoring and evaluation metrics
-```
-
-> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+>
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
 
 ---
 

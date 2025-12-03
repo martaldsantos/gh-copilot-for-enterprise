@@ -104,38 +104,21 @@ Agent mode excels at iteration:
 
 ### Creating Specialized Agents
 
-Define custom agents for your team's workflows:
+Define custom agents for your team's workflows. Agents are specialized AI personas that help with specific tasks.
 
-**Security Reviewer Agent:**
-```markdown
----
-name: Security Review
-description: Review code for security vulnerabilities
-tools: ['codebase', 'search', 'problems']
----
+**Types of agents to consider:**
+- **Security Reviewer Agent** - Analyze code for vulnerabilities without making changes
+- **Planning Agent** - Generate implementation plans before coding
+- **Code Reviewer Agent** - Review code for best practices and issues
+- **Documentation Agent** - Generate and maintain documentation
 
-Analyze code for:
-- SQL injection
-- XSS vulnerabilities
-- Authentication issues
-- Sensitive data exposure
+**What to include in your agent files:**
+- Clear name and description
+- List of tools the agent should use
+- Specific instructions for the agent's behavior
+- Optional handoffs to other agents
 
-Do NOT make changes. Only report findings.
-```
-
-**Planning Agent:**
-```markdown
----
-name: Planner
-tools: ['search', 'fetch', 'githubRepo']
-handoffs:
-  - label: Implement
-    agent: agent
-    prompt: Implement the plan above.
----
-
-Generate implementation plans only. Do not write code.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and real-world examples.
 
 ### Using Handoffs
 

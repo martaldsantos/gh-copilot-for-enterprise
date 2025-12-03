@@ -100,25 +100,15 @@ Agent mode will:
 
 ### 2. Create a Custom Agent for API Development
 
-Create `.github/agents/api-developer.agent.md`:
+**Your goal:** Create a custom agent file at `.github/agents/api-developer.agent.md` that specializes in REST API development.
 
-```markdown
----
-name: API Developer
-description: Expert in REST API development
-tools: ['codebase', 'editFiles', 'runTerminal']
----
+**What your agent should do:**
+- Guide API development following REST best practices
+- Ensure proper HTTP status codes and error handling
+- Generate input validation and OpenAPI documentation
+- Reference existing patterns in your codebase
 
-You are an expert API developer. When building APIs:
-- Follow REST best practices
-- Use proper HTTP status codes
-- Include input validation
-- Add comprehensive error handling
-- Generate OpenAPI documentation
-- Write tests for all endpoints
-
-Always reference existing patterns in #codebase.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
 
 ### 3. Use Context with # Mentions
 
@@ -132,25 +122,18 @@ Reference #codebase for existing error handling patterns.
 
 ### 4. Create Reusable Prompt Files
 
-Create `.github/prompts/create-endpoint.prompt.md`:
+**Your goal:** Create a prompt file at `.github/prompts/create-endpoint.prompt.md` that helps you quickly scaffold new API endpoints.
 
-```markdown
----
-name: create-endpoint
-description: Generate a REST API endpoint
-agent: agent
----
+**What your prompt file should do:**
+- Accept inputs for HTTP method and resource name
+- Generate endpoints following REST conventions
+- Include input validation and error handling
+- Create corresponding unit tests
+- Reference your existing codebase patterns
 
-Create a ${input:method} endpoint at /api/${input:resource} that:
-- Follows REST conventions
-- Includes input validation
-- Has proper error handling
-- Returns appropriate status codes
-- Includes unit tests
-- Uses patterns from #file:app.js
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates.
 
-Then use: `/create-endpoint`
+Once created, use it with: `/create-endpoint`
 
 ### 5. Iterative Development with Agent
 

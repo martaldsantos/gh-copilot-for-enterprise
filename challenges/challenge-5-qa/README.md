@@ -122,28 +122,17 @@ Restart VS Code after adding this configuration.
 
 ### Step 3: Create a QA Custom Agent
 
-Create `.github/agents/qa-engineer.agent.md`:
+**Your goal:** Create a custom agent file at `.github/agents/qa-engineer.agent.md` that specializes in test automation.
 
-```markdown
----
-name: QA Engineer
-description: Expert in test automation and quality assurance
-tools: ['codebase', 'editFiles', 'runTerminal', 'playwright']
----
-
-You are an expert QA engineer. When writing tests:
+**What your agent should do:**
 - Follow AAA pattern (Arrange, Act, Assert)
 - Use Page Object Model for E2E tests
 - Include edge cases and error scenarios
 - Write descriptive test names
-- Check #problems for test failures
-- Reference existing tests in #codebase for patterns
+- Reference existing tests in your codebase
+- Use proper waits and assertions in E2E tests
 
-For E2E tests:
-- Use data-testid attributes for selectors
-- Add proper waits and assertions
-- Handle async operations correctly
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
 
 ### Step 4: Verify Setup
 
@@ -175,29 +164,17 @@ Analyze the test coverage in #codebase:
 
 ### Step 2: Create Reusable Test Prompt File
 
-Create `.github/prompts/create-tests.prompt.md`:
+**Your goal:** Create a prompt file at `.github/prompts/create-tests.prompt.md` that helps you generate comprehensive unit tests.
 
-```markdown
----
-name: create-tests
-description: Generate comprehensive unit tests
-agent: agent
----
+**What your prompt file should do:**
+- Accept an input for the file to test
+- Analyze and identify all testable functions
+- Generate tests with happy path, edge cases, and error scenarios
+- Use AAA pattern and mock external dependencies
+- Follow existing test patterns in your codebase
+- Run tests to verify they pass
 
-Generate unit tests for ${input:fileName}:
-
-1. Analyze the file and identify all testable functions
-2. Create tests with:
-   - Happy path scenarios
-   - Edge cases (null, empty, boundary values)
-   - Error handling scenarios
-3. Use AAA pattern (Arrange, Act, Assert)
-4. Mock all external dependencies
-5. Follow patterns from existing tests in #codebase
-6. Run the tests to verify they pass
-
-Check #problems after creating tests.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates.
 
 ### Step 3: Generate Unit Tests with Agent Mode
 
@@ -296,28 +273,16 @@ You: Now create a test file that uses this page object for login flows
 
 ### Step 3: Generate E2E Tests with Prompt File
 
-Create `.github/prompts/e2e-test.prompt.md`:
+**Your goal:** Create a prompt file at `.github/prompts/e2e-test.prompt.md` that helps you generate Playwright E2E tests.
 
-```markdown
----
-name: e2e-test
-description: Generate Playwright E2E tests
-agent: agent
----
+**What your prompt file should do:**
+- Accept an input for the feature to test
+- Use Page Objects from your tests/pages/ directory
+- Generate tests for happy path, validation errors, and edge cases
+- Include proper waits and assertions
+- Run tests to verify they pass
 
-Create Playwright E2E tests for ${input:feature}:
-
-1. Use Page Objects from tests/pages/
-2. Test these scenarios:
-   - Happy path user flow
-   - Validation error handling
-   - Edge cases
-3. Include proper waits and assertions
-4. Add descriptive test names
-5. Use test.describe for grouping
-
-Run npx playwright test after creating to verify.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates.
 
 ### Step 4: Implement Critical Flow Tests
 

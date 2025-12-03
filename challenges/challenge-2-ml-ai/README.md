@@ -97,25 +97,16 @@ Agent mode will create and run notebook cells automatically!
 
 ### 2. Create a Data Science Custom Agent
 
-Create `.github/agents/data-scientist.agent.md`:
+**Your goal:** Create a custom agent file at `.github/agents/data-scientist.agent.md` that specializes in data analysis and machine learning.
 
-```markdown
----
-name: Data Scientist
-description: Expert in data analysis and ML
-tools: ['codebase', 'editFiles', 'runTerminal']
----
-
-You are an expert data scientist. When analyzing data:
-- Always check data quality first
-- Use appropriate visualizations
-- Explain statistical findings
+**What your agent should do:**
+- Prioritize data quality checks and EDA
+- Generate appropriate visualizations for insights
 - Follow scikit-learn best practices
-- Document assumptions and decisions
-- Suggest next steps after each analysis
+- Document assumptions and suggest next steps
+- Reference existing notebooks in your codebase
 
-Reference existing notebooks in #codebase for patterns.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
 
 ### 3. Use Context Mentions for Guidance
 
@@ -129,26 +120,18 @@ Reference #codebase for existing visualization styles.
 
 ### 4. Create Reusable Prompt Files
 
-Create `.github/prompts/create-model.prompt.md`:
+**Your goal:** Create a prompt file at `.github/prompts/create-model.prompt.md` that helps you quickly train and evaluate ML models.
 
-```markdown
----
-name: create-model
-description: Train and evaluate an ML model
-agent: agent
----
+**What your prompt file should do:**
+- Accept inputs for model type and target variable
+- Prepare features and split data appropriately
+- Train the model with proper validation
+- Evaluate with relevant metrics and visualizations
+- Show feature importance and suggest improvements
 
-Train a ${input:modelType} model for ${input:target}:
-1. Prepare features and target
-2. Split data (80/20, stratified)
-3. Train the model
-4. Evaluate with metrics (accuracy, precision, recall, F1)
-5. Create confusion matrix visualization
-6. Show feature importance
-7. Suggest improvements
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates.
 
-Use with: `/create-model`
+Once created, use it with: `/create-model`
 
 ### 5. Iterative Model Development
 

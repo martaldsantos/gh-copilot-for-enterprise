@@ -68,10 +68,13 @@ The script will:
 2. **Copy these files from this repo:**
    - `.devcontainer/` folder (for consistent dev environment)
    - Your challenge's starter code folder
-3. **Create your own `.github/copilot-instructions.md`** (examples in each track guide)
-4. **Do NOT copy** this repo's `.github/copilot-instructions.md`
+3. **Create your own `.github/copilot-instructions.md`** tailored to your project
+4. **Create custom agents and prompts** based on your workflow needs
+5. **Do NOT copy** this repo's `.github/copilot-instructions.md`
 
-See your track guide for specific files to copy and example custom instructions.
+> 💡 **Looking for examples?** Check out the **[github/awesome-copilot](https://github.com/github/awesome-copilot)** repository for real-world examples of custom instructions, agents, and prompts.
+
+See your track guide for specific files to copy and guidance on what to create.
 
 #### Launch in GitHub Codespaces (Recommended)
 
@@ -196,6 +199,14 @@ Work with real-world open-source applications to implement comprehensive test au
 ---
 
 ## 📖 Learning Resources
+
+### Examples & Templates
+
+> 💡 **[github/awesome-copilot](https://github.com/github/awesome-copilot)** - A curated collection of real-world examples including:
+> - Custom instruction files (`.github/copilot-instructions.md`)
+> - Custom agent templates (`.github/agents/`)
+> - Reusable prompt files (`.github/prompts/`)
+> - Best practices and patterns
 
 ### GitHub Copilot Documentation
 - [Getting Started with Copilot](./docs/copilot-basics.md)

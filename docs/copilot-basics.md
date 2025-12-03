@@ -154,44 +154,37 @@ While typing, Copilot suggests completions:
 
 ### Custom Instructions
 
-Create a `.github/copilot-instructions.md` file to set project-wide guidelines:
+Create a `.github/copilot-instructions.md` file to set project-wide guidelines.
 
-```markdown
-# Project Guidelines
+**What to include:**
+- Project context (framework, language, architecture)
+- Coding standards and conventions
+- Testing requirements
+- Patterns to follow
 
-- Use TypeScript strict mode
-- Follow the repository patterns for error handling
-- Write unit tests for all new functions
-- Use ESLint and Prettier formatting
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world custom instruction files.
 
 ### Custom Agents
 
-Create specialized agents in `.github/agents/` for specific workflows:
+Create specialized agents in `.github/agents/` for specific workflows.
 
-```markdown
----
-name: API Designer
-description: Design REST API endpoints
-tools: ['search', 'fetch']
----
+**What agents can do:**
+- Focus on specific domains (security, API design, testing)
+- Use specific tools and models
+- Hand off to other agents for multi-step workflows
 
-Design RESTful APIs following OpenAPI 3.0 specification...
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
 
 ### Prompt Files
 
-Create reusable prompts in `.github/prompts/`:
+Create reusable prompts in `.github/prompts/` for common tasks.
 
-```markdown
----
-name: create-component
-description: Generate a React component
-agent: agent
----
+**What prompt files can do:**
+- Accept dynamic inputs for flexible templates
+- Reference files and codebase patterns
+- Invoke specific agents
 
-Create a React component with TypeScript, tests, and Tailwind styling...
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file ideas.
 
 ## Working with Agent Mode
 

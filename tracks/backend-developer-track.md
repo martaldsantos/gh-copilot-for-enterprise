@@ -46,65 +46,33 @@ Then create your own `.github/copilot-instructions.md` using the example below.
 
 ### 1. Create a `.github/copilot-instructions.md` File
 
-This file tells Copilot about your project context and coding preferences.
+This file tells Copilot about your project context and coding preferences. **Your goal is to create your own custom instructions file.**
 
-```markdown
-# Copilot Instructions for Backend Development
+**What to include:**
+- Project context (framework, language, architecture)
+- Coding standards and conventions for your team
+- Testing requirements and coverage goals
+- API patterns and authentication approach
 
-## Project Context
-- This is a REST API project using [Node.js/Express OR Python/FastAPI]
-- We follow RESTful conventions and use JWT for authentication
-- Database: PostgreSQL with [TypeORM/SQLAlchemy]
-
-## Coding Standards
-- Use async/await for all asynchronous operations
-- All endpoints must have input validation
-- Include JSDoc/docstrings for all functions
-- Follow the existing error handling patterns
-
-## Testing Requirements
-- Write unit tests for all service functions
-- Include integration tests for API endpoints
-- Aim for >80% code coverage
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
 
 ### 2. Create Custom Agents (`.github/agents/`)
 
-Create specialized agents for different tasks:
+Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
 
-**`.github/agents/api-developer.md`**:
-```markdown
-# API Developer Agent
+**Agents to consider creating:**
+- **API Developer Agent** - An expert in REST API design, authentication patterns, and error handling
+- **Test Writer Agent** - Specialized in generating comprehensive tests with high coverage
+- **Code Reviewer Agent** - Focused on code quality, security, and best practices
 
-You are an expert backend developer specializing in REST APIs.
+**What to include in each agent:**
+- Clear description of the agent's expertise
+- Specific instructions for code generation
+- References to your project's patterns and conventions
 
-## Your Expertise
-- RESTful API design and best practices
-- Authentication and authorization (JWT, OAuth)
-- Database design and optimization
-- Input validation and error handling
-
-## When Generating Code
-- Always include proper error handling
-- Add input validation for all endpoints
-- Include appropriate HTTP status codes
-- Generate OpenAPI/Swagger documentation
-```
-
-**`.github/agents/test-writer.md`**:
-```markdown
-# Test Writer Agent
-
-You are an expert in writing comprehensive tests.
-
-## Your Focus
-- Unit tests with high coverage
-- Integration tests for API endpoints
-- Mock external dependencies
-- Test edge cases and error scenarios
-```
-
-> 💡 **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+>
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
 
 ---
 

@@ -155,125 +155,54 @@ case $CHALLENGE in
         ;;
 esac
 
-# Create .github directory with copilot instructions
-mkdir -p .github
+# Create .github directory structure
+mkdir -p .github/agents
+mkdir -p .github/prompts
 
-# Generate copilot-instructions.md based on challenge
-case $CHALLENGE in
-    1)
-        cat > .github/copilot-instructions.md << 'EOF'
-# Copilot Instructions for Web API Development
+# Create a README to guide participants on creating their own files
+cat > .github/README.md << 'EOF'
+# GitHub Copilot Configuration
 
-## Project Context
-- Building a REST API for task management
-- Framework: Express.js (Node) or FastAPI (Python)
-- Features: Authentication, CRUD operations, filtering, pagination
+This folder is where you'll configure GitHub Copilot for your project.
 
-## Coding Standards
-- Follow RESTful API conventions
-- Use proper HTTP status codes
-- Implement input validation
-- Include comprehensive error handling
-- Write tests for all endpoints
+## What to Create
 
-## API Patterns
-- Use JWT for authentication
-- Implement middleware for auth checks
-- Use consistent response formats
-- Document endpoints with OpenAPI/Swagger
+### 1. `copilot-instructions.md`
+Create your own custom instructions file that tells Copilot about:
+- Your project context (framework, language, architecture)
+- Coding standards and conventions
+- Testing requirements and coverage goals
+- Any specific patterns to follow
+
+### 2. `agents/` folder
+Create custom agents for specialized tasks:
+- Create `.md` files that define agent personas
+- Each agent should have a specific expertise area
+- Reference your codebase patterns
+
+### 3. `prompts/` folder
+Create reusable prompt templates:
+- Create `.prompt.md` files for common tasks
+- Use `${input:name}` for dynamic inputs
+- Reference existing patterns with `#file:` mentions
+
+## Looking for Examples?
+
+Check out the **[github/awesome-copilot](https://github.com/github/awesome-copilot)** repository for:
+- Real-world custom instruction files
+- Agent templates and ideas
+- Prompt file examples
+- Best practices and patterns
+
+## Getting Started
+
+1. Create your `copilot-instructions.md` based on your challenge requirements
+2. Create at least one custom agent in `agents/`
+3. Create at least one prompt file in `prompts/`
+4. Test your configurations with Copilot Chat
+
+Happy hacking! 🚀
 EOF
-        ;;
-    2)
-        cat > .github/copilot-instructions.md << 'EOF'
-# Copilot Instructions for ML/AI Development
-
-## Project Context
-- Customer churn prediction using machine learning
-- Python with pandas, numpy, scikit-learn
-- Jupyter Notebook workflow
-
-## Data Science Standards
-- Follow EDA best practices
-- Document all preprocessing steps
-- Use cross-validation for model selection
-- Include feature importance analysis
-- Generate actionable business insights
-
-## Code Quality
-- Use descriptive variable names
-- Comment complex transformations
-- Include visualization for findings
-- Follow PEP 8 style guidelines
-EOF
-        ;;
-    3)
-        cat > .github/copilot-instructions.md << 'EOF'
-# Copilot Instructions for DevOps/Infrastructure
-
-## Project Context
-- Cloud infrastructure using Terraform (Azure)
-- Docker containerization
-- Kubernetes deployment
-
-## Infrastructure Standards
-- Use Azure as the cloud provider (not AWS/GCP)
-- Follow infrastructure as code best practices
-- Implement proper security groups and networking
-- Use remote state for Terraform
-- Include resource tagging
-
-## Security
-- Never commit secrets or credentials
-- Use managed identities where possible
-- Implement least-privilege access
-- Enable encryption at rest and in transit
-EOF
-        ;;
-    4)
-        cat > .github/copilot-instructions.md << 'EOF'
-# Copilot Instructions for Frontend Development
-
-## Project Context
-- Task Dashboard application
-- React 18 with TypeScript
-- Tailwind CSS for styling
-- Vite for build tooling
-
-## Component Standards
-- Use functional components with hooks
-- Implement proper TypeScript types (no `any`)
-- Follow accessibility guidelines (WCAG 2.1 AA)
-- Create reusable, composable components
-
-## State Management
-- Use React Query for server state
-- Use React hooks for local state
-- Implement proper loading and error states
-EOF
-        ;;
-    5)
-        cat > .github/copilot-instructions.md << 'EOF'
-# Copilot Instructions for QA & Test Automation
-
-## Project Context
-- Testing real-world open-source applications
-- Using Playwright for E2E testing
-- Implementing comprehensive test coverage
-
-## Testing Standards
-- Follow AAA pattern (Arrange, Act, Assert)
-- Use Page Object Model for maintainability
-- Include positive and negative test cases
-- Mock external dependencies in unit tests
-
-## Playwright Best Practices
-- Use proper waits (avoid arbitrary timeouts)
-- Take screenshots on failure
-- Test across multiple browsers
-- Use data-testid attributes when available
-EOF
-        ;;
-esac
 
 # Copy documentation
 mkdir -p docs

@@ -79,68 +79,34 @@ Create specialized agents for specific workflows by defining `.agent.md` files.
 
 ### Custom Agent Structure
 
-```markdown
----
-description: Generate implementation plans without code changes
-name: Planner
-tools: ['fetch', 'githubRepo', 'search', 'usages']
-model: Claude Sonnet 4
-handoffs:
-  - label: Start Implementation
-    agent: agent
-    prompt: Implement the plan outlined above.
-    send: false
----
+Custom agents are defined in `.agent.md` files with a YAML frontmatter section.
 
-# Planning Instructions
+**Key elements to include:**
+- `name` - A clear, descriptive name
+- `description` - What the agent specializes in
+- `tools` - List of tools the agent can use
+- `model` - (Optional) Preferred AI model
+- `handoffs` - (Optional) Transitions to other agents
 
-You are in planning mode. Your task is to generate an 
-implementation plan for new features or refactoring.
+The body of the file contains instructions for how the agent should behave.
 
-Do NOT make any code edits. Only generate plans.
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and real-world examples.
 
 ### Example Custom Agents
 
-**Security Reviewer:**
-```markdown
----
-name: Security Review
-description: Analyze code for security vulnerabilities
-tools: ['codebase', 'search', 'problems']
----
+**Types of agents you might create:**
 
-Review the code for:
-- SQL injection vulnerabilities
-- XSS attack vectors
-- Authentication/authorization issues
-- Sensitive data exposure
-```
+- **Security Reviewer** - Analyzes code for security vulnerabilities
+- **API Designer** - Designs REST API endpoints following best practices
+- **Test Generator** - Creates comprehensive test suites
+- **Documentation Writer** - Generates and maintains documentation
+- **Code Reviewer** - Reviews code for quality and patterns
 
-**API Designer:**
-```markdown
----
-name: API Designer
-description: Design REST API endpoints
-tools: ['search', 'fetch']
----
-
-Design RESTful API endpoints following:
-- OpenAPI 3.0 specification
-- REST best practices
-- Consistent naming conventions
-```
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates.
 
 ### Handoffs Between Agents
 
-Handoffs create guided workflows that transition between agents:
-
-```markdown
-handoffs:
-  - label: Implement Changes
-    agent: agent
-    prompt: Now implement the changes outlined above.
-```
+Handoffs create guided workflows that transition between agents. Define them in the frontmatter to create multi-step processes.
 
 ---
 
@@ -156,20 +122,19 @@ Create reusable prompts for common tasks using `.prompt.md` files.
 
 ### Prompt File Structure
 
-```markdown
----
-description: Generate a React component with tests
-name: create-component
-tools: ['codebase', 'editFiles']
-agent: agent
----
+Prompt files use YAML frontmatter to define metadata and the body contains the prompt template.
 
-Create a React component named ${input:componentName} that:
-- Uses TypeScript with proper type definitions
-- Includes unit tests with React Testing Library
-- Follows the patterns in ${file:src/components/Button.tsx}
-- Uses Tailwind CSS for styling
-```
+**Key elements to include:**
+- `name` - Name used to invoke the prompt (e.g., `/create-component`)
+- `description` - What the prompt does
+- `tools` - (Optional) Tools to use
+- `agent` - (Optional) Agent to run with
+
+**Dynamic inputs:** Use `${input:variableName}` for user-provided values.
+
+**File references:** Use `${file:path/to/file.ts}` to reference files.
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
 
 ### Using Prompt Files
 

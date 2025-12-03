@@ -125,5 +125,16 @@ If participants work directly in this repository without customizing the Copilot
 1. Start with a fresh repository or fork
 2. Copy the `.devcontainer/` folder for environment consistency
 3. Copy their challenge's starter code
-4. Create a custom `.github/copilot-instructions.md` (examples provided in each track)
+4. Create a custom `.github/copilot-instructions.md` tailored to their project
 5. Optionally create custom agents in `.github/agents/`
+
+> 💡 **For examples of custom instruction files, agents, and prompts:** Direct participants to the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples and best practices.
+
+## Challenge Philosophy
+
+This hackathon follows a **challenge-based learning** approach:
+
+- **Do NOT provide ready-to-paste solutions** for copilot-instructions, agents, or prompts
+- **Describe WHAT participants should achieve**, not exactly HOW to write each file
+- **Guide participants in creating their own configurations** based on their understanding
+- **Reference [github/awesome-copilot](https://github.com/github/awesome-copilot)** for examples when participants need inspiration
