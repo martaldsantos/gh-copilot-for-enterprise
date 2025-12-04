@@ -100,22 +100,21 @@ You will be testing **eShopOnWeb**, a reference .NET application.
 1.  **Clone the Repository**:
     In your challenge repository, clone the eShopOnWeb app:
     ```bash
-    git clone https://github.com/NimblePros/eShopOnWeb.git app
+    git clone https://github.com/dotnet/eShop app
     ```
 
 2.  **Clean Up Existing Tests**:
     We want YOU to write the tests. Delete the existing test folder:
     ```bash
-    rm -rf app/tests
+    rm -rf app/tests app/e2e
     ```
 
 3.  **Verify Application Runs**:
     ```bash
     cd app
-    dotnet restore Everything.sln
-    dotnet run --project src/Web/Web.csproj
+    dotnet run --project src/eShop.AppHost/eShop.AppHost.csproj
     ```
-    (Verify it runs on localhost:5001 or similar)
+    (Verify it runs on localhost by connecting to the Aspire dashboard URL provided in your output - it will take a bit of time start everything)
 
 #### 🚀 Phase 2: Unit Testing with Copilot
 
