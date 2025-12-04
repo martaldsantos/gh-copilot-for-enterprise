@@ -126,6 +126,8 @@ For MCP servers you want across all workspaces, use MCP: Open User Configuration
 
 The **Atlassian Rovo MCP Server** is a cloud-based remote MCP server that connects your Atlassian Cloud products (Jira, Confluence, and Compass) to AI assistants like GitHub Copilot.
 
+For more information and how to run it, please refer to [this document](https://github.com/mcp/atlassian/atlassian-mcp-server).
+
 ### What You Can Do
 
 - **Jira**: Search issues, create/update work items, bulk create from notes
