@@ -112,6 +112,7 @@ You will be testing **eShopOnWeb**, a reference .NET application.
 3.  **Verify Application Runs**:
     ```bash
     cd app
+    dotnet dev-certs https --trust
     dotnet run --project src/eShop.AppHost/eShop.AppHost.csproj
     ```
     (Verify it runs on localhost by connecting to the Aspire dashboard URL provided in your output - it will take a bit of time start everything)
