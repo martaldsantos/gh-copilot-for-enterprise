@@ -112,7 +112,7 @@ You will be testing **eShopOnWeb**, a reference .NET application.
 3.  **Verify Application Runs**:
     ```bash
     cd app
-    dotnet restore
+    dotnet restore Everything.sln
     dotnet run --project src/Web/Web.csproj
     ```
     (Verify it runs on localhost:5001 or similar)
