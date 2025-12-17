@@ -272,9 +272,9 @@ docker ps
 # May need to wait for startup
 ```
 
-**AWS Credentials Missing**
+**Azure Credentials Missing**
 ```
-# For hackathon: No real AWS needed
+# For hackathon: No real Azure deployment needed
 # Terraform validate/plan only
 # Don't actually apply!
 ```
@@ -307,17 +307,18 @@ lsof -ti:3000 | xargs kill -9
 # Ctrl+Shift+P → "TypeScript: Restart TS Server"
 ```
 
-### Challenge 5: MCP
+### Challenge 5: QA
 
-**MCP SDK Not Found**
+**Playwright Not Found**
 ```bash
-# Install MCP SDK
-npm install @modelcontextprotocol/sdk
+# Install Playwright
+npm install @playwright/test
+npx playwright install
 ```
 
-**MCP Server Not Connecting**
+**Browser Launch Issues**
 ```
-1. Check server file path in .vscode/settings.json
+1. Ensure browsers are installed: npx playwright install
 2. Verify server starts: node mcp-servers/github-server.js
 3. Check for errors in server output
 4. Restart VS Code
@@ -482,4 +483,4 @@ If this guide doesn't help:
 
 Most issues have simple solutions. Stay calm and debug systematically!
 
-[Back to Main](./README.md) | [Quick Start](./QUICKSTART.md)
+[Back to Main](./README.md) | [Tracks](./tracks/README.md)

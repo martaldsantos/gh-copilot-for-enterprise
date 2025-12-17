@@ -1,368 +1,431 @@
-# Copilot Chat Modes Reference 💬
+# Copilot Agents & Chat Modes Reference 🤖
 
-GitHub Copilot Chat provides specialized commands (slash commands) that help you get more targeted assistance. Think of them as shortcuts to specific AI behaviors.
+GitHub Copilot in VS Code offers powerful **agentic capabilities** that go beyond simple code suggestions. Learn how to use different agents, customize workflows, and leverage tools to accelerate development.
 
-## Available Chat Commands
+## Understanding Copilot Agents
 
-### `/explain` - Understand Code
+### What Are Agents?
 
-**Purpose:** Get detailed explanations of code, algorithms, or concepts.
+Agents are specialized AI personas that determine how Copilot behaves during a chat session. Each agent has different capabilities, tools access, and interaction patterns.
 
-**When to use:**
-- Understanding unfamiliar code
-- Learning new algorithms
-- Onboarding to a codebase
-- Reviewing complex logic
+### Built-in Agents
 
-**Examples:**
+VS Code provides four built-in agents:
 
-1. **Explain selected code:**
-   ```
-   Select code → Copilot Chat → "/explain"
-   ```
+| Agent | Description | Best For |
+|-------|-------------|----------|
+| **Agent** | Full autonomous mode - can edit files, run terminal commands, and iterate on its work | Multi-file implementations, complex tasks |
+| **Plan** | Read-only mode for generating implementation plans | Architecture decisions, task planning |
+| **Ask** | Q&A mode for questions and explanations | Learning, understanding code, research |
+| **Edit** | Focused file editing with inline changes | Quick edits to specific files |
 
-2. **Explain specific concepts:**
-   ```
-   /explain how async/await works in JavaScript
-   ```
+### Switching Between Agents
 
-3. **Explain algorithms:**
-   ```
-   /explain the quicksort algorithm with time complexity
-   ```
-
-**Pro Tips:**
-- Select code before using `/explain`
-- Ask follow-up questions for deeper understanding
-- Use for code reviews
+1. Open the Chat view (`Ctrl+Alt+I` / `Cmd+Shift+I`)
+2. Click the agent picker dropdown
+3. Select your desired agent
 
 ---
 
-### `/fix` - Debug and Repair
+## Agent Mode - The Agentic Experience 🚀
 
-**Purpose:** Identify and fix bugs, errors, or issues in your code.
+**Agent mode** is Copilot's most powerful capability. It can:
 
-**When to use:**
-- Encountering runtime errors
-- Fixing compilation errors
-- Debugging logical issues
-- Addressing linting warnings
+- ✅ Autonomously iterate on code
+- ✅ Recognize and fix its own errors
+- ✅ Execute terminal commands
+- ✅ Make changes across multiple files
+- ✅ Infer additional tasks needed to complete your request
+- ✅ Self-heal from runtime errors
 
-**Examples:**
+### When to Use Agent Mode
 
-1. **Fix errors:**
-   ```
-   /fix this TypeScript error: Property 'id' does not exist on type 'User'
-   ```
+Use Agent mode when you need to:
+- Implement features spanning multiple files
+- Set up new projects or components
+- Debug issues that require investigation
+- Refactor code across your codebase
+- Perform complex multi-step tasks
 
-2. **Debug issues:**
-   ```
-   /fix why is this function returning undefined?
-   ```
+### Example: Building a Feature with Agent Mode
 
-3. **Fix linting issues:**
-   ```
-   /fix all ESLint errors in this file
-   ```
+```
+Create a user authentication system with:
+- Login and registration endpoints
+- JWT token generation and validation
+- Password hashing with bcrypt
+- Input validation
+- Unit tests for all components
+```
 
-**Pro Tips:**
-- Include error messages in your prompt
-- Select the problematic code
-- Test the fix before committing
+Agent mode will:
+1. Create necessary files (routes, models, middleware)
+2. Install required dependencies
+3. Implement the code
+4. Run tests to verify
+5. Fix any issues it encounters
 
 ---
 
-### `/test` - Generate Tests
+## Custom Agents 🎭
 
-**Purpose:** Create unit tests, integration tests, or test cases for your code.
+Create specialized agents for specific workflows by defining `.agent.md` files.
 
-**When to use:**
-- Writing new tests
-- Improving test coverage
-- Testing edge cases
-- Creating test data
+### Creating a Custom Agent
 
-**Examples:**
+1. Run `Chat: New Custom Agent` from Command Palette
+2. Choose location (Workspace or User profile)
+3. Define the agent in the Markdown file
 
-1. **Generate unit tests:**
-   ```
-   Select function → "/test create unit tests for this function"
-   ```
+### Custom Agent Structure
 
-2. **Test with specific framework:**
-   ```
-   /test create Jest tests for the UserService class
-   ```
+Custom agents are defined in `.agent.md` files with a YAML frontmatter section.
 
-3. **Generate test data:**
-   ```
-   /test create mock data for testing user authentication
-   ```
+**Key elements to include:**
+- `name` - A clear, descriptive name
+- `description` - What the agent specializes in
+- `tools` - List of tools the agent can use
+- `model` - (Optional) Preferred AI model
+- `handoffs` - (Optional) Transitions to other agents
 
-**Pro Tips:**
-- Specify testing framework (Jest, Pytest, etc.)
-- Ask for edge cases: `/test include edge cases`
-- Request specific test types (unit, integration, e2e)
+The body of the file contains instructions for how the agent should behave.
 
----
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and real-world examples.
 
-### `/doc` - Generate Documentation
+### Example Custom Agents
 
-**Purpose:** Create documentation, comments, README files, or API docs.
+**Types of agents you might create:**
 
-**When to use:**
-- Documenting functions and classes
-- Writing README files
-- Creating API documentation
-- Adding JSDoc/docstrings
+- **Security Reviewer** - Analyzes code for security vulnerabilities
+- **API Designer** - Designs REST API endpoints following best practices
+- **Test Generator** - Creates comprehensive test suites
+- **Documentation Writer** - Generates and maintains documentation
+- **Code Reviewer** - Reviews code for quality and patterns
 
-**Examples:**
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates.
 
-1. **Document function:**
-   ```
-   Select function → "/doc add JSDoc comments"
-   ```
+### Handoffs Between Agents
 
-2. **Create README:**
-   ```
-   /doc create a README for this project with setup instructions
-   ```
-
-3. **API documentation:**
-   ```
-   /doc generate OpenAPI specification for these endpoints
-   ```
-
-**Pro Tips:**
-- Specify documentation format (JSDoc, Sphinx, etc.)
-- Include usage examples: `/doc with examples`
-- Request specific sections
+Handoffs create guided workflows that transition between agents. Define them in the frontmatter to create multi-step processes.
 
 ---
 
-### `/optimize` - Performance Improvements
+## Prompt Files (Reusable Prompts) 📄
 
-**Purpose:** Optimize code for better performance, efficiency, or readability.
+Create reusable prompts for common tasks using `.prompt.md` files.
 
-**When to use:**
-- Improving algorithm efficiency
-- Reducing memory usage
-- Optimizing database queries
-- Refactoring for clarity
+### Creating a Prompt File
 
-**Examples:**
+1. Enable `chat.promptFiles` setting
+2. Run `Chat: New Prompt File` from Command Palette
+3. Store in `.github/prompts/` or user profile
 
-1. **Optimize performance:**
-   ```
-   /optimize this function for better time complexity
-   ```
+### Prompt File Structure
 
-2. **Memory optimization:**
-   ```
-   /optimize reduce memory usage in this data processing
-   ```
+Prompt files use YAML frontmatter to define metadata and the body contains the prompt template.
 
-3. **Code refactoring:**
-   ```
-   /optimize this code for readability and maintainability
-   ```
+**Key elements to include:**
+- `name` - Name used to invoke the prompt (e.g., `/create-component`)
+- `description` - What the prompt does
+- `tools` - (Optional) Tools to use
+- `agent` - (Optional) Agent to run with
+
+**Dynamic inputs:** Use `${input:variableName}` for user-provided values.
+
+**File references:** Use `${file:path/to/file.ts}` to reference files.
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
+
+### Using Prompt Files
+
+Type `/` in chat followed by the prompt name:
+```
+/create-component
+```
 
 ---
 
-### Workspace Context Chat
+## Tools in Chat 🛠️
 
-**Purpose:** Ask questions about your entire workspace/project.
+Tools extend Copilot's capabilities to interact with external systems and perform specialized tasks.
 
-**When to use:**
-- Finding files or functions
-- Understanding project structure
-- Locating implementations
-- Cross-file refactoring
+### Built-in Tools
 
-**How to use:**
-- Use `@workspace` in your chat
-- Don't select specific code
+| Tool | Description | Usage |
+|------|-------------|-------|
+| `#codebase` | Search the entire codebase | `#codebase how is auth implemented?` |
+| `#file` | Reference specific files | `#file:src/auth.ts explain this` |
+| `#problems` | Access editor problems/errors | `Fix the issues in #problems` |
+| `#terminalSelection` | Reference terminal output | `Explain #terminalSelection` |
+| `#fetch` | Fetch web content | `Summarize #fetch https://example.com` |
+| `#githubRepo` | Search GitHub repositories | `#githubRepo vercel/next.js routing` |
+| `#usages` | Find code usages | Show usages of this function |
+| `#changes` | Access git changes | Review #changes for security issues |
 
-**Examples:**
+### Using Tools in Prompts
+
+Reference tools explicitly with `#`:
 
 ```
-@workspace where is the user authentication implemented?
-
-@workspace how is error handling done in this project?
-
-@workspace find all API endpoints that handle payments
-
-@workspace what testing frameworks are used?
+Using #codebase, find all API endpoints and create 
+comprehensive tests following the patterns in #file:tests/api.test.ts
 ```
 
-**Pro Tips:**
-- Great for code discovery
-- Helps understand patterns
-- Useful for refactoring across files
+### Tool Picker
+
+In Agent mode, click the **Configure Tools** button to:
+- Enable/disable specific tools
+- View available MCP tools
+- Create tool sets for common workflows
 
 ---
 
-## Advanced Usage
+## MCP (Model Context Protocol) Integration 🔌
 
-### Combining Commands with Context
+Connect Copilot to external services and data sources.
 
-You can be more specific with slash commands:
+### Installing MCP Servers
+
+**From VS Code Extensions view:**
+1. Enable `chat.mcp.gallery.enabled` setting
+2. Open Extensions view (`Ctrl+Shift+X`)
+3. Search `@mcp` to browse available servers
+4. Click Install
+
+**From Configuration:**
+Add to `.vscode/mcp.json`:
+```json
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${input:github-token}"
+      }
+    }
+  }
+}
+```
+
+### Popular MCP Servers
+
+| Server | Purpose |
+|--------|---------|
+| **Playwright** | Browser automation for testing |
+| **GitHub** | GitHub API access (issues, PRs, repos) |
+| **Filesystem** | Enhanced file operations |
+| **Database** | Database queries |
+| **Fetch** | HTTP requests |
+
+### Using MCP Tools
+
+Once configured, MCP tools appear in the tool picker and can be invoked:
 
 ```
-/test create integration tests for the user registration flow, 
-mocking the database and email service
-
-/fix the race condition in the async function, ensuring 
-proper error handling
-
-/explain the authentication flow from login to JWT token 
-generation, including refresh token logic
-
-/doc create comprehensive API documentation with request/response 
-examples and error codes
+List my open GitHub issues and create a task list
 ```
 
-### Chain of Thought
+---
 
-Have a conversation with Copilot:
+## Context Management with # Mentions
+
+Use `#` to add context to your prompts:
+
+### File Context
+```
+#file:src/models/user.ts - Add validation to this model
+```
+
+### Selection Context
+```
+#selection - Explain what this selected code does
+```
+
+### Workspace Context
+```
+#codebase - Find all usages of the UserService class
+```
+
+### Terminal Context
+```
+#terminalSelection - Debug this error output
+```
+
+---
+
+## Slash Commands (Quick Actions)
+
+While agents handle complex tasks, slash commands provide quick actions:
+
+| Command | Purpose |
+|---------|---------|
+| `/explain` | Explain selected code |
+| `/fix` | Fix errors in selection |
+| `/tests` | Generate tests |
+| `/new` | Create new files/projects |
+| `/clear` | Clear chat history |
+
+### Using Slash Commands with Agent
+
+Combine commands with agent capabilities:
+```
+/tests for the authentication module - include edge cases 
+and mock external dependencies
+```
+
+---
+
+## Multi-File Editing (Copilot Edits)
+
+Agent mode excels at multi-file operations:
+
+### Example: Refactoring Across Files
 
 ```
-You: /explain how does this caching work?
-Copilot: [explanation]
-You: What happens if the cache is full?
-Copilot: [explanation]
-You: /fix implement an LRU eviction policy
+Refactor the UserService to use dependency injection:
+- Update the service class
+- Create an interface
+- Update all consumers
+- Update tests
 ```
 
-### Language-Specific Commands
+### Reviewing Changes
 
-Be explicit about language/framework:
+1. Changes appear inline in the editor
+2. Accept or reject each change
+3. Use Undo in Chat to revert to previous state
+4. Run tests to verify changes
+
+---
+
+## Iterative Workflows
+
+### Conversational Development
+
+Have an ongoing conversation with Copilot:
 
 ```
-/test create Pytest tests with fixtures and parametrize
+You: Create a REST API for tasks
+Agent: [Creates initial implementation]
 
-/doc add Python docstrings following Google style
+You: Add input validation
+Agent: [Adds validation logic]
 
-/fix this React hook dependency issue
+You: Now add authentication middleware
+Agent: [Implements auth middleware]
 
-/explain this SQL query with execution plan
+You: Run the tests
+Agent: [Executes tests, fixes any failures]
 ```
+
+### Handoff Workflows
+
+Use handoffs for structured workflows:
+1. **Plan** → Generate implementation plan
+2. **Agent** → Implement the plan
+3. **Security Review** → Check for vulnerabilities
+4. **Agent** → Address security issues
+
+---
 
 ## Best Practices
 
-### 1. **Be Specific**
-❌ `/fix this`  
-✅ `/fix the null pointer exception in line 42`
+### 1. **Choose the Right Agent**
+- Complex implementations → **Agent**
+- Planning/architecture → **Plan**
+- Quick questions → **Ask**
+- Focused edits → **Edit**
 
 ### 2. **Provide Context**
-❌ `/test`  
-✅ `/test create unit tests for authentication, including invalid credentials and token expiration`
+- Use `#file` to reference relevant code
+- Use `#codebase` for project-wide understanding
+- Include examples of desired patterns
 
-### 3. **Select Code First**
-For `/explain`, `/fix`, `/test`, `/doc` - select relevant code before using the command
+### 3. **Review Changes Carefully**
+- Agent mode makes real changes
+- Review each file modification
+- Run tests before committing
 
-### 4. **Iterate**
-Don't accept the first suggestion blindly:
-- Ask for clarification
-- Request alternatives
-- Refine the output
+### 4. **Iterate and Refine**
+- Don't expect perfection on first try
+- Provide feedback to improve results
+- Use follow-up prompts to refine
 
-### 5. **Verify Output**
-- Review generated tests (do they actually test the logic?)
-- Verify fixes (do they solve the problem?)
-- Check documentation (is it accurate?)
+### 5. **Use Tool Approvals Wisely**
+- Review tool parameters before approving
+- Be cautious with file modifications
+- Understand what terminal commands do
 
-## Command Comparison
+---
 
-| Command | Input | Output | Best For |
-|---------|-------|--------|----------|
-| `/explain` | Code/concept | Explanation | Learning, understanding |
-| `/fix` | Buggy code | Fixed code | Debugging |
-| `/test` | Function/class | Test code | Testing |
-| `/doc` | Code | Documentation | Docs, comments |
-| `/optimize` | Code | Improved code | Performance |
-| `@workspace` | Question | Answer + references | Discovery |
-
-## Examples from Challenges
+## Challenge-Specific Examples
 
 ### Challenge 1: Web API
 ```
-/test create integration tests for the user registration endpoint, 
-including validation errors and duplicate email handling
-
-/explain how JWT authentication works in this implementation
-
-/doc generate OpenAPI specification for all task endpoints
+Create a complete task management API with:
+- CRUD endpoints for tasks
+- User authentication with JWT
+- Input validation and error handling
+- Unit tests with >80% coverage
+- OpenAPI documentation
 ```
 
 ### Challenge 2: ML/AI
 ```
-/explain the difference between these feature scaling methods
-
-/fix the data type mismatch in this pandas operation
-
-/test create tests for the feature engineering functions
+Analyze customer_churn.csv using Agent mode:
+- Load and explore the data
+- Create visualizations
+- Engineer features
+- Train and compare models
+- Generate a summary report
 ```
 
 ### Challenge 3: DevOps
 ```
-/explain this Terraform resource and its dependencies
-
-/doc create deployment runbook with rollback procedures
-
-/fix the Docker build failing on layer 4
+Set up Azure infrastructure with Terraform:
+- VNet with public/private subnets
+- Container registry
+- Kubernetes cluster
+- Proper security groups
 ```
 
 ### Challenge 4: Frontend
 ```
-/test create unit tests for this React component with user interactions
-
-/explain the useEffect dependencies in this hook
-
-/optimize this component to prevent unnecessary re-renders
+Build a task dashboard with React:
+- Dashboard component with statistics
+- Task list with filtering and sorting
+- Dark/light theme toggle
+- Comprehensive component tests
 ```
 
-### Challenge 5: MCP
+### Challenge 5: QA
 ```
-/explain how this MCP server communicates with Copilot
-
-/test create integration tests for all MCP tools
-
-/doc document the MCP server API and available tools
-```
-
-## Troubleshooting
-
-### Command Not Working?
-- Make sure you typed `/` before the command
-- Check if you're in Copilot Chat (not inline chat)
-- Verify Copilot is enabled
-
-### Irrelevant Suggestions?
-- Add more context to your prompt
-- Select relevant code before command
-- Be more specific about what you need
-
-### Response Too Generic?
-- Provide examples of what you want
-- Reference specific patterns in your codebase
-- Ask follow-up questions for details
-
----
-
-## Quick Reference Card
-
-```
-📖 /explain  - Understand code
-🔧 /fix      - Debug issues  
-✅ /test     - Generate tests
-📝 /doc      - Create docs
-⚡ /optimize - Improve performance
-🔍 @workspace - Search project
+Using the Playwright MCP server, navigate to the 
+application and generate E2E tests for the main user flows.
 ```
 
 ---
 
-**Master these commands and become a Copilot power user! 🚀**
+## Quick Reference
+
+```
+🤖 Agent      - Full autonomous mode, multi-file edits
+📋 Plan       - Read-only planning mode
+❓ Ask        - Q&A and explanations
+✏️ Edit       - Focused file editing
+📄 .prompt.md - Reusable prompt templates
+🎭 .agent.md  - Custom agent definitions
+🛠️ #tools     - Add context and capabilities
+🔌 MCP        - External service integration
+```
+
+---
+
+**Embrace the agentic workflow and let Copilot do the heavy lifting! 🚀**
 
 [Back to Main README](../README.md) | [Prompt Engineering →](./prompt-engineering.md)

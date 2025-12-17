@@ -1,153 +1,271 @@
 # Prompt Engineering for GitHub Copilot 🎯
 
-Learn how to write effective prompts that get the best results from GitHub Copilot.
+Learn how to write effective prompts that get the best results from GitHub Copilot's **agentic capabilities** in VS Code.
 
 ## The Art of Prompting
 
-Think of prompting as giving instructions to a very capable but literal colleague. Clear, specific instructions yield better results than vague requests.
+With Agent mode, Copilot can now complete complex, multi-step tasks autonomously. Good prompts guide this agentic behavior effectively.
 
 ## Core Principles
 
-### 1. **Be Specific**
+### 1. **Be Specific and Comprehensive**
 
 ❌ **Vague:**
-```javascript
-// function to process data
+```
+create api
 ```
 
 ✅ **Specific:**
-```javascript
-// Function to process user data: validate email format, hash password with bcrypt, 
-// and return sanitized user object with id, email, and createdAt timestamp
+```
+Create a REST API for task management with:
+- CRUD endpoints for tasks
+- JWT authentication middleware  
+- Input validation with proper error messages
+- Unit tests for all endpoints
+- OpenAPI documentation
 ```
 
-### 2. **Provide Context**
+### 2. **Use Context with # Mentions**
 
-❌ **No Context:**
-```python
-# create model
+Reference files and codebase context explicitly:
+
+```
+Using the patterns in #file:src/services/UserService.ts,
+create a ProductService with similar error handling.
+
+Use #codebase to find existing validation utilities.
 ```
 
-✅ **With Context:**
-```python
-# Using SQLAlchemy, create a User model with:
-# - id: Integer, primary key, auto-increment
-# - email: String(120), unique, not null
-# - password_hash: String(256), not null
-# - created_at: DateTime, default now
-# Following the pattern in models/product.py
-```
-
-### 3. **Use Examples**
+### 3. **Provide Examples**
 
 ❌ **Abstract:**
-```typescript
-// create validation function
+```
+validate email
 ```
 
 ✅ **With Examples:**
-```typescript
-// Create email validation function that:
-// - Returns true for: "user@example.com", "name.surname@company.co.uk"
-// - Returns false for: "invalid", "@example.com", "user@", "user @example.com"
-// - Uses regex pattern matching
+```
+Create email validation that:
+- Returns true for: "user@example.com", "name.surname@company.co.uk"
+- Returns false for: "invalid", "@example.com", "user@", "user @example.com"
+- Uses regex pattern matching
 ```
 
 ### 4. **Break Down Complex Tasks**
 
-❌ **Too Complex:**
-```python
-# build complete authentication system
+For large tasks, guide the agent through steps:
+
+```
+Implement user authentication:
+1. First, create the User model with password hashing
+2. Then, implement registration endpoint with validation
+3. Next, create login endpoint returning JWT
+4. Finally, add auth middleware for protected routes
+
+After each step, run tests before proceeding.
 ```
 
-✅ **Step by Step:**
-```python
-# Step 1: Create password hashing function using bcrypt
-# Step 2: Create user registration endpoint with validation
-# Step 3: Create login endpoint that returns JWT token
-# Step 4: Create middleware to verify JWT tokens
+## Agent Mode Prompting
+
+### Multi-File Tasks
+
+Agent mode excels at tasks spanning multiple files:
+
+```
+Create a complete feature for user profiles:
+- Profile model and database schema
+- CRUD API endpoints
+- Profile component for the frontend
+- Integration tests
+- Update the main router with new routes
+```
+
+### Iterative Development
+
+Work conversationally with Agent mode:
+
+```
+You: Create a basic Express server with a /health endpoint
+
+[Agent creates initial code]
+
+You: Add logging middleware using winston
+
+[Agent adds logging]
+
+You: Now add error handling middleware
+
+[Agent adds error handling]
+
+You: Run npm test to verify everything works
+
+[Agent runs tests, fixes any issues]
+```
+
+### Using Tools in Prompts
+
+Reference tools explicitly for specific tasks:
+
+```
+Use #fetch to get the latest React documentation for hooks, 
+then create a custom useDebounce hook following their patterns.
+
+Search #githubRepo vercel/next.js for routing examples, 
+then implement similar routing in this project.
+
+Check #problems and fix all TypeScript errors in the project.
 ```
 
 ## Prompt Patterns
 
 ### Pattern 1: The Specification Pattern
 
-Describe exactly what you want:
+Define complete requirements upfront:
 
-```javascript
-/**
- * Create a function 'calculateShippingCost' that:
- * - Takes: weight (kg), distance (km), isExpress (boolean)
- * - Returns: cost in USD (number)
- * - Formula: baseCost = weight * 0.5 + distance * 0.1
- * - If express: multiply by 1.5
- * - Minimum cost: $5
- * - Maximum cost: $500
- * - Round to 2 decimal places
- */
+```
+Create a 'calculateShippingCost' function that:
+- Takes: weight (kg), distance (km), isExpress (boolean)
+- Returns: cost in USD (number)
+- Formula: baseCost = weight * 0.5 + distance * 0.1
+- If express: multiply by 1.5
+- Minimum cost: $5
+- Maximum cost: $500
+- Round to 2 decimal places
+- Include unit tests
 ```
 
-### Pattern 2: The Example-Driven Pattern
+### Pattern 2: The Reference Pattern
 
-Show Copilot what you want through examples:
+Point to existing code as examples:
 
-```python
-# Create a function that converts snake_case to camelCase
-# Examples:
-# "user_name" → "userName"
-# "total_price_usd" → "totalPriceUsd"  
-# "api_key" → "apiKey"
+```
+Following the same patterns as #file:src/services/UserService.ts,
+create a ProductService that:
+- Has similar error handling
+- Uses the same logging approach
+- Follows the same test structure
 ```
 
-### Pattern 3: The Reference Pattern
-
-Point to existing code:
-
-```typescript
-// Following the same pattern as UserService.ts, create a ProductService
-// that handles CRUD operations for products with similar error handling
-// and logging
-```
-
-### Pattern 4: The Constraint Pattern
+### Pattern 3: The Constraint Pattern
 
 Define what NOT to do:
 
-```python
-# Create a SQL query to get users
-# Constraints:
-# - Do NOT use SELECT *
-# - Must include WHERE clause for active users only
-# - Do NOT return password fields
-# - Limit results to 100
-# - Order by created_at DESC
+```
+Create a SQL query to get users:
+- Do NOT use SELECT *
+- Must include WHERE clause for active users only
+- Do NOT return password fields
+- Limit results to 100
+- Order by created_at DESC
+```
+
+### Pattern 4: The Workflow Pattern
+
+Define a sequence of agent actions:
+
+```
+Set up a new feature:
+1. Create the database migration
+2. Generate the model
+3. Create API endpoints
+4. Add input validation
+5. Write integration tests
+6. Run all tests to verify
+7. Update API documentation
+```
+
+## Custom Agents and Prompt Files
+
+### Creating Prompt Files
+
+Store reusable prompts in `.github/prompts/` directory.
+
+**Key elements of prompt files:**
+- YAML frontmatter with name, description, and optional settings
+- Use `${input:variableName}` for dynamic user inputs
+- Use `#file:path` references to include codebase context
+- Specify an agent for execution
+
+**Invoke with:** `/prompt-name` in chat
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
+
+### Custom Agent Instructions
+
+Define specialized agents for common workflows in `.github/agents/`.
+
+**What to include in agent files:**
+- Clear expertise description
+- Behavioral guidelines
+- Tool preferences
+- Code generation rules
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
+
+## Context Management
+
+### File References
+
+```
+#file:src/config.ts - Check the existing config structure
+#file:package.json - Review dependencies
+#file:src/types/index.ts - Use these type definitions
+```
+
+### Codebase Search
+
+```
+Search #codebase for how authentication is implemented, 
+then create similar auth for the admin panel.
+```
+
+### Selection Context
+
+```
+#selection - Add error handling to this code
+#selection - Refactor to use async/await
+#selection - Add TypeScript types
+```
+
+### Terminal Output
+
+```
+#terminalSelection - What does this error mean and how do I fix it?
 ```
 
 ## Advanced Techniques
 
-### Multi-Line Comments for Complex Tasks
+### Multi-Turn Conversations
 
-```typescript
-/**
- * Implement a retry mechanism with exponential backoff:
- * 
- * Requirements:
- * - Generic function that wraps any async operation
- * - Max retries: 3
- * - Initial delay: 1 second
- * - Exponential backoff: delay * 2^attempt
- * - Only retry on network errors, not validation errors
- * - Log each retry attempt
- * - Throw original error after max retries
- * 
- * Type signature: 
- * retryWithBackoff<T>(fn: () => Promise<T>, maxRetries?: number): Promise<T>
- */
+Build context over multiple messages:
+
+```
+Turn 1: Explain the architecture of this project
+Turn 2: Based on that, where should I add a caching layer?
+Turn 3: Implement the caching layer you recommended
+Turn 4: Add tests for the cache
+Turn 5: Run the tests and fix any failures
 ```
 
-### Context Through Naming
+### Combining Tools
 
-```javascript
+```
+Using #fetch to get the Express.js documentation and 
+#githubRepo expressjs/express for examples, create a 
+middleware that rate-limits requests to 100/minute per IP.
+```
+
+### Self-Verification
+
+Ask Agent to verify its own work:
+
+```
+Create a user registration endpoint, then:
+- Write tests for it
+- Run the tests
+- Fix any failures
+- Run tests again to confirm all pass
+```
 // Good naming helps Copilot understand context
 class UserAuthenticationService {
   // Copilot now knows this relates to auth
@@ -287,7 +405,7 @@ Create reusable prompt templates for common tasks:
 ### Test Generation Template
 
 ```
-/test create [framework] tests for this [component/function/class]
+/tests create [framework] tests for this [component/function/class]
 Include:
 - Happy path scenarios
 - Edge cases ([specific cases])

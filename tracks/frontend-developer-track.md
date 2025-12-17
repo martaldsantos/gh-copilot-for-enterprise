@@ -33,92 +33,153 @@ You'll work with:
 - **State Management** - Context API or Redux
 - **Testing** - Jest and React Testing Library
 
+## ⚡ First Steps: Set Up Your Workspace
+
+### 1. Configure Copilot Context (CRITICAL)
+
+The file `.github/copilot-instructions.md` currently contains instructions for the hackathon organizers. **You must overwrite this file** with instructions relevant to your specific project.
+
+1. Open `.github/copilot-instructions.md`.
+2. **Delete its entire contents.**
+3. Use the example below as a starting point for your new instructions.
+
+> 💡 **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
+
+### 2. Navigate to Your Challenge
+
+Open the folder `challenges/challenge-4-frontend/` in your workspace. This is where you will be working.
+
+---
+
+### 3. Create Your Custom Instructions
+
+This file tells Copilot about your project context and coding preferences. **Your goal is to create your own custom instructions file.**
+
+**What to include:**
+- Project context (React version, TypeScript, styling approach)
+- Component standards and patterns
+- Accessibility requirements (WCAG compliance level)
+- Testing approach and coverage goals
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
+
+### 2. Create Custom Agents (`.github/agents/`)
+
+Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
+
+**Agents to consider creating:**
+- **React Developer Agent** - Expert in React patterns, hooks, and TypeScript
+- **UI Stylist Agent** - Specialized in CSS, responsive design, and animations
+- **Accessibility Expert Agent** - Focused on WCAG compliance and keyboard navigation
+
+**What to include in each agent:**
+- Clear description of the agent's expertise area
+- Specific instructions for component generation
+- References to your design system and patterns
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+>
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+
+---
+
 ## 🗺️ Track Structure
 
-### Challenge 4: Frontend - Interactive UI Components (Required)
-**Duration:** 2 hours  
+### Your Challenge: Frontend - Interactive UI Components
+**Duration:** 4-6 hours  
 **Focus:** Modern React development
 
-Build a complete frontend application with:
-- Reusable React components
-- TypeScript type safety
-- Responsive design
-- State management
-- Form handling and validation
-- Testing
+#### 🎯 Objective
+
+Build a modern, responsive web application with interactive UI components using React and TypeScript. Learn how GitHub Copilot's **Agent mode** accelerates frontend development through component scaffolding, multi-file generation, TypeScript types, styling, and state management.
+
+#### 📋 Requirements
+
+Build a Task Dashboard application with:
+
+**Core Features**
+1. **Dashboard Overview**
+   - Task statistics cards
+   - Recent activity feed
+   - Quick actions menu
+   - Responsive grid layout
+
+2. **Task List Component**
+   - Filterable task list
+   - Sort by priority/date
+   - Search functionality
+   - Pagination
+   - Drag-and-drop reordering
+
+3. **Task Form**
+   - Create/Edit task modal
+   - Form validation
+   - Date picker
+   - Priority selector
+   - Rich text editor for description
+
+4. **User Interface**
+   - Dark/Light theme toggle
+   - Responsive design (mobile-first)
+   - Loading states
+   - Error boundaries
+   - Toast notifications
+
+**Quality Requirements**
+- TypeScript strict mode
+- Component testing (>80% coverage)
+- Accessibility (WCAG 2.1 AA)
+- Performance optimization
+- Clean, reusable components
+
+#### 🚀 Getting Started
+
+1. **Setup**: Navigate to `challenges/challenge-4-frontend/`, install dependencies (`npm install`), and start the dev server (`npm run dev`).
+2. **Review Starter Code**: Explore `src/App.tsx` and `src/types/` to understand the project structure.
+3. **Start Building**: Use Copilot to generate components and logic.
+
+#### 💡 Copilot Tips
+
+- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to generate complete components (component, test, styles, export).
+- **Iterate**: Ask Copilot to "Create a TaskCard component" and then refine it.
+- **Accessibility**: Ask Copilot to "Ensure this component is accessible" or "Add ARIA labels".
 
 **Copilot Skills You'll Learn:**
-- Component scaffolding
-- TypeScript type generation
+- Component scaffolding and patterns
+- TypeScript type and interface generation
 - CSS/styling suggestions
 - Event handler patterns
-- Test generation with `/test`
+- Test generation with `/tests`
+- `/explain` for understanding React patterns
+- Natural language for documentation
 
-📖 [Start Challenge 4](../challenges/challenge-4-frontend/README.md)
-
----
-
-### Challenge 1: Web Development - REST API (Recommended)
-**Duration:** 1.5 hours  
-**Focus:** Backend integration
-
-Build or understand the API your frontend will consume:
-- REST API endpoints
-- Data structures
-- Authentication patterns
-- API documentation
-
-**Copilot Skills You'll Learn:**
-- API integration patterns
-- Data fetching strategies
-- Error handling
-
-📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
-
----
-
-### Challenge 5: Full Stack - MCP Server Integration (Advanced, Optional)
-**Duration:** 2 hours  
-**Focus:** Advanced frontend integration
-
-Enhance your application with:
-- External service integration
-- Advanced state management
-- Real-time features
-- Full-stack patterns
-
-**Copilot Skills You'll Learn:**
-- Complex integrations
-- MCP server usage
-- Advanced React patterns
-
-📖 [Start Challenge 5](../challenges/challenge-5-fullstack-mcp/README.md)
+📖 [Start Challenge 4](../challenges/challenge-4-frontend/)
 
 ## ⏱️ Recommended Schedule
 
-### Full Day (8 hours)
+### Full Day (6 hours)
 
 ```
-09:00 - 09:30   Setup & Introduction to Copilot for React
-09:30 - 11:00   Challenge 4: Component Architecture & Setup
-11:00 - 11:15   Break
-11:15 - 12:30   Challenge 4: Building Core Components
-12:30 - 13:30   Lunch
-13:30 - 15:00   Challenge 4: State Management & Forms
-15:00 - 15:15   Break
-15:15 - 17:00   Challenge 4: Testing & Polish (or Challenge 5)
-17:00 - 17:30   Review & Showcase
+09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
+09:30 - 10:30   Component Architecture & Setup
+10:30 - 10:45   Break
+10:45 - 12:00   Building Core Components
+12:00 - 13:00   Lunch
+13:00 - 14:30   State Management & Forms
+14:30 - 14:45   Break
+14:45 - 16:00   Testing, Accessibility & Polish
+16:00 - 16:30   Review & Showcase
 ```
 
 ### Half Day (4 hours)
 
 ```
-09:00 - 09:15   Setup & Introduction
-09:15 - 10:30   Core Components Development
+09:00 - 09:30   Setup & First Steps
+09:30 - 10:30   Core Components Development
 10:30 - 10:45   Break
 10:45 - 12:00   State & Forms Implementation
-12:00 - 12:45   Styling & Responsive Design
-12:45 - 13:00   Review & Wrap-up
+12:00 - 12:30   Styling & Responsive Design
+12:30 - 13:00   Review & Wrap-up
 ```
 
 ## 🎓 Learning Outcomes
@@ -139,10 +200,10 @@ By completing this track, you will:
 - ✅ Generate React components quickly
 - ✅ Create TypeScript types and interfaces
 - ✅ Get styling suggestions
-- ✅ Generate test cases with `/test`
+- ✅ Generate test cases with `/tests`
 - ✅ Refactor code efficiently
 - ✅ Debug issues with `/fix`
-- ✅ Document components with `/doc`
+- ✅ Document components using natural language prompts
 
 ## 💡 Track-Specific Tips
 
@@ -220,7 +281,7 @@ By completing this track, you will:
 
 **Generate tests:**
 1. Highlight your component
-2. Use `/test create tests for this component`
+2. Use `/tests create tests for this component`
 3. Review and add edge cases
 
 **Example prompt:**

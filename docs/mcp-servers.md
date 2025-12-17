@@ -1,78 +1,288 @@
 # Model Context Protocol (MCP) Servers 🔌
 
-Learn how to extend GitHub Copilot's capabilities by connecting it to external tools and data sources through MCP servers.
+Extend GitHub Copilot's capabilities by connecting it to external tools, data sources, and services through MCP servers.
 
 ## What is MCP?
 
-**Model Context Protocol (MCP)** is an open standard that enables AI assistants like GitHub Copilot to securely connect to external data sources, tools, and services. Think of it as a universal adapter that lets Copilot access information beyond your code.
+**Model Context Protocol (MCP)** is an open standard that enables AI assistants like GitHub Copilot to securely connect to external systems. MCP servers provide **tools** that Copilot can invoke during Agent mode to accomplish tasks.
 
 ## Why Use MCP?
 
-### Without MCP
-Copilot only knows about:
-- Your current codebase
-- Public code patterns
-- General programming knowledge
+| Without MCP | With MCP |
+|-------------|----------|
+| Only your codebase | Live database data |
+| Public code patterns | GitHub/Jira/Slack APIs |
+| General knowledge | Company documentation |
+| | Real-time metrics |
+| | Custom business logic |
 
-### With MCP
-Copilot can access:
-- Live database data
-- External APIs (GitHub, Jira, Slack)
-- Company documentation
-- Cloud infrastructure info
-- Custom business logic
-- Real-time metrics
+## MCP in VS Code
 
-## How MCP Works
+MCP support is **generally available** in VS Code 1.102+. VS Code provides multiple ways to discover, install, and manage MCP servers.
+
+### How MCP Works with Copilot
 
 ```
 ┌──────────────────┐
-│  GitHub Copilot  │
-│   (AI Assistant) │
+│ Copilot Agent    │
+│ (in VS Code)     │
 └────────┬─────────┘
-         │
          │ MCP Protocol
+┌────────▼──────────┐
+│   MCP Server      │
+│ (Your Integration)│
+└────────┬──────────┘
          │
-┌────────▼──────────────────────┐
-│     MCP Server                │
-│  (Your Integration)           │
-└────────┬──────────────────────┘
-         │
-         ├─────────┬────────┬──────────┐
-         │         │        │          │
-    ┌────▼──┐ ┌───▼───┐ ┌─▼─────┐ ┌──▼────┐
-    │ GitHub│ │Database│ │Weather│ │  Jira │
-    │  API  │ │        │ │  API  │ │  API  │
-    └───────┘ └────────┘ └───────┘ └───────┘
+    ┌────┴────┬────────┬────────┐
+    │         │        │        │
+┌───▼───┐ ┌───▼───┐ ┌──▼──┐ ┌──▼───┐
+│GitHub │ │Database│ │Fetch│ │Custom│
+│  API  │ │        │ │     │ │ API  │
+└───────┘ └────────┘ └─────┘ └──────┘
 ```
 
-## MCP Concepts
+---
 
-### 1. **MCP Server**
-A program that:
-- Exposes tools and data to Copilot
-- Handles requests from Copilot
-- Connects to external services
-- Returns formatted responses
+## Installing MCP Servers
 
-### 2. **Tools**
-Functions that Copilot can call:
-- `get_user(id)` - Fetch user data
-- `create_issue(title, description)` - Create Jira ticket
-- `query_database(sql)` - Run database query
-- `get_weather(city)` - Fetch weather data
+### Option 1: GitHub MCP Server Registry (Recommended)
 
-### 3. **Resources**
-Data that Copilot can read:
-- File contents
-- Documentation
-- Configuration
-- Schemas
+VS Code integrates with the GitHub MCP server registry for easy discovery:
 
-### 4. **Prompts**
-Reusable prompt templates that Copilot can use
+1. Enable the gallery in settings:
+   ```json
+   {
+     "chat.mcp.gallery.enabled": true
+   }
+   ```
 
-## Creating an MCP Server
+2. Open Extensions view (`Ctrl+Shift+X`)
+
+3. Type `@mcp` in the search field
+
+4. Browse and install servers directly
+
+### Option 2: Configuration File (mcp.json)
+
+Create `.vscode/mcp.json` in your workspace:
+
+```json
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${input:github-token}"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
+    }
+  },
+  "inputs": [
+    {
+      "id": "github-token",
+      "type": "promptString",
+      "description": "GitHub Personal Access Token",
+      "password": true
+    }
+  ]
+}
+```
+
+### Option 3: VS Code CLI
+
+```bash
+code --add-mcp '{"name":"playwright","command":"npx","args":["@playwright/mcp@latest"]}'
+```
+
+### Option 4: User Configuration
+
+For MCP servers you want across all workspaces, use MCP: Open User Configuration command.
+
+---
+
+## Popular MCP Servers
+
+| Server | Purpose | Installation |
+|--------|---------|--------------|
+| **Playwright** | Browser automation for testing | `npx @playwright/mcp@latest` |
+| **GitHub** | GitHub API access | `npx @modelcontextprotocol/server-github` |
+| **Atlassian Rovo** | Jira, Confluence, Compass access | Remote server (see below) |
+| **Filesystem** | Enhanced file operations | `npx @modelcontextprotocol/server-filesystem` |
+| **PostgreSQL** | Database queries | `npx @modelcontextprotocol/server-postgres` |
+| **Fetch** | HTTP requests | `npx @modelcontextprotocol/server-fetch` |
+| **Memory** | Persistent memory | `npx @modelcontextprotocol/server-memory` |
+
+---
+
+## Atlassian Rovo MCP Server (Jira & Confluence)
+
+The **Atlassian Rovo MCP Server** is a cloud-based remote MCP server that connects your Atlassian Cloud products (Jira, Confluence, and Compass) to AI assistants like GitHub Copilot.
+
+For more information and how to run it, please refer to [this document](https://github.com/mcp/atlassian/atlassian-mcp-server).
+
+### What You Can Do
+
+- **Jira**: Search issues, create/update work items, bulk create from notes
+- **Confluence**: Summarize pages, create documentation, navigate spaces
+- **Compass**: Query service dependencies, create components
+- **Cross-product**: Link Jira tickets to Confluence pages, find related docs
+
+### Example Workflows
+
+```
+"Find all open bugs in Project Alpha"
+"Create a story titled 'Redesign onboarding' in Jira"
+"Summarize the Q2 planning page in Confluence"
+"What depends on the api-gateway service in Compass?"
+"Link these Jira tickets to the Release Plan page"
+```
+
+### Setup for VS Code / GitHub Copilot
+
+The Atlassian Rovo MCP Server is a **remote server** that requires the `mcp-remote` proxy:
+
+**Prerequisites**:
+- Atlassian Cloud site with Jira and/or Confluence
+- Node.js v18+ installed
+- Modern browser for OAuth authentication
+
+**Configuration** (`.vscode/mcp.json`):
+
+```json
+{
+  "servers": {
+    "atlassian": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
+    }
+  }
+}
+```
+
+### Authentication
+
+1. When you first use the Atlassian MCP tools, a browser window opens
+2. Complete the OAuth 2.1 authorization flow
+3. Grant permissions for the requested Atlassian products
+4. Tokens are session-based and respect your existing Jira/Confluence permissions
+
+### Security Features
+
+- **OAuth 2.1**: Secure authentication with scoped tokens
+- **Permission-based**: Only accesses data you have permission to view
+- **HTTPS/TLS 1.2+**: All traffic encrypted
+- **Audit logging**: Actions logged for compliance
+
+### Beta Limitations
+
+- Rate limits apply (higher for Premium/Enterprise plans)
+- Some custom Jira fields may not be recognized
+- Workspace switching not available in single session
+
+For full documentation: [Atlassian Rovo MCP Server Guide](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/)
+
+---
+
+## Using MCP Tools in Chat
+
+### Enabling Tools
+
+1. Open Chat View (`Ctrl+Alt+I`)
+2. Select **Agent** from the agent picker
+3. Click **Configure Tools** button
+4. Enable/disable specific tools or entire servers
+
+### Automatic Tool Invocation
+
+In Agent mode, Copilot automatically selects and invokes relevant tools:
+
+```
+"List my open GitHub issues and create a summary"
+→ Copilot uses GitHub MCP to fetch issues
+
+"Navigate to the login page and identify all form elements"
+→ Copilot uses Playwright MCP to browse
+
+"Query the database for users created this month"
+→ Copilot uses PostgreSQL MCP
+```
+
+### Explicit Tool References
+
+Use `#` to explicitly reference tools:
+
+```
+Using #fetch, summarize the content from https://example.com/docs
+
+#githubRepo vercel/next.js - how does routing work?
+```
+
+---
+
+## Tool Approval & Security
+
+MCP servers can run code on your machine. VS Code implements several safety measures:
+
+### Trust Prompts
+
+When starting an MCP server for the first time, VS Code asks you to confirm trust.
+
+### Tool Approvals
+
+Before running certain tools, Copilot asks for confirmation:
+
+- **Allow** - Run once
+- **Allow for Session** - Run during this session
+- **Allow for Workspace** - Always allow in this workspace
+- **Skip** - Don't run this tool
+
+### Reviewing Tool Parameters
+
+Expand tool invocations to review and edit parameters before approval.
+
+### Terminal Command Approvals
+
+Configure auto-approval for safe commands in settings:
+
+```json
+{
+  "chat.tools.terminal.autoApprove": {
+    "mkdir": true,
+    "/^git (status|show\\b.*)$/": true,
+    "del": false
+  }
+}
+```
+
+---
+
+## MCP Resources and Prompts
+
+### Resources
+
+MCP servers can expose resources (data) that you add as context:
+
+1. In Chat, select **Add Context > MCP Resources**
+2. Choose a resource type
+3. The resource content is added to your prompt
+
+### Prompts
+
+MCP servers can provide pre-configured prompts:
+
+Type `/mcp.servername.promptname` in chat to invoke.
+
+---
+
+## Creating Your Own MCP Server
 
 ### Basic Structure
 
@@ -84,20 +294,74 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 
-// Create server instance
 const server = new Server(
-  {
-    name: 'my-mcp-server',
-    version: '1.0.0',
-  },
-  {
-    capabilities: {
-      tools: {}, // Enable tools
-    },
-  }
+  { name: 'my-mcp-server', version: '1.0.0' },
+  { capabilities: { tools: {} } }
 );
 
-// List available tools
+// Define available tools
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
+  tools: [
+    {
+      name: 'get_user',
+      description: 'Fetch user information by ID',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          userId: { type: 'string', description: 'The user ID' },
+        },
+        required: ['userId'],
+      },
+    },
+  ],
+}));
+
+// Handle tool calls
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
+  if (request.params.name === 'get_user') {
+    const userId = request.params.arguments?.userId;
+    const user = await fetchUser(userId);
+    return {
+      content: [{ type: 'text', text: JSON.stringify(user, null, 2) }],
+    };
+  }
+  throw new Error(`Unknown tool: ${request.params.name}`);
+});
+
+// Start server
+async function main() {
+  const transport = new StdioServerTransport();
+  await server.connect(transport);
+}
+main();
+```
+
+### Configuration for Development
+
+Add to `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "my-server": {
+      "command": "node",
+      "args": ["./mcp-server/index.js"],
+      "dev": {
+        "watch": "./mcp-server/**/*.js",
+        "debug": true
+      }
+    }
+  }
+}
+```
+
+### Debugging
+
+Enable development mode for:
+- **watch**: Auto-restart on file changes
+- **debug**: Enable VS Code debugger attachment
+
+---
 server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
     tools: [
@@ -156,17 +420,21 @@ Add to `.vscode/settings.json`:
 
 ```json
 {
-  "github.copilot.advanced": {
-    "mcp": {
-      "servers": {
-        "my-server": {
-          "command": "node",
-          "args": ["path/to/your/mcp-server.js"]
-        }
+  "mcp": {
+    "servers": {
+      "my-server": {
+        "command": "node",
+        "args": ["path/to/your/mcp-server.js"]
       }
     }
   }
 }
+```
+
+Or install via VS Code CLI:
+
+```bash
+code --add-mcp '{"name":"my-server","command":"node","args":["path/to/your/mcp-server.js"]}'
 ```
 
 ## Example: GitHub MCP Server

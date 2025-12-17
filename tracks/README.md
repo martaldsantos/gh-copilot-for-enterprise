@@ -7,14 +7,11 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 ### [🌐 Backend Developer Track](./backend-developer-track.md)
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
-**Focus:** REST API development, authentication, testing, and backend infrastructure
+**Focus:** REST API development, authentication, testing, and database integration
 
-**Challenges:** 
-- Challenge 1: REST API Builder (Required)
-- Challenge 3: Infrastructure as Code (Recommended)
-- Challenge 5: MCP Integration (Advanced)
+**Your Challenge:** Challenge 1 - REST API Builder
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
 
 ---
 
@@ -23,26 +20,20 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Focus:** Data analysis, feature engineering, model development, and ML pipelines
 
-**Challenges:**
-- Challenge 2: ML & Data Analysis (Required)
-- Challenge 5: MCP Integration (Advanced, Optional)
-- Challenge 1: REST API for ML Deployment (Optional)
+**Your Challenge:** Challenge 2 - ML & Data Analysis (Jupyter Notebooks)
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
 
 ---
 
 ### [🏗️ DevOps & Platform Track](./devops-platform-track.md)
 **Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
 
-**Focus:** Infrastructure as Code, containerization, Kubernetes, and CI/CD automation
+**Focus:** Infrastructure as Code with Terraform (Azure), Docker, Kubernetes, and CI/CD
 
-**Challenges:**
-- Challenge 3: Infrastructure as Code (Required)
-- Challenge 1: Application to Deploy (Recommended)
-- Challenge 5: Advanced Automation (Advanced)
+**Your Challenge:** Challenge 3 - Infrastructure as Code
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
 
 ---
 
@@ -51,27 +42,21 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Focus:** React components, TypeScript, modern UI development, and state management
 
-**Challenges:**
-- Challenge 4: Interactive UI Components (Required)
-- Challenge 1: Backend Integration (Recommended)
-- Challenge 5: Advanced Features (Advanced)
+**Your Challenge:** Challenge 4 - Interactive UI Components
 
-**Duration:** 6-8 hours
+**Duration:** 4-6 hours
 
 ---
 
-### [🚀 Full-Stack Developer Track](./full-stack-developer-track.md)
-**Best for:** Full-Stack Developers, Software Engineers, Technical Leads
+### [🧪 QA Tester Track](./qa-tester-track.md)
 
-**Focus:** End-to-end application development from database to deployment
+**Best for:** QA Engineers, Test Automation Engineers, Quality Assurance Specialists, SDETs
 
-**Challenges:**
-- Challenge 1: REST API (Required)
-- Challenge 4: Frontend UI (Required)
-- Challenge 3: Infrastructure & Deployment (Recommended)
-- Challenge 5: MCP Integration (Advanced)
+**Focus:** Test automation with Playwright MCP, testing real-world open-source applications
 
-**Duration:** 8 hours (Full Day)
+**Your Challenge:** Challenge 5 - QA & Test Automation
+
+**Duration:** 4-6 hours
 
 ---
 
@@ -84,43 +69,45 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
    - Data Scientist/ML → Data Science Track
    - DevOps/Infrastructure → DevOps Track
    - Frontend/UI Developer → Frontend Track
-   - Full-Stack Developer → Full-Stack Track
+   - QA/Test Engineer → QA Tester Track
 
 2. **What do you want to learn?**
-   - Building APIs → Backend Track
+   - Building REST APIs → Backend Track
    - Data analysis & ML → Data Science Track
    - Infrastructure automation → DevOps Track
    - User interfaces → Frontend Track
-   - Everything → Full-Stack Track
+   - Test automation → QA Tester Track
+   - Full applications (API + UI) → Combine Backend + Frontend Tracks
 
 3. **How much time do you have?**
-   - 4 hours → Choose one track, complete core challenges
-   - 6-8 hours → Complete recommended track path
-   - Full day → Full-Stack Track or multiple tracks
+   - 4 hours → Choose any track, complete core tasks
+   - 6 hours → Complete full track with extras
+   - Full day → Combine multiple tracks (e.g., Backend + Frontend)
 
 ### Not Sure? Start Here:
 
 - **New to Copilot?** → Backend Track (most beginner-friendly)
-- **Want breadth?** → Full-Stack Track
+- **Want breadth?** → Combine Backend + Frontend Tracks
 - **Want depth?** → Choose your specialty track
 
 ## 📋 Track Comparison
 
-| Track | Difficulty | Duration | Technologies | Best For |
+| Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
-| **Backend** | ⭐⭐ Beginner-Int | 6-8h | Node.js/Python, REST APIs | API development |
-| **Data Science** | ⭐⭐⭐ Intermediate | 6-8h | Python, pandas, ML | Data analysis |
-| **DevOps** | ⭐⭐⭐ Int-Advanced | 6-8h | Terraform, Docker, K8s | Infrastructure |
-| **Frontend** | ⭐⭐ Beginner-Int | 6-8h | React, TypeScript | UI development |
-| **Full-Stack** | ⭐⭐⭐⭐ Advanced | 8h | All of the above | Complete apps |
+| **Backend** | ⭐⭐ Beginner-Int | 4-6h | Node.js/Python, REST APIs | Challenge 1 |
+| **Data Science** | ⭐⭐⭐ Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
+| **DevOps** | ⭐⭐⭐ Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
+| **Frontend** | ⭐⭐ Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
+| **QA Tester** | ⭐⭐ Beginner-Int | 4-6h | Playwright, Jest, Pytest | Challenge 5 |
 
 ## 🎯 What You'll Learn in Every Track
 
 All tracks teach you:
+
 - ✅ GitHub Copilot core features (inline suggestions, chat)
 - ✅ Effective prompt engineering
-- ✅ Using chat commands (`/explain`, `/fix`, `/test`, `/doc`)
-- ✅ Workspace context awareness
+- ✅ Using chat commands (`/explain`, `/fix`, `/tests`, `/new`)
+- ✅ Workspace context awareness (`@workspace`)
 - ✅ Code generation and acceleration
 - ✅ Testing and documentation with Copilot
 
@@ -128,15 +115,22 @@ Plus track-specific skills!
 
 ## 🚀 Getting Started
 
+### ⚠️ IMPORTANT: Create a Fresh Repository
+
+> **Critical:** Do NOT work directly in this hackathon repository! See the **[Setup Instructions in the main README](../README.md#%EF%B8%8F-important-create-your-own-repository)** for why this matters and how to set up your workspace properly.
+
+👉 **[Follow the Setup Instructions](../README.md#step-2-set-up-environment)** - includes an interactive setup script!
+
+---
+
 ### 1. Choose Your Track
 Click on the track link above to read the detailed guide.
 
 ### 2. Review Prerequisites
 Each track lists required knowledge and tools.
 
-### 3. Set Up Environment
-- **Recommended:** Launch GitHub Codespace (everything pre-configured)
-- **Alternative:** Local setup with VS Code and Copilot
+### 3. Set Up Your Workspace
+Follow the **[Setup Instructions](../README.md#step-2-set-up-environment)** to create your fresh repository.
 
 ### 4. Follow the Track Guide
 Each track provides:
@@ -144,6 +138,7 @@ Each track provides:
 - Time allocation
 - Learning objectives
 - Tips specific to that domain
+- **Example `.github/copilot-instructions.md`** for your project
 
 ### 5. Start Your First Challenge
 Begin with the required challenge for your track!
@@ -151,7 +146,7 @@ Begin with the required challenge for your track!
 ## ⏱️ Sample Schedules
 
 ### Full Day (8 hours)
-Perfect for Full-Stack track or completing multiple challenges in depth.
+Perfect for combining multiple tracks (e.g., Backend + Frontend) or completing challenges in depth.
 
 ### Half Day (4 hours)
 Focus on the core required challenge in your chosen track.
@@ -168,7 +163,7 @@ Mix and match challenges across tracks based on your interests!
 
 ### 2. Branch Out Later
 - Finished your track early? Try another!
-- Full-stack developers: Do multiple tracks
+- Want full-stack experience? Combine Backend + Frontend tracks
 - Mix challenges that interest you
 
 ### 3. Use Track Resources
@@ -212,9 +207,9 @@ Plus access to:
 - Present different perspectives
 
 **Option 3: Full-Stack Together**
-- All do Full-Stack track
+- Combine Backend + Frontend tracks
 - Divide challenges among team members
-- Integrate at the end
+- Integrate API and UI at the end
 
 ## 📊 Success Metrics
 
@@ -254,11 +249,10 @@ Track your progress across any track:
 - [Data Science & ML Track](./data-science-ml-track.md)
 - [DevOps & Platform Track](./devops-platform-track.md)
 - [Frontend Developer Track](./frontend-developer-track.md)
-- [Full-Stack Developer Track](./full-stack-developer-track.md)
+- [QA Tester Track](./qa-tester-track.md)
 
 ### General Resources
 - [Main README](../README.md)
-- [Quick Start Guide](../QUICKSTART.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
 - [Documentation](../docs/)
 

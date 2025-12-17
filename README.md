@@ -1,5 +1,7 @@
 # GitHub Copilot Enterprise Hackathon 🚀
 
+![Hackathon Banner](docs/images/hackathon-banner.jpg)
+
 Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **5 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
 
 ## 🎯 Hackathon Overview
@@ -12,7 +14,7 @@ This hackathon is organized into **role-based tracks** for different team types:
 - **[🤖 Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
 - **[🏗️ DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
 - **[🎨 Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
-- **[🚀 Full-Stack Developer Track](./tracks/full-stack-developer-track.md)** - End-to-end application development
+- **[🧪 QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, comprehensive testing
 
 👉 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -20,8 +22,7 @@ Each track provides a curated path through the challenges based on your role, wi
 
 ## ⏱️ Duration
 
-**6-8 hours** per track (Full-Stack track: 8 hours)  
-Each challenge is designed to take 1-1.5 hours
+**6-8 hours** per track.
 
 ## 🛠️ Getting Started
 
@@ -37,14 +38,26 @@ Each challenge is designed to take 1-1.5 hours
 - GitHub Codespaces enabled (recommended) OR
 - Local development environment with VS Code and GitHub Copilot extension
 
-#### Launch in GitHub Codespaces (Recommended)
+#### 🚀 Start Hacking
 
-1. Click the green "Code" button at the top of this repository
-2. Select "Codespaces" tab
-3. Click "Create codespace on main" (or your branch)
-4. Wait for the environment to set up (2-3 minutes)
+**Option A: GitHub Codespaces (Recommended)**
 
-The devcontainer is pre-configured with:
+1. Click the green **"Code"** button at the top of this repository.
+2. Select the **"Codespaces"** tab.
+3. Click **"Create codespace on main"**.
+4. Wait for the environment to set up (2-3 minutes).
+
+**Option B: Local Development**
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/martaldsantos/gh-copilot-for-enterprise.git
+   cd gh-copilot-for-enterprise
+   ```
+2. Open the folder in VS Code.
+3. When prompted, click **"Reopen in Container"** (requires Docker and Dev Containers extension).
+
+The environment is pre-configured with:
 - Node.js (LTS)
 - Python 3.11
 - Docker
@@ -52,24 +65,50 @@ The devcontainer is pre-configured with:
 - kubectl
 - All necessary VS Code extensions
 
-### Step 3: Start Your Track
+### Step 3: Configure Copilot Context (CRITICAL)
+
+The file `.github/copilot-instructions.md` currently contains instructions for the hackathon organizers. **You must overwrite this file** with instructions relevant to your specific project.
+
+1. Open `.github/copilot-instructions.md`.
+2. **Delete its entire contents.**
+3. Add instructions specific to your challenge (see your Track guide for examples).
+4. Save the file.
+
+> 💡 **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
+
+### Step 4: Verify Your Setup
+
+Before starting, make sure Copilot is working:
+
+**Check Copilot Status:**
+- Look at the bottom-right of VS Code
+- Copilot icon should be visible and say "Ready"
+
+**Test Inline Suggestions:**
+1. Create a new file (e.g., `test.js`)
+2. Type: `// function to add two numbers`
+3. You should see Copilot suggestions appear!
+
+**Test Chat:**
+1. Press `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Shift+I` (Mac)
+2. Type: "Hello, are you working?"
+3. Copilot should respond!
+
+### Step 5: Start Your Track
 
 Once your environment is ready:
 1. Open your chosen track guide (e.g., `tracks/backend-developer-track.md`)
 2. Follow the recommended challenge sequence
 3. Use the track-specific tips and guidance
 
-**Quick Start:** 👉 [Quick Start Guide](./QUICKSTART.md)
-
 ## 📚 Key GitHub Copilot Features You'll Learn
 
 Throughout these challenges, you'll master:
 
-### 1. **Chat Modes**
-- `/explain` - Understand complex code
-- `/fix` - Debug and fix issues
-- `/test` - Generate test cases
-- `/doc` - Create documentation
+### 1. **Chat & Agentic Capabilities**
+- `/explain`, `/fix`, `/tests` commands
+- **Agentic Mode** - Autonomous multi-step task execution
+- **Planning Mode** - High-level architectural reasoning
 - Workspace context chat
 
 ### 2. **Prompt Engineering**
@@ -78,9 +117,9 @@ Throughout these challenges, you'll master:
 - Iterative refinement
 - Collections and reusable prompts
 
-### 3. **MCP Servers** (Model Context Protocol)
-- Connecting external tools and data sources
-- Custom integrations
+### 3. **Extensibility & Custom Agents**
+- **MCP Servers** - Connect external tools and data
+- **Custom Agents** - Build and use specialized assistants
 - Enhanced context for Copilot
 
 ### 4. **Inline Suggestions**
@@ -92,18 +131,18 @@ Throughout these challenges, you'll master:
 
 **💡 Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 5 challenges are available, and each track recommends a specific sequence:
+All 5 challenges are available, and each track has a dedicated challenge:
 
-### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/README.md)
+### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/)
 **Team**: Backend/Web Developers  
 **Skills**: Express.js/FastAPI, API design, error handling, testing  
-**Copilot Focus**: Inline completion, `/test` command, workspace chat
+**Copilot Focus**: Inline completion, `/tests` command, workspace chat
 
 Build a fully functional REST API with authentication, CRUD operations, and comprehensive testing using Copilot to accelerate development.
 
 ---
 
-### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/README.md)
+### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/)
 **Team**: Data Scientists, ML Engineers  
 **Skills**: Python, pandas, scikit-learn, data visualization  
 **Copilot Focus**: Jupyter notebooks integration, `/explain` for algorithms, code generation
@@ -112,16 +151,17 @@ Perform exploratory data analysis and build a machine learning model with Copilo
 
 ---
 
-### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/README.md)
+### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/)
 **Team**: DevOps, Platform Engineers  
 **Skills**: Terraform, Docker, Kubernetes, CI/CD  
-**Copilot Focus**: Infrastructure patterns, `/doc` for configurations, best practices
+**Copilot Focus**: Infrastructure patterns, documentation generation, best practices
 
 Design and implement cloud infrastructure using Terraform, containerize applications, and set up deployment pipelines with Copilot's infrastructure expertise.
 
 ---
 
-### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/README.md)
+### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/)
+
 **Team**: Frontend Developers  
 **Skills**: React, TypeScript, Component design, State management  
 **Copilot Focus**: Component scaffolding, TypeScript types, CSS styling
@@ -130,16 +170,26 @@ Create a modern, responsive web application with reusable components, leveraging
 
 ---
 
-### [Challenge 5: Full Stack - MCP Server Integration](./challenges/challenge-5-fullstack-mcp/README.md)
-**Team**: Full-stack Developers, Advanced Users  
-**Skills**: Node.js, MCP Protocol, API integration, Full-stack architecture  
-**Copilot Focus**: MCP server creation, advanced context, multi-file editing
+### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/)
 
-Build a complete application that integrates with external services through MCP servers, showcasing how to enhance Copilot with custom context and tools.
+**Team**: QA Engineers, SDETs, Test Automation Engineers  
+**Duration**: 4-6 hours (extended challenge with real-world apps)  
+**Skills**: Playwright, Jest/Pytest, Page Object Model, E2E testing  
+**Copilot Focus**: Test generation with `/tests`, Playwright MCP for AI-driven testing
+
+Work with real-world open-source applications to implement comprehensive test automation, including unit tests, E2E tests with Playwright, and AI-driven testing using Playwright MCP.
 
 ---
 
 ## 📖 Learning Resources
+
+### Examples & Templates
+
+> 💡 **[github/awesome-copilot](https://github.com/github/awesome-copilot)** - A curated collection of real-world examples including:
+> - Custom instruction files (`.github/copilot-instructions.md`)
+> - Custom agent templates (`.github/agents/`)
+> - Reusable prompt files (`.github/prompts/`)
+> - Best practices and patterns
 
 ### GitHub Copilot Documentation
 - [Getting Started with Copilot](./docs/copilot-basics.md)
@@ -155,14 +205,36 @@ Build a complete application that integrates with external services through MCP 
 1. **Be Specific**: Detailed prompts yield better results
 2. **Provide Context**: Reference existing code and patterns
 3. **Iterate**: Refine suggestions through conversation
-4. **Use Chat Commands**: Leverage `/explain`, `/fix`, `/test`, `/doc`
+4. **Use Chat Commands**: Leverage `/explain`, `/fix`, `/tests`, and natural language for documentation
 5. **Review Suggestions**: Always understand generated code
 6. **Keyboard Shortcuts**: 
    - `Tab` - Accept suggestion
    - `Esc` - Dismiss suggestion
    - `Alt+]` - Next suggestion
    - `Alt+[` - Previous suggestion
-   - `Ctrl+Enter` - Open Copilot inline chat
+   - `Ctrl+Shift+I` - Open Copilot Chat
+
+### Tips for Success
+
+1. **Write Clear Comments**
+   ```javascript
+   // ❌ Bad: "do stuff"
+   // ✅ Good: "Validate email format and return true if valid, false otherwise"
+   ```
+
+2. **Use Chat Freely** - Ask Copilot: "What does this code do?", "How can I improve this?"
+
+3. **Review Everything** - Understand all generated code, test thoroughly
+
+4. **Iterate** - First suggestion not perfect? Refine your prompt or try different approaches
+
+### Common Issues
+
+| Problem | Solution |
+|---------|----------|
+| Copilot not suggesting | Check status icon, ensure signed in, restart VS Code |
+| Wrong suggestions | Be more specific, provide more context, try chat instead |
+| Environment issues | Codespaces: rebuild container; Local: check tool versions |
 
 ## 🏆 Hackathon Format
 
@@ -199,7 +271,7 @@ Prefer to explore on your own?
 Track your progress:
 - [ ] Chose and started your track
 - [ ] Completed at least 2 challenges (or all required challenges in your track)
-- [ ] Used all major chat commands (`/explain`, `/fix`, `/test`, `/doc`)
+- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`)
 - [ ] Created reusable prompt collections
 - [ ] Documented learnings and productivity wins
 - [ ] Can explain Copilot's impact on your workflow
@@ -232,7 +304,6 @@ After the hackathon:
 
 ### Quick Links
 - 🗺️ **[Choose Your Track](./tracks/README.md)** - Role-based learning paths
-- 🚀 **[Quick Start Guide](./QUICKSTART.md)** - Get up and running in minutes
 - 🔧 **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - 👥 **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers
 - 🤝 **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
@@ -249,8 +320,8 @@ After the hackathon:
 **Ready to get started?** 
 
 1. 👉 **[Choose Your Track](./tracks/README.md)** - Find the best path for your role
-2. 🚀 Read the [Quick Start Guide](./QUICKSTART.md)
-3. 🎯 Start your first challenge
-4. 💻 Code with Copilot!
+2. 🛠️ Follow the [Setup Instructions](#step-2-set-up-environment) above
+3. ✅ [Verify Your Setup](#step-3-verify-your-setup)
+4. 🎯 Start your first challenge!
 
 Happy Hacking! 💻✨

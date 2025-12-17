@@ -34,92 +34,149 @@ You'll work with:
 - matplotlib, seaborn for visualization
 - Optional: TensorFlow/PyTorch for deep learning
 
+## ⚡ First Steps: Set Up Your Workspace
+
+### 1. Configure Copilot Context (CRITICAL)
+
+The file `.github/copilot-instructions.md` currently contains instructions for the hackathon organizers. **You must overwrite this file** with instructions relevant to your specific project.
+
+1. Open `.github/copilot-instructions.md`.
+2. **Delete its entire contents.**
+3. Use the example below as a starting point for your new instructions.
+
+> 💡 **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
+
+### 2. Navigate to Your Challenge
+
+Open the folder `challenges/challenge-2-ml-ai/` in your workspace. This is where you will be working.
+
+---
+
+### 3. Create Your Custom Instructions
+
+This file tells Copilot about your data science context and preferences. **Your goal is to create your own custom instructions file.**
+
+**What to include:**
+- Python version and key libraries (pandas, scikit-learn, etc.)
+- Coding standards (PEP 8, type hints, docstrings)
+- Data science best practices (EDA, validation, pipelines)
+- Notebook documentation standards
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
+
+### 2. Create Custom Agents (`.github/agents/`)
+
+Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
+
+**Agents to consider creating:**
+- **Data Scientist Agent** - Expert in EDA, feature engineering, and model development
+- **ML Engineer Agent** - Focused on model optimization, pipelines, and deployment
+- **Visualization Expert Agent** - Specialized in creating insightful charts and dashboards
+
+**What to include in each agent:**
+- Clear description of the agent's data science expertise
+- Specific instructions for analysis and modeling
+- References to your preferred libraries and patterns
+
+> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+>
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+
+---
+
 ## 🗺️ Track Structure
 
-### Challenge 2: ML/AI - Data Analysis & Model Development (Required)
-**Duration:** 1.5-2 hours  
-**Focus:** Complete ML pipeline
+### Your Challenge: ML/AI - Data Analysis & Model Development
+**Duration:** 4-6 hours  
+**Focus:** Complete ML pipeline in Jupyter notebooks
 
-Build an end-to-end machine learning solution:
-- Exploratory data analysis
-- Data cleaning and preprocessing
-- Feature engineering
-- Model training and evaluation
-- Performance optimization
+#### 🎯 Objective
+
+Perform exploratory data analysis and build a machine learning model using GitHub Copilot's **Agent mode** in Jupyter Notebooks. Learn how Copilot's agentic capabilities can accelerate data science workflows, from data exploration to model deployment.
+
+#### 📋 Requirements
+
+Build a complete ML pipeline for customer churn prediction:
+
+**Core Features**
+1. **Data Exploration**
+   - Load and inspect dataset
+   - Handle missing values
+   - Statistical analysis
+   - Data quality checks
+
+2. **Data Visualization**
+   - Distribution plots
+   - Correlation analysis
+   - Feature relationships
+   - Class balance visualization
+
+3. **Feature Engineering**
+   - Create new features
+   - Encode categorical variables
+   - Scale numerical features
+   - Feature selection
+
+4. **Model Development**
+   - Train/test split
+   - Multiple model comparison
+   - Hyperparameter tuning
+   - Cross-validation
+
+5. **Evaluation & Insights**
+   - Performance metrics
+   - Feature importance
+   - Model interpretation
+   - Business recommendations
+
+#### 🚀 Getting Started
+
+1. **Setup**: Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip install -r requirements.txt`).
+2. **Open Notebook**: Open `customer_churn_analysis.ipynb` in VS Code.
+3. **Start Analysis**: Use Copilot to analyze the data and build models.
+
+#### 💡 Copilot Tips
+
+- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to analyze data and generate notebook cells.
+- **Iterate**: Ask Copilot to "Analyze the customer_churn.csv dataset" and then refine the analysis.
+- **Visualize**: Ask Copilot to "Create visualizations showing churn distribution".
 
 **Copilot Skills You'll Learn:**
 - Code generation in Jupyter notebooks
-- `/explain` for complex algorithms
+- `/explain` for complex algorithms and statistics
+- `/new` for creating new projects and files
 - Data visualization assistance
 - Feature engineering suggestions
 - Model selection guidance
+- Natural language prompts for documenting your analysis
 
-📖 [Start Challenge 2](../challenges/challenge-2-ml-ai/README.md)
-
----
-
-### Challenge 5: Full Stack - MCP Server Integration (Advanced, Optional)
-**Duration:** 2 hours  
-**Focus:** ML model deployment
-
-Learn to deploy and integrate ML models:
-- Model serving with APIs
-- MCP servers for ML context
-- Integration with external services
-- Production ML patterns
-
-**Copilot Skills You'll Learn:**
-- API development for ML models
-- MCP server creation
-- Advanced integration patterns
-- Full-stack ML development
-
-📖 [Start Challenge 5](../challenges/challenge-5-fullstack-mcp/README.md)
-
----
-
-### Challenge 1: Web Development - REST API (Optional)
-**Duration:** 1.5 hours  
-**Focus:** ML API deployment
-
-If you want to learn about deploying models as APIs:
-- Build REST API for model serving
-- Input validation for predictions
-- Response formatting
-- API testing
-
-**Copilot Skills You'll Learn:**
-- API development basics
-- Testing frameworks
-- Documentation generation
-
-📖 [Start Challenge 1](../challenges/challenge-1-web-api/README.md)
+📖 [Start Challenge 2](../challenges/challenge-2-ml-ai/)
 
 ## ⏱️ Recommended Schedule
 
-### Full Day (8 hours)
+### Full Day (6 hours)
 
 ```
-09:00 - 09:30   Setup & Introduction to Copilot for Data Science
-09:30 - 11:00   Challenge 2: Data Exploration & Visualization
-11:00 - 11:15   Break
-11:15 - 12:30   Challenge 2: Feature Engineering & Model Training
-12:30 - 13:30   Lunch
-13:30 - 15:00   Challenge 2: Model Evaluation & Optimization
-15:00 - 15:15   Break
-15:15 - 17:00   Challenge 5: ML Model Deployment (or bonus tasks)
-17:00 - 17:30   Review & Showcase
+09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
+09:30 - 10:30   Data Exploration & Visualization
+10:30 - 10:45   Break
+10:45 - 12:00   Feature Engineering
+12:00 - 13:00   Lunch
+13:00 - 14:30   Model Training & Evaluation
+14:30 - 14:45   Break
+14:45 - 16:00   Hyperparameter Tuning & Results
+16:00 - 16:30   Review & Showcase
 ```
 
 ### Half Day (4 hours)
 
 ```
-09:00 - 09:15   Setup & Introduction
-09:15 - 10:30   Data Exploration & Visualization
+09:00 - 09:30   Setup & First Steps
+09:30 - 10:30   Data Exploration & Visualization
 10:30 - 10:45   Break
 10:45 - 12:00   Feature Engineering & Model Training
-12:00 - 12:45   Model Evaluation & Documentation
-12:45 - 13:00   Review & Wrap-up
+12:00 - 12:30   Model Evaluation & Documentation
+12:30 - 13:00   Review & Wrap-up
 ```
 
 ## 🎓 Learning Outcomes
@@ -127,13 +184,13 @@ If you want to learn about deploying models as APIs:
 By completing this track, you will:
 
 ### Technical Skills
+
 - ✅ Perform comprehensive exploratory data analysis
 - ✅ Handle missing data and outliers effectively
 - ✅ Engineer meaningful features from raw data
 - ✅ Train and evaluate multiple ML models
 - ✅ Optimize model hyperparameters
 - ✅ Interpret model results and generate insights
-- ✅ Deploy ML models as APIs (optional)
 
 ### Copilot Mastery
 - ✅ Use Copilot effectively in Jupyter notebooks
@@ -283,7 +340,7 @@ df = pd.read_csv('customer_churn.csv')
    - Create evaluation metrics
 
 4. **Documentation**
-   - Use `/doc` to explain complex functions
+   - Ask Copilot to "add docstrings" to explain complex functions
    - Generate markdown summaries
    - Create reproducible notebooks
 

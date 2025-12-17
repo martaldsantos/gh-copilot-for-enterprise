@@ -1,0 +1,28 @@
+{
+	"servers": {
+		"github": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp",
+			"gallery": "https://1es-mcp.data.eastus.azure-apicenter.ms/workspaces/default",
+			"version": "original"
+		},
+		"microsoft-docs": {
+			"type": "http",
+			"url": "https://learn.microsoft.com/api/mcp",
+			"gallery": "https://1es-mcp.data.eastus.azure-apicenter.ms/workspaces/default",
+			"version": "original"
+		},
+		"playwright": {
+			"command": "npx",
+			"args": [
+				"@playwright/mcp@latest"
+			],
+			"type": "stdio"
+		},
+        "atlassian": {
+            "type": "http",
+            "url": "https://mcp.atlassian.com/v1/sse",
+        }
+	},
+	"inputs": []
+}
