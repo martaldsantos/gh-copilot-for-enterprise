@@ -234,11 +234,9 @@ Build a complete application that predicts flight delay probability. Explore a r
 
 ### GitHub Copilot Documentation
 
-- [Getting Started with Copilot](./docs/copilot-basics.md)
-- [Chat Modes Reference](./docs/chat-modes.md)
+- [Copilot Guide](./docs/copilot-guide.md)
 - [Prompt Engineering Guide](./docs/prompt-engineering.md)
 - [MCP Servers Guide](./docs/mcp-servers.md)
-- [Best Practices](./docs/best-practices.md)
 
 ### Quick Tips
 

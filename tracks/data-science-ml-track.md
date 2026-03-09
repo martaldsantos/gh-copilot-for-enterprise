@@ -314,9 +314,8 @@ If you finish early:
 
 ### Data Science with Copilot
 
+- [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-- [Best Practices](../docs/best-practices.md)
-- [Chat Modes Reference](../docs/chat-modes.md)
 
 ### ML/AI Resources
 

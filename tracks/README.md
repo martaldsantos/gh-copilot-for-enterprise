@@ -206,10 +206,9 @@ Each track includes:
 
 Plus access to:
 
-- [Copilot Basics](../docs/copilot-basics.md)
+- [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering](../docs/prompt-engineering.md)
-- [Chat Modes](../docs/chat-modes.md)
-- [Best Practices](../docs/best-practices.md)
+- [MCP Servers](../docs/mcp-servers.md)
 
 ## For Teams
 
@@ -263,7 +262,7 @@ Track your progress across any track:
 ## Need Help?
 
 - **Track-specific questions?** Check your track guide
-- **General Copilot help?** See [Copilot Basics](../docs/copilot-basics.md)
+- **General Copilot help?** See [Copilot Guide](../docs/copilot-guide.md)
 - **Technical issues?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - **Stuck on challenge?** Ask Copilot Chat or facilitator
 

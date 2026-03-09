@@ -1,14 +1,10 @@
 # Prompt Engineering for GitHub Copilot
 
-Learn how to write effective prompts that get the best results from GitHub Copilot's **agentic capabilities** in VS Code.
-
-## The Art of Prompting
-
-With Agent mode, Copilot can now complete complex, multi-step tasks autonomously. Good prompts guide this agentic behavior effectively.
+How to write effective prompts for Copilot's Agent mode in VS Code. For an overview of agents, tools, and context mentions, see the [Copilot Guide](./copilot-guide.md).
 
 ## Core Principles
 
-### 1. **Be Specific and Comprehensive**
+### 1. Be Specific
 
 **Vague:**
 
@@ -27,18 +23,7 @@ Create a REST API for task management with:
 - OpenAPI documentation
 ```
 
-### 2. **Use Context with # Mentions**
-
-Reference files and codebase context explicitly:
-
-```text
-Using the patterns in #file:src/services/UserService.ts,
-create a ProductService with similar error handling.
-
-Use #codebase to find existing validation utilities.
-```
-
-### 3. **Provide Examples**
+### 2. Provide Examples
 
 **Abstract:**
 
@@ -55,7 +40,7 @@ Create email validation that:
 - Uses regex pattern matching
 ```
 
-### 4. **Break Down Complex Tasks**
+### 3. Break Down Complex Tasks
 
 For large tasks, guide the agent through steps:
 
@@ -67,57 +52,6 @@ Implement user authentication:
 4. Finally, add auth middleware for protected routes
 
 After each step, run tests before proceeding.
-```
-
-## Agent Mode Prompting
-
-### Multi-File Tasks
-
-Agent mode excels at tasks spanning multiple files:
-
-```text
-Create a complete feature for user profiles:
-- Profile model and database schema
-- CRUD API endpoints
-- Profile component for the frontend
-- Integration tests
-- Update the main router with new routes
-```
-
-### Iterative Development
-
-Work conversationally with Agent mode:
-
-```text
-You: Create a basic Express server with a /health endpoint
-
-[Agent creates initial code]
-
-You: Add logging middleware using winston
-
-[Agent adds logging]
-
-You: Now add error handling middleware
-
-[Agent adds error handling]
-
-You: Run npm test to verify everything works
-
-[Agent runs tests, fixes any issues]
-```
-
-### Using Tools in Prompts
-
-Reference tools explicitly for specific tasks:
-
-```text
-Use #fetch to get the latest React documentation for hooks, 
-then create a custom useDebounce hook following their patterns.
-
-Search #githubRepo vercel/next.js for routing examples, 
-then implement similar routing in this project.
-
-Check #problems and fix all TypeScript errors in the project.
 ```
 
 ## Prompt Patterns
@@ -176,67 +110,6 @@ Set up a new feature:
 5. Write integration tests
 6. Run all tests to verify
 7. Update API documentation
-```
-
-## Custom Agents and Prompt Files
-
-### Creating Prompt Files
-
-Store reusable prompts in `.github/prompts/` directory.
-
-**Key elements of prompt files:**
-
-- YAML frontmatter with name, description, and optional settings
-- Use `${input:variableName}` for dynamic user inputs
-- Use `#file:path` references to include codebase context
-- Specify an agent for execution
-
-**Invoke with:** `/prompt-name` in chat
-
-> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
-
-### Custom Agent Instructions
-
-Define specialized agents for common workflows in `.github/agents/`.
-
-**What to include in agent files:**
-
-- Clear expertise description
-- Behavioral guidelines
-- Tool preferences
-- Code generation rules
-
-> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
-
-## Context Management
-
-### File References
-
-```text
-#file:src/config.ts - Check the existing config structure
-#file:package.json - Review dependencies
-#file:src/types/index.ts - Use these type definitions
-```
-
-### Codebase Search
-
-```text
-Search #codebase for how authentication is implemented, 
-then create similar auth for the admin panel.
-```
-
-### Selection Context
-
-```text
-#selection - Add error handling to this code
-#selection - Refactor to use async/await
-#selection - Add TypeScript types
-```
-
-### Terminal Output
-
-```text
-#terminalSelection - What does this error mean and how do I fix it?
 ```
 
 ## Advanced Techniques
@@ -546,10 +419,10 @@ Try improving these prompts:
 Specific > Vague
 Context > Isolation
 Examples > Abstraction
-🔨 Constraints > Freedom
-🔄 Iterate > One-shot
+Constraints > Freedom
+Iterate > One-shot
 ```
 
 ---
 
-[← Chat Modes](./chat-modes.md) | [MCP Servers →](./mcp-servers.md)
+[Back to Main README](../README.md) | [MCP Servers](./mcp-servers.md)

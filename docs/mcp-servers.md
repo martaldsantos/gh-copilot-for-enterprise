@@ -195,16 +195,7 @@ For full documentation: [Atlassian Rovo MCP Server Guide](https://support.atlass
 
 ## Using MCP Tools in Chat
 
-### Enabling Tools
-
-1. Open Chat View (`Ctrl+Alt+I`)
-2. Select **Agent** from the agent picker
-3. Click **Configure Tools** button
-4. Enable/disable specific tools or entire servers
-
-### Automatic Tool Invocation
-
-In Agent mode, Copilot automatically selects and invokes relevant tools:
+Once configured, enable MCP tools via **Configure Tools** in Agent mode. Copilot automatically selects relevant tools based on your prompt:
 
 ```text
 "List my open GitHub issues and create a summary"
@@ -217,52 +208,13 @@ In Agent mode, Copilot automatically selects and invokes relevant tools:
 → Copilot uses PostgreSQL MCP
 ```
 
-### Explicit Tool References
-
-Use `#` to explicitly reference tools:
+You can also reference tools explicitly with `#`:
 
 ```text
 Using #fetch, summarize the content from https://example.com/docs
-
-#githubRepo vercel/next.js - how does routing work?
 ```
 
----
-
-## Tool Approval & Security
-
-MCP servers can run code on your machine. VS Code implements several safety measures:
-
-### Trust Prompts
-
-When starting an MCP server for the first time, VS Code asks you to confirm trust.
-
-### Tool Approvals
-
-Before running certain tools, Copilot asks for confirmation:
-
-- **Allow** - Run once
-- **Allow for Session** - Run during this session
-- **Allow for Workspace** - Always allow in this workspace
-- **Skip** - Don't run this tool
-
-### Reviewing Tool Parameters
-
-Expand tool invocations to review and edit parameters before approval.
-
-### Terminal Command Approvals
-
-Configure auto-approval for safe commands in settings:
-
-```json
-{
-  "chat.tools.terminal.autoApprove": {
-    "mkdir": true,
-    "/^git (status|show\\b.*)$/": true,
-    "del": false
-  }
-}
-```
+For details on tool approvals and security, see the [Copilot Guide](./copilot-guide.md).
 
 ---
 
@@ -876,4 +828,4 @@ describe('MCP Server', () => {
 
 ---
 
-[← Prompt Engineering](./prompt-engineering.md) | [Best Practices →](./best-practices.md)
+[Back to Main README](../README.md) | [Prompt Engineering](./prompt-engineering.md)

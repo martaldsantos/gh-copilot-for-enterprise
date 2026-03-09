@@ -323,9 +323,8 @@ If you finish early:
 
 ### Infrastructure as Code
 
-- [Terraform Best Practices](../docs/best-practices.md)
+- [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-- [Chat Modes Reference](../docs/chat-modes.md)
 
 ### DevOps Resources
 

@@ -51,7 +51,7 @@ Send participants:
 - [ ] Repository link
 - [ ] **[Tracks Overview](./tracks/README.md)** - Ask them to review before the event
 - [ ] Hackathon schedule
-- [ ] Pre-reading: `docs/copilot-basics.md`
+- [ ] Pre-reading: `docs/copilot-guide.md`
 - [ ] Setup instructions
 - [ ] Slack/Teams channel for questions
 

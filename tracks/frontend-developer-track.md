@@ -346,9 +346,8 @@ If you finish early:
 
 ### Frontend Development
 
-- [React Best Practices](../docs/best-practices.md)
+- [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-- [Chat Modes Reference](../docs/chat-modes.md)
 
 ### React & TypeScript
 

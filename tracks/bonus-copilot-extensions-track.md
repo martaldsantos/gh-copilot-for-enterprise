@@ -331,8 +331,8 @@ Track your progress:
 
 ### General
 
+- [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-- [Best Practices](../docs/best-practices.md)
 
 ---
 

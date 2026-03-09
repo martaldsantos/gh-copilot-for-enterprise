@@ -446,9 +446,8 @@ Track your progress:
 
 ### Data Science
 
+- [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-- [Best Practices](../docs/best-practices.md)
-- [Chat Modes Reference](../docs/chat-modes.md)
 - Scikit-learn documentation
 - Pandas user guide
 
