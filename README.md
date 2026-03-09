@@ -143,7 +143,7 @@ Throughout these challenges, you'll master:
 
 ## Challenges
 
-**Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience.
+** Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
 All 5 challenges are available, and each track has a dedicated challenge:
 
@@ -198,17 +198,6 @@ Work with real-world open-source applications to implement comprehensive test au
 
 ---
 
-### [Challenge 7: Bonus -- Full-Stack Flight Delay Predictor](./challenges/challenge-7-flight-delay/)
-
-**Team**: Full-Stack Developers, Advanced Participants
-**Duration**: 8-12 hours (extended bonus challenge)
-**Skills**: Python, pandas, scikit-learn, Flask/FastAPI, TypeScript, frontend frameworks
-**Copilot Focus**: End-to-end development -- data science in notebooks, API scaffolding, frontend generation, cross-domain debugging
-
-Build a complete application that predicts flight delay probability. Explore a real FAA dataset, train an ML model, serve it through a REST API, and create a frontend where users select a day and airport to see their delay risk.
-
----
-
 ### [Bonus Challenge 6: Copilot Extensions -- Team Standup Bot](./challenges/challenge-6-copilot-extensions/)
 
 **Team**: Experienced developers (any role) who finished a standard track
@@ -219,6 +208,17 @@ Build a complete application that predicts flight delay probability. Explore a r
 Build a fully functional Copilot Extension agent -- a Team Standup & Project Tracker Bot that users invoke via `@standup-bot` in Copilot Chat. Integrates with GitHub APIs for project awareness and uses AI for blocker analysis and report generation.
 
 > ⚠️ **Bonus challenge** -- significantly harder and longer than standard challenges.
+
+---
+
+### [Challenge 7: Bonus -- Full-Stack Flight Delay Predictor](./challenges/challenge-7-flight-delay/)
+
+**Team**: Full-Stack Developers, Advanced Participants
+**Duration**: 8-12 hours (extended bonus challenge)
+**Skills**: Python, pandas, scikit-learn, Flask/FastAPI, TypeScript, frontend frameworks
+**Copilot Focus**: End-to-end development -- data science in notebooks, API scaffolding, frontend generation, cross-domain debugging
+
+Build a complete application that predicts flight delay probability. Explore a real FAA dataset, train an ML model, serve it through a REST API, and create a frontend where users select a day and airport to see their delay risk.
 
 ---
 
@@ -242,7 +242,7 @@ Build a fully functional Copilot Extension agent -- a Team Standup & Project Tra
 
 ### Quick Tips
 
-**Maximize Your Copilot Experience:**
+** Maximize Your Copilot Experience:**
 
 1. **Be Specific**: Detailed prompts yield better results
 2. **Provide Context**: Reference existing code and patterns
