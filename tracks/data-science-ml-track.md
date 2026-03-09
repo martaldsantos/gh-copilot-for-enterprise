@@ -129,6 +129,18 @@ Build a complete ML pipeline for customer churn prediction:
    - Model interpretation
    - Business recommendations
 
+6. **Class Imbalance Handling** *(Advanced)*
+   - Analyze and document the class imbalance in the target variable
+   - Apply at least two techniques to address it (e.g., SMOTE, class weights, under/oversampling)
+   - Compare model performance with and without imbalance correction
+   - Justify which approach works best and why
+
+7. **Model Interpretability** *(Advanced)*
+   - Use SHAP (SHapley Additive exPlanations) to explain individual predictions
+   - Generate a SHAP summary plot showing global feature importance
+   - Pick 2-3 specific customers and explain *why* the model predicts they will churn
+   - Translate the SHAP insights into actionable business recommendations (e.g., which customers to target for retention campaigns and what to offer them)
+
 #### 🚀 Getting Started
 
 1. **Setup**: Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip install -r requirements.txt`).

@@ -116,7 +116,7 @@ Build a Task Dashboard application with:
    - Form validation
    - Date picker
    - Priority selector
-   - Rich text editor for description
+   - Description field (textarea or rich text editor as bonus)
 
 4. **User Interface**
    - Dark/Light theme toggle

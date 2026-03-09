@@ -141,7 +141,7 @@ Build a complete infrastructure stack for a "Quote of the Day" web application (
 #### 💡 Copilot Tips
 
 - **Infrastructure Explanations**: Use `/explain` to understand complex Terraform modules or Kubernetes manifests.
-- **Security Checks**: Ask Copilot "Are there any security issues in this Dockerfile?" or "How can I secure this S3 bucket in Terraform?"
+- **Security Checks**: Ask Copilot "Are there any security issues in this Dockerfile?" or "How can I secure this Azure Storage account in Terraform?"
 - **Translation**: Ask Copilot to translate a `docker-compose.yml` file into Kubernetes manifests.
 
 **Copilot Skills You'll Learn:**

@@ -152,7 +152,7 @@ Build a Task Management API with the following features:
 10:30 - 10:45   Break
 10:45 - 12:00   Authentication & Authorization
 12:00 - 13:00   Lunch
-13:00 - 14:30   Database Integration & Validation
+13:00 - 14:30   Data Layer & Validation
 14:30 - 14:45   Break
 14:45 - 16:00   Testing & Documentation
 16:00 - 16:30   Review & Showcase
