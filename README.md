@@ -15,8 +15,8 @@ This hackathon is organized into **role-based tracks** for different team types,
 - **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
 - **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
 - **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, comprehensive testing
-- **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
 - **[Bonus: Copilot Extensions Track](./tracks/bonus-copilot-extensions-track.md)** - Build a Copilot Extension agent (advanced)
+- **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
