@@ -1,8 +1,8 @@
-# GitHub Copilot Basics 🚀
+# GitHub Copilot Basics
 
 ## What is GitHub Copilot?
 
-GitHub Copilot is your **AI-powered development partner** that goes far beyond simple code completion. In VS Code, Copilot offers a complete agentic experience—it can understand your entire project, make multi-file changes, run terminal commands, and iterate autonomously to complete complex tasks.
+GitHub Copilot is your **AI-powered development partner** that goes far beyond simple code completion. In VS Code, Copilot offers a complete agentic experience -- it can understand your entire project, make multi-file changes, run terminal commands, and iterate autonomously to complete complex tasks.
 
 ## The Copilot Experience in VS Code
 
@@ -27,18 +27,19 @@ Agents define how Copilot behaves during a conversation. VS Code includes four b
 | **Ask** | Q&A mode | Answers questions, explains code |
 | **Edit** | Focused editing | Makes targeted changes to files |
 
-### Using Agent Mode 🤖
+### Using Agent Mode
 
 **Agent mode** is the most powerful way to use Copilot. It can:
 
-- ✅ Create and modify multiple files
-- ✅ Run terminal commands automatically
-- ✅ Recognize errors and fix them
-- ✅ Iterate until your task is complete
-- ✅ Infer additional work needed
+- Create and modify multiple files
+- Run terminal commands automatically
+- Recognize errors and fix them
+- Iterate until your task is complete
+- Infer additional work needed
 
 **Example:**
-```
+
+```text
 Create a REST API for task management with:
 - CRUD endpoints
 - JWT authentication  
@@ -80,9 +81,11 @@ Try this with Agent mode:
 1. Open Chat View (`Ctrl+Alt+I`)
 2. Select **Agent** from the agent picker
 3. Type:
-   ```
+
+   ```text
    Create a simple Express server with a /health endpoint that returns JSON status
    ```
+
 4. Watch Copilot:
    - Create the file
    - Write the code
@@ -101,7 +104,8 @@ Use `#` to give Copilot specific context:
 | `#problems` | Access editor errors | `Fix the issues in #problems` |
 
 **Example with context:**
-```
+
+```text
 Using the patterns in #file:src/services/UserService.ts, 
 create a ProductService with similar error handling
 ```
@@ -120,6 +124,7 @@ Tools extend what Copilot can do. Access them via the **Configure Tools** button
 ### MCP Tools
 
 Install additional capabilities through MCP (Model Context Protocol) servers:
+
 - **Playwright** - Browser automation
 - **GitHub** - GitHub API access
 - **Database** - Query databases
@@ -133,7 +138,7 @@ While typing, Copilot suggests completions:
 - **Next suggestion**: `Alt+]` / `Option+]`
 - **Previous suggestion**: `Alt+[` / `Option+[`
 
-💡 **Tip**: Write a comment describing what you need, then press Enter:
+**Tip**: Write a comment describing what you need, then press Enter:
 
 ```javascript
 // Function to validate email format using regex
@@ -157,34 +162,37 @@ While typing, Copilot suggests completions:
 Create a `.github/copilot-instructions.md` file to set project-wide guidelines.
 
 **What to include:**
+
 - Project context (framework, language, architecture)
 - Coding standards and conventions
 - Testing requirements
 - Patterns to follow
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world custom instruction files.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world custom instruction files.
 
 ### Custom Agents
 
 Create specialized agents in `.github/agents/` for specific workflows.
 
 **What agents can do:**
+
 - Focus on specific domains (security, API design, testing)
 - Use specific tools and models
 - Hand off to other agents for multi-step workflows
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
 
 ### Prompt Files
 
 Create reusable prompts in `.github/prompts/` for common tasks.
 
 **What prompt files can do:**
+
 - Accept dynamic inputs for flexible templates
 - Reference files and codebase patterns
 - Invoke specific agents
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file ideas.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file ideas.
 
 ## Working with Agent Mode
 
@@ -200,6 +208,7 @@ When Agent makes changes:
 ### Tool Approvals
 
 Agent may request permission to:
+
 - Modify files
 - Run terminal commands
 - Access MCP tools
@@ -220,29 +229,34 @@ Choose different AI models for different tasks:
 ## Best Practices
 
 ### 1. Choose the Right Agent
+
 - Complex, multi-file tasks → **Agent**
 - Planning and architecture → **Plan**
 - Quick questions → **Ask**
 - Focused file edits → **Edit**
 
 ### 2. Provide Context
+
 - Use `#file` to reference relevant code
 - Use `#codebase` for project-wide understanding
 - Include examples of desired patterns
 
 ### 3. Iterate
+
 - Don't expect perfection first try
 - Ask follow-up questions
 - Refine with additional instructions
 
 ### 4. Review Everything
+
 - Agent makes real changes
 - Always review before committing
 - Run tests to verify
 
 ## What Copilot Can Do
 
-✅ **Capabilities:**
+**Capabilities:**
+
 - Generate multi-file implementations
 - Refactor across your codebase
 - Run terminal commands
@@ -253,7 +267,8 @@ Choose different AI models for different tasks:
 
 ## What Requires Your Judgment
 
-❌ **You should:**
+**You should:**
+
 - Make architectural decisions
 - Verify security implications
 - Understand the generated code
@@ -262,13 +277,11 @@ Choose different AI models for different tasks:
 
 ## Next Steps
 
-1. 📖 [Chat Modes & Agents Guide](./chat-modes.md) - Master agent workflows
-2. 🎯 [Prompt Engineering](./prompt-engineering.md) - Write effective prompts
-3. 🔌 [MCP Servers](./mcp-servers.md) - Extend capabilities
-4. 🌟 [Best Practices](./best-practices.md) - Production-ready patterns
+1. [Chat Modes & Agents Guide](./chat-modes.md) - Master agent workflows
+2. [Prompt Engineering](./prompt-engineering.md) - Write effective prompts
+3. [MCP Servers](./mcp-servers.md) - Extend capabilities
+4. [Best Practices](./best-practices.md) - Production-ready patterns
 
 ---
-
-**Embrace the agentic workflow and accelerate your development! 🤖**
 
 [Back to Main README](../README.md)

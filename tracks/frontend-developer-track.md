@@ -1,14 +1,14 @@
-# Frontend Developer Track 🎨
+# Frontend Developer Track
 
-**Duration:** 6-8 hours  
-**Difficulty:** Beginner to Intermediate  
+**Duration:** 6-8 hours
+**Difficulty:** Beginner to Intermediate
 **Focus:** Building modern, interactive user interfaces with GitHub Copilot
 
-## 🎯 Track Overview
+## Track Overview
 
 This track is designed for frontend developers who want to master GitHub Copilot for UI development. You'll learn how Copilot can accelerate React component creation, TypeScript development, styling, and state management while building modern, responsive web applications.
 
-## 👥 Who Is This For?
+## Who Is This For?
 
 - Frontend Developers
 - UI/UX Engineers
@@ -16,7 +16,7 @@ This track is designed for frontend developers who want to master GitHub Copilot
 - Web Developers focused on client-side
 - Full-stack developers interested in frontend
 
-## 📋 Prerequisites
+## Prerequisites
 
 - JavaScript fundamentals
 - Basic React knowledge (components, props, state)
@@ -24,16 +24,17 @@ This track is designed for frontend developers who want to master GitHub Copilot
 - Familiarity with npm/package managers
 - TypeScript helpful but not required
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 You'll work with:
+
 - **React 18+** - UI framework
 - **TypeScript** - Type safety
 - **Modern CSS** - Styling (CSS Modules, Styled Components, or Tailwind)
 - **State Management** - Context API or Redux
 - **Testing** - Jest and React Testing Library
 
-## ⚡ First Steps: Set Up Your Workspace
+## First Steps: Set Up Your Workspace
 
 ### 1. Configure Copilot Context (CRITICAL)
 
@@ -43,7 +44,7 @@ The file `.github/copilot-instructions.md` currently contains instructions for t
 2. **Delete its entire contents.**
 3. Use the example below as a starting point for your new instructions.
 
-> 💡 **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
+> **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
 
 ### 2. Navigate to Your Challenge
 
@@ -56,48 +57,53 @@ Open the folder `challenges/challenge-4-frontend/` in your workspace. This is wh
 This file tells Copilot about your project context and coding preferences. **Your goal is to create your own custom instructions file.**
 
 **What to include:**
+
 - Project context (React version, TypeScript, styling approach)
 - Component standards and patterns
 - Accessibility requirements (WCAG compliance level)
 - Testing approach and coverage goals
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
 
 ### 2. Create Custom Agents (`.github/agents/`)
 
 Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
 
 **Agents to consider creating:**
+
 - **React Developer Agent** - Expert in React patterns, hooks, and TypeScript
 - **UI Stylist Agent** - Specialized in CSS, responsive design, and animations
 - **Accessibility Expert Agent** - Focused on WCAG compliance and keyboard navigation
 
 **What to include in each agent:**
+
 - Clear description of the agent's expertise area
 - Specific instructions for component generation
 - References to your design system and patterns
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
 >
 > **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
 
 ---
 
-## 🗺️ Track Structure
+## Track Structure
 
 ### Your Challenge: Frontend - Interactive UI Components
-**Duration:** 4-6 hours  
+
+**Duration:** 4-6 hours
 **Focus:** Modern React development
 
-#### 🎯 Objective
+#### Objective
 
 Build a modern, responsive web application with interactive UI components using React and TypeScript. Learn how GitHub Copilot's **Agent mode** accelerates frontend development through component scaffolding, multi-file generation, TypeScript types, styling, and state management.
 
-#### 📋 Requirements
+#### Requirements
 
 Build a Task Dashboard application with:
 
 **Core Features**
+
 1. **Dashboard Overview**
    - Task statistics cards
    - Recent activity feed
@@ -126,25 +132,27 @@ Build a Task Dashboard application with:
    - Toast notifications
 
 **Quality Requirements**
+
 - TypeScript strict mode
 - Component testing (>80% coverage)
 - Accessibility (WCAG 2.1 AA)
 - Performance optimization
 - Clean, reusable components
 
-#### 🚀 Getting Started
+#### Getting Started
 
 1. **Setup**: Navigate to `challenges/challenge-4-frontend/`, install dependencies (`npm install`), and start the dev server (`npm run dev`).
 2. **Review Starter Code**: Explore `src/App.tsx` and `src/types/` to understand the project structure.
 3. **Start Building**: Use Copilot to generate components and logic.
 
-#### 💡 Copilot Tips
+#### Copilot Tips
 
 - **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to generate complete components (component, test, styles, export).
 - **Iterate**: Ask Copilot to "Create a TaskCard component" and then refine it.
 - **Accessibility**: Ask Copilot to "Ensure this component is accessible" or "Add ARIA labels".
 
 **Copilot Skills You'll Learn:**
+
 - Component scaffolding and patterns
 - TypeScript type and interface generation
 - CSS/styling suggestions
@@ -153,13 +161,13 @@ Build a Task Dashboard application with:
 - `/explain` for understanding React patterns
 - Natural language for documentation
 
-📖 [Start Challenge 4](../challenges/challenge-4-frontend/)
+[Start Challenge 4](../challenges/challenge-4-frontend/)
 
-## ⏱️ Recommended Schedule
+## Recommended Schedule
 
 ### Full Day (6 hours)
 
-```
+```text
 09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
 09:30 - 10:30   Component Architecture & Setup
 10:30 - 10:45   Break
@@ -173,7 +181,7 @@ Build a Task Dashboard application with:
 
 ### Half Day (4 hours)
 
-```
+```text
 09:00 - 09:30   Setup & First Steps
 09:30 - 10:30   Core Components Development
 10:30 - 10:45   Break
@@ -182,34 +190,37 @@ Build a Task Dashboard application with:
 12:30 - 13:00   Review & Wrap-up
 ```
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 By completing this track, you will:
 
 ### Technical Skills
-- ✅ Build reusable React components
-- ✅ Implement TypeScript for type safety
-- ✅ Create responsive, accessible UIs
-- ✅ Manage application state effectively
-- ✅ Handle forms and validation
-- ✅ Integrate with REST APIs
-- ✅ Write component tests
-- ✅ Optimize performance
+
+- Build reusable React components
+- Implement TypeScript for type safety
+- Create responsive, accessible UIs
+- Manage application state effectively
+- Handle forms and validation
+- Integrate with REST APIs
+- Write component tests
+- Optimize performance
 
 ### Copilot Mastery
-- ✅ Generate React components quickly
-- ✅ Create TypeScript types and interfaces
-- ✅ Get styling suggestions
-- ✅ Generate test cases with `/tests`
-- ✅ Refactor code efficiently
-- ✅ Debug issues with `/fix`
-- ✅ Document components using natural language prompts
 
-## 💡 Track-Specific Tips
+- Generate React components quickly
+- Create TypeScript types and interfaces
+- Get styling suggestions
+- Generate test cases with `/tests`
+- Refactor code efficiently
+- Debug issues with `/fix`
+- Document components using natural language prompts
+
+## Track-Specific Tips
 
 ### 1. Component Development with Copilot
 
 **Describe components in comments:**
+
 ```typescript
 // Create a ProductCard component that displays:
 // - Product image
@@ -220,6 +231,7 @@ By completing this track, you will:
 ```
 
 **Generate TypeScript interfaces:**
+
 ```typescript
 // Define interface for User with:
 // - id (number)
@@ -232,6 +244,7 @@ By completing this track, you will:
 ### 2. State Management
 
 **Ask for complete patterns:**
+
 ```typescript
 // Create a custom hook useAuth that:
 // - Manages authentication state
@@ -241,12 +254,14 @@ By completing this track, you will:
 ```
 
 **Context setup:**
+
 - "Create a Context for theme management with light/dark mode"
 - "Set up Redux slice for shopping cart with add, remove, update actions"
 
 ### 3. Styling with Copilot
 
 **CSS generation:**
+
 ```css
 /* Create a card component style with:
  * - White background with shadow
@@ -258,6 +273,7 @@ By completing this track, you will:
 ```
 
 **Styled Components:**
+
 ```typescript
 // Create styled button with primary/secondary variants
 // Include hover, active, and disabled states
@@ -267,6 +283,7 @@ By completing this track, you will:
 ### 4. Form Handling
 
 **Complete form with validation:**
+
 ```typescript
 // Create a registration form with:
 // - Email with validation
@@ -280,17 +297,20 @@ By completing this track, you will:
 ### 5. Testing Components
 
 **Generate tests:**
+
 1. Highlight your component
 2. Use `/tests create tests for this component`
 3. Review and add edge cases
 
 **Example prompt:**
+
 - "Create tests for user interactions and different states"
 - "Add accessibility tests with jest-axe"
 
-## 📊 Success Metrics
+## Success Metrics
 
 Track your progress:
+
 - [ ] Created multiple reusable components
 - [ ] Implemented TypeScript throughout
 - [ ] Built responsive, mobile-friendly UI
@@ -301,7 +321,7 @@ Track your progress:
 - [ ] Achieved good accessibility scores
 - [ ] Used Copilot Chat commands effectively
 
-## 🎁 Bonus Challenges
+## Bonus Challenges
 
 If you finish early:
 
@@ -314,7 +334,7 @@ If you finish early:
 7. **Performance**: Implement code splitting and lazy loading
 8. **Storybook**: Create component library with Storybook
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Set Up Environment**: Launch Codespace or install Node.js locally
 2. **Verify Copilot**: Test in a `.tsx` file
@@ -322,28 +342,32 @@ If you finish early:
 4. **Use TypeScript**: Let Copilot help with types
 5. **Iterate**: Build incrementally, test in browser
 
-## 📚 Additional Resources
+## Additional Resources
 
 ### Frontend Development
+
 - [React Best Practices](../docs/best-practices.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Chat Modes Reference](../docs/chat-modes.md)
 
 ### React & TypeScript
+
 - React documentation
 - TypeScript handbook
 - React Testing Library guides
 
 ### For Facilitators
+
 - See [Facilitator Guide](../FACILITATOR_GUIDE.md) for frontend track guidance
 - This track is beginner-friendly with basic React knowledge
 - Ensure Node.js and npm are available
 
-## 🎨 Design & Styling
+## Design & Styling
 
 ### Creating Beautiful UIs with Copilot
 
 **Responsive Design:**
+
 ```css
 /* Create responsive grid layout:
  * - 1 column on mobile
@@ -354,6 +378,7 @@ If you finish early:
 ```
 
 **Component Variants:**
+
 ```typescript
 // Create Button component with variants:
 // - primary (blue background)
@@ -364,28 +389,32 @@ If you finish early:
 ```
 
 **Animations:**
+
 - "Add smooth fade-in animation on component mount"
 - "Create loading skeleton with shimmer effect"
 
-## ♿ Accessibility
+## Accessibility
 
 ### Building Accessible Components
 
 Copilot can help ensure accessibility:
 
 **Ask for ARIA attributes:**
+
 - "Make this modal accessible with proper ARIA labels"
 - "Add keyboard navigation to this dropdown"
 
 **Semantic HTML:**
+
 - "Use semantic HTML elements for this layout"
 - "Add proper heading hierarchy"
 
 **Check compliance:**
+
 - Use `/explain` to understand accessibility features
 - Ask: "What accessibility improvements are needed?"
 
-## 🧪 Testing Frontend Components
+## Testing Frontend Components
 
 ### Test Strategy
 
@@ -399,12 +428,13 @@ Copilot can help ensure accessibility:
 ```
 
 **Run tests frequently:**
+
 ```bash
 npm test
 npm test -- --coverage
 ```
 
-## 🔄 State Management Patterns
+## State Management Patterns
 
 ### Common Patterns Copilot Can Help With
 
@@ -424,43 +454,47 @@ npm test -- --coverage
    - "Set up React Query for data fetching"
    - "Create queries for CRUD operations"
 
-## 🖼️ Component Architecture
+## Component Architecture
 
 ### Building Scalable Components
 
 **Folder structure:**
-```
+
+```text
 Ask Copilot: "Suggest a component folder structure for a medium React app
 with components, hooks, utils, and types"
 ```
 
 **Component patterns:**
+
 - Container/Presentational components
 - Compound components
 - Render props
 - Custom hooks
 
 **Let Copilot guide you:**
+
 - "What's the best pattern for this use case?"
 - "How should I structure this complex component?"
 
-## 🤝 Need Help?
+## Need Help?
 
 - **Component issues?** Ask Copilot for alternative approaches
 - **TypeScript errors?** Use `/fix` on the error
 - **Styling questions?** Request specific CSS patterns
 - **Stuck?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
-## 🎯 Track Completion
+## Track Completion
 
 You've successfully completed the Frontend track when you:
-- ✅ Built a working React application
-- ✅ Used TypeScript effectively
-- ✅ Created reusable, tested components
-- ✅ Implemented responsive design
-- ✅ Managed state properly
-- ✅ Can explain Copilot's productivity impact
+
+- Built a working React application
+- Used TypeScript effectively
+- Created reusable, tested components
+- Implemented responsive design
+- Managed state properly
+- Can explain Copilot's productivity impact
 
 ---
 
-**Ready to build UIs with Copilot?** Start with [Challenge 4: Interactive UI Components](../challenges/challenge-4-frontend/README.md) 🎨✨
+Start with [Challenge 4: Interactive UI Components](../challenges/challenge-4-frontend/README.md)

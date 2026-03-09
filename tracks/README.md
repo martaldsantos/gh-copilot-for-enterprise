@@ -1,10 +1,11 @@
-# Hackathon Tracks Overview 🎯
+# Hackathon Tracks Overview
 
 Welcome! This hackathon is organized into **5 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
-## 🗺️ Choose Your Track
+## Choose Your Track
 
-### [🌐 Backend Developer Track](./backend-developer-track.md)
+### [Backend Developer Track](./backend-developer-track.md)
+
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
 **Focus:** REST API development, authentication, testing, and database integration
@@ -15,7 +16,8 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 ---
 
-### [🤖 Data Science & ML Track](./data-science-ml-track.md)
+### [Data Science & ML Track](./data-science-ml-track.md)
+
 **Best for:** Data Scientists, ML Engineers, Data Analysts
 
 **Focus:** Data analysis, feature engineering, model development, and ML pipelines
@@ -26,7 +28,8 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 ---
 
-### [🏗️ DevOps & Platform Track](./devops-platform-track.md)
+### [DevOps & Platform Track](./devops-platform-track.md)
+
 **Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
 
 **Focus:** Infrastructure as Code with Terraform (Azure), Docker, Kubernetes, and CI/CD
@@ -37,7 +40,8 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 ---
 
-### [🎨 Frontend Developer Track](./frontend-developer-track.md)
+### [Frontend Developer Track](./frontend-developer-track.md)
+
 **Best for:** Frontend Developers, UI/UX Engineers, React Developers
 
 **Focus:** React components, TypeScript, modern UI development, and state management
@@ -48,7 +52,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 ---
 
-### [🧪 QA Tester Track](./qa-tester-track.md)
+### [QA Tester Track](./qa-tester-track.md)
 
 **Best for:** QA Engineers, Test Automation Engineers, Quality Assurance Specialists, SDETs
 
@@ -60,9 +64,9 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 ---
 
-## 🤔 Which Track Should I Choose?
+## Which Track Should I Choose?
 
-### Answer These Questions:
+### Answer These Questions
 
 1. **What's your primary role?**
    - Backend/API Developer → Backend Track
@@ -84,56 +88,61 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
    - 6 hours → Complete full track with extras
    - Full day → Combine multiple tracks (e.g., Backend + Frontend)
 
-### Not Sure? Start Here:
+### Not Sure? Start Here
 
 - **New to Copilot?** → Backend Track (most beginner-friendly)
 - **Want breadth?** → Combine Backend + Frontend Tracks
 - **Want depth?** → Choose your specialty track
 
-## 📋 Track Comparison
+## Track Comparison
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
-| **Backend** | ⭐⭐ Beginner-Int | 4-6h | Node.js/Python, REST APIs | Challenge 1 |
-| **Data Science** | ⭐⭐⭐ Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
-| **DevOps** | ⭐⭐⭐ Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
-| **Frontend** | ⭐⭐ Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
-| **QA Tester** | ⭐⭐⭐ Int-Advanced | 4-6h | Playwright, xUnit, .NET Aspire | Challenge 5 |
+| **Backend** | Beginner-Int | 4-6h | Node.js/Python, REST APIs | Challenge 1 |
+| **Data Science** | Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
+| **DevOps** | Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
+| **Frontend** | Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
+| **QA Tester** | Int-Advanced | 4-6h | Playwright, xUnit, .NET Aspire | Challenge 5 |
 
-## 🎯 What You'll Learn in Every Track
+## What You'll Learn in Every Track
 
 All tracks teach you:
 
-- ✅ GitHub Copilot core features (inline suggestions, chat)
-- ✅ Effective prompt engineering
-- ✅ Using chat commands (`/explain`, `/fix`, `/tests`, `/new`)
-- ✅ Workspace context awareness (`@workspace`)
-- ✅ Code generation and acceleration
-- ✅ Testing and documentation with Copilot
+- GitHub Copilot core features (inline suggestions, chat)
+- Effective prompt engineering
+- Using chat commands (`/explain`, `/fix`, `/tests`, `/new`)
+- Workspace context awareness (`@workspace`)
+- Code generation and acceleration
+- Testing and documentation with Copilot
 
 Plus track-specific skills!
 
-## 🚀 Getting Started
+## Getting Started
 
-### ⚠️ IMPORTANT: Create a Fresh Repository
+### IMPORTANT: Create a Fresh Repository
 
 > **Critical:** Do NOT work directly in this hackathon repository! See the **[Setup Instructions in the main README](../README.md#%EF%B8%8F-important-create-your-own-repository)** for why this matters and how to set up your workspace properly.
 
-👉 **[Follow the Setup Instructions](../README.md#step-2-set-up-environment)** - includes an interactive setup script!
+**[Follow the Setup Instructions](../README.md#step-2-set-up-environment)** - includes an interactive setup script!
 
 ---
 
 ### 1. Choose Your Track
+
 Click on the track link above to read the detailed guide.
 
 ### 2. Review Prerequisites
+
 Each track lists required knowledge and tools.
 
 ### 3. Set Up Your Workspace
+
 Follow the **[Setup Instructions](../README.md#step-2-set-up-environment)** to create your fresh repository.
 
 ### 4. Follow the Track Guide
+
 Each track provides:
+
 - Recommended challenge sequence
 - Time allocation
 - Learning objectives
@@ -141,110 +150,127 @@ Each track provides:
 - **Example `.github/copilot-instructions.md`** for your project
 
 ### 5. Start Your First Challenge
+
 Begin with the required challenge for your track!
 
-## ⏱️ Sample Schedules
+## Sample Schedules
 
 ### Full Day (8 hours)
+
 Perfect for combining multiple tracks (e.g., Backend + Frontend) or completing challenges in depth.
 
 ### Half Day (4 hours)
+
 Focus on the core required challenge in your chosen track.
 
 ### Custom
+
 Mix and match challenges across tracks based on your interests!
 
-## 💡 Tips for Success
+## Tips for Success
 
 ### 1. Stick to Your Track (Initially)
+
 - Start with your primary track
 - Complete at least the required challenge
 - This ensures focused learning
 
 ### 2. Branch Out Later
+
 - Finished your track early? Try another!
 - Want full-stack experience? Combine Backend + Frontend tracks
 - Mix challenges that interest you
 
 ### 3. Use Track Resources
+
 - Each track has specific tips for that domain
 - Prompt examples tailored to the technology
 - Best practices for that area
 
 ### 4. Collaborate
+
 - Find others on your track
 - Share discoveries
 - Help each other learn
 
-## 📚 Track Resources
+## Track Resources
 
 Each track includes:
-- 📖 Detailed track guide
-- 🎯 Learning objectives
-- ⏱️ Recommended schedule
-- 💡 Domain-specific Copilot tips
-- ✅ Success metrics
-- 🎁 Bonus challenges
+
+- Detailed track guide
+- Learning objectives
+- Recommended schedule
+- Domain-specific Copilot tips
+- Success metrics
+- Bonus challenges
 
 Plus access to:
+
 - [Copilot Basics](../docs/copilot-basics.md)
 - [Prompt Engineering](../docs/prompt-engineering.md)
 - [Chat Modes](../docs/chat-modes.md)
 - [Best Practices](../docs/best-practices.md)
 
-## 🤝 For Teams
+## For Teams
 
-### If you're doing this as a team:
+### If you're doing this as a team
 
 **Option 1: Everyone on Same Track**
+
 - Choose track based on team's primary role
 - Work together, share learnings
 - Present unified solution
 
 **Option 2: Different Tracks**
+
 - Each person chooses their specialty
 - Build complementary skills
 - Present different perspectives
 
 **Option 3: Full-Stack Together**
+
 - Combine Backend + Frontend tracks
 - Divide challenges among team members
 - Integrate API and UI at the end
 
-## 📊 Success Metrics
+## Success Metrics
 
 Track your progress across any track:
-- [ ] Completed at least required challenges for track
-- [ ] Used all major Copilot features
-- [ ] Achieved track-specific learning outcomes
-- [ ] Can demo working solution
-- [ ] Can explain productivity gains
-- [ ] Ready to use Copilot in daily work
 
-## 🎓 After Your Track
+- [] Completed at least required challenges for track
+- [] Used all major Copilot features
+- [] Achieved track-specific learning outcomes
+- [] Can demo working solution
+- [] Can explain productivity gains
+- [] Ready to use Copilot in daily work
 
-### Next Steps:
+## After Your Track
+
+### Next Steps
+
 1. **Complete the track** - Finish required challenges
 2. **Try bonus challenges** - Go deeper in your domain
 3. **Explore another track** - Broaden your skills
 4. **Apply to real work** - Use Copilot in your projects
 5. **Share learnings** - Help others in your organization
 
-### Cross-Track Learning:
+### Cross-Track Learning
+
 - Backend devs: Try Frontend track to understand full picture
 - Frontend devs: Try Backend to understand APIs better
 - Everyone: Try DevOps to understand deployment
 
-## 🆘 Need Help?
+## Need Help?
 
 - **Track-specific questions?** Check your track guide
 - **General Copilot help?** See [Copilot Basics](../docs/copilot-basics.md)
 - **Technical issues?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - **Stuck on challenge?** Ask Copilot Chat or facilitator
 
-## 📞 Quick Links
+## Quick Links
 
 ### Track Guides
+
 - [Backend Developer Track](./backend-developer-track.md)
 - [Data Science & ML Track](./data-science-ml-track.md)
 - [DevOps & Platform Track](./devops-platform-track.md)
@@ -252,12 +278,13 @@ Track your progress across any track:
 - [QA Tester Track](./qa-tester-track.md)
 
 ### General Resources
+
 - [Main README](../README.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
 - [Documentation](../docs/)
 
 ---
 
-**Ready to start?** Choose your track and begin your Copilot journey! 🚀
+Choose your track above and get started.
 
-Not sure? Start with the [Backend Developer Track](./backend-developer-track.md) - it's the most beginner-friendly! 🌐
+Not sure? Start with the [Backend Developer Track](./backend-developer-track.md) - it's the most beginner-friendly!

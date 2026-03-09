@@ -1,4 +1,4 @@
-# Copilot Agents & Chat Modes Reference 🤖
+# Copilot Agents & Chat Modes Reference
 
 GitHub Copilot in VS Code offers powerful **agentic capabilities** that go beyond simple code suggestions. Learn how to use different agents, customize workflows, and leverage tools to accelerate development.
 
@@ -27,20 +27,21 @@ VS Code provides four built-in agents:
 
 ---
 
-## Agent Mode - The Agentic Experience 🚀
+## Agent Mode - The Agentic Experience
 
 **Agent mode** is Copilot's most powerful capability. It can:
 
-- ✅ Autonomously iterate on code
-- ✅ Recognize and fix its own errors
-- ✅ Execute terminal commands
-- ✅ Make changes across multiple files
-- ✅ Infer additional tasks needed to complete your request
-- ✅ Self-heal from runtime errors
+- Autonomously iterate on code
+- Recognize and fix its own errors
+- Execute terminal commands
+- Make changes across multiple files
+- Infer additional tasks needed to complete your request
+- Self-heal from runtime errors
 
 ### When to Use Agent Mode
 
 Use Agent mode when you need to:
+
 - Implement features spanning multiple files
 - Set up new projects or components
 - Debug issues that require investigation
@@ -49,7 +50,7 @@ Use Agent mode when you need to:
 
 ### Example: Building a Feature with Agent Mode
 
-```
+```text
 Create a user authentication system with:
 - Login and registration endpoints
 - JWT token generation and validation
@@ -59,6 +60,7 @@ Create a user authentication system with:
 ```
 
 Agent mode will:
+
 1. Create necessary files (routes, models, middleware)
 2. Install required dependencies
 3. Implement the code
@@ -67,7 +69,7 @@ Agent mode will:
 
 ---
 
-## Custom Agents 🎭
+## Custom Agents
 
 Create specialized agents for specific workflows by defining `.agent.md` files.
 
@@ -82,6 +84,7 @@ Create specialized agents for specific workflows by defining `.agent.md` files.
 Custom agents are defined in `.agent.md` files with a YAML frontmatter section.
 
 **Key elements to include:**
+
 - `name` - A clear, descriptive name
 - `description` - What the agent specializes in
 - `tools` - List of tools the agent can use
@@ -90,7 +93,7 @@ Custom agents are defined in `.agent.md` files with a YAML frontmatter section.
 
 The body of the file contains instructions for how the agent should behave.
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and real-world examples.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and real-world examples.
 
 ### Example Custom Agents
 
@@ -102,7 +105,7 @@ The body of the file contains instructions for how the agent should behave.
 - **Documentation Writer** - Generates and maintains documentation
 - **Code Reviewer** - Reviews code for quality and patterns
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates.
 
 ### Handoffs Between Agents
 
@@ -110,7 +113,7 @@ Handoffs create guided workflows that transition between agents. Define them in 
 
 ---
 
-## Prompt Files (Reusable Prompts) 📄
+## Prompt Files (Reusable Prompts)
 
 Create reusable prompts for common tasks using `.prompt.md` files.
 
@@ -125,6 +128,7 @@ Create reusable prompts for common tasks using `.prompt.md` files.
 Prompt files use YAML frontmatter to define metadata and the body contains the prompt template.
 
 **Key elements to include:**
+
 - `name` - Name used to invoke the prompt (e.g., `/create-component`)
 - `description` - What the prompt does
 - `tools` - (Optional) Tools to use
@@ -134,18 +138,19 @@ Prompt files use YAML frontmatter to define metadata and the body contains the p
 
 **File references:** Use `${file:path/to/file.ts}` to reference files.
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
 
 ### Using Prompt Files
 
 Type `/` in chat followed by the prompt name:
-```
+
+```text
 /create-component
 ```
 
 ---
 
-## Tools in Chat 🛠️
+## Tools in Chat
 
 Tools extend Copilot's capabilities to interact with external systems and perform specialized tasks.
 
@@ -166,7 +171,7 @@ Tools extend Copilot's capabilities to interact with external systems and perfor
 
 Reference tools explicitly with `#`:
 
-```
+```text
 Using #codebase, find all API endpoints and create 
 comprehensive tests following the patterns in #file:tests/api.test.ts
 ```
@@ -174,19 +179,21 @@ comprehensive tests following the patterns in #file:tests/api.test.ts
 ### Tool Picker
 
 In Agent mode, click the **Configure Tools** button to:
+
 - Enable/disable specific tools
 - View available MCP tools
 - Create tool sets for common workflows
 
 ---
 
-## MCP (Model Context Protocol) Integration 🔌
+## MCP (Model Context Protocol) Integration
 
 Connect Copilot to external services and data sources.
 
 ### Installing MCP Servers
 
 **From VS Code Extensions view:**
+
 1. Enable `chat.mcp.gallery.enabled` setting
 2. Open Extensions view (`Ctrl+Shift+X`)
 3. Search `@mcp` to browse available servers
@@ -194,6 +201,7 @@ Connect Copilot to external services and data sources.
 
 **From Configuration:**
 Add to `.vscode/mcp.json`:
+
 ```json
 {
   "servers": {
@@ -226,7 +234,7 @@ Add to `.vscode/mcp.json`:
 
 Once configured, MCP tools appear in the tool picker and can be invoked:
 
-```
+```text
 List my open GitHub issues and create a task list
 ```
 
@@ -237,22 +245,26 @@ List my open GitHub issues and create a task list
 Use `#` to add context to your prompts:
 
 ### File Context
-```
+
+```text
 #file:src/models/user.ts - Add validation to this model
 ```
 
 ### Selection Context
-```
+
+```text
 #selection - Explain what this selected code does
 ```
 
 ### Workspace Context
-```
+
+```text
 #codebase - Find all usages of the UserService class
 ```
 
 ### Terminal Context
-```
+
+```text
 #terminalSelection - Debug this error output
 ```
 
@@ -273,7 +285,8 @@ While agents handle complex tasks, slash commands provide quick actions:
 ### Using Slash Commands with Agent
 
 Combine commands with agent capabilities:
-```
+
+```text
 /tests for the authentication module - include edge cases 
 and mock external dependencies
 ```
@@ -286,7 +299,7 @@ Agent mode excels at multi-file operations:
 
 ### Example: Refactoring Across Files
 
-```
+```text
 Refactor the UserService to use dependency injection:
 - Update the service class
 - Create an interface
@@ -309,7 +322,7 @@ Refactor the UserService to use dependency injection:
 
 Have an ongoing conversation with Copilot:
 
-```
+```text
 You: Create a REST API for tasks
 Agent: [Creates initial implementation]
 
@@ -326,6 +339,7 @@ Agent: [Executes tests, fixes any failures]
 ### Handoff Workflows
 
 Use handoffs for structured workflows:
+
 1. **Plan** → Generate implementation plan
 2. **Agent** → Implement the plan
 3. **Security Review** → Check for vulnerabilities
@@ -336,27 +350,32 @@ Use handoffs for structured workflows:
 ## Best Practices
 
 ### 1. **Choose the Right Agent**
+
 - Complex implementations → **Agent**
 - Planning/architecture → **Plan**
 - Quick questions → **Ask**
 - Focused edits → **Edit**
 
 ### 2. **Provide Context**
+
 - Use `#file` to reference relevant code
 - Use `#codebase` for project-wide understanding
 - Include examples of desired patterns
 
 ### 3. **Review Changes Carefully**
+
 - Agent mode makes real changes
 - Review each file modification
 - Run tests before committing
 
 ### 4. **Iterate and Refine**
+
 - Don't expect perfection on first try
 - Provide feedback to improve results
 - Use follow-up prompts to refine
 
 ### 5. **Use Tool Approvals Wisely**
+
 - Review tool parameters before approving
 - Be cautious with file modifications
 - Understand what terminal commands do
@@ -366,7 +385,8 @@ Use handoffs for structured workflows:
 ## Challenge-Specific Examples
 
 ### Challenge 1: Web API
-```
+
+```text
 Create a complete task management API with:
 - CRUD endpoints for tasks
 - User authentication with JWT
@@ -376,7 +396,8 @@ Create a complete task management API with:
 ```
 
 ### Challenge 2: ML/AI
-```
+
+```text
 Analyze customer_churn.csv using Agent mode:
 - Load and explore the data
 - Create visualizations
@@ -386,7 +407,8 @@ Analyze customer_churn.csv using Agent mode:
 ```
 
 ### Challenge 3: DevOps
-```
+
+```text
 Set up Azure infrastructure with Terraform:
 - VNet with public/private subnets
 - Container registry
@@ -395,7 +417,8 @@ Set up Azure infrastructure with Terraform:
 ```
 
 ### Challenge 4: Frontend
-```
+
+```text
 Build a task dashboard with React:
 - Dashboard component with statistics
 - Task list with filtering and sorting
@@ -404,7 +427,8 @@ Build a task dashboard with React:
 ```
 
 ### Challenge 5: QA
-```
+
+```text
 Using the Playwright MCP server, navigate to the 
 application and generate E2E tests for the main user flows.
 ```
@@ -413,19 +437,17 @@ application and generate E2E tests for the main user flows.
 
 ## Quick Reference
 
-```
-🤖 Agent      - Full autonomous mode, multi-file edits
-📋 Plan       - Read-only planning mode
+```text
+Agent    - Full autonomous mode, multi-file edits
+Plan     - Read-only planning mode
 ❓ Ask        - Q&A and explanations
 ✏️ Edit       - Focused file editing
 📄 .prompt.md - Reusable prompt templates
-🎭 .agent.md  - Custom agent definitions
-🛠️ #tools     - Add context and capabilities
-🔌 MCP        - External service integration
+.agent.md  - Custom agent definitions
+#tools     - Add context and capabilities
+MCP        - External service integration
 ```
 
 ---
-
-**Embrace the agentic workflow and let Copilot do the heavy lifting! 🚀**
 
 [Back to Main README](../README.md) | [Prompt Engineering →](./prompt-engineering.md)

@@ -1,0 +1,10 @@
+jupyter
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+flask
+fastapi
+uvicorn
+pickle5

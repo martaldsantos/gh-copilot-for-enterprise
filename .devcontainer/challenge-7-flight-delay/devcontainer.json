@@ -1,0 +1,25 @@
+{
+	"name": "Challenge 7 - Flight Delay Predictor (Bonus)",
+	"image": "mcr.microsoft.com/devcontainers/python:3.11",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"dbaeumer.vscode-eslint",
+				"humao.rest-client"
+			]
+		}
+	},
+	"postCreateCommand": "pip install pandas numpy scikit-learn matplotlib seaborn jupyter flask fastapi uvicorn && cd challenges/challenge-7-flight-delay/client && npm install",
+	"remoteUser": "vscode"
+}

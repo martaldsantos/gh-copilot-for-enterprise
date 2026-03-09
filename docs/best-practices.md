@@ -1,4 +1,4 @@
-# GitHub Copilot Best Practices 🌟
+# GitHub Copilot Best Practices
 
 A comprehensive guide to getting the most out of GitHub Copilot's **agentic capabilities** while maintaining code quality and security.
 
@@ -7,6 +7,7 @@ A comprehensive guide to getting the most out of GitHub Copilot's **agentic capa
 ### 1. **Copilot is an AI Partner, Not a Replacement**
 
 With Agent mode, Copilot can now:
+
 - Make multi-file changes autonomously
 - Run terminal commands
 - Iterate on its own work
@@ -14,14 +15,16 @@ With Agent mode, Copilot can now:
 
 But you still need to:
 
-✅ **Do:**
+**Do:**
+
 - Review all changes before accepting
 - Understand the code being generated
 - Verify security implications
 - Make architectural decisions
 - Test thoroughly
 
-❌ **Don't:**
+**Don't:**
+
 - Accept changes without reviewing
 - Let Agent mode run unchecked
 - Skip security review
@@ -40,7 +43,7 @@ But you still need to:
 
 Use `#` mentions to give Copilot the context it needs:
 
-```
+```text
 Using the patterns in #file:src/services/UserService.ts,
 create a ProductService with similar error handling.
 Reference #codebase for existing validation utilities.
@@ -61,11 +64,13 @@ Agent mode can modify many files at once. Best practices:
 ### Managing Tool Approvals
 
 Agent requests permission for:
+
 - File modifications
 - Terminal commands
 - MCP tool invocations
 
 **Approval strategies:**
+
 - **One-time**: For unfamiliar operations
 - **Session**: For trusted repetitive tasks
 - **Workspace**: For safe, common operations
@@ -91,7 +96,7 @@ Configure auto-approval for safe commands:
 
 Agent mode excels at iteration:
 
-```
+```text
 1. You: Create a REST API for tasks with CRUD endpoints
 2. Agent: [Creates initial implementation]
 3. You: Add input validation
@@ -107,18 +112,20 @@ Agent mode excels at iteration:
 Define custom agents for your team's workflows. Agents are specialized AI personas that help with specific tasks.
 
 **Types of agents to consider:**
+
 - **Security Reviewer Agent** - Analyze code for vulnerabilities without making changes
 - **Planning Agent** - Generate implementation plans before coding
 - **Code Reviewer Agent** - Review code for best practices and issues
 - **Documentation Agent** - Generate and maintain documentation
 
 **What to include in your agent files:**
+
 - Clear name and description
 - List of tools the agent should use
 - Specific instructions for the agent's behavior
 - Optional handoffs to other agents
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and real-world examples.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and real-world examples.
 
 ### Using Handoffs
 
@@ -134,12 +141,14 @@ Create guided workflows between agents:
 ### Write Clear Prompts
 
 **Before:**
-```
+
+```text
 create api
 ```
 
 **After:**
-```
+
+```text
 Create a REST API for task management with:
 - CRUD endpoints (GET, POST, PUT, DELETE)
 - JWT authentication middleware
@@ -152,6 +161,7 @@ Create a REST API for task management with:
 ### Use Type Systems
 
 **TypeScript:**
+
 ```typescript
 // Good - Copilot knows exact types
 interface User {
@@ -166,6 +176,7 @@ function processUser(user: User): void {
 ```
 
 **Python:**
+
 ```python
 # Good - Type hints help Copilot
 from typing import List, Optional
@@ -198,12 +209,14 @@ class ProductService {
 
 ### 1. **Never Commit Secrets**
 
-❌ **Bad:**
+**Bad:**
+
 ```javascript
 const API_KEY = "sk-1234567890abcdef"; // Copilot might suggest this
 ```
 
-✅ **Good:**
+**Good:**
+
 ```javascript
 const API_KEY = process.env.API_KEY;
 if (!API_KEY) {
@@ -225,13 +238,15 @@ function processUserInput(input) {
 
 ### 3. **Review Database Queries**
 
-❌ **Dangerous:**
+**Dangerous:**
+
 ```javascript
 // Copilot might suggest:
 db.query(`SELECT * FROM users WHERE id = ${userId}`);
 ```
 
-✅ **Safe:**
+**Safe:**
+
 ```javascript
 // Use parameterized queries to prevent SQL injection
 db.query('SELECT * FROM users WHERE id = $1', [userId]);
@@ -240,6 +255,7 @@ db.query('SELECT * FROM users WHERE id = $1', [userId]);
 ### 4. **Check for Common Vulnerabilities**
 
 Always review for:
+
 - SQL injection
 - XSS (Cross-Site Scripting)
 - CSRF (Cross-Site Request Forgery)
@@ -404,7 +420,7 @@ Create [ComponentName] component:
 
 Use Copilot during code reviews:
 
-```
+```text
 Ask Copilot:
 "Review this code for security issues, performance problems, and best practices"
 
@@ -499,6 +515,7 @@ func ProcessData(ctx context.Context, data []byte) error {
 ### 1. **Use Keyboard Shortcuts**
 
 Learn and use:
+
 - `Tab` - Accept suggestion
 - `Alt+]` / `Alt+[` - Next/previous suggestion
 - `Ctrl+I` - Inline chat
@@ -520,7 +537,7 @@ Learn and use:
 
 ### 3. **Use Copilot for Refactoring**
 
-```
+```text
 Ask: "Refactor this function to use async/await instead of callbacks"
 Ask: "Extract this duplicated code into a reusable function"
 Ask: "Simplify this nested if-else into a switch statement"
@@ -529,6 +546,7 @@ Ask: "Simplify this nested if-else into a switch statement"
 ### 4. **Learn from Suggestions**
 
 When Copilot suggests something unfamiliar:
+
 - Use `/explain` to understand it
 - Research the pattern
 - Decide if it's appropriate
@@ -536,25 +554,29 @@ When Copilot suggests something unfamiliar:
 
 ## Common Mistakes to Avoid
 
-### ❌ 1. **Accepting Without Understanding**
+### 1. **Accepting Without Understanding**
+
 ```javascript
 // Don't accept code you don't understand
 // Use /explain first!
 ```
 
-### ❌ 2. **Ignoring Context**
+### 2. **Ignoring Context**
+
 ```javascript
 // Copilot can't read your mind
 // Provide clear context and requirements
 ```
 
-### ❌ 3. **Not Testing Generated Code**
+### 3. **Not Testing Generated Code**
+
 ```javascript
 // Always test Copilot's suggestions
 // They might be syntactically correct but logically wrong
 ```
 
-### ❌ 4. **Skipping Security Review**
+### 4. **Skipping Security Review**
+
 ```javascript
 // Never skip security review for:
 // - Authentication code
@@ -563,7 +585,8 @@ When Copilot suggests something unfamiliar:
 // - API endpoints
 ```
 
-### ❌ 5. **Over-Relying on Copilot**
+### 5. **Over-Relying on Copilot**
+
 ```javascript
 // Don't let Copilot make architectural decisions
 // You understand your system best
@@ -574,12 +597,14 @@ When Copilot suggests something unfamiliar:
 Track these metrics:
 
 ### Individual
+
 - Time saved per task
 - Code quality (review feedback)
 - Test coverage
 - Bug reduction
 
 ### Team
+
 - Velocity improvement
 - Consistency in code style
 - Knowledge sharing
@@ -619,6 +644,6 @@ When Copilot struggles:
 
 ---
 
-**Use Copilot wisely, review thoroughly, ship confidently! 🚀**
+Use Copilot wisely, review thoroughly, and ship with confidence.
 
 [← MCP Servers](./mcp-servers.md) | [Back to Main](../README.md)

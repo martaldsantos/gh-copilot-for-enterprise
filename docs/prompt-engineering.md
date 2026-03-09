@@ -1,4 +1,4 @@
-# Prompt Engineering for GitHub Copilot 🎯
+# Prompt Engineering for GitHub Copilot
 
 Learn how to write effective prompts that get the best results from GitHub Copilot's **agentic capabilities** in VS Code.
 
@@ -10,13 +10,15 @@ With Agent mode, Copilot can now complete complex, multi-step tasks autonomously
 
 ### 1. **Be Specific and Comprehensive**
 
-❌ **Vague:**
-```
+**Vague:**
+
+```text
 create api
 ```
 
-✅ **Specific:**
-```
+**Specific:**
+
+```text
 Create a REST API for task management with:
 - CRUD endpoints for tasks
 - JWT authentication middleware  
@@ -29,7 +31,7 @@ Create a REST API for task management with:
 
 Reference files and codebase context explicitly:
 
-```
+```text
 Using the patterns in #file:src/services/UserService.ts,
 create a ProductService with similar error handling.
 
@@ -38,13 +40,15 @@ Use #codebase to find existing validation utilities.
 
 ### 3. **Provide Examples**
 
-❌ **Abstract:**
-```
+**Abstract:**
+
+```text
 validate email
 ```
 
-✅ **With Examples:**
-```
+**With Examples:**
+
+```text
 Create email validation that:
 - Returns true for: "user@example.com", "name.surname@company.co.uk"
 - Returns false for: "invalid", "@example.com", "user@", "user @example.com"
@@ -55,7 +59,7 @@ Create email validation that:
 
 For large tasks, guide the agent through steps:
 
-```
+```text
 Implement user authentication:
 1. First, create the User model with password hashing
 2. Then, implement registration endpoint with validation
@@ -71,7 +75,7 @@ After each step, run tests before proceeding.
 
 Agent mode excels at tasks spanning multiple files:
 
-```
+```text
 Create a complete feature for user profiles:
 - Profile model and database schema
 - CRUD API endpoints
@@ -84,7 +88,7 @@ Create a complete feature for user profiles:
 
 Work conversationally with Agent mode:
 
-```
+```text
 You: Create a basic Express server with a /health endpoint
 
 [Agent creates initial code]
@@ -106,7 +110,7 @@ You: Run npm test to verify everything works
 
 Reference tools explicitly for specific tasks:
 
-```
+```text
 Use #fetch to get the latest React documentation for hooks, 
 then create a custom useDebounce hook following their patterns.
 
@@ -122,7 +126,7 @@ Check #problems and fix all TypeScript errors in the project.
 
 Define complete requirements upfront:
 
-```
+```text
 Create a 'calculateShippingCost' function that:
 - Takes: weight (kg), distance (km), isExpress (boolean)
 - Returns: cost in USD (number)
@@ -138,7 +142,7 @@ Create a 'calculateShippingCost' function that:
 
 Point to existing code as examples:
 
-```
+```text
 Following the same patterns as #file:src/services/UserService.ts,
 create a ProductService that:
 - Has similar error handling
@@ -150,7 +154,7 @@ create a ProductService that:
 
 Define what NOT to do:
 
-```
+```text
 Create a SQL query to get users:
 - Do NOT use SELECT *
 - Must include WHERE clause for active users only
@@ -163,7 +167,7 @@ Create a SQL query to get users:
 
 Define a sequence of agent actions:
 
-```
+```text
 Set up a new feature:
 1. Create the database migration
 2. Generate the model
@@ -181,6 +185,7 @@ Set up a new feature:
 Store reusable prompts in `.github/prompts/` directory.
 
 **Key elements of prompt files:**
+
 - YAML frontmatter with name, description, and optional settings
 - Use `${input:variableName}` for dynamic user inputs
 - Use `#file:path` references to include codebase context
@@ -188,25 +193,26 @@ Store reusable prompts in `.github/prompts/` directory.
 
 **Invoke with:** `/prompt-name` in chat
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for prompt file templates and ideas.
 
 ### Custom Agent Instructions
 
 Define specialized agents for common workflows in `.github/agents/`.
 
 **What to include in agent files:**
+
 - Clear expertise description
 - Behavioral guidelines
 - Tool preferences
 - Code generation rules
 
-> 💡 **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
+> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for agent templates.
 
 ## Context Management
 
 ### File References
 
-```
+```text
 #file:src/config.ts - Check the existing config structure
 #file:package.json - Review dependencies
 #file:src/types/index.ts - Use these type definitions
@@ -214,14 +220,14 @@ Define specialized agents for common workflows in `.github/agents/`.
 
 ### Codebase Search
 
-```
+```text
 Search #codebase for how authentication is implemented, 
 then create similar auth for the admin panel.
 ```
 
 ### Selection Context
 
-```
+```text
 #selection - Add error handling to this code
 #selection - Refactor to use async/await
 #selection - Add TypeScript types
@@ -229,7 +235,7 @@ then create similar auth for the admin panel.
 
 ### Terminal Output
 
-```
+```text
 #terminalSelection - What does this error mean and how do I fix it?
 ```
 
@@ -239,7 +245,7 @@ then create similar auth for the admin panel.
 
 Build context over multiple messages:
 
-```
+```text
 Turn 1: Explain the architecture of this project
 Turn 2: Based on that, where should I add a caching layer?
 Turn 3: Implement the caching layer you recommended
@@ -249,7 +255,7 @@ Turn 5: Run the tests and fix any failures
 
 ### Combining Tools
 
-```
+```text
 Using #fetch to get the Express.js documentation and 
 #githubRepo expressjs/express for examples, create a 
 middleware that rate-limits requests to 100/minute per IP.
@@ -259,13 +265,15 @@ middleware that rate-limits requests to 100/minute per IP.
 
 Ask Agent to verify its own work:
 
-```
+```text
 Create a user registration endpoint, then:
 - Write tests for it
 - Run the tests
 - Fix any failures
 - Run tests again to confirm all pass
 ```
+
+```javascript
 // Good naming helps Copilot understand context
 class UserAuthenticationService {
   // Copilot now knows this relates to auth
@@ -404,7 +412,7 @@ Create reusable prompt templates for common tasks:
 
 ### Test Generation Template
 
-```
+```text
 /tests create [framework] tests for this [component/function/class]
 Include:
 - Happy path scenarios
@@ -416,7 +424,7 @@ Include:
 
 ### Code Review Template
 
-```
+```text
 Review this code for:
 - Security vulnerabilities ([specific concerns])
 - Performance issues
@@ -428,7 +436,7 @@ Suggest improvements with examples
 
 ### Refactoring Template
 
-```
+```text
 Refactor this code to:
 - Follow [pattern/principle]
 - Improve [readability/performance/maintainability]
@@ -439,7 +447,7 @@ Refactor this code to:
 
 ## Common Pitfalls
 
-### ❌ Pitfall 1: Too Vague
+### Pitfall 1: Too Vague
 
 ```javascript
 // bad function
@@ -447,7 +455,7 @@ Refactor this code to:
 
 **Problem:** Copilot has no idea what you want.
 
-### ❌ Pitfall 2: Assuming Knowledge
+### Pitfall 2: Assuming Knowledge
 
 ```python
 # implement the algorithm
@@ -455,7 +463,7 @@ Refactor this code to:
 
 **Problem:** Which algorithm? For what purpose?
 
-### ❌ Pitfall 3: No Constraints
+### Pitfall 3: No Constraints
 
 ```typescript
 // fetch user data
@@ -463,7 +471,7 @@ Refactor this code to:
 
 **Problem:** From where? What format? Error handling?
 
-### ❌ Pitfall 4: Over-Complicating
+### Pitfall 4: Over-Complicating
 
 ```python
 # Create a sophisticated, enterprise-grade, highly scalable, fault-tolerant,
@@ -477,6 +485,7 @@ Refactor this code to:
 Copilot works best with iteration:
 
 **Round 1:**
+
 ```javascript
 // Create function to validate email
 ```
@@ -484,6 +493,7 @@ Copilot works best with iteration:
 **Copilot suggests basic validation**
 
 **Round 2:**
+
 ```javascript
 // Create function to validate email
 // Must support international domains and subdomains
@@ -493,7 +503,8 @@ Copilot works best with iteration:
 **Better result!**
 
 **Round 3: Use Chat**
-```
+
+```text
 /explain why doesn't this validate international characters?
 [Refine based on explanation]
 ```
@@ -501,44 +512,44 @@ Copilot works best with iteration:
 ## Measuring Success
 
 Good prompts lead to:
-- ✅ First suggestion is usable (maybe needs minor tweaks)
-- ✅ Code follows project patterns
-- ✅ Includes error handling
-- ✅ Has appropriate types/validation
-- ✅ Requires minimal modification
+
+- First suggestion is usable (maybe needs minor tweaks)
+- Code follows project patterns
+- Includes error handling
+- Has appropriate types/validation
+- Requires minimal modification
 
 Poor prompts lead to:
-- ❌ Need to cycle through many suggestions
-- ❌ Generated code doesn't compile
-- ❌ Missing critical functionality
-- ❌ Inconsistent with project style
-- ❌ Requires complete rewrite
+
+- Need to cycle through many suggestions
+- Generated code doesn't compile
+- Missing critical functionality
+- Inconsistent with project style
+- Requires complete rewrite
 
 ## Practice Exercises
 
 Try improving these prompts:
 
-1. **Before:** `// sort array`  
+1. **Before:** `// sort array`
    **After:** _[Your improved version]_
 
-2. **Before:** `# create database`  
+2. **Before:** `# create database`
    **After:** _[Your improved version]_
 
-3. **Before:** `// API call`  
+3. **Before:** `// API call`
    **After:** _[Your improved version]_
 
 ## Cheat Sheet
 
-```
-📝 Specific > Vague
-🎯 Context > Isolation  
-📚 Examples > Abstraction
+```text
+Specific > Vague
+Context > Isolation
+Examples > Abstraction
 🔨 Constraints > Freedom
 🔄 Iterate > One-shot
 ```
 
 ---
-
-**Practice makes perfect! Keep refining your prompts.** 🎯
 
 [← Chat Modes](./chat-modes.md) | [MCP Servers →](./mcp-servers.md)
