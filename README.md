@@ -147,7 +147,7 @@ Throughout these challenges, you'll master:
 
 All 7 challenges are available, and each track has a dedicated challenge:
 
-### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/)
+### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/) ([Track](./tracks/backend-developer-track.md))
 
 **Team**: Backend/Web Developers
 **Skills**: Express.js/FastAPI, API design, error handling, testing
@@ -157,7 +157,7 @@ Build a fully functional REST API with authentication, CRUD operations, and comp
 
 ---
 
-### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/)
+### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/) ([Track](./tracks/data-science-ml-track.md))
 
 **Team**: Data Scientists, ML Engineers
 **Skills**: Python, pandas, scikit-learn, data visualization
@@ -167,7 +167,7 @@ Perform exploratory data analysis and build a machine learning model with Copilo
 
 ---
 
-### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/)
+### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/) ([Track](./tracks/devops-platform-track.md))
 
 **Team**: DevOps, Platform Engineers
 **Skills**: Terraform, Docker, Kubernetes, CI/CD
@@ -177,7 +177,7 @@ Design and implement cloud infrastructure using Terraform, containerize applicat
 
 ---
 
-### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/)
+### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/) ([Track](./tracks/frontend-developer-track.md))
 
 **Team**: Frontend Developers
 **Skills**: React, TypeScript, Component design, State management
@@ -187,7 +187,7 @@ Create a modern, responsive web application with reusable components, leveraging
 
 ---
 
-### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/)
+### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/) ([Track](./tracks/qa-tester-track.md))
 
 **Team**: QA Engineers, SDETs, Test Automation Engineers
 **Duration**: 4-6 hours (extended challenge with real-world apps)
@@ -198,7 +198,7 @@ Work with real-world open-source applications to implement comprehensive test au
 
 ---
 
-### [Bonus Challenge 6: Copilot Extensions -- Team Standup Bot](./challenges/challenge-6-copilot-extensions/)
+### [Bonus Challenge 6: Copilot Extensions -- Team Standup Bot](./challenges/challenge-6-copilot-extensions/) ([Track](./tracks/bonus-copilot-extensions-track.md))
 
 **Team**: Experienced developers (any role) who finished a standard track
 **Duration**: 8-12 hours (Advanced)
@@ -211,7 +211,7 @@ Build a fully functional Copilot Extension agent -- a Team Standup & Project Tra
 
 ---
 
-### [Challenge 7: Bonus -- Full-Stack Flight Delay Predictor](./challenges/challenge-7-flight-delay/)
+### [Challenge 7: Bonus -- Full-Stack Flight Delay Predictor](./challenges/challenge-7-flight-delay/) ([Track](./tracks/bonus-flight-delay-track.md))
 
 **Team**: Full-Stack Developers, Advanced Participants
 **Duration**: 8-12 hours (extended bonus challenge)
