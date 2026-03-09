@@ -143,9 +143,9 @@ Throughout these challenges, you'll master:
 
 ## Challenges
 
-** Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
+**Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 5 challenges are available, and each track has a dedicated challenge:
+All 7 challenges are available, and each track has a dedicated challenge:
 
 ### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/)
 
@@ -240,7 +240,7 @@ Build a complete application that predicts flight delay probability. Explore a r
 
 ### Quick Tips
 
-** Maximize Your Copilot Experience:**
+**Maximize Your Copilot Experience:**
 
 1. **Be Specific**: Detailed prompts yield better results
 2. **Provide Context**: Reference existing code and patterns
