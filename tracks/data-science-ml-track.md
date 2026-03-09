@@ -98,10 +98,12 @@ Perform exploratory data analysis and build a machine learning model using GitHu
 
 Build a complete ML pipeline for customer churn prediction:
 
+> ⚠️ **The dataset is intentionally messy** — it contains missing values, inconsistent formatting, duplicate rows, mixed data types, and other quality issues. Use GitHub Copilot to discover and fix these problems before building models.
+
 **Core Features**
 1. **Data Exploration**
    - Load and inspect dataset
-   - Handle missing values
+   - Handle missing values, duplicates, and inconsistent data
    - Statistical analysis
    - Data quality checks
 
