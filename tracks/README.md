@@ -98,7 +98,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 | **Data Science** | ⭐⭐⭐ Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
 | **DevOps** | ⭐⭐⭐ Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
 | **Frontend** | ⭐⭐ Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
-| **QA Tester** | ⭐⭐ Beginner-Int | 4-6h | Playwright, xUnit, C#/.NET | Challenge 5 |
+| **QA Tester** | ⭐⭐⭐ Int-Advanced | 4-6h | Playwright, xUnit, .NET Aspire | Challenge 5 |
 
 ## 🎯 What You'll Learn in Every Track
 

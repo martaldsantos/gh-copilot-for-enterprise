@@ -1,7 +1,7 @@
 # QA Tester Track 🧪
 
 **Duration:** 6-8 hours  
-**Difficulty:** Intermediate  
+**Difficulty:** Intermediate to Advanced  
 **Focus:** Test automation, quality assurance, and testing best practices with GitHub Copilot
 
 ## 🎯 Track Overview
@@ -16,10 +16,10 @@ This track is designed for QA Engineers and Test Automation specialists. Unlike 
 
 ## 🛠️ Technology Stack
 
-- **Application**: .NET 8.0 / ASP.NET Core (eShopOnWeb)
-- **Language**: C#
+- **Application**: .NET 9.0 / ASP.NET Core + .NET Aspire (eShop)
+- **Language**: C# (application and unit tests), TypeScript (E2E tests)
 - **Unit Testing**: xUnit
-- **E2E Testing**: Playwright (Node.js or .NET)
+- **E2E Testing**: Playwright (TypeScript)
 - **AI Integration**: Playwright MCP Server
 - **Environment**: Docker & DevContainers
 
@@ -87,100 +87,146 @@ Learn how to use GitHub Copilot's **Agent mode** to accelerate test automation. 
 
 This challenge is **different from other challenges**. Instead of building an application, you will:
 
-1.  **Clone the eShopOnWeb application**
+1.  **Clone the eShop application** (a real-world .NET Aspire reference app)
 2.  **Remove existing tests** (to simulate a legacy app without coverage)
-3.  **Implement comprehensive unit tests using Agent mode**
-4.  **Create E2E tests with Playwright**
-5.  **Configure AI-driven testing with Playwright MCP**
+3.  **Choose your testing path** (Unit Tests, E2E Tests, or both)
+4.  **Use AI-driven testing with Playwright MCP**
+
+> **Choose your scope:** You can do **Path A** (Unit Tests), **Path B** (E2E Tests), or **both**. Completing both paths earns bonus points!
 
 #### 🚀 Phase 1: Setup Target Application
 
-You will be testing **eShopOnWeb**, a reference .NET application.
+You will be testing **[eShop](https://github.com/dotnet/eShop)**, a .NET Aspire reference application with a microservices architecture.
+
+> ⚠️ **Setup note**: eShop uses .NET Aspire and Docker. The initial setup takes a few minutes as it pulls container images and starts multiple services. Be patient during first launch.
 
 1.  **Clone the Repository**:
-    In your challenge repository, clone the eShopOnWeb app:
+    In your challenge repository, clone the eShop app:
     ```bash
-    git clone https://github.com/dotnet/eShop app
+    git clone https://github.com/dotnet/eShop.git app
+    cd app && git checkout 5624ad564d1602a927879df32a79b94522eb6101
     ```
 
 2.  **Clean Up Existing Tests**:
-    We want YOU to write the tests. Delete the existing test folder:
+    We want YOU to write the tests. Delete the existing test folders:
     ```bash
     rm -rf app/tests app/e2e
     ```
 
-3.  **Verify Application Runs**:
+3. **Remove Test Projects from Solution**:
+    Open `app/eShop.slnx` and remove the test projects from the solution file. This simulates a legacy codebase without tests. Remove these lines and save:
+
+    ```xml
+    <Folder Name="/tests/">
+      <Project Path="tests/Basket.UnitTests/Basket.UnitTests.csproj" />
+      <Project Path="tests/Catalog.FunctionalTests/Catalog.FunctionalTests.csproj" />
+      <Project Path="tests/Ordering.FunctionalTests/Ordering.FunctionalTests.csproj" />
+      <Project Path="tests/Ordering.UnitTests/Ordering.UnitTests.csproj" />
+      <Project Path="tests/ClientApp.UnitTests/ClientApp.UnitTests.csproj" />
+    </Folder>
+    ```
+
+4. **Remove Test Projects from solution files**:
+    Also delete from the `app/eShop.slnf` file the references to the test projects. Remove these lines and save:
+
+    ```text
+    "tests\\Basket.UnitTests\\Basket.UnitTests.csproj",
+    "tests\\Catalog.FunctionalTests\\Catalog.FunctionalTests.csproj",
+    "tests\\Ordering.FunctionalTests\\Ordering.FunctionalTests.csproj",
+    "tests\\Ordering.UnitTests\\Ordering.UnitTests.csproj"
+    ```
+
+5.  **Verify Application Runs**:
     ```bash
     cd app
+    dotnet restore eShop.Web.slnf
     dotnet dev-certs https --trust
     dotnet run --project src/eShop.AppHost/eShop.AppHost.csproj
     ```
-    (Verify it runs on localhost by connecting to the Aspire dashboard URL provided in your output - it will take a bit of time start everything)
+    The Aspire dashboard URL will appear in the terminal output. Open it in your browser to see all services. The web app frontend will be available from the dashboard resources view.
 
-#### 🚀 Phase 2: Unit Testing with Copilot
+#### 🚀 Phase 2 — Path A: Unit Testing with Copilot (C# / xUnit)
 
-**Goal**: Add unit tests for the `Core` project (Domain logic).
+**Goal**: Add unit tests for the application's domain and service logic using C# and xUnit.
 
 1.  **Create Test Project**:
-    Ask Copilot: "Create a new xUnit test project named 'UnitTests' in the 'tests' folder and add a reference to the 'ApplicationCore' project."
+    Ask Copilot: "Create a new xUnit test project named 'UnitTests' in the 'tests' folder and add a reference to one of the service projects (e.g., Basket.API or Catalog.API)."
 
 2.  **Generate Tests**:
-    Open `src/ApplicationCore/Services/BasketService.cs` (or similar service).
-    Ask Copilot: "Generate comprehensive unit tests for BasketService, covering edge cases and mocking dependencies."
+    Explore the `src/` folder and open a service file (e.g., a gRPC service or API endpoint handler).
+    Ask Copilot: "Generate comprehensive unit tests for this service, covering edge cases and mocking dependencies."
 
-#### 🚀 Phase 3: E2E Testing with Playwright
+3.  **Expand Coverage**:
+    Ask Copilot to generate tests for additional services across the microservices (e.g., Basket, Catalog, Ordering).
 
-**Goal**: Create end-to-end tests for the shopping flow.
+#### 🚀 Phase 3 — Path B: E2E Testing with Playwright (TypeScript)
+
+**Goal**: Create end-to-end tests for the shopping flow using TypeScript and Playwright.
+
+> **Note:** The starter code in `challenges/challenge-5-qa/tests/` provides a TypeScript Playwright scaffolding with Page Object pattern examples. Playwright tests interact with the app through the browser, so it doesn't matter that the app is written in C#.
 
 1.  **Setup Playwright**:
-    Ask Copilot: "How do I initialize a Playwright project for .NET (or Node.js) in a 'tests/e2e' folder?"
+    Navigate to `challenges/challenge-5-qa/` and run:
+    ```bash
+    npm install
+    npx playwright install
+    ```
 
-2.  **Generate E2E Tests**:
-    Ask Copilot: "Create a Playwright test that:
-    1. Goes to the homepage
-    2. Adds an item to the basket
-    3. Logs in with default credentials
-    4. Verifies the item is in the basket"
+2.  **Update Configuration**:
+    Open `playwright.config.ts` and update `baseURL` to match your running eShop webapp URL (check the Aspire dashboard for the correct port).
+
+3.  **Generate E2E Tests**:
+    Use the starter Page Object classes as reference. Ask Copilot: "Create a Playwright test that:
+    1. Goes to the eShop homepage
+    2. Browses the catalog
+    3. Adds an item to the basket
+    4. Logs in
+    5. Verifies the item is in the basket"
+
+4.  **Add More Page Objects**:
+    Ask Copilot to create additional Page Objects (e.g., `CatalogPage.ts`, `BasketPage.ts`) following the pattern in `BasePage.ts`.
 
 #### 🚀 Phase 4: AI-Driven Testing (MCP)
 
-**Goal**: Use the Playwright MCP server to let Copilot explore the app.
+**Goal**: Use the Playwright MCP server to let Copilot explore the app autonomously.
 
 1.  **Configure MCP**:
-    Ensure the Playwright MCP server is configured in your VS Code settings (see instructions below).
+    Ensure the Playwright MCP server is configured in your VS Code settings (see the [Playwright MCP Guide](../challenges/challenge-5-qa/docs/playwright-mcp-guide.md)).
 
-2.  **Autonomous Testing**:
-    Ask Copilot: "Use Playwright to navigate to the homepage, take a screenshot, and check if the 'Login' button is visible."
+2.  **Autonomous Exploration**:
+    Ask Copilot: "Use Playwright to navigate to the eShop web app URL, take a snapshot, and describe the main page elements you see."
+
+3.  **AI-Generated Tests**:
+    Ask Copilot: "Navigate through the catalog and shopping flow, then generate Playwright test scripts for the scenarios you observed."
 
 #### 💡 Copilot Tips
 
 - **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to generate test suites.
 - **Iterate**: Ask Copilot to "Create a test plan for the login flow" and then implement it.
 - **MCP**: Use the Playwright MCP to let Copilot interact with the browser directly.
+- **Context**: Keep the source file you want to test open when asking Copilot to write unit tests.
 
 **Copilot Skills You'll Learn:**
-- Test generation and refactoring
-- AI-driven browser automation
+- Test generation and refactoring (C# xUnit and/or TypeScript Playwright)
+- AI-driven browser automation via MCP
+- Page Object Model pattern
 
 ## 📊 Success Metrics
 
-- [ ] Application running in DevContainer.
-- [ ] Added at least 5 meaningful unit tests.
-- [ ] Created 1 robust E2E test suite with Playwright.
-- [ ] Successfully used Playwright MCP to control the browser via Chat.
-- [ ] Generated a test script using MCP actions.
+- [ ] eShop application running locally (Aspire dashboard accessible)
+- [ ] **Path A**: Added at least 5 meaningful xUnit unit tests for domain/service logic
+- [ ] **Path B**: Created at least 1 robust E2E test suite with Playwright (TypeScript)
+- [ ] Successfully used Playwright MCP to control the browser via Chat
+- [ ] Generated a test script from MCP-observed behavior
 
 ## 💡 Pro Tips
 
 - **Context is King**: When asking Copilot to write tests, keep the file you want to test open.
 - **MCP Debugging**: If the MCP tool fails, check the "Output" panel in VS Code and select "GitHub Copilot MCP" to see logs.
 - **Port Forwarding**: Ensure the application port is forwarded in the DevContainer so the headless browser (and you) can access it.
+- **Aspire Dashboard**: Use the Aspire dashboard to monitor all microservices and find the correct URLs for each service.
 
 ---
 
-**Ready to start?** [Clone the app](#phase-1-setup-target-application) and begin! 🚀
-
----
-
-**Ready to start?** [Choose your app](#phase-1-choose-your-target-application) and begin! 🚀
+**Ready to start?** [Set up the app](#-phase-1-setup-target-application) and begin! 🚀
 
