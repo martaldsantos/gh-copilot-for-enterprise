@@ -1,17 +1,12 @@
 # Data Science & ML Track
 
 **Duration:** 6-8 hours
-**Difficulty:** Intermediate
+**Difficulty:** Intermediate to Advanced (progressive stages)
 **Focus:** Data analysis, machine learning, and AI development with GitHub Copilot
 
-## Track Overview
+## Who Is This For
 
-This track is designed for data scientists and machine learning engineers who want to leverage GitHub Copilot for data analysis, feature engineering, model development, and ML pipelines. You'll learn how Copilot can accelerate your data science workflow from exploration to production.
-
-## Who Is This For?
-
-- Data Scientists
-- Machine Learning Engineers
+- Data Scientists and ML Engineers
 - Data Analysts
 - AI/ML Researchers
 - Analytics Engineers
@@ -26,8 +21,6 @@ This track is designed for data scientists and machine learning engineers who wa
 
 ## Technology Stack
 
-You'll work with:
-
 - **Python 3.11+**
 - **Jupyter Notebooks**
 - pandas, numpy for data manipulation
@@ -35,7 +28,7 @@ You'll work with:
 - matplotlib, seaborn for visualization
 - Optional: TensorFlow/PyTorch for deep learning
 
-## First Steps: Set Up Your Workspace
+## Getting Started
 
 ### 1. Configure Copilot Context (CRITICAL)
 
@@ -43,17 +36,11 @@ The file `.github/copilot-instructions.md` currently contains instructions for t
 
 1. Open `.github/copilot-instructions.md`.
 2. **Delete its entire contents.**
-3. Use the example below as a starting point for your new instructions.
+3. Write your own instructions following the guidance below.
 
 > **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
 
-### 2. Navigate to Your Challenge
-
-Open the folder `challenges/challenge-2-ml-ai/` in your workspace. This is where you will be working.
-
----
-
-### 3. Create Your Custom Instructions
+### 2. Create Your Custom Instructions
 
 This file tells Copilot about your data science context and preferences. **Your goal is to create your own custom instructions file.**
 
@@ -64,17 +51,15 @@ This file tells Copilot about your data science context and preferences. **Your 
 - Data science best practices (EDA, validation, pipelines)
 - Notebook documentation standards
 
-> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
-
-### 2. Create Custom Agents (`.github/agents/`)
+### 3. Create Custom Agents (`.github/agents/`)
 
 Create specialized agents for different tasks. **Your goal is to create agents that match your workflow.**
 
 **Agents to consider creating:**
 
-- **Data Scientist Agent** - Expert in EDA, feature engineering, and model development
-- **ML Engineer Agent** - Focused on model optimization, pipelines, and deployment
-- **Visualization Expert Agent** - Specialized in creating insightful charts and dashboards
+- **Data Scientist Agent** -- Expert in EDA, feature engineering, and model development
+- **ML Engineer Agent** -- Focused on model optimization, pipelines, and deployment
+- **Visualization Expert Agent** -- Specialized in creating insightful charts and dashboards
 
 **What to include in each agent:**
 
@@ -82,165 +67,158 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 - Specific instructions for analysis and modeling
 - References to your preferred libraries and patterns
 
-> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+> Check out [github/awesome-copilot](https://github.com/github/awesome-copilot) for real-world examples of custom instructions and agent templates.
 >
-> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance.
+
+### 4. Open the Challenge
+
+Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip install -r requirements.txt`). Open `customer_churn_analysis.ipynb` in VS Code and work through the stages in order.
 
 ---
 
-## Track Structure
+## Stages
 
-### Your Challenge: ML/AI - Data Analysis & Model Development
+| Stage | Name | Difficulty | Est. Time | Key Deliverable |
+|-------|------|------------|-----------|----------------|
+| 1 | Data Discovery and Cleaning | Intermediate | 60-75 min | Data quality report documenting all 7+ issues |
+| 2 | Exploratory Analysis and Feature Engineering | Intermediate | 60-90 min | 8+ visualizations with interpretation, hypothesis tests, feature selection |
+| 3 | Model Development and Rigorous Evaluation | Advanced | 60-90 min | 4+ models with pipelines, cross-validation, cost-sensitive scoring |
+| 4 | Class Imbalance and Interpretability | Advanced | 60-90 min | Imbalance comparison table, SHAP analysis, business recommendations |
+| 5 | Deployment Pipeline and Monitoring | Advanced | 60-90 min | Prediction API, drift detection, model card |
 
-**Duration:** 4-6 hours
-**Focus:** Complete ML pipeline in Jupyter notebooks
+The dataset is intentionally messy. Copilot can generate pandas and scikit-learn code efficiently, but discovering subtle data quality issues, interpreting SHAP values for business decisions, and building drift detection require your analytical judgment.
 
-#### Objective
+> **Short on time?** Skip hypothesis testing in Stage 2, train 3 models instead of 4 in Stage 3, do only SHAP analysis in Stage 4, and skip the API + drift detection in Stage 5.
 
-Perform exploratory data analysis and build a machine learning model using GitHub Copilot's **Agent mode** in Jupyter Notebooks. Learn how Copilot's agentic capabilities can accelerate data science workflows, from data exploration to model deployment.
+### Stage 1: Data Discovery and Cleaning
 
-#### Requirements
+**Difficulty:** Intermediate | **Time:** 60-75 min
 
-Build a complete ML pipeline for customer churn prediction:
+The dataset has 7+ distinct data quality problems. Your job is to find every one of them
+without being told what to look for.
 
-> ⚠️ **The dataset is intentionally messy** -- it contains missing values, inconsistent formatting, duplicate rows, mixed data types, and other quality issues. Use GitHub Copilot to discover and fix these problems before building models.
+#### Tasks
 
-**Core Features**
+1. Load the dataset and inspect shape, dtypes, and null counts.
+2. Discover and document every data quality issue. The dataset contains problems with inconsistent casing, mixed date formats, type mismatches, blank strings vs. NaN, missing values, duplicate rows, and string-typed numeric columns -- but you must find them yourself.
+3. Clean each issue and justify your approach (why not a different method?).
+4. Write a **Data Quality Report** markdown cell listing every issue found, its impact on analysis, and the fix applied.
 
-1. **Data Exploration**
-   - Load and inspect dataset
-   - Handle missing values, duplicates, and inconsistent data
-   - Statistical analysis
-   - Data quality checks
+#### Verification
 
-2. **Data Visualization**
-   - Distribution plots
-   - Correlation analysis
-   - Feature relationships
-   - Class balance visualization
+- Cleaned dataset has 0 duplicates
+- All columns have consistent, correct dtypes
+- No nulls in critical columns (or documented justification for remaining nulls)
+- Data quality report lists all discovered issues
 
-3. **Feature Engineering**
-   - Create new features
-   - Encode categorical variables
-   - Scale numerical features
-   - Feature selection
+---
 
-4. **Model Development**
-   - Train/test split
-   - Multiple model comparison
-   - Hyperparameter tuning
-   - Cross-validation
+### Stage 2: Exploratory Analysis and Feature Engineering
 
-5. **Evaluation & Insights**
-   - Performance metrics
-   - Feature importance
-   - Model interpretation
-   - Business recommendations
+**Difficulty:** Intermediate | **Time:** 60-90 min
 
-6. **Class Imbalance Handling** *(Advanced)*
-   - Analyze and document the class imbalance in the target variable
-   - Apply at least two techniques to address it (e.g., SMOTE, class weights, under/oversampling)
-   - Compare model performance with and without imbalance correction
-   - Justify which approach works best and why
+Visualization without interpretation is decoration. Every plot needs to answer a question.
 
-7. **Model Interpretability** *(Advanced)*
-   - Use SHAP (SHapley Additive exPlanations) to explain individual predictions
-   - Generate a SHAP summary plot showing global feature importance
-   - Pick 2-3 specific customers and explain *why* the model predicts they will churn
-   - Translate the SHAP insights into actionable business recommendations (e.g., which customers to target for retention campaigns and what to offer them)
+#### Tasks
 
-#### Getting Started
+1. Create at least 8 distinct visualizations. Each must include a written interpretation (a markdown cell or comment) explaining what the plot reveals about churn.
+2. Statistical hypothesis testing: test at least 2 hypotheses (e.g., "fiber optic customers churn more than DSL customers"). Use chi-square, t-test, or equivalent. Report p-values and conclusions.
+3. Engineer at least 5 new features with written business rationale for each.
+4. Feature selection: compare at least 2 methods (e.g., correlation analysis, mutual information, recursive feature elimination). Justify your final feature set.
 
-1. **Setup**: Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip install -r requirements.txt`).
-2. **Open Notebook**: Open `customer_churn_analysis.ipynb` in VS Code.
-3. **Start Analysis**: Use Copilot to analyze the data and build models.
+#### Verification
 
-#### Copilot Tips
+- 8+ visualizations with titles, labels, and written interpretation
+- 2+ hypothesis tests with p-values and stated conclusions
+- 5+ engineered features with business rationale documented
+- Feature selection comparison shows results from 2+ methods
 
-- **Use Agent Mode**: Open Chat View (`Ctrl+Alt+I`) and select **Agent** to analyze data and generate notebook cells.
-- **Iterate**: Ask Copilot to "Analyze the customer_churn.csv dataset" and then refine the analysis.
-- **Visualize**: Ask Copilot to "Create visualizations showing churn distribution".
+---
 
-**Copilot Skills You'll Learn:**
+### Stage 3: Model Development and Rigorous Evaluation
 
-- Code generation in Jupyter notebooks
-- `/explain` for complex algorithms and statistics
-- `/new` for creating new projects and files
-- Data visualization assistance
-- Feature engineering suggestions
-- Model selection guidance
-- Natural language prompts for documenting your analysis
+**Difficulty:** Advanced | **Time:** 60-90 min
 
-[Start Challenge 2](../challenges/challenge-2-ml-ai/)
+Reproducibility matters. Use sklearn Pipelines for all preprocessing and training.
 
-## Recommended Schedule
+#### Tasks
 
-### Full Day (6 hours)
+1. Train at least 4 models: Logistic Regression, Random Forest, Gradient Boosting, and one additional (SVM, Neural Net, or XGBoost).
+2. Wrap preprocessing and model training in sklearn Pipeline objects.
+3. Stratified k-fold cross-validation (k=5 minimum). Report mean and standard deviation for each metric.
+4. Hyperparameter tuning with GridSearchCV or RandomizedSearchCV. Document the search space and best parameters found.
+5. Define a custom scoring function where false negatives (missing a churner) cost 5x more than false positives. Use this scorer during tuning.
 
-```text
-09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
-09:30 - 10:30   Data Exploration & Visualization
-10:30 - 10:45   Break
-10:45 - 12:00   Feature Engineering
-12:00 - 13:00   Lunch
-13:00 - 14:30   Model Training & Evaluation
-14:30 - 14:45   Break
-14:45 - 16:00   Hyperparameter Tuning & Results
-16:00 - 16:30   Review & Showcase
-```
+#### Verification
 
-### Half Day (4 hours)
+- 4+ models trained using Pipeline objects
+- Cross-validation scores include mean and std dev
+- Hyperparameter tuning documents search space and best params
+- Custom cost-sensitive scorer is used in tuning (not just standard accuracy)
 
-```text
-09:00 - 09:30   Setup & First Steps
-09:30 - 10:30   Data Exploration & Visualization
-10:30 - 10:45   Break
-10:45 - 12:00   Feature Engineering & Model Training
-12:00 - 12:30   Model Evaluation & Documentation
-12:30 - 13:00   Review & Wrap-up
-```
+---
 
-## Learning Outcomes
+### Stage 4: Class Imbalance and Interpretability
 
-By completing this track, you will:
+**Difficulty:** Advanced | **Time:** 60-90 min
 
-### Technical Skills
+The dataset has class imbalance. Address it rigorously and explain your model to the business.
 
-- Perform comprehensive exploratory data analysis
-- Handle missing data and outliers effectively
-- Engineer meaningful features from raw data
-- Train and evaluate multiple ML models
-- Optimize model hyperparameters
-- Interpret model results and generate insights
+#### Tasks
 
-### Copilot Mastery
+1. Implement and compare at least 3 imbalance techniques: SMOTE, class weights, and random undersampling.
+2. For each technique, report all metrics (accuracy, precision, recall, F1, AUC-ROC). Explain which metric matters most for the churn prediction business case and why.
+3. SHAP analysis: generate a summary plot for global feature importance. Create dependence plots for the top 3 features. Create force plots for 3 individual predictions: 1 churner correctly predicted, 1 non-churner correctly predicted, and 1 misclassification.
+4. Write a **Model Explainability Report** cell translating SHAP insights into actionable business recommendations. Be specific (e.g., "customers with contracts under 6 months and monthly charges above $70 should receive a retention offer within the first 3 months").
 
-- Use Copilot effectively in Jupyter notebooks
-- Generate data processing code with comments
-- Create visualizations with minimal code
-- Leverage `/explain` for understanding algorithms
-- Generate comprehensive test datasets
-- Document analysis and findings
+#### Verification
 
-## Track-Specific Tips
+- Comparison table with all metrics across all 3 imbalance techniques
+- Explanation of which metric matters most and why
+- SHAP summary, dependence, and force plots rendered
+- Business recommendations are specific and actionable (not generic)
 
-### 1. Data Exploration with Copilot
+#### What Copilot Helps With vs. What Requires Your Judgment
 
-**Comment-driven analysis:**
+Copilot generates SMOTE code, SHAP plot boilerplate, and metric comparison tables efficiently. But deciding which metric matters most for the business, interpreting SHAP dependence plots to find actionable patterns, and writing recommendations that a product team could act on require domain understanding.
+
+---
+
+### Stage 5: Deployment Pipeline and Monitoring
+
+**Difficulty:** Advanced | **Time:** 60-90 min
+
+A model that exists only in a notebook is not deployed. Make it usable.
+
+#### Tasks
+
+1. Serialize the best model and its full preprocessing pipeline using joblib. Create a prediction function that takes raw (uncleaned) customer data and returns a churn probability. The function must handle the same data quality issues you found in Stage 1.
+2. Create a prediction API endpoint in `serve_model.py` using FastAPI. The endpoint accepts customer data as JSON and returns churn probability.
+3. Data drift detection: implement KS-test or PSI (Population Stability Index) on key features. Compare incoming data distributions against training data distributions and flag when drift exceeds a threshold.
+4. Write a **Model Card** using the template in `model_card_template.md`. Cover: intended use, training data description, performance metrics across demographic groups (if applicable), limitations, and ethical considerations.
+5. Create a monitoring cell that simulates 100 new customers with progressively drifted features and shows how predictions and drift scores change.
+
+#### Verification
+
+- Prediction function handles raw data (including quality issues) end-to-end
+- API endpoint returns probability as JSON
+- Drift detection correctly flags synthetic drifted data
+- Model card covers all required sections with substantive content
+- Monitoring simulation shows drift impact on predictions
+
+---
+
+## Tips for Using Copilot on This Track
+
+**Comment-driven analysis in notebooks:**
 
 ```python
 # Load the dataset, display first 5 rows, show column types and missing values
 # Create a summary statistics table for all numerical columns
 ```
 
-**Ask for insights:**
-
-- "What patterns can we see in this data?"
-- "Which features are most correlated with the target?"
-
-### 2. Feature Engineering
-
-**Describe what you want:**
+**Describe feature engineering in comments:**
 
 ```python
 # Create age groups: 0-18, 19-35, 36-55, 56+
@@ -248,9 +226,7 @@ By completing this track, you will:
 # One-hot encode categorical variables preserving column names
 ```
 
-### 3. Visualization
-
-**Let Copilot create complex plots:**
+**Generate complex visualizations:**
 
 ```python
 # Create a 2x2 subplot showing:
@@ -260,8 +236,6 @@ By completing this track, you will:
 # 4. Count plot for categorical variables
 ```
 
-### 4. Model Development
-
 **Efficient model comparison:**
 
 ```python
@@ -270,129 +244,11 @@ By completing this track, you will:
 # Display results in a comparison table with accuracy, precision, recall, F1
 ```
 
-### 5. Using `/explain` for Learning
+Use `/explain` on any algorithm Copilot suggests to understand how it works.
 
-When Copilot suggests an algorithm:
-
-1. Highlight the code
-2. Use `/explain how does this algorithm work?`
-3. Ask follow-up questions for deeper understanding
-
-## Success Metrics
-
-Track your progress:
-
-- [ ] Completed full EDA with visualizations
-- [ ] Handled missing values appropriately
-- [ ] Created meaningful features
-- [ ] Trained and compared multiple models
-- [ ] Achieved good model performance (>80% accuracy or relevant metric)
-- [ ] Generated actionable business insights
-- [ ] Used `/explain` to understand algorithms
-- [ ] Documented findings clearly
-
-## Bonus Challenges
-
-If you finish early:
-
-1. **Deep Learning**: Build a neural network with TensorFlow/PyTorch
-2. **Advanced Feature Engineering**: Create polynomial features, PCA
-3. **Model Explainability**: Implement SHAP values
-4. **AutoML**: Experiment with auto-sklearn or H2O
-5. **Time Series**: Add time series analysis if applicable
-6. **Model Deployment**: Create a FastAPI endpoint for predictions
-
-## Getting Started
-
-1. **Launch Jupyter**: Start your Codespace or local Jupyter server
-2. **Verify Copilot**: Ensure Copilot works in notebooks
-3. **Start Challenge 2**: Open the ML challenge notebook
-4. **Use Comments**: Write descriptive comments before each cell
-5. **Iterate**: Refine Copilot suggestions as needed
-
-## Additional Resources
-
-### Data Science with Copilot
+## Resources
 
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-
-### ML/AI Resources
-
-- Scikit-learn documentation
-- Pandas user guide
-- Matplotlib gallery
-
-### For Facilitators
-
-- See [Facilitator Guide](../FACILITATOR_GUIDE.md) for ML track guidance
-- This track requires intermediate Python and ML knowledge
-
-## Working in Jupyter Notebooks
-
-### Copilot Tips for Notebooks
-
-1. **Write comments first**: Describe your analysis goal
-2. **Accept and modify**: Review all generated code
-3. **Use chat panel**: Ask questions about the data
-4. **Generate markdown**: Ask Copilot to document findings
-
-**Example workflow:**
-
-```python
-# Cell 1: Comment describing what you want
-# Load customer_churn.csv and show basic info
-
-# Cell 2: Copilot generates the code
-import pandas as pd
-df = pd.read_csv('customer_churn.csv')
-# ... Copilot completes the rest
-
-# Cell 3: Ask Copilot to explain results
-# Use /explain in chat about any unexpected patterns
-```
-
-## Scientific Workflow
-
-### Best Practices for Data Science with Copilot
-
-1. **Exploratory Phase**
-   - Let Copilot handle boilerplate (imports, loading)
-   - Use it for quick visualizations
-   - Ask for statistical tests
-
-2. **Feature Engineering**
-   - Describe transformations in comments
-   - Generate multiple options and compare
-   - Use Copilot for encoding schemes
-
-3. **Modeling Phase**
-   - Ask for model recommendations
-   - Generate cross-validation code
-   - Create evaluation metrics
-
-4. **Documentation**
-   - Ask Copilot to "add docstrings" to explain complex functions
-   - Generate markdown summaries
-   - Create reproducible notebooks
-
-## Need Help?
-
-- **Data questions?** Ask Copilot to explain patterns
-- **Algorithm confusion?** Use `/explain` on model code
-- **Stuck?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- **Technical issues?** Consult your facilitator
-
-## Track Completion
-
-You've successfully completed the Data Science & ML track when you:
-
-- Built a complete ML pipeline
-- Understood how Copilot accelerates data science
-- Generated insights from data
-- Created well-documented analysis
-- Can explain your model's decisions
-
----
-
-Start with [Challenge 2: ML & Data Analysis](../challenges/challenge-2-ml-ai/README.md)
+- [Troubleshooting Guide](../TROUBLESHOOTING.md)
+- [Facilitator Guide](../FACILITATOR_GUIDE.md)

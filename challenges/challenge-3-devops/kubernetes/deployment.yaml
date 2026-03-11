@@ -1,13 +1,5 @@
-# TODO: Use Copilot to create Kubernetes Deployment
-# Ask: "Create a Kubernetes Deployment for the quote-app with 3 replicas, resource limits, and health checks"
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: quote-app
-spec:
-  # TODO: Add replicas, selector, and template
-  # TODO: Configure resource limits
-  # TODO: Add liveness and readiness probes
-  # TODO: Configure rolling update strategy
-  # TODO: Mount ConfigMap 'quote-config' as environment variables
+

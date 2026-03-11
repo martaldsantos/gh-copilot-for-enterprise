@@ -6,13 +6,7 @@
 
 > ⚠️ **This is a bonus track.** It is significantly harder and longer than the standard 4-6 hour tracks. It is designed for experienced developers who have completed a standard track (or equivalent) and want a deeper challenge that goes beyond using Copilot -- to **extending** it.
 
-## Track Overview
-
-In the standard tracks you learned to *use* GitHub Copilot. In this bonus track, you'll build software that *becomes part of* Copilot. You'll create a fully functional **Copilot Extension** -- an agent-based backend service that users invoke directly from Copilot Chat via `@your-extension`.
-
-Your extension will be a **Team Standup & Project Tracker Bot**: a conversational agent that helps developers log standups, query project status from GitHub's API, generate team reports, and get AI-powered recommendations -- all without leaving their editor.
-
-## Who Is This For?
+## Who Is This For
 
 - Developers who finished a standard track and want more
 - Backend engineers interested in AI-powered tooling
@@ -21,7 +15,7 @@ Your extension will be a **Team Standup & Project Tracker Bot**: a conversationa
 
 ## Prerequisites
 
-- **Required:** Completion of at least one standard track (or equivalent experience)
+- Completion of at least one standard track (or equivalent experience)
 - Solid Node.js and Express.js skills
 - Familiarity with GitHub APIs (Issues, Pull Requests, Events)
 - Understanding of streaming HTTP responses (Server-Sent Events)
@@ -35,74 +29,39 @@ Your extension will be a **Team Standup & Project Tracker Bot**: a conversationa
 - **Debugging:** `@copilot-extensions/gh-debug-cli` -- local testing without registering a GitHub App
 - **Deployment:** Azure (App Service or Container Apps) for the final registered extension
 
-## First Steps: Set Up Your Workspace
+## Getting Started
 
-### 1. Navigate to Your Challenge
+### 1. Open the Challenge
 
 Open the folder `challenges/challenge-6-copilot-extensions/` in your workspace.
 
-### DevContainer
+A dedicated devcontainer is provided at `.devcontainer/challenge-6-copilot-extensions/`. It includes Node.js LTS, Docker-in-Docker, and GitHub CLI. Open the command palette (`F1` > **Dev Containers: Reopen in Container**) and select **challenge-6-copilot-extensions** when prompted.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-6-copilot-extensions/`. It includes Node.js LTS, Docker-in-Docker, and GitHub CLI.
-
-To use it, open the command palette (`F1` → **Dev Containers: Reopen in Container**) and select **challenge-6-copilot-extensions** when prompted.
-
-### 2. Install Dependencies
+### 2. Install and Run
 
 ```bash
 cd challenges/challenge-6-copilot-extensions
 npm install
-
-```
-
-### 3. Start the Development Server
-
-```bash
 npm run dev
-
 ```
 
-You should see:
+### 3. Test Locally with the Debug CLI
 
-```text
-🤖 Standup Bot Copilot Extension running on port 3000
-📡 Webhook endpoint: http://localhost:3000/
-🔧 Debug with: npx @copilot-extensions/gh-debug-cli@latest http://localhost:3000
-
-```
-
-### 4. Test Locally with the Debug CLI
-
-In a separate terminal, run:
+In a separate terminal:
 
 ```bash
 npx @copilot-extensions/gh-debug-cli@latest http://localhost:3000
-
 ```
 
-This starts an interactive chat session that simulates the Copilot platform sending requests to your extension. You can type messages and see responses without registering a GitHub App.
+This starts an interactive chat session that simulates the Copilot platform sending requests to your extension.
 
-### 5. Configure Copilot Context
+### 4. Configure Copilot Context
 
-Overwrite `.github/copilot-instructions.md` with instructions relevant to building Copilot Extensions. Include context about:
-
-- The `@copilot-extensions/preview-sdk` API
-- Server-Sent Events (SSE) response format
-- The project structure and intent-based routing pattern
+Overwrite `.github/copilot-instructions.md` with instructions relevant to building Copilot Extensions. Include context about the `@copilot-extensions/preview-sdk` API, Server-Sent Events response format, and the project's intent-based routing pattern.
 
 ---
 
-## Track Structure
-
-### Your Challenge: Build a Copilot Extension -- Team Standup & Project Tracker
-
-#### Objective
-
-Build a fully functional Copilot Extension agent that users can invoke from Copilot Chat. The extension acts as a team standup bot that integrates with GitHub's API to provide project awareness and AI-powered analysis.
-
-#### Requirements
-
-Build the Standup Bot extension with the following capabilities:
+## Stages
 
 ---
 
@@ -193,17 +152,16 @@ Build the Standup Bot extension with the following capabilities:
 
 ---
 
-#### Copilot Tips for This Challenge
+## Tips for Using Copilot on This Track
 
 **Use Copilot to build the extension itself -- meta!**
 
 - Ask Copilot to help you implement each SDK function call
 - Use `/explain` on the SDK source code to understand how events work
 - Ask: *"How do I use createConfirmationEvent to confirm a standup entry before saving?"*
-- Ask: *"Generate integration tests for an Express endpoint that returns Server-Sent Events"*
 - Use Agent mode to scaffold the full routing structure in one go
 
-**Debugging Tips:**
+**Debugging:**
 
 - The `gh-debug-cli` tool is essential -- use it constantly during development
 - Add `console.log` in your handlers to see the raw parsed payload
@@ -231,86 +189,7 @@ const { message } = await prompt("Analyze this", { token, model: "gpt-4o" });
 // Function calling
 const result = await prompt({ token, model: "gpt-4o", tools: [...], messages: [...] });
 const calls = getFunctionCalls(result);
-
 ```
-
----
-
-## Recommended Schedule
-
-### Full Challenge (10-12 hours)
-
-```text
-Hour  0 -  1    Setup, explore SDK docs, run debug CLI
-Hour  1 -  3    Phase 1: Verification, routing, help command
-Hour  3 -  4    Break / review
-Hour  4 -  7    Phase 2: Standup logging, GitHub status, reports
-Hour  7 -  8    Break / review
-Hour  8 - 10    Phase 3: AI analysis, function calling
-Hour 10 - 12    Phase 4: Testing, deployment, registration
-
-```
-
-### Condensed (6-8 hours)
-
-```text
-Hour 0 - 1    Setup & Phase 1 (skip deep verification testing)
-Hour 1 - 4    Phase 2: Core features (focus on standup + status)
-Hour 4 - 6    Phase 3: Pick ONE advanced feature
-Hour 6 - 8    Testing + deployment attempt
-
-```
-
----
-
-## Learning Outcomes
-
-By completing this track, you will:
-
-### Technical Skills
-
-- Build a production-ready Copilot Extension agent
-- Handle cryptographic request verification
-- Work with Server-Sent Events (SSE) streaming responses
-- Integrate with GitHub APIs using Octokit
-- Use LLM prompting from server-side code (via the SDK's `prompt()`)
-- Implement function calling to let the LLM orchestrate API calls
-- Deploy a webhook-based service to Azure
-
-### Copilot Extension Ecosystem
-
-- Understand the Copilot Extension architecture (agent vs. skillset)
-- Use all major response event types (ack, text, references, confirmations, errors, done)
-- Debug extensions locally with `gh-debug-cli`
-- Register and configure a GitHub App as a Copilot Extension
-- Build conversational experiences inside Copilot Chat
-
-### Copilot Mastery (Meta)
-
-- Use Copilot to build a Copilot Extension (full-circle AI-assisted development)
-- Apply Agent mode for multi-file scaffolding
-- Use `/explain` on SDK internals
-- Generate tests for streaming HTTP endpoints
-
----
-
-## Success Metrics
-
-Track your progress:
-
-- [ ] Extension starts and responds to the debug CLI
-- [ ] Request verification works (valid requests accepted, invalid rejected)
-- [ ] Intent routing dispatches to correct handlers
-- [ ] Help command returns formatted usage information
-- [ ] Standup logging extracts fields and uses confirmation flow
-- [ ] Project status queries GitHub Issues and PRs via Octokit
-- [ ] Report generation produces an AI-narrated team summary
-- [ ] At least one advanced feature (AI blocker analysis OR function calling)
-- [ ] Tests pass with >70% coverage
-- [ ] (Stretch) Deployed to Azure and registered as a GitHub App
-- [ ] (Stretch) Working end-to-end in a real Copilot Chat session
-
----
 
 ## Resources
 
@@ -333,16 +212,4 @@ Track your progress:
 
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-
----
-
-## Need Help?
-
-- **Stuck on SDK concepts?** Ask Copilot: *"Explain how createConfirmationEvent works in the Copilot Extensions SDK"*
-- **Debug CLI not working?** Make sure your server is running on the expected port
-- **Verification failing?** The debug CLI simulates verification -- skip it in dev mode if needed
-- **Deployment issues?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md)
-
----
-
-Start with [Challenge 6: Copilot Extensions](../challenges/challenge-6-copilot-extensions/)
+- [Troubleshooting Guide](../TROUBLESHOOTING.md)

@@ -1,6 +1,6 @@
 # Hackathon Tracks Overview
 
-Welcome! This hackathon is organized into **5 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **6 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## Choose Your Track
 
@@ -12,7 +12,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Your Challenge:** Challenge 1 - REST API Builder
 
-**Duration:** 4-6 hours
+**Duration:** 6-8 hours (5 progressive stages)
 
 ---
 
@@ -24,7 +24,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Your Challenge:** Challenge 2 - ML & Data Analysis (Jupyter Notebooks)
 
-**Duration:** 4-6 hours
+**Duration:** 6-8 hours (5 progressive stages)
 
 ---
 
@@ -36,7 +36,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Your Challenge:** Challenge 3 - Infrastructure as Code
 
-**Duration:** 4-6 hours
+**Duration:** 6-8 hours (5 progressive stages)
 
 ---
 
@@ -48,7 +48,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Your Challenge:** Challenge 4 - Interactive UI Components
 
-**Duration:** 4-6 hours
+**Duration:** 6-8 hours (5 progressive stages)
 
 ---
 
@@ -60,7 +60,19 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 **Your Challenge:** Challenge 5 - QA & Test Automation
 
-**Duration:** 4-6 hours
+**Duration:** 6-8 hours (5 progressive stages)
+
+---
+
+### [Product Owner & Business Analyst Track](./product-owner-track.md)
+
+**Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
+
+**Focus:** Product planning, backlog management, documentation, and GitHub collaboration -- no code required
+
+**Your Challenge:** Challenge 8 - Product Planning (TaskFlow v2.0)
+
+**Duration:** 6-8 hours (5 progressive stages)
 
 ---
 
@@ -74,6 +86,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
    - DevOps/Infrastructure → DevOps Track
    - Frontend/UI Developer → Frontend Track
    - QA/Test Engineer → QA Tester Track
+   - Product Owner/BA/PM → Product Owner & BA Track
 
 2. **What do you want to learn?**
    - Building REST APIs → Backend Track
@@ -81,6 +94,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
    - Infrastructure automation → DevOps Track
    - User interfaces → Frontend Track
    - Test automation → QA Tester Track
+   - Product planning & documentation → Product Owner & BA Track
    - Full applications (API + UI) → Combine Backend + Frontend Tracks
 
 3. **How much time do you have?**
@@ -90,7 +104,7 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 ### Not Sure? Start Here
 
-- **New to Copilot?** → Backend Track (most beginner-friendly)
+- **New to Copilot?** → Backend Track (most beginner-friendly for developers) or Product Owner & BA Track (for non-developers)
 - **Want breadth?** → Combine Backend + Frontend Tracks
 - **Want depth?** → Choose your specialty track
 
@@ -98,11 +112,12 @@ Welcome! This hackathon is organized into **5 role-based tracks** to help you ge
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
-| **Backend** | Beginner-Int | 4-6h | Node.js/Python, REST APIs | Challenge 1 |
-| **Data Science** | Intermediate | 4-6h | Python, pandas, ML | Challenge 2 |
-| **DevOps** | Int-Advanced | 4-6h | Terraform, Docker, K8s | Challenge 3 |
-| **Frontend** | Beginner-Int | 4-6h | React, TypeScript | Challenge 4 |
-| **QA Tester** | Int-Advanced | 4-6h | Playwright, xUnit, .NET Aspire | Challenge 5 |
+| **Backend** | Beginner-Adv | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
+| **Data Science** | Int-Advanced | 6-8h | Python, pandas, ML | Challenge 2 |
+| **DevOps** | Int-Advanced | 6-8h | Terraform, Docker, K8s | Challenge 3 |
+| **Frontend** | Beginner-Adv | 6-8h | React, TypeScript | Challenge 4 |
+| **QA Tester** | Int-Advanced | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
+| **Product Owner & BA** | Beginner-Adv | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
 
 ## What You'll Learn in Every Track
 

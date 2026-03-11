@@ -4,13 +4,7 @@
 **Difficulty:** Advanced
 **Focus:** Full-stack application development -- data science, API engineering, and frontend -- with GitHub Copilot
 
-## Track Overview
-
-This is the **bonus track** -- a significantly harder, end-to-end challenge that combines data science, backend API development, and frontend engineering into a single cohesive application. You will build a flight delay prediction tool: a web application that lets a user select a day of the week and a destination airport, then shows the probability that their flight will be delayed by more than 15 minutes.
-
-Unlike the other tracks, this one is not scoped to a single domain. You'll work across the entire stack -- from raw data exploration in a Jupyter notebook, to training and exporting a machine learning model, to building a REST API that serves predictions, to crafting a user-facing frontend that ties it all together.
-
-## Who Is This For?
+## Who Is This For
 
 - Full-stack developers looking for a comprehensive challenge
 - Teams that finished their primary track early
@@ -27,8 +21,6 @@ Unlike the other tracks, this one is not scoped to a single domain. You'll work 
 
 ## Technology Stack
 
-You'll work with:
-
 - **Python 3.11+** -- data analysis and API
 - **Jupyter Notebooks** -- data exploration and model building
 - pandas, numpy, scikit-learn, matplotlib, seaborn -- data science
@@ -37,7 +29,7 @@ You'll work with:
 - Framework of your choice (React, Svelte, Vue, or vanilla)
 - **Vite** -- frontend build tooling (provided)
 
-## First Steps: Set Up Your Workspace
+## Getting Started
 
 ### 1. Configure Copilot Context (CRITICAL)
 
@@ -45,23 +37,11 @@ The file `.github/copilot-instructions.md` currently contains instructions for t
 
 1. Open `.github/copilot-instructions.md`.
 2. **Delete its entire contents.**
-3. Use the example below as a starting point for your new instructions.
+3. Write your own instructions following the guidance below.
 
 > **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
 
-### 2. Navigate to Your Challenge
-
-Open the folder `challenges/challenge-7-flight-delay/` in your workspace. This is where you will be working.
-
-### DevContainer
-
-A dedicated devcontainer is provided at `.devcontainer/challenge-7-flight-delay/`. It includes Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS -- everything you need for all four phases.
-
-To use it, open the command palette (`F1` → **Dev Containers: Reopen in Container**) and select **challenge-7-flight-delay** when prompted.
-
----
-
-### 3. Create Your Custom Instructions
+### 2. Create Your Custom Instructions
 
 This file tells Copilot about your full-stack project context and preferences. **Your goal is to create your own custom instructions file.**
 
@@ -74,9 +54,7 @@ This file tells Copilot about your full-stack project context and preferences. *
 - Testing expectations
 - The project's overall goal: flight delay prediction from FAA data
 
-> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for real-world examples of custom instruction files and best practices.
-
-### 4. Create Custom Agents (`.github/agents/`)
+### 3. Create Custom Agents (`.github/agents/`)
 
 Create specialized agents for different phases of this challenge. **Your goal is to create agents that match your workflow.**
 
@@ -93,13 +71,17 @@ Create specialized agents for different phases of this challenge. **Your goal is
 - Specific instructions for their phase of the project
 - References to your preferred libraries, patterns, and conventions
 
-> **Looking for examples?** Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for custom agent templates and ideas.
+> Check out [github/awesome-copilot](https://github.com/github/awesome-copilot) for real-world examples of custom instructions and agent templates.
 >
-> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance!
+> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance.
+
+### 4. Open the Challenge
+
+Navigate to `challenges/challenge-7-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/challenge-7-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS.
 
 ---
 
-## Track Structure
+## Stages
 
 This challenge is broken into **four phases**. Each phase builds on the previous one.
 
@@ -302,104 +284,28 @@ Elevate the application beyond the basics. These are optional challenges for tea
 
 ---
 
-## Recommended Schedule
+---
 
-### Full Day (10 hours)
+## Tips for Using Copilot on This Track
 
-```text
-09:00 - 09:30   Setup & First Steps (agents, copilot-instructions)
-09:30 - 10:30   Phase 1: Data Loading, Cleaning & EDA
-10:30 - 10:45   Break
-10:45 - 12:00   Phase 1: Feature Engineering & Model Training
-12:00 - 12:30   Phase 1: Model Evaluation & Export
-12:30 - 13:30   Lunch
-13:30 - 14:30   Phase 2: API Endpoints (/predict, /airports)
-14:30 - 15:00   Phase 2: Validation, CORS & Testing
-15:00 - 15:15   Break
-15:15 - 16:30   Phase 3: Frontend Build & API Integration
-16:30 - 17:30   Phase 4: Advanced Features & Polish
-17:30 - 18:00   Review & Showcase
-
-```
-
-### Compressed Day (8 hours)
-
-```text
-09:00 - 09:30   Setup & First Steps
-09:30 - 11:00   Phase 1: Full Data Science Pipeline
-11:00 - 11:15   Break
-11:15 - 12:30   Phase 2: Build the API
-12:30 - 13:30   Lunch
-13:30 - 15:00   Phase 3: Build the Frontend
-15:00 - 15:15   Break
-15:15 - 16:30   Phase 4: Polish & Advanced Features
-16:30 - 17:00   Review & Showcase
-
-```
-
-## Learning Outcomes
-
-By completing this track, you will:
-
-### Technical Skills
-
-- Perform exploratory data analysis on real-world FAA flight data
-- Train and evaluate a machine learning classification model
-- Export and serve an ML model via a REST API
-- Build a responsive frontend that consumes API endpoints
-- Handle CORS, input validation, error handling, and loading states
-- Integrate a full-stack application end-to-end
-
-### Copilot Mastery
-
-- Use Copilot effectively in Jupyter notebooks for data analysis
-- Generate API endpoint boilerplate from descriptive comments
-- Scaffold frontend components via natural language prompts
-- Leverage `/explain` to understand ML algorithms and patterns
-- Use Agent Mode for multi-file, multi-step code generation
-- Create custom agents specialized to different development phases
-- Debug cross-domain issues (CORS, serialization) with Copilot Chat
-
-## Track-Specific Tips
-
-### 1. Data Science Phase
-
-**Comment-driven analysis:**
+**Data science -- start each cell with a descriptive comment:**
 
 ```python
-
 # Load the flights dataset from data/flights.csv
-
 # Display shape, first 5 rows, and count of null values per column
-
 ```
 
-**Ask for insights:**
-
-- *"Which day of the week has the highest delay rate?"*
-- *"What are the top 10 airports with the most delays?"*
-
-### 2. API Development
-
-**Start with a blueprint:**
+**API development -- start with a blueprint:**
 
 ```python
-
 # Flask API for flight delay prediction
-
 # Endpoints:
-
 # - GET /predict?day_of_week=<int>&airport_id=<int> → returns delay probability
-
 # - GET /airports → returns list of airports sorted by name
-
 # Load model from model.pkl, airports from airports.csv
-
 ```
 
-### 3. Frontend Development
-
-**Describe your UI:**
+**Frontend -- describe your UI:**
 
 ```typescript
 // Create a form with:
@@ -407,85 +313,17 @@ By completing this track, you will:
 // - A day-of-week selector (Monday through Sunday)
 // - A submit button that calls GET /predict and displays the result
 // - A results section showing delay probability as a percentage
-
 ```
 
-### 4. Debugging with Copilot
+**Debugging across the stack:**
 
-- **CORS errors?** Ask Copilot: *"How do I enable CORS in Flask?"*
-- **Model not loading?** Use `/fix` on the error traceback.
-- **Frontend not rendering?** Ask Copilot to review your component structure.
+- CORS errors? Ask Copilot: *"How do I enable CORS in Flask?"*
+- Model not loading? Use `/fix` on the error traceback.
+- Frontend not rendering? Ask Copilot to review your component structure.
 
-## Success Metrics
-
-Track your progress:
-
-### Core (Must Complete)
-
-- [ ] Dataset loaded, cleaned, and explored with visualizations
-- [ ] ML model trained, evaluated, and exported to `model.pkl`
-- [ ] Airports extracted and saved to `airports.csv`
-- [ ] API serves predictions via `/predict` endpoint
-- [ ] API serves airport list via `/airports` endpoint
-- [ ] Frontend displays airport and day selectors
-- [ ] Frontend calls the API and shows the delay probability
-- [ ] Full application works end-to-end
-
-### Advanced (Stretch Goals)
-
-- [ ] Multiple models compared and best one selected
-- [ ] API has input validation and error handling
-- [ ] Swagger/OpenAPI documentation
-- [ ] Frontend has loading/error states and responsive design
-- [ ] Tests written for API and/or frontend
-- [ ] Application containerized with Docker
-- [ ] CI/CD pipeline created
-- [ ] Deployed to Azure
-
-## Additional Resources
-
-### Data Science
+## Resources
 
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
-- Scikit-learn documentation
-- Pandas user guide
-
-### API Development
-
-- Flask documentation
-- FastAPI documentation
-
-### Frontend
-
-- Vite documentation
-- TypeScript handbook
-
-### For Facilitators
-
-- See [Facilitator Guide](../FACILITATOR_GUIDE.md) for bonus track guidance
-- This track requires broad full-stack experience and is significantly harder than the other tracks
-- Expect participants to spend 8-12 hours; it is normal to not complete all phases
-- Phase 4 is entirely optional -- completing Phases 1-3 is a strong result
-
-## Need Help?
-
-- **Data questions?** Ask Copilot to explain patterns in the dataset
-- **Model confusion?** Use `/explain` on the model training code
-- **API issues?** Ask Copilot about CORS, serialization, or Flask/FastAPI patterns
-- **Frontend stuck?** Describe what you want in chat -- Copilot can generate components
-- **General help?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md) or ask your facilitator
-
-## Track Completion
-
-You've successfully completed the Bonus Track when you:
-
-- Built a complete ML model from real flight data
-- Created an API that serves predictions and airport data
-- Built a frontend that lets users interact with the model
-- Understood how Copilot accelerates full-stack development
-- Can explain your end-to-end architecture and design decisions
-
----
-
-Start with [Challenge 7: Flight Delay Predictor](../challenges/challenge-7-flight-delay/)
+- [Troubleshooting Guide](../TROUBLESHOOTING.md)
+- [Facilitator Guide](../FACILITATOR_GUIDE.md)

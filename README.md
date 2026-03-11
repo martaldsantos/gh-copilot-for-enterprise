@@ -2,7 +2,7 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **5 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 role-based tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
 
 ## Hackathon Overview
 
@@ -15,6 +15,7 @@ This hackathon is organized into **role-based tracks** for different team types,
 - **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
 - **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
 - **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, comprehensive testing
+- **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
 - **[Bonus: Copilot Extensions Track](./tracks/bonus-copilot-extensions-track.md)** - Build a Copilot Extension agent (advanced)
 - **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
 
@@ -153,7 +154,7 @@ All 7 challenges are available, and each track has a dedicated challenge:
 **Skills**: Express.js/FastAPI, API design, error handling, testing
 **Copilot Focus**: Inline completion, `/tests` command, workspace chat
 
-Build a fully functional REST API with authentication, CRUD operations, and comprehensive testing using Copilot to accelerate development.
+Build a task management REST API across 5 progressive stages: basic CRUD, JWT authentication with role-based access, SQLite persistence with data relationships, debugging a broken v2 API module (3 intentional bugs), and production readiness with load testing, caching, and structured logging.
 
 ---
 
@@ -163,7 +164,7 @@ Build a fully functional REST API with authentication, CRUD operations, and comp
 **Skills**: Python, pandas, scikit-learn, data visualization
 **Copilot Focus**: Jupyter notebooks integration, `/explain` for algorithms, code generation
 
-Perform exploratory data analysis and build a machine learning model with Copilot assisting in data processing, feature engineering, and model selection.
+Predict customer churn across 5 stages: discover 7+ hidden data quality issues, create visualizations with statistical hypothesis testing, train models with cost-sensitive evaluation using sklearn Pipelines, compare imbalance techniques with SHAP interpretability, and deploy a prediction API with drift detection and a model card.
 
 ---
 
@@ -173,7 +174,7 @@ Perform exploratory data analysis and build a machine learning model with Copilo
 **Skills**: Terraform, Docker, Kubernetes, CI/CD
 **Copilot Focus**: Infrastructure patterns, documentation generation, best practices
 
-Design and implement cloud infrastructure using Terraform, containerize applications, and set up deployment pipelines with Copilot's infrastructure expertise.
+Build infrastructure for a Node.js app across 5 stages: multi-stage Dockerfile with Docker Compose, Kubernetes with HPA and NetworkPolicy, Terraform for Azure (ACR, AKS) with variables and remote state, debug a broken Key Vault module and add observability, then create a CI/CD pipeline with blue/green deployment and a DR runbook.
 
 ---
 
@@ -183,18 +184,17 @@ Design and implement cloud infrastructure using Terraform, containerize applicat
 **Skills**: React, TypeScript, Component design, State management
 **Copilot Focus**: Component scaffolding, TypeScript types, CSS styling
 
-Create a modern, responsive web application with reusable components, leveraging Copilot for rapid prototyping and TypeScript type safety.
+Build a task dashboard across 5 stages: responsive layout with React Router, state management with Context/useReducer and undo support, drag-and-drop Kanban with keyboard shortcuts and themes, find and fix 5 accessibility violations in a pre-built component, then integrate with a REST API and achieve >80% test coverage.
 
 ---
 
 ### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/) ([Track](./tracks/qa-tester-track.md))
 
 **Team**: QA Engineers, SDETs, Test Automation Engineers
-**Duration**: 4-6 hours (extended challenge with real-world apps)
-**Skills**: Playwright, Jest/Pytest, Page Object Model, E2E testing
-**Copilot Focus**: Test generation with `/tests`, Playwright MCP for AI-driven testing
+**Skills**: Playwright, Page Object Model, E2E testing, CI/CD
+**Copilot Focus**: Test generation, Playwright MCP for AI-driven testing
 
-Work with real-world open-source applications to implement comprehensive test automation, including unit tests, E2E tests with Playwright, and AI-driven testing using Playwright MCP.
+Test the eShop application across 5 stages: debug 3 intentional bugs in the starter LoginPage, build Page Objects for a full shopping flow with parameterized tests, achieve cross-browser and mobile coverage with network resilience, use Playwright MCP for AI-driven test generation, then set up CI with a custom reporter, performance assertions, and flakiness analysis.
 
 ---
 
@@ -219,6 +219,16 @@ Build a fully functional Copilot Extension agent -- a Team Standup & Project Tra
 **Copilot Focus**: End-to-end development -- data science in notebooks, API scaffolding, frontend generation, cross-domain debugging
 
 Build a complete application that predicts flight delay probability. Explore a real FAA dataset, train an ML model, serve it through a REST API, and create a frontend where users select a day and airport to see their delay risk.
+
+---
+
+### [Challenge 8: Product Planning -- TaskFlow v2.0](./challenges/challenge-8-product-planning/) ([Track](./tracks/product-owner-track.md))
+
+**Team**: Product Owners, Business Analysts, Project Managers
+**Skills**: Markdown, GitHub Issues, GitHub Projects, Pull Requests
+**Copilot Focus**: Long-form writing, brainstorming, GitHub MCP server for issue/PR management
+
+Plan the next major release of a task management platform across 5 progressive stages. Start with competitive analysis and quantified personas, then write and critique user stories, build feature specs aligned to real API endpoints, resolve conflicting stakeholder requests under a fixed budget, and produce a production-grade release plan with risk matrices, rollback strategies, and monitoring specs. No application code required.
 
 ---
 
