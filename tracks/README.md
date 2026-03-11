@@ -1,6 +1,6 @@
 # Hackathon Tracks Overview
 
-Welcome! This hackathon is organized into **6 role-based tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## Choose Your Track
 
@@ -76,6 +76,34 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
 
 ---
 
+## Bonus Tracks
+
+Completed your main track? These advanced tracks go deeper.
+
+### [Bonus: Copilot Extensions Track](./bonus-copilot-extensions-track.md)
+
+**Best for:** Experienced developers who want to build custom Copilot integrations
+
+**Focus:** Building a GitHub Copilot Extension agent using the Extensions SDK
+
+**Your Challenge:** Challenge 6 - Copilot Extensions
+
+**Duration:** 8-12 hours (Advanced)
+
+---
+
+### [Bonus: Flight Delay Predictor Track](./bonus-flight-delay-track.md)
+
+**Best for:** Full-stack developers who want to combine ML, API, and UI skills
+
+**Focus:** End-to-end application -- data science, backend API, and frontend UI
+
+**Your Challenge:** Challenge 7 - Flight Delay Predictor
+
+**Duration:** 8-12 hours (Advanced)
+
+---
+
 ## Which Track Should I Choose?
 
 ### Answer These Questions
@@ -87,6 +115,7 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
    - Frontend/UI Developer → Frontend Track
    - QA/Test Engineer → QA Tester Track
    - Product Owner/BA/PM → Product Owner & BA Track
+   - Finished a core track and want more? → Bonus tracks
 
 2. **What do you want to learn?**
    - Building REST APIs → Backend Track
@@ -96,6 +125,8 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
    - Test automation → QA Tester Track
    - Product planning & documentation → Product Owner & BA Track
    - Full applications (API + UI) → Combine Backend + Frontend Tracks
+   - Building Copilot Extensions → Bonus: Copilot Extensions Track
+   - Full-stack ML apps → Bonus: Flight Delay Track
 
 3. **How much time do you have?**
    - 4 hours → Choose any track, complete core tasks
@@ -118,6 +149,8 @@ Welcome! This hackathon is organized into **6 role-based tracks** to help you ge
 | **Frontend** | Beginner-Adv | 6-8h | React, TypeScript | Challenge 4 |
 | **QA Tester** | Int-Advanced | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
 | **Product Owner & BA** | Beginner-Adv | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
+| **Bonus: Copilot Extensions** | Advanced | 8-12h | Node.js, Copilot Extensions SDK | Challenge 6 |
+| **Bonus: Flight Delay** | Advanced | 8-12h | Python, scikit-learn, React/Vite | Challenge 7 |
 
 ## What You'll Learn in Every Track
 
@@ -290,6 +323,9 @@ Track your progress across any track:
 - [DevOps & Platform Track](./devops-platform-track.md)
 - [Frontend Developer Track](./frontend-developer-track.md)
 - [QA Tester Track](./qa-tester-track.md)
+- [Product Owner & BA Track](./product-owner-track.md)
+- [Bonus: Copilot Extensions Track](./bonus-copilot-extensions-track.md)
+- [Bonus: Flight Delay Predictor Track](./bonus-flight-delay-track.md)
 
 ### General Resources
 
