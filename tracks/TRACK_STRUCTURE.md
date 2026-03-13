@@ -44,7 +44,7 @@ Sections marked **(required)** must appear in every track. Sections marked **(if
    - Brief paragraph on progression and judgment
    - Blockquote with "Short on time?" guidance
 
-7. ## Tips for Using Copilot on This Track    (if applicable)
+7. ## Tips for Using Copilot on This Track    (required)
    - Practical prompts and patterns specific to the track
 
 8. ## Resources                               (required)
