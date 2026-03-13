@@ -80,13 +80,13 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 Completed your main track? These advanced tracks go deeper.
 
-### 🧩 [Bonus: Copilot Extensions Track](./bonus-copilot-extensions-track.md)
+### 🧩 [Bonus: Copilot SDK Track](./bonus-copilot-sdk-track.md)
 
-**Best for:** Experienced developers who want to build custom Copilot integrations
+**Best for:** Experienced developers who want to embed Copilot's agent runtime in custom apps
 
-**Focus:** Building a GitHub Copilot Extension agent using the Extensions SDK
+**Focus:** Building an agentic application using the GitHub Copilot SDK
 
-**Your Challenge:** Challenge 6 - Copilot Extensions
+**Your Challenge:** Challenge 6 - Copilot SDK
 
 **Duration:** 8-12 hours (Advanced)
 
@@ -138,7 +138,7 @@ Completed your main track? These advanced tracks go deeper.
    - Test automation → QA Tester Track
    - Product planning & documentation → Product Owner & BA Track
    - Full applications (API + UI) → Combine Backend + Frontend Tracks
-   - Building Copilot Extensions → Bonus: Copilot Extensions Track
+   - Building with the Copilot SDK → Bonus: Copilot SDK Track
    - Full-stack ML apps → Bonus: Flight Delay Track
    - Full team agile sprint → Bonus: Team Sprint
 
@@ -163,7 +163,7 @@ Completed your main track? These advanced tracks go deeper.
 | 🎨 **Frontend** | ⭐ -- ⭐⭐⭐ | 6-8h | React, TypeScript | Challenge 4 |
 | 🔍 **QA Tester** | ⭐ -- ⭐⭐⭐ | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
 | 📋 **Product Owner & BA** | ⭐ -- ⭐⭐⭐ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
-| 🧩 **Bonus: Copilot Extensions** | ⭐⭐⭐ | 8-12h | Node.js, Copilot Extensions SDK | Challenge 6 |
+| 🧩 **Bonus: Copilot SDK** | ⭐⭐⭐ | 8-12h | Node.js, TypeScript, Copilot SDK | Challenge 6 |
 | ✈️ **Bonus: Flight Delay** | ⭐⭐⭐ | 8-12h | Python, scikit-learn, React/Vite | Challenge 7 |
 | 🏢 **Bonus: Team Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Challenge 9 |
 
@@ -339,7 +339,7 @@ Track your progress across any track:
 - [Frontend Developer Track](./frontend-developer-track.md)
 - [QA Tester Track](./qa-tester-track.md)
 - [Product Owner & BA Track](./product-owner-track.md)
-- [Bonus: Copilot Extensions Track](./bonus-copilot-extensions-track.md)
+- [Bonus: Copilot SDK Track](./bonus-copilot-sdk-track.md)
 - [Bonus: Flight Delay Predictor Track](./bonus-flight-delay-track.md)
 
 ### General Resources

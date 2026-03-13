@@ -16,7 +16,7 @@ This hackathon is organized into **role-based tracks** for different team types,
 - 🎨 **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
 - 🔍 **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, end-to-end testing
 - 📋 **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
-- 🧩 **[Bonus: Copilot Extensions Track](./tracks/bonus-copilot-extensions-track.md)** - Build a Copilot Extension agent (advanced)
+- 🧩 **[Bonus: Copilot SDK Track](./tracks/bonus-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced)
 - ✈️ **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
 - 🏢 **[Bonus: Cross-Functional Team Sprint](./tracks/bonus-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people)
 
@@ -205,14 +205,14 @@ Test the eShop application across 5 stages: debug 3 intentional bugs in the star
 
 ---
 
-### [Bonus Challenge 6: Copilot Extensions -- Team Standup Bot](./challenges/challenge-6-copilot-extensions/) ([Track](./tracks/bonus-copilot-extensions-track.md))
+### [Bonus Challenge 6: Copilot SDK -- Project Health Agent](./challenges/challenge-6-copilot-sdk/) ([Track](./tracks/bonus-copilot-sdk-track.md))
 
 **Team**: Experienced developers (any role) who finished a standard track
 **Duration**: 8-12 hours (Advanced)
-**Skills**: Node.js, Express, Copilot Extensions SDK, GitHub API, Server-Sent Events
-**Copilot Focus**: Building an extension *for* Copilot -- request verification, SSE responses, LLM prompting, function calling
+**Skills**: Node.js, TypeScript, Copilot SDK, GitHub API, custom tool definitions
+**Copilot Focus**: Building *with* the Copilot agent runtime -- sessions, streaming, custom tools, MCP integration
 
-Build a fully functional Copilot Extension agent -- a Team Standup & Project Tracker Bot that users invoke via `@standup-bot` in Copilot Chat. Integrates with GitHub APIs for project awareness and uses AI for blocker analysis and report generation.
+Build an agentic application powered by the GitHub Copilot SDK. Create a Project Health Agent that uses custom tools to query GitHub Issues and PRs, provides project summaries, and supports multi-turn conversations with streaming responses.
 
 > ⚠️ **Bonus challenge** -- significantly harder and longer than standard challenges.
 

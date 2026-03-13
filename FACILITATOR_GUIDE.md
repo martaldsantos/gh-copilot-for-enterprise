@@ -41,7 +41,7 @@ Review the seven tracks:
 
 **Bonus Tracks (8-12 hours, Advanced):**
 
-- [ ] [Copilot Extensions Track](./tracks/bonus-copilot-extensions-track.md)
+- [ ] [Copilot SDK Track](./tracks/bonus-copilot-sdk-track.md)
 - [ ] [Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)
 
 ### 4. **Communication**
@@ -287,13 +287,13 @@ Around lunch, gather everyone:
 - Encourage using `/tests` for generating test cases
 - Intermediate-to-advanced track
 
-### Bonus: Copilot Extensions Track
+### Bonus: Copilot SDK Track
 
 **Common challenges:**
 
-- Understanding the Copilot Extensions SDK
-- Streaming HTTP responses (SSE)
-- Signature verification for requests
+- Understanding the Copilot SDK architecture (SDK communicates with Copilot CLI via JSON-RPC)
+- Defining and handling custom tool calls
+- Managing session lifecycle and streaming events
 
 **Facilitation tips:**
 
@@ -333,7 +333,7 @@ Around lunch, gather everyone:
 
 **Advanced Bonus Tracks (8-12 hours):**
 
-- Copilot Extensions Track (requires completion of a core track)
+- Copilot SDK Track (requires completion of a core track)
 - Flight Delay Predictor Track (full-stack, multi-domain)
 
 ### By Individual Challenge
@@ -353,7 +353,7 @@ Around lunch, gather everyone:
 
 - Challenge 3: DevOps (full stack)
 - Challenge 5: QA (advanced automation patterns)
-- Challenge 6: Copilot Extensions (building extensions)
+- Challenge 6: Copilot SDK (building SDK applications)
 - Challenge 7: Flight Delay Predictor (full-stack ML app)
 
 ## Metrics to Track
