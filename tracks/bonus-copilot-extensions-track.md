@@ -11,7 +11,7 @@
 - Developers who finished a standard track and want more
 - Backend engineers interested in AI-powered tooling
 - Platform/DevEx engineers who want to build custom Copilot integrations
-- Anyone curious about the Copilot Extensions ecosystem
+- Anyone curious about building Copilot Extensions
 
 ## Prerequisites
 

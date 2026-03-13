@@ -2,7 +2,7 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 core tracks** and **2 bonus tracks** with hands-on challenges designed to help teams across your organization master GitHub Copilot's powerful features.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 core tracks** and **2 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
 
 ## Hackathon Overview
 
@@ -14,7 +14,7 @@ This hackathon is organized into **role-based tracks** for different team types,
 - **[Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
 - **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
 - **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
-- **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, comprehensive testing
+- **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, end-to-end testing
 - **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
 - **[Bonus: Copilot Extensions Track](./tracks/bonus-copilot-extensions-track.md)** - Build a Copilot Extension agent (advanced)
 - **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
@@ -250,12 +250,12 @@ Plan the next major release of a task management platform across 5 progressive s
 
 ### Quick Tips
 
-**Maximize Your Copilot Experience:**
+**Getting the Most from Copilot:**
 
 1. **Be Specific**: Detailed prompts yield better results
 2. **Provide Context**: Reference existing code and patterns
 3. **Iterate**: Refine suggestions through conversation
-4. **Use Chat Commands**: Leverage `/explain`, `/fix`, `/tests`, and natural language for documentation
+4. **Use Chat Commands**: Use `/explain`, `/fix`, `/tests`, and natural language for documentation
 5. **Review Suggestions**: Always understand generated code
 6. **Keyboard Shortcuts**:
  - `Tab` - Accept suggestion

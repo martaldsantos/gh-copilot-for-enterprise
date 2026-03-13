@@ -221,7 +221,7 @@ Mix and match challenges across tracks based on your interests!
 
 - Start with your primary track
 - Complete at least the required challenge
-- This ensures focused learning
+- This keeps things focused
 
 ### 2. Branch Out Later
 

@@ -191,13 +191,13 @@ Copilot generates code-splitting boilerplate and axe-core setup. But identifying
 
 **Difficulty:** Advanced | **Time:** 60-90 min
 
-Connect the frontend to a real (or mocked) backend and write comprehensive tests.
+Connect the frontend to a real (or mocked) backend and write thorough tests.
 
 #### Tasks
 
 1. Connect the frontend to the Challenge 1 REST API, or set up MSW (Mock Service Worker) using the skeleton in `src/mocks/handlers.ts` to mock all API calls.
 2. Offline support: implement a service worker that caches the app shell. When offline, show cached data and queue mutations for sync when connectivity returns.
-3. Comprehensive testing with at least 80% code coverage:
+3. Testing with at least 80% code coverage:
    - Unit tests for reducer functions and utility code
    - Integration tests for user flows (create task, edit task, delete with undo) using React Testing Library
    - Visual regression tests using Playwright screenshots for key pages

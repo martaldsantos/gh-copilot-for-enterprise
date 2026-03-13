@@ -2,7 +2,7 @@
 
 **Duration:** 6-8 hours
 **Difficulty:** Beginner to Advanced (progressive stages)
-**Focus:** Building robust APIs and backend services with GitHub Copilot
+**Focus:** Building APIs and backend services with GitHub Copilot
 
 ## Who Is This For
 
@@ -53,7 +53,7 @@ Create specialized agents for different tasks. **Your goal is to create agents t
 **Agents to consider creating:**
 
 - **API Developer Agent** -- Expert in REST API design, authentication patterns, and error handling
-- **Test Writer Agent** -- Specialized in generating comprehensive tests with high coverage
+- **Test Writer Agent** -- Specialized in generating tests with high coverage
 - **Code Reviewer Agent** -- Focused on code quality, security, and best practices
 
 **What to include in each agent:**
@@ -196,7 +196,7 @@ Prepare the API for production deployment.
 3. Graceful shutdown: when the server receives SIGTERM, stop accepting new connections, finish in-flight requests, close database connections, then exit.
 4. Structured logging: all log output in JSON format with `timestamp`, `level`, `message`, `requestId` (correlation ID carried through the request lifecycle).
 5. Load testing: use the skeleton in `load-test/benchmark.js` (or `benchmark.py`) to write a load test. The API must handle 500 concurrent connections with p95 latency under 200ms on the task listing endpoint.
-6. Comprehensive test suite achieving >80% code coverage, including edge cases for pagination boundaries, concurrent modifications, and auth token expiration.
+6. Test suite achieving >80% code coverage, including edge cases for pagination boundaries, concurrent modifications, and auth token expiration.
 
 #### Verification
 

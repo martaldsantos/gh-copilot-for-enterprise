@@ -6,7 +6,7 @@
 
 ## Who Is This For
 
-- Full-stack developers looking for a comprehensive challenge
+- Full-stack developers looking for a deep, cross-domain challenge
 - Teams that finished their primary track early
 - Experienced engineers who want to push Copilot's capabilities across multiple domains
 - Anyone who wants to combine ML, API, and UI skills in a single project
@@ -267,7 +267,7 @@ Create a user-facing web application that allows someone to select a day of the 
 
 #### Objective
 
-Elevate the application beyond the basics. These are optional challenges for teams who finish early or want to push further.
+Go beyond the basics. These are optional challenges for teams who finish early or want to push further.
 
 #### Advanced Challenges
 

@@ -27,7 +27,7 @@ Switch agents by clicking the agent picker dropdown in the Chat view.
 
 ### Agent Mode
 
-Agent mode is the most powerful way to use Copilot. It can:
+Agent mode is Copilot's most capable mode. It can:
 
 - Create and modify multiple files
 - Run terminal commands automatically
