@@ -7,75 +7,18 @@
 
 The final stretch. The team polishes the application, runs final tests on the production environment, and delivers a demo. The PO leads the demo and the team runs a brief retrospective afterward.
 
-## Parallel Tasks by Role
+## Jump to Your Role
 
-### Product Owner
+Find your role and follow the link for your detailed task list:
 
-1. **Final acceptance** -- Walk through the deployed application. Verify each story against its acceptance criteria. Mark completed Issues as "Done" on the project board.
-
-2. **Finalize release notes** -- Update `docs/release-notes.md` with the final feature list, known issues, and any scope changes from the original plan.
-
-3. **Prepare and rehearse the demo** -- Practice the demo flow once before presenting:
-   - Submit a new issue report
-   - View it in the reports list
-   - Browse community events
-   - Show the dashboard (if built)
-   - Show the deployed URL
-
-4. **Lead the demo** (last 20-30 minutes) -- Walk through the application live. Each team member can present their specific contribution.
-
-5. **Run the retrospective** (last 10 minutes) -- Three questions for the team:
-   - What went well?
-   - What would we change next time?
-   - Where did GitHub Copilot help most, and where did it fall short?
-
-### Backend Developer
-
-1. **Fix critical bugs** -- If QA found any showstoppers during final testing, fix them now. Non-critical bugs go to the known issues list.
-
-2. **Performance check** -- Run a quick manual test or review response times for the main endpoints. Optimize anything noticeably slow.
-
-3. **Help with deployment** -- If the DevOps engineer hit any deployment issues, pair on resolving them.
-
-4. **Demo contribution** -- Be ready to show the API layer: endpoint design, test results, specific Copilot prompts that worked well.
-
-### Frontend Developer
-
-1. **Fix critical UI bugs** -- Address any issues from QA's final pass.
-
-2. **Visual polish** -- Spacing, color consistency, loading states, empty states. Small details that make the demo look professional.
-
-3. **Demo contribution** -- Walk through the UI: component structure, responsive behavior, how Copilot helped with component generation and styling.
-
-### QA Engineer
-
-1. **Final regression run** -- Run the full E2E test suite against the production deployment.
-
-2. **Smoke test on production** -- Manually verify the critical path: submit a report, view the reports list, browse events. Confirm the deployed version works like local.
-
-3. **Generate the final test report** -- Total tests, pass rate, and a coverage summary. Have this ready for the demo.
-
-4. **Demo contribution** -- Show the test suite, test results, and any interesting bugs you caught during the day.
-
-### DevOps Engineer
-
-1. **Verify the production deployment** -- Confirm the live URL is working, HTTPS is active, and APIs respond correctly.
-
-2. **Document the deployment** -- Write `docs/deployment.md`: how to deploy, required environment variables, how to rollback if something breaks.
-
-3. **Verify monitoring** -- Confirm health checks are green. Show that you can access container logs.
-
-4. **Demo contribution** -- Show the infrastructure: CI/CD pipeline, Azure resources, the deployment process, a green build in GitHub Actions.
-
-### Business Analyst
-
-1. **Final feature walkthrough** -- Go through the deployed app one more time. Note anything that deviates from the original acceptance criteria.
-
-2. **Finalize known issues** -- Update `docs/known-issues.md` with any remaining bugs or gaps.
-
-3. **Retrospective notes** -- Help the PO capture feedback. Create `docs/retrospective.md` if the team wants a written record.
-
-4. **Demo contribution** -- Present the acceptance testing results and how the delivered product compares to the original stakeholder brief.
+| Role | Focus This Phase | Key Deliverable |
+|------|-----------------|-----------------|
+| [Product Owner](phase-4-deploy-demo/product-owner.md) | Final acceptance, release notes, lead demo, run retro | Demo delivered, retrospective completed |
+| [Backend Developer](phase-4-deploy-demo/backend-developer.md) | Critical bug fixes, performance check, deployment help | API stable and ready for demo |
+| [Frontend Developer](phase-4-deploy-demo/frontend-developer.md) | Critical UI fixes, visual polish | UI polished for demo |
+| [QA Engineer](phase-4-deploy-demo/qa-engineer.md) | Final regression, production smoke test, test report | Test results ready for demo |
+| [DevOps Engineer](phase-4-deploy-demo/devops-engineer.md) | Verify deployment, write docs, confirm monitoring | Production URL live, deployment documented |
+| [Business Analyst](phase-4-deploy-demo/business-analyst.md) | Final walkthrough, known issues, retro notes *(optional role)* | Known issues finalized |
 
 ## Demo Format (last 20-30 minutes)
 
@@ -101,9 +44,9 @@ After the demo, the team discusses:
 
 Capture notes in `docs/retrospective.md` or as a GitHub Issue labeled `retrospective`.
 
-## Verification
+## Final Checklist
 
-This is the final phase. The team is done when:
+The team is done when:
 
 - [ ] Application is deployed and accessible via a public URL (or localhost if Azure deployment was cut for time)
 - [ ] At least the core flow works end-to-end: submit a report, view reports, browse events
