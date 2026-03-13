@@ -1,7 +1,9 @@
 # DevOps & Platform Engineering Track
 
 **Duration:** 6-8 hours
+
 **Difficulty:** ★★☆ to ★★★
+
 **Focus:** Infrastructure as Code, containerization, and deployment automation with GitHub Copilot
 
 ## Who Is This For

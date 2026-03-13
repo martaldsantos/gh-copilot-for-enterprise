@@ -1,7 +1,9 @@
 # Bonus Track: Copilot Extensions Developer
 
 **Duration:** 8-12 hours (Advanced)
+
 **Difficulty:** ★★★
+
 **Focus:** Building a GitHub Copilot Extension from scratch using the Copilot Extensions SDK
 
 > ⚠️ **This is a bonus track.** It is significantly harder and longer than the standard 4-6 hour tracks. It is designed for experienced developers who have completed a standard track (or equivalent) and want a deeper challenge that goes beyond using Copilot -- to **extending** it.

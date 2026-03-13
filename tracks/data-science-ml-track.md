@@ -1,7 +1,9 @@
 # Data Science & ML Track
 
 **Duration:** 6-8 hours
+
 **Difficulty:** ★★☆ to ★★★ (progressive stages)
+
 **Focus:** Data analysis, machine learning, and AI development with GitHub Copilot
 
 ## Who Is This For

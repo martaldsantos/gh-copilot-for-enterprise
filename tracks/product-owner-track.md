@@ -1,7 +1,9 @@
 # Product Owner & Business Analyst Track
 
 **Duration:** 6-8 hours
+
 **Difficulty:** ★☆☆ to ★★★ (progressive stages)
+
 **Focus:** Product planning, backlog management, and documentation using GitHub Copilot and GitHub's collaboration features
 
 ## Who Is This For

@@ -1,7 +1,9 @@
 # Backend Developer Track
 
 **Duration:** 6-8 hours
+
 **Difficulty:** ★☆☆ to ★★★ (progressive stages)
+
 **Focus:** Building APIs and backend services with GitHub Copilot
 
 ## Who Is This For

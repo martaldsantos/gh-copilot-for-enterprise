@@ -1,7 +1,9 @@
 # QA Tester Track
 
 **Duration:** 6-8 hours
+
 **Difficulty:** ★★☆ to ★★★ (progressive stages)
+
 **Focus:** Test automation, quality assurance, and testing best practices with GitHub Copilot
 
 ## Who Is This For

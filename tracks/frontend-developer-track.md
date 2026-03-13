@@ -1,7 +1,9 @@
 # Frontend Developer Track
 
 **Duration:** 6-8 hours
+
 **Difficulty:** ★☆☆ to ★★☆
+
 **Focus:** Building modern, interactive user interfaces with GitHub Copilot
 
 ## Who Is This For

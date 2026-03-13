@@ -1,7 +1,9 @@
 # Bonus Track: Full-Stack Flight Delay Predictor
 
 **Duration:** 8-12 hours
+
 **Difficulty:** ★★★
+
 **Focus:** Full-stack application development -- data science, API engineering, and frontend -- with GitHub Copilot
 
 ## Who Is This For
