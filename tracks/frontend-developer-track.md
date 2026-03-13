@@ -2,7 +2,7 @@
 
 **Duration:** 6-8 hours
 
-**Difficulty:** ⭐ to ⭐⭐
+**Difficulty:** ⭐ to ⭐⭐⭐ (progressive stages)
 
 **Focus:** Building modern, interactive user interfaces with GitHub Copilot
 
