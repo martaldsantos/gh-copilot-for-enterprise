@@ -1,15 +1,17 @@
 # Contributing to GitHub Copilot Hackathon
 
-Thank you for your interest in improving this hackathon content! 🎉
+Thank you for your interest in improving this hackathon content!
 
 ## How to Contribute
 
 ### Reporting Issues
+
 - Found a bug in the challenges? Open an issue!
 - Have a suggestion for improvement? We'd love to hear it!
 - Unclear instructions? Let us know!
 
 ### Submitting Changes
+
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/awesome-improvement`)
 3. Make your changes
@@ -21,6 +23,7 @@ Thank you for your interest in improving this hackathon content! 🎉
 ## Adding New Challenges
 
 New challenge submissions should include:
+
 - Clear README with objectives and steps
 - Starter code/templates
 - Solution examples (in a separate branch)
@@ -30,6 +33,7 @@ New challenge submissions should include:
 ## Improving Documentation
 
 We welcome improvements to:
+
 - Challenge instructions
 - Copilot usage tips
 - Code examples
@@ -45,7 +49,3 @@ We welcome improvements to:
 ## Questions?
 
 Open an issue or discussion - we're here to help!
-
----
-
-**Happy Contributing! 🚀**

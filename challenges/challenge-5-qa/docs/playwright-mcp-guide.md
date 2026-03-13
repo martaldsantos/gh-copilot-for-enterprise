@@ -68,7 +68,7 @@ Example config file:
 ### Available Capabilities
 
 - `tabs` - Tab management
-- `install` - Browser installation  
+- `install` - Browser installation
 - `pdf` - PDF generation
 - `vision` - Coordinate-based interactions
 
@@ -78,15 +78,15 @@ Example config file:
 
 Ask Copilot to explore your application:
 
-```
+```text
 Navigate to http://localhost:3000 and describe the main navigation elements.
 ```
 
-```
+```text
 Go to the login page and list all form fields and buttons you find.
 ```
 
-```
+```text
 Navigate through the main user flows and identify potential test scenarios.
 ```
 
@@ -94,11 +94,11 @@ Navigate through the main user flows and identify potential test scenarios.
 
 Ask Copilot to generate tests based on what it observes:
 
-```
+```text
 Navigate to the dashboard and generate Playwright tests for the widgets you see.
 ```
 
-```
+```text
 Explore the settings page and create tests for form validation.
 ```
 
@@ -106,11 +106,11 @@ Explore the settings page and create tests for form validation.
 
 Use AI to find potential issues:
 
-```
+```text
 Navigate through the checkout flow and report any usability issues.
 ```
 
-```
+```text
 Test the form validation by entering invalid data and report the behavior.
 ```
 

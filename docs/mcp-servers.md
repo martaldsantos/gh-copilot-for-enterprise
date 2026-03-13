@@ -1,4 +1,4 @@
-# Model Context Protocol (MCP) Servers 🔌
+# Model Context Protocol (MCP) Servers
 
 Extend GitHub Copilot's capabilities by connecting it to external tools, data sources, and services through MCP servers.
 
@@ -22,7 +22,7 @@ MCP support is **generally available** in VS Code 1.102+. VS Code provides multi
 
 ### How MCP Works with Copilot
 
-```
+```text
 ┌──────────────────┐
 │ Copilot Agent    │
 │ (in VS Code)     │
@@ -50,6 +50,7 @@ MCP support is **generally available** in VS Code 1.102+. VS Code provides multi
 VS Code integrates with the GitHub MCP server registry for easy discovery:
 
 1. Enable the gallery in settings:
+
    ```json
    {
      "chat.mcp.gallery.enabled": true
@@ -137,7 +138,7 @@ For more information and how to run it, please refer to [this document](https://
 
 ### Example Workflows
 
-```
+```text
 "Find all open bugs in Project Alpha"
 "Create a story titled 'Redesign onboarding' in Jira"
 "Summarize the Q2 planning page in Confluence"
@@ -150,6 +151,7 @@ For more information and how to run it, please refer to [this document](https://
 The Atlassian Rovo MCP Server is a **remote server** that requires the `mcp-remote` proxy:
 
 **Prerequisites**:
+
 - Atlassian Cloud site with Jira and/or Confluence
 - Node.js v18+ installed
 - Modern browser for OAuth authentication
@@ -193,18 +195,9 @@ For full documentation: [Atlassian Rovo MCP Server Guide](https://support.atlass
 
 ## Using MCP Tools in Chat
 
-### Enabling Tools
+Once configured, enable MCP tools via **Configure Tools** in Agent mode. Copilot automatically selects relevant tools based on your prompt:
 
-1. Open Chat View (`Ctrl+Alt+I`)
-2. Select **Agent** from the agent picker
-3. Click **Configure Tools** button
-4. Enable/disable specific tools or entire servers
-
-### Automatic Tool Invocation
-
-In Agent mode, Copilot automatically selects and invokes relevant tools:
-
-```
+```text
 "List my open GitHub issues and create a summary"
 → Copilot uses GitHub MCP to fetch issues
 
@@ -215,52 +208,13 @@ In Agent mode, Copilot automatically selects and invokes relevant tools:
 → Copilot uses PostgreSQL MCP
 ```
 
-### Explicit Tool References
+You can also reference tools explicitly with `#`:
 
-Use `#` to explicitly reference tools:
-
-```
+```text
 Using #fetch, summarize the content from https://example.com/docs
-
-#githubRepo vercel/next.js - how does routing work?
 ```
 
----
-
-## Tool Approval & Security
-
-MCP servers can run code on your machine. VS Code implements several safety measures:
-
-### Trust Prompts
-
-When starting an MCP server for the first time, VS Code asks you to confirm trust.
-
-### Tool Approvals
-
-Before running certain tools, Copilot asks for confirmation:
-
-- **Allow** - Run once
-- **Allow for Session** - Run during this session
-- **Allow for Workspace** - Always allow in this workspace
-- **Skip** - Don't run this tool
-
-### Reviewing Tool Parameters
-
-Expand tool invocations to review and edit parameters before approval.
-
-### Terminal Command Approvals
-
-Configure auto-approval for safe commands in settings:
-
-```json
-{
-  "chat.tools.terminal.autoApprove": {
-    "mkdir": true,
-    "/^git (status|show\\b.*)$/": true,
-    "del": false
-  }
-}
-```
+For details on tool approvals and security, see the [Copilot Guide](./copilot-guide.md).
 
 ---
 
@@ -358,10 +312,15 @@ Add to `.vscode/mcp.json`:
 ### Debugging
 
 Enable development mode for:
+
 - **watch**: Auto-restart on file changes
 - **debug**: Enable VS Code debugger attachment
 
 ---
+
+### Complete Server Example
+
+```javascript
 server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
     tools: [
@@ -669,7 +628,7 @@ Once your MCP server is configured, you can ask Copilot questions that require e
 
 ### Example Queries
 
-```
+```text
 "What are the open pull requests in this repository?"
 → Copilot uses GitHub MCP server
 
@@ -689,6 +648,7 @@ Once your MCP server is configured, you can ask Copilot questions that require e
 ## Best Practices
 
 ### 1. **Security**
+
 - Never expose sensitive operations
 - Validate all inputs
 - Use authentication tokens
@@ -709,6 +669,7 @@ const result = await pool.query(
 ```
 
 ### 2. **Error Handling**
+
 ```typescript
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
@@ -726,6 +687,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 ```
 
 ### 3. **Performance**
+
 - Implement caching
 - Limit result sizes
 - Use pagination
@@ -746,6 +708,7 @@ async function getCachedData(key: string, fetcher: () => Promise<any>) {
 ```
 
 ### 4. **Documentation**
+
 Provide clear tool descriptions:
 
 ```typescript
@@ -772,6 +735,7 @@ Provide clear tool descriptions:
 ## Testing MCP Servers
 
 ### 1. **MCP Inspector**
+
 ```bash
 npx @modelcontextprotocol/inspector node your-mcp-server.js
 ```
@@ -779,6 +743,7 @@ npx @modelcontextprotocol/inspector node your-mcp-server.js
 Opens a UI to test your MCP server interactively.
 
 ### 2. **Unit Tests**
+
 ```typescript
 import { describe, it, expect } from 'vitest';
 
@@ -834,17 +799,20 @@ describe('MCP Server', () => {
 ## Troubleshooting
 
 ### MCP Server Not Connecting?
+
 1. Check server is running: `node your-server.js`
 2. Verify VS Code settings path
 3. Check server logs
 4. Restart VS Code
 
 ### Tools Not Appearing?
+
 1. Verify `ListToolsRequestSchema` handler
 2. Check tool schema format
 3. Review MCP server logs
 
 ### Poor Responses?
+
 1. Improve tool descriptions
 2. Add more context in responses
 3. Format data clearly
@@ -860,6 +828,4 @@ describe('MCP Server', () => {
 
 ---
 
-**MCP unlocks Copilot's true potential! 🔌**
-
-[← Prompt Engineering](./prompt-engineering.md) | [Best Practices →](./best-practices.md)
+[Back to Main README](../README.md) | [Prompt Engineering](./prompt-engineering.md)

@@ -4,6 +4,9 @@ import { BasePage } from './BasePage';
 /**
  * Login Page Object
  * Handles all interactions with the login page
+ *
+ * NOTE: This page object contains 3 intentional bugs.
+ * Debug and fix them to get the tests passing consistently.
  */
 export class LoginPage extends BasePage {
   // Locators - update these selectors for your target application
@@ -17,8 +20,8 @@ export class LoginPage extends BasePage {
   constructor(page: Page) {
     super(page);
     
-    // Update these selectors to match your application
-    this.usernameInput = page.locator('[data-testid="username"], #username, input[name="username"], input[type="email"]').first();
+    // Bug 1: This selector targets an element that doesn't exist, causing timeouts
+    this.usernameInput = page.locator('[data-testid="user-name-field"]').first();
     this.passwordInput = page.locator('[data-testid="password"], #password, input[name="password"], input[type="password"]').first();
     this.submitButton = page.locator('[data-testid="login-submit"], button[type="submit"], input[type="submit"]').first();
     this.errorMessage = page.locator('.error-message, .alert-danger, [role="alert"]').first();
@@ -40,17 +43,18 @@ export class LoginPage extends BasePage {
   async login(username: string, password: string): Promise<void> {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
-    await this.submitButton.click();
+    // Bug 2: Missing await causes race condition -- click fires but test
+    // continues before navigation completes, causing flaky failures
+    this.submitButton.click();
   }
   
   /**
    * Get the error message text if visible
    */
   async getErrorMessage(): Promise<string | null> {
-    if (await this.errorMessage.isVisible()) {
-      return await this.errorMessage.textContent();
-    }
-    return null;
+    // Bug 3: innerText() behaves differently than textContent() across browsers
+    // and throws if element is not visible instead of returning null
+    return await this.errorMessage.innerText();
   }
   
   /**

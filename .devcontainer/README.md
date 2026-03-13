@@ -1,8 +1,8 @@
-# DevContainer Configurations 🐳
+# DevContainer Configurations
 
 This folder contains dedicated DevContainer configurations for each challenge in the GitHub Copilot Hackathon.
 
-## 📦 Available Configurations
+## Available Configurations
 
 Select the configuration that matches the challenge you are working on.
 
@@ -41,7 +41,7 @@ Select the configuration that matches the challenge you are working on.
 - **Tools:** .NET 8.0 SDK, Playwright
 - **Extensions:** C# Dev Kit, Playwright Test
 
-## 🚀 How to Use
+## How to Use
 
 1. **Copy the Folder**: Copy the contents of the specific challenge folder (e.g., `.devcontainer/challenge-1-backend/`) into the `.devcontainer/` folder of your own repository.
    - *Example*: `cp -r .devcontainer/challenge-1-backend/* .devcontainer/`

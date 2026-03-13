@@ -1,5 +1,4 @@
 // Task Manager API - Starter Code
-// GitHub Copilot Hackathon - Challenge 1
 
 const express = require('express');
 const cors = require('cors');
@@ -17,12 +16,9 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', message: 'Task Manager API is running' });
 });
 
-// TODO: Add authentication routes
-// Hint: Use Copilot to generate auth routes
-// Example prompt: "Create authentication routes for register and login"
+// Authentication routes
 
-// TODO: Add task routes
-// Hint: Ask Copilot to create CRUD routes for tasks
+// Task routes
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -36,8 +32,7 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📝 Ready to build your Task Manager API with GitHub Copilot!`);
+  console.log(`Server running on port ${PORT}`);
 });
 
 module.exports = app;
