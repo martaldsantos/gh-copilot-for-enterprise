@@ -143,14 +143,14 @@ Completed your main track? These advanced tracks go deeper.
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
-| **Backend** | Beginner-Adv | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
-| **Data Science** | Int-Advanced | 6-8h | Python, pandas, ML | Challenge 2 |
-| **DevOps** | Int-Advanced | 6-8h | Terraform, Docker, K8s | Challenge 3 |
-| **Frontend** | Beginner-Adv | 6-8h | React, TypeScript | Challenge 4 |
-| **QA Tester** | Int-Advanced | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
-| **Product Owner & BA** | Beginner-Adv | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
-| **Bonus: Copilot Extensions** | Advanced | 8-12h | Node.js, Copilot Extensions SDK | Challenge 6 |
-| **Bonus: Flight Delay** | Advanced | 8-12h | Python, scikit-learn, React/Vite | Challenge 7 |
+| **Backend** | ★☆☆ -- ★★★ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
+| **Data Science** | ★☆☆ -- ★★★ | 6-8h | Python, pandas, ML | Challenge 2 |
+| **DevOps** | ★☆☆ -- ★★★ | 6-8h | Terraform, Docker, K8s | Challenge 3 |
+| **Frontend** | ★☆☆ -- ★★★ | 6-8h | React, TypeScript | Challenge 4 |
+| **QA Tester** | ★☆☆ -- ★★★ | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
+| **Product Owner & BA** | ★☆☆ -- ★★★ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
+| **Bonus: Copilot Extensions** | ★★★ | 8-12h | Node.js, Copilot Extensions SDK | Challenge 6 |
+| **Bonus: Flight Delay** | ★★★ | 8-12h | Python, scikit-learn, React/Vite | Challenge 7 |
 
 ## What You'll Learn in Every Track
 

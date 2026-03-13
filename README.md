@@ -57,7 +57,6 @@ Each track provides a curated path through the challenges based on your role, wi
    ```bash
    git clone https://github.com/martaldsantos/gh-copilot-for-enterprise.git
    cd gh-copilot-for-enterprise
-
    ```
 
 2. Open the folder in VS Code.
@@ -72,16 +71,23 @@ The environment is pre-configured with:
 - kubectl
 - All necessary VS Code extensions
 
-### Step 3: Configure Copilot Context (CRITICAL)
+### Step 3: Clean Start (CRITICAL)
 
-The file `.github/copilot-instructions.md` currently contains instructions for the hackathon organizers. **You must overwrite this file** with instructions relevant to your specific project.
+The `.github/` directory contains instructions, agents, and skills used by the hackathon organizers. Run the cleanup script to reset it before you begin.
 
-1. Open `.github/copilot-instructions.md`.
-2. **Delete its entire contents.**
-3. Add instructions specific to your challenge (see your Track guide for examples).
-4. Save the file.
+**Linux / macOS / Codespaces:**
 
-> **Why?** If you don't do this, Copilot will think it's helping organize a hackathon instead of helping you write code!
+```bash
+./scripts/clean-start.sh
+```
+
+**Windows (PowerShell):**
+
+```powershell
+.\scripts\clean-start.ps1
+```
+
+This empties `.github/copilot-instructions.md`, removes existing agents and skills, and detaches the git remote so you don't accidentally push to the template repo. After running the script, add your own project-specific instructions (see your Track guide for examples).
 
 ### Step 4: Verify Your Setup
 

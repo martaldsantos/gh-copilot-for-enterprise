@@ -1,7 +1,7 @@
 # Bonus Track: Copilot Extensions Developer
 
 **Duration:** 8-12 hours (Advanced)
-**Difficulty:** Advanced
+**Difficulty:** ★★★
 **Focus:** Building a GitHub Copilot Extension from scratch using the Copilot Extensions SDK
 
 > ⚠️ **This is a bonus track.** It is significantly harder and longer than the standard 4-6 hour tracks. It is designed for experienced developers who have completed a standard track (or equivalent) and want a deeper challenge that goes beyond using Copilot -- to **extending** it.
@@ -55,102 +55,20 @@ npx @copilot-extensions/gh-debug-cli@latest http://localhost:3000
 
 This starts an interactive chat session that simulates the Copilot platform sending requests to your extension.
 
-### 4. Configure Copilot Context
+### 4. Clean Start and Custom Instructions
 
-Overwrite `.github/copilot-instructions.md` with instructions relevant to building Copilot Extensions. Include context about the `@copilot-extensions/preview-sdk` API, Server-Sent Events response format, and the project's intent-based routing pattern.
+Follow the [common setup steps](getting-started.md) for the clean start. Then write new instructions relevant to building Copilot Extensions -- include context about the `@copilot-extensions/preview-sdk` API, Server-Sent Events response format, and the project's intent-based routing pattern.
 
 ---
 
 ## Stages
 
----
-
-**Phase 1: Foundation (Estimated: 2-3 hours)**
-
-1. **Request Verification & Parsing**
- - Use `verifyAndParseRequest()` to validate that incoming requests genuinely come from GitHub
- - Extract the user's message with `getUserMessage()`
- - Extract the user's GitHub identity from the token using the Octokit client
-
-2. **Intent-Based Routing**
- - Parse the user's message to determine what they want to do
- - Implement a command router that dispatches to handler functions based on intent:
- - `help` -- show available commands
- - `log standup` -- record a standup update
- - `show status` -- query GitHub for project status
- - `generate report` -- create a team summary
- - Handle unrecognized commands gracefully with helpful suggestions
-
-3. **Help Command**
- - Return a well-formatted markdown response listing all commands
- - Include usage examples for each command
- - Use `createAckEvent()`, `createTextEvent()`, and `createDoneEvent()`
-
----
-
-**Phase 2: Core Features (Estimated: 3-4 hours)**
-
-4. **Standup Logging with Confirmations**
- - Parse natural language standup updates (e.g., "Yesterday I fixed the auth bug, today I'm working on the dashboard, blocked by the API rate limit issue")
- - Use the `prompt()` function from the SDK to send the raw message to the LLM and have it extract structured fields: `yesterday`, `today`, `blockers`
- - Before saving, use `createConfirmationEvent()` to ask the user to confirm the parsed standup
- - Handle the confirmation response via `getUserConfirmation()`
- - Store confirmed entries in the `StandupStore`
-
-5. **Project Status from GitHub**
- - Use the user's token (`x-github-token` header) to authenticate Octokit
- - Fetch open issues assigned to the user
- - Fetch open pull requests authored by the user
- - Fetch recent activity (commits, reviews)
- - Format into a clear markdown summary
- - Include GitHub references using `createReferencesEvent()` so issues/PRs become clickable links in the chat
-
-6. **Report Generation**
- - Compile all standup entries from today into a team summary
- - Use the `prompt()` function to ask the LLM to generate a human-readable narrative from the raw entries
- - Include metrics: who submitted, who hasn't, common blockers
- - Format as a professional standup report in markdown
-
----
-
-**Phase 3: Advanced Features (Estimated: 2-3 hours)**
-
-7. **AI-Powered Blocker Recommendations**
- - When a user reports blockers, use `prompt()` to analyze them
- - Cross-reference with the user's open issues and PRs from GitHub
- - Generate actionable suggestions (e.g., "Issue #42 might be related -- consider commenting there")
- - Include issue references using `createReferencesEvent()`
-
-8. **Function Calling**
- - Define tool functions (e.g., `get_open_issues`, `search_issues`, `get_pr_status`) using the `tools` parameter in `prompt()`
- - Handle function call responses using `getFunctionCalls()`
- - Execute the requested function and feed results back to the LLM for a final answer
- - This enables the LLM to decide *when* to query GitHub rather than always doing it
-
-9. **Error Handling & Edge Cases**
- - Use `createErrorsEvent()` for structured error reporting
- - Handle rate limiting, authentication failures, missing repos gracefully
- - Add request timeout handling
- - Implement logging for debugging
-
----
-
-**Phase 4: Production-Ready (Estimated: 1-2 hours)**
-
-10. **Testing**
- - Unit tests for intent parsing and the standup store
- - Integration tests using supertest for the HTTP endpoint
- - Mock the SDK verification for testing (skip signature verification in test mode)
- - Aim for >70% coverage
-
-11. **Deployment to Azure**
- - Containerize the extension with a Dockerfile
- - Deploy to Azure App Service or Azure Container Apps
- - Register as a GitHub App with the Copilot Extension type
- - Configure the webhook URL to point to your deployed service
- - Test end-to-end via `@your-extension` in a real Copilot Chat session
-
----
+| Phase | Name | Est. Time | What You Build |
+|-------|------|-----------|----------------|
+| 1 | [Foundation](bonus-copilot-extensions-track/phase-1-foundation.md) | 2-3 hours | Request verification, intent routing, help command |
+| 2 | [Core Features](bonus-copilot-extensions-track/phase-2-core-features.md) | 3-4 hours | Standup logging, GitHub status, report generation |
+| 3 | [Advanced Features](bonus-copilot-extensions-track/phase-3-advanced-features.md) | 2-3 hours | Blocker recommendations, function calling, error handling |
+| 4 | [Production-Ready](bonus-copilot-extensions-track/phase-4-production.md) | 1-2 hours | Testing, Azure deployment, GitHub App registration |
 
 ## Tips for Using Copilot on This Track
 
