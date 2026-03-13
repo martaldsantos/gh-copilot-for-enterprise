@@ -1,14 +1,20 @@
-// Project Health Agent - Copilot SDK Application
+// ship-it: Release Notes Agent - Copilot SDK Application
 // GitHub Copilot Hackathon - Bonus Challenge 6
 //
 // This application uses the GitHub Copilot SDK to build an interactive agent that:
-// - Answers questions about a project's GitHub Issues and PRs
-// - Provides project health summaries
-// - Suggests actions based on repository state
-// - Uses custom tools to fetch live data from GitHub
+// - Fetches merged PRs between two git refs (tag, date, or commit SHA)
+// - Categorizes changes into features, fixes, breaking changes, etc.
+// - Generates a structured changelog through conversation
+// - Publishes a draft GitHub Release when the user is satisfied
 
 import { CopilotClient } from "@github/copilot-sdk";
 import * as readline from "readline";
+
+// TODO: Parse CLI arguments for --repo and --since
+// Example: npx tsx index.ts --repo contoso/backend-api --since v2.3.0
+const args = process.argv.slice(2);
+const repoArg = args.find((_, i) => args[i - 1] === "--repo") || "";
+const sinceArg = args.find((_, i) => args[i - 1] === "--since") || "";
 
 const client = new CopilotClient();
 
@@ -19,19 +25,20 @@ const session = await client.createSession({
 
 // TODO: Define custom tools for the session
 // The SDK lets you register tools that the model can call.
-// Start with a simple tool, then add GitHub integration tools.
+// Start with a PR-fetching tool, then add categorization and publishing tools.
 //
 // Example tool definition:
 // {
-//   name: "get_open_issues",
-//   description: "Fetch open issues for a GitHub repository",
+//   name: "get_merged_prs",
+//   description: "Fetch pull requests merged since a given tag, date, or commit SHA",
 //   parameters: {
 //     type: "object",
 //     properties: {
 //       owner: { type: "string", description: "Repository owner" },
 //       repo: { type: "string", description: "Repository name" },
+//       since: { type: "string", description: "Tag name, date, or commit SHA to start from" },
 //     },
-//     required: ["owner", "repo"],
+//     required: ["owner", "repo", "since"],
 //   },
 // }
 
@@ -49,8 +56,18 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-console.log("Project Health Agent (Copilot SDK)");
-console.log("Type a question about your project, or 'exit' to quit.\n");
+console.log("ship-it: Release Notes Agent (Copilot SDK)");
+if (repoArg && sinceArg) {
+  console.log(`Target: ${repoArg} since ${sinceArg}`);
+}
+console.log("Describe your release, or type 'exit' to quit.\n");
+
+// Send initial scope confirmation if args are provided
+if (repoArg && sinceArg) {
+  await session.sendAndWait({
+    prompt: `I want to generate release notes for ${repoArg} covering all changes since ${sinceArg}. Confirm the scope and ask me if I'm ready to proceed.`,
+  });
+}
 
 function ask() {
   rl.question("> ", async (input) => {

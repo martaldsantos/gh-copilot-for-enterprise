@@ -4,20 +4,29 @@
 
 **Estimated:** 1-2 hours
 
-## 10. Testing
+The agent works end-to-end. Now make it reliable, testable, and deployable.
 
-- Unit tests for custom tool implementations (verify they return correct data)
-- Integration tests that create a real `CopilotClient` session and exercise tool calls
-- Mock external APIs (GitHub) for deterministic test results
-- Aim for >70% coverage on your tool and agent logic
+## Tasks
 
-## 11. Deployment to Azure
+1. **Testing**
+    - Write unit tests for each custom tool implementation: mock Octokit responses and verify that `get_merged_prs` returns correctly shaped data, that `get_linked_issues` resolves references, and that `get_commit_stats` computes the right totals
+    - Test the categorization logic independently -- given a set of PR fixtures with various labels and title prefixes, verify they land in the right categories
+    - Write an integration test that creates a real `CopilotClient` session, sends a release notes prompt against fixture data, and verifies the output contains the expected sections
+    - Mock the GitHub API for deterministic results -- you do not want tests hitting the network
+    - Aim for >70% coverage on tool and categorization logic
 
-- Package the application for deployment (compile TypeScript, bundle dependencies)
-- Deploy to Azure App Service or Azure Container Apps
-- Configure environment variables for GitHub authentication
-- Verify the deployed application works end-to-end with the Copilot CLI backend
-- Document the deployment steps so other team members can run it
+2. **Deployment to Azure**
+    - Compile TypeScript and bundle dependencies for deployment
+    - Deploy to Azure App Service or Azure Container Apps
+    - Configure environment variables for `GITHUB_TOKEN` and any MCP server settings
+    - Verify the deployed application works end-to-end with the Copilot CLI backend
+    - Document the deployment steps so other team members can run it
+
+## Verification
+
+- `npm test` passes with >70% coverage on tool implementations and categorization logic
+- The application runs successfully on Azure and can generate release notes for a real repository
+- Environment variables are configured securely -- no tokens in source code or build artifacts
 
 ---
 

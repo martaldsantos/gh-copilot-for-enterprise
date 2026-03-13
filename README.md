@@ -205,14 +205,14 @@ Test the eShop application across 5 stages: debug 3 intentional bugs in the star
 
 ---
 
-### [Bonus Challenge 6: Copilot SDK -- Project Health Agent](./challenges/challenge-6-copilot-sdk/) ([Track](./tracks/bonus-copilot-sdk-track.md))
+### [Bonus Challenge 6: Copilot SDK -- Release Notes Agent](./challenges/challenge-6-copilot-sdk/) ([Track](./tracks/bonus-copilot-sdk-track.md))
 
 **Team**: Experienced developers (any role) who finished a standard track
 **Duration**: 8-12 hours (Advanced)
 **Skills**: Node.js, TypeScript, Copilot SDK, GitHub API, custom tool definitions
 **Copilot Focus**: Building *with* the Copilot agent runtime -- sessions, streaming, custom tools, MCP integration
 
-Build an agentic application powered by the GitHub Copilot SDK. Create a Project Health Agent that uses custom tools to query GitHub Issues and PRs, provides project summaries, and supports multi-turn conversations with streaming responses.
+Build a Release Notes Agent powered by the GitHub Copilot SDK. The agent fetches merged PRs, categorizes changes, generates a structured changelog through iterative conversation, and publishes a draft GitHub Release -- all using custom tools, streaming responses, and multi-turn sessions.
 
 > ⚠️ **Bonus challenge** -- significantly harder and longer than standard challenges.
 

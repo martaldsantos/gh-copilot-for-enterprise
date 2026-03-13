@@ -4,7 +4,7 @@
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Building an agentic application from scratch using the GitHub Copilot SDK
+**Focus:** Building a Release Notes Agent from scratch using the GitHub Copilot SDK
 
 > ⚠️ **This is a bonus track.** It is significantly harder and longer than the standard 4-6 hour tracks. It is designed for experienced developers who have completed a standard track (or equivalent) and want a deeper challenge that goes beyond using Copilot -- to **building with its engine**.
 
@@ -19,7 +19,7 @@
 
 - Completion of at least one standard track (or equivalent experience)
 - Solid Node.js and TypeScript skills
-- Familiarity with GitHub APIs (Issues, Pull Requests, Events)
+- Familiarity with GitHub APIs (Issues, Pull Requests, Releases, Tags)
 - Understanding of event-driven and streaming patterns
 - Copilot CLI installed and authenticated (`copilot --version` should work)
 
@@ -27,9 +27,15 @@
 
 - **Runtime:** Node.js (LTS) with TypeScript
 - **SDK:** `@github/copilot-sdk` -- programmatic access to Copilot's agent runtime (sessions, streaming, custom tools)
-- **GitHub API:** `@octokit/rest` -- for querying Issues, PRs, activity
+- **GitHub API:** `@octokit/rest` -- for querying PRs, releases, tags, commits, and CI status
 - **Copilot CLI:** Required as the backend server -- the SDK communicates with it via JSON-RPC
 - **Deployment:** Azure (App Service or Container Apps) for the final application
+
+## What You Are Building
+
+**"ship-it" -- a Release Notes Agent.** Given a repository and a reference point (a tag, a date, or a commit SHA), this CLI agent analyzes all merged pull requests, categorizes the changes, generates a structured changelog, and can publish a draft GitHub Release. The workflow is conversational -- a team lead can review the generated notes, ask for adjustments ("move this PR to the highlights section", "add a migration guide for the breaking change"), and iterate until they are satisfied. When everything looks right, they say "publish it" and the agent creates the release.
+
+This is the kind of repetitive-but-judgement-requiring task where an agent with tools genuinely outperforms a plain script. Nobody likes writing release notes by hand, but a script can't categorize changes intelligently or draft human-readable summaries. The SDK sits right in the middle.
 
 ## Getting Started
 
@@ -60,7 +66,7 @@ The SDK manages the CLI process lifecycle automatically. You do not need to star
 
 ### 4. Clean Start and Custom Instructions
 
-Follow the [common setup steps](getting-started.md) for the clean start. Then write custom instructions relevant to building Copilot SDK applications -- include context about `CopilotClient`, session management, custom tool definitions, and the event-based streaming model.
+Follow the [common setup steps](getting-started.md) for the clean start. Then write custom instructions relevant to building Copilot SDK applications -- include context about `CopilotClient`, session management, custom tool definitions, and the event-based streaming model. Also add context about the release notes domain: PR categorization conventions, changelog formatting, and GitHub Release creation.
 
 ---
 
@@ -68,19 +74,20 @@ Follow the [common setup steps](getting-started.md) for the clean start. Then wr
 
 | Phase | Name | Est. Time | What You Build |
 |-------|------|-----------|----------------|
-| 1 | [Foundation](bonus-copilot-sdk-track/phase-1-foundation.md) | 2-3 hours | Client setup, first session, streaming responses |
-| 2 | [Core Features](bonus-copilot-sdk-track/phase-2-core-features.md) | 3-4 hours | Custom tools, GitHub integration, multi-turn conversations |
-| 3 | [Advanced Features](bonus-copilot-sdk-track/phase-3-advanced-features.md) | 2-3 hours | MCP server integration, custom agents, error handling |
+| 1 | [Foundation](bonus-copilot-sdk-track/phase-1-foundation.md) | 2-3 hours | Client setup, streaming, interactive release scope confirmation |
+| 2 | [Core Features](bonus-copilot-sdk-track/phase-2-core-features.md) | 3-4 hours | PR fetching tools, change categorization, changelog generation |
+| 3 | [Advanced Features](bonus-copilot-sdk-track/phase-3-advanced-features.md) | 2-3 hours | MCP integration, release publishing, iterative refinement |
 | 4 | [Production-Ready](bonus-copilot-sdk-track/phase-4-production.md) | 1-2 hours | Testing, packaging, Azure deployment |
 
 ## Tips for Using Copilot on This Track
 
 **Use Copilot to build a Copilot-powered app -- meta!**
 
-- Ask Copilot to help you define custom tool schemas for the SDK
+- Ask Copilot to help you define custom tool schemas for the SDK -- start with "Define a tool schema that fetches merged PRs between two git refs"
 - Use `/explain` on the SDK types to understand the session event model
-- Ask: *"How do I define a custom tool that fetches open GitHub issues for a user?"*
+- Ask: *"How should I categorize pull requests into features, fixes, breaking changes, and internal changes based on labels and title prefixes?"*
 - Use Agent mode to scaffold the full tool registration and event handling in one go
+- When building the changelog formatter, ask Copilot to generate templates matching popular formats (Keep a Changelog, GitHub's auto-generated notes style)
 
 ## Resources
 

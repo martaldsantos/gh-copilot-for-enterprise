@@ -84,7 +84,7 @@ Completed your main track? These advanced tracks go deeper.
 
 **Best for:** Experienced developers who want to embed Copilot's agent runtime in custom apps
 
-**Focus:** Building an agentic application using the GitHub Copilot SDK
+**Focus:** Building a Release Notes Agent using the GitHub Copilot SDK
 
 **Your Challenge:** Challenge 6 - Copilot SDK
 

@@ -1,8 +1,8 @@
 {
-  "name": "project-health-copilot-sdk",
+  "name": "ship-it-release-agent",
   "version": "1.0.0",
   "type": "module",
-  "description": "Project Health Agent - GitHub Copilot SDK Application (Bonus Challenge 6)",
+  "description": "ship-it: Release Notes Agent - GitHub Copilot SDK Application (Bonus Challenge 6)",
   "main": "index.ts",
   "scripts": {
     "start": "npx tsx index.ts",
@@ -10,7 +10,7 @@
     "test": "vitest run --coverage",
     "test:watch": "vitest"
   },
-  "keywords": ["copilot-sdk", "github", "agent", "hackathon"],
+  "keywords": ["copilot-sdk", "github", "agent", "release-notes", "hackathon"],
   "author": "",
   "license": "MIT",
   "dependencies": {
