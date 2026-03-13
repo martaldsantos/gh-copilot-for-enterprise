@@ -4,7 +4,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ## Choose Your Track
 
-### � [Product Owner & Business Analyst Track](./product-owner-track.md)
+### 📋 [Product Owner & Business Analyst Track](./product-owner-track.md)
 
 **Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
 
@@ -16,7 +16,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ---
 
-### �🔧 [Backend Developer Track](./backend-developer-track.md)
+### 🔧 [Backend Developer Track](./backend-developer-track.md)
 
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
@@ -157,8 +157,8 @@ Completed your main track? These advanced tracks go deeper.
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
-| � **Product Owner & BA** | ⭐ -- ⭐⭐⭐ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 0 |
-| �🔧 **Backend** | ⭐ -- ⭐⭐⭐ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
+| 📋 **Product Owner & BA** | ⭐ -- ⭐⭐⭐ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 0 |
+| 🔧 **Backend** | ⭐ -- ⭐⭐⭐ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
 | 📊 **Data Science** | ⭐ -- ⭐⭐⭐ | 6-8h | Python, pandas, ML | Challenge 2 |
 | ☁️ **DevOps** | ⭐ -- ⭐⭐⭐ | 6-8h | Terraform, Docker, K8s | Challenge 3 |
 | 🎨 **Frontend** | ⭐ -- ⭐⭐⭐ | 6-8h | React, TypeScript | Challenge 4 |

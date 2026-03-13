@@ -10,7 +10,7 @@ This hackathon is organized into **role-based tracks** for different team types,
 
 ### Choose Your Track
 
-- � **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
+- 📋 **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
 - 🔧 **[Backend Developer Track](./tracks/backend-developer-track.md)** - REST APIs, authentication, testing
 - 📊 **[Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
 - ☁️ **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
