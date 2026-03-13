@@ -2,7 +2,7 @@
 
 [Back to Backend Developer Track](../backend-developer-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Replace the in-memory store with a real database and add data relationships.
 

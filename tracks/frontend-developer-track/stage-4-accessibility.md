@@ -2,7 +2,7 @@
 
 [Back to Frontend Developer Track](../frontend-developer-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 This stage includes a pre-built component with intentional accessibility violations.
 

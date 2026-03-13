@@ -2,7 +2,7 @@
 
 [Back to DevOps & Platform Engineering Track](../devops-platform-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-75 min
+**Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 Containerize the Node.js application and set up a local development workflow.
 

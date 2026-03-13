@@ -2,7 +2,7 @@
 
 [Back to Frontend Developer Track](../frontend-developer-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Replace static data with real state management. Users must be able to create, edit, and delete tasks.
 

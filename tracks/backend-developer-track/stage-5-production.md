@@ -2,7 +2,7 @@
 
 [Back to Backend Developer Track](../backend-developer-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Prepare the API for production deployment.
 

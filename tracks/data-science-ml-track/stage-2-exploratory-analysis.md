@@ -2,7 +2,7 @@
 
 [Back to Data Science & ML Track](../data-science-ml-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Visualization without interpretation is decoration. Every plot needs to answer a question.
 

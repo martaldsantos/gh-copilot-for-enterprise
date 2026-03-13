@@ -2,7 +2,7 @@
 
 **Duration:** 6-8 hours
 
-**Difficulty:** ★★☆ to ★★★ (progressive stages)
+**Difficulty:** ⭐⭐ to ⭐⭐⭐ (progressive stages)
 
 **Focus:** Test automation, quality assurance, and testing best practices with GitHub Copilot
 
@@ -100,11 +100,11 @@ You will be testing **[eShop](https://github.com/dotnet/eShop)**, a .NET Aspire 
 
 | Stage | Name | Difficulty | Est. Time | Key Deliverable |
 |-------|------|------------|-----------|----------------|
-| 1 | [Setup and Debug Starter Tests](qa-tester-track/stage-1-setup-debug.md) | ★★☆ | 60-75 min | Fix 3 bugs in LoginPage, adapt selectors, add test cases |
-| 2 | [Page Object Expansion and Shopping Flow](qa-tester-track/stage-2-page-objects.md) | ★★☆ | 60-90 min | CatalogPage, BasketPage, full E2E shopping test, fixtures |
-| 3 | [Cross-Browser, Mobile, and Resilience](qa-tester-track/stage-3-cross-browser.md) | ★★★ | 60-90 min | Tests pass on 3 browsers + mobile, network throttling, visual comparison |
-| 4 | [AI-Driven Testing and Hybrid Approach](qa-tester-track/stage-4-ai-driven.md) | ★★★ | 60-90 min | MCP-generated tests, API+UI hybrid tests, data consistency verification |
-| 5 | [Quality Gates, Reporting, and CI](qa-tester-track/stage-5-quality-gates.md) | ★★★ | 60-90 min | GitHub Actions CI, custom markdown reporter, flakiness analysis, test strategy |
+| 1 | [Setup and Debug Starter Tests](qa-tester-track/stage-1-setup-debug.md) | ⭐⭐ | 60-75 min | Fix 3 bugs in LoginPage, adapt selectors, add test cases |
+| 2 | [Page Object Expansion and Shopping Flow](qa-tester-track/stage-2-page-objects.md) | ⭐⭐ | 60-90 min | CatalogPage, BasketPage, full E2E shopping test, fixtures |
+| 3 | [Cross-Browser, Mobile, and Resilience](qa-tester-track/stage-3-cross-browser.md) | ⭐⭐⭐ | 60-90 min | Tests pass on 3 browsers + mobile, network throttling, visual comparison |
+| 4 | [AI-Driven Testing and Hybrid Approach](qa-tester-track/stage-4-ai-driven.md) | ⭐⭐⭐ | 60-90 min | MCP-generated tests, API+UI hybrid tests, data consistency verification |
+| 5 | [Quality Gates, Reporting, and CI](qa-tester-track/stage-5-quality-gates.md) | ⭐⭐⭐ | 60-90 min | GitHub Actions CI, custom markdown reporter, flakiness analysis, test strategy |
 
 Copilot generates test boilerplate efficiently, but Stage 1 starts with debugging intentionally broken code, and later stages require cross-browser troubleshooting and test strategy decisions.
 

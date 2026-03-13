@@ -2,7 +2,7 @@
 
 [Back to QA Tester Track](../qa-tester-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-75 min
+**Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 The starter code in `tests/pages/LoginPage.ts` contains 3 intentional bugs. Your first task is to find and fix them.
 

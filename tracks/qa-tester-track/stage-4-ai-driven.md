@@ -2,7 +2,7 @@
 
 [Back to QA Tester Track](../qa-tester-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Combine AI-driven exploration with traditional test automation.
 

@@ -2,7 +2,7 @@
 
 **Duration:** 6-8 hours
 
-**Difficulty:** ★★☆ to ★★★
+**Difficulty:** ⭐⭐ to ⭐⭐⭐
 
 **Focus:** Infrastructure as Code, containerization, and deployment automation with GitHub Copilot
 
@@ -64,11 +64,11 @@ Navigate to `challenges/challenge-3-devops/`. Explore the starter code: `app/` h
 
 | Stage | Name | Difficulty | Est. Time | Key Deliverable |
 |-------|------|------------|-----------|----------------|
-| 1 | [Containerization and Local Development](devops-platform-track/stage-1-containerization.md) | ★★☆ | 60-75 min | Multi-stage Dockerfile, Docker Compose, security scan |
-| 2 | [Kubernetes Orchestration](devops-platform-track/stage-2-kubernetes.md) | ★★☆ | 60-90 min | Deployment, Service, ConfigMap, HPA, NetworkPolicy |
-| 3 | [Terraform Infrastructure](devops-platform-track/stage-3-terraform.md) | ★★★ | 60-90 min | Azure RG, ACR, AKS with variables and remote state |
-| 4 | [Observability and Security Hardening](devops-platform-track/stage-4-observability.md) | ★★★ | 60-90 min | Fix broken Key Vault module, pod security, metrics endpoint |
-| 5 | [CI/CD Pipeline and Deployment Strategy](devops-platform-track/stage-5-cicd.md) | ★★★ | 60-90 min | GitHub Actions, blue/green deployment, DR runbook |
+| 1 | [Containerization and Local Development](devops-platform-track/stage-1-containerization.md) | ⭐⭐ | 60-75 min | Multi-stage Dockerfile, Docker Compose, security scan |
+| 2 | [Kubernetes Orchestration](devops-platform-track/stage-2-kubernetes.md) | ⭐⭐ | 60-90 min | Deployment, Service, ConfigMap, HPA, NetworkPolicy |
+| 3 | [Terraform Infrastructure](devops-platform-track/stage-3-terraform.md) | ⭐⭐⭐ | 60-90 min | Azure RG, ACR, AKS with variables and remote state |
+| 4 | [Observability and Security Hardening](devops-platform-track/stage-4-observability.md) | ⭐⭐⭐ | 60-90 min | Fix broken Key Vault module, pod security, metrics endpoint |
+| 5 | [CI/CD Pipeline and Deployment Strategy](devops-platform-track/stage-5-cicd.md) | ⭐⭐⭐ | 60-90 min | GitHub Actions, blue/green deployment, DR runbook |
 
 The application is already complete -- your job is the infrastructure. Copilot generates valid Dockerfile, YAML, and HCL syntax, but Stage 4 requires debugging broken Terraform and Stage 5 requires deployment strategy decisions that need operational judgment.
 

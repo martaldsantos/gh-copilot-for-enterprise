@@ -4,7 +4,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ## Choose Your Track
 
-### [Backend Developer Track](./backend-developer-track.md)
+### 🔧 [Backend Developer Track](./backend-developer-track.md)
 
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
@@ -16,7 +16,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ---
 
-### [Data Science & ML Track](./data-science-ml-track.md)
+### 📊 [Data Science & ML Track](./data-science-ml-track.md)
 
 **Best for:** Data Scientists, ML Engineers, Data Analysts
 
@@ -28,7 +28,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ---
 
-### [DevOps & Platform Track](./devops-platform-track.md)
+### ☁️ [DevOps & Platform Track](./devops-platform-track.md)
 
 **Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
 
@@ -40,7 +40,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ---
 
-### [Frontend Developer Track](./frontend-developer-track.md)
+### 🎨 [Frontend Developer Track](./frontend-developer-track.md)
 
 **Best for:** Frontend Developers, UI/UX Engineers, React Developers
 
@@ -52,7 +52,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ---
 
-### [QA Tester Track](./qa-tester-track.md)
+### 🔍 [QA Tester Track](./qa-tester-track.md)
 
 **Best for:** QA Engineers, Test Automation Engineers, Quality Assurance Specialists, SDETs
 
@@ -64,7 +64,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ---
 
-### [Product Owner & Business Analyst Track](./product-owner-track.md)
+### 📋 [Product Owner & Business Analyst Track](./product-owner-track.md)
 
 **Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
 
@@ -80,7 +80,7 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 Completed your main track? These advanced tracks go deeper.
 
-### [Bonus: Copilot Extensions Track](./bonus-copilot-extensions-track.md)
+### 🧩 [Bonus: Copilot Extensions Track](./bonus-copilot-extensions-track.md)
 
 **Best for:** Experienced developers who want to build custom Copilot integrations
 
@@ -92,7 +92,7 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
-### [Bonus: Flight Delay Predictor Track](./bonus-flight-delay-track.md)
+### ✈️ [Bonus: Flight Delay Predictor Track](./bonus-flight-delay-track.md)
 
 **Best for:** Full-stack developers who want to combine ML, API, and UI skills
 
@@ -101,6 +101,18 @@ Completed your main track? These advanced tracks go deeper.
 **Your Challenge:** Challenge 7 - Flight Delay Predictor
 
 **Duration:** 8-12 hours (Advanced)
+
+---
+
+### 🏢 [Bonus: Cross-Functional Team Sprint](./bonus-team-sprint-track.md)
+
+**Best for:** Teams of 4-6 people from different roles (PO, developers, QA, DevOps) who want to build a complete application together
+
+**Focus:** End-to-end agile sprint -- ideation with GitHub Spark, parallel development, deployment to Azure
+
+**Your Challenge:** Challenge 9 - CityPulse Team Sprint
+
+**Duration:** 8 hours (Team, Advanced)
 
 ---
 
@@ -116,6 +128,7 @@ Completed your main track? These advanced tracks go deeper.
    - QA/Test Engineer → QA Tester Track
    - Product Owner/BA/PM → Product Owner & BA Track
    - Finished a core track and want more? → Bonus tracks
+   - Cross-functional team (PO + devs + QA + DevOps)? → Bonus: Team Sprint
 
 2. **What do you want to learn?**
    - Building REST APIs → Backend Track
@@ -127,6 +140,7 @@ Completed your main track? These advanced tracks go deeper.
    - Full applications (API + UI) → Combine Backend + Frontend Tracks
    - Building Copilot Extensions → Bonus: Copilot Extensions Track
    - Full-stack ML apps → Bonus: Flight Delay Track
+   - Full team agile sprint → Bonus: Team Sprint
 
 3. **How much time do you have?**
    - 4 hours → Choose any track, complete core tasks
@@ -143,14 +157,15 @@ Completed your main track? These advanced tracks go deeper.
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
-| **Backend** | ★☆☆ -- ★★★ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
-| **Data Science** | ★☆☆ -- ★★★ | 6-8h | Python, pandas, ML | Challenge 2 |
-| **DevOps** | ★☆☆ -- ★★★ | 6-8h | Terraform, Docker, K8s | Challenge 3 |
-| **Frontend** | ★☆☆ -- ★★★ | 6-8h | React, TypeScript | Challenge 4 |
-| **QA Tester** | ★☆☆ -- ★★★ | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
-| **Product Owner & BA** | ★☆☆ -- ★★★ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
-| **Bonus: Copilot Extensions** | ★★★ | 8-12h | Node.js, Copilot Extensions SDK | Challenge 6 |
-| **Bonus: Flight Delay** | ★★★ | 8-12h | Python, scikit-learn, React/Vite | Challenge 7 |
+| 🔧 **Backend** | ⭐ -- ⭐⭐⭐ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
+| 📊 **Data Science** | ⭐ -- ⭐⭐⭐ | 6-8h | Python, pandas, ML | Challenge 2 |
+| ☁️ **DevOps** | ⭐ -- ⭐⭐⭐ | 6-8h | Terraform, Docker, K8s | Challenge 3 |
+| 🎨 **Frontend** | ⭐ -- ⭐⭐⭐ | 6-8h | React, TypeScript | Challenge 4 |
+| 🔍 **QA Tester** | ⭐ -- ⭐⭐⭐ | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
+| 📋 **Product Owner & BA** | ⭐ -- ⭐⭐⭐ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
+| 🧩 **Bonus: Copilot Extensions** | ⭐⭐⭐ | 8-12h | Node.js, Copilot Extensions SDK | Challenge 6 |
+| ✈️ **Bonus: Flight Delay** | ⭐⭐⭐ | 8-12h | Python, scikit-learn, React/Vite | Challenge 7 |
+| 🏢 **Bonus: Team Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Challenge 9 |
 
 ## What You'll Learn in Every Track
 

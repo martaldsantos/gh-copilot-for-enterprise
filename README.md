@@ -2,22 +2,23 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 core tracks** and **2 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 core tracks** and **3 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
 
 ## Hackathon Overview
 
-This hackathon is organized into **role-based tracks** for different team types, plus a **bonus track** for advanced participants:
+This hackathon is organized into **role-based tracks** for different team types, plus **bonus tracks** for advanced and cross-functional teams:
 
 ### Choose Your Track
 
-- **[Backend Developer Track](./tracks/backend-developer-track.md)** - REST APIs, authentication, testing
-- **[Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
-- **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
-- **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
-- **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, end-to-end testing
-- **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
-- **[Bonus: Copilot Extensions Track](./tracks/bonus-copilot-extensions-track.md)** - Build a Copilot Extension agent (advanced)
-- **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
+- 🔧 **[Backend Developer Track](./tracks/backend-developer-track.md)** - REST APIs, authentication, testing
+- 📊 **[Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
+- ☁️ **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
+- 🎨 **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
+- 🔍 **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, end-to-end testing
+- 📋 **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
+- 🧩 **[Bonus: Copilot Extensions Track](./tracks/bonus-copilot-extensions-track.md)** - Build a Copilot Extension agent (advanced)
+- ✈️ **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
+- 🏢 **[Bonus: Cross-Functional Team Sprint](./tracks/bonus-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people)
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -235,6 +236,19 @@ Build a complete application that predicts flight delay probability. Explore a r
 **Copilot Focus**: Long-form writing, brainstorming, GitHub MCP server for issue/PR management
 
 Plan the next major release of a task management platform across 5 progressive stages. Start with competitive analysis and quantified personas, then write and critique user stories, build feature specs aligned to real API endpoints, resolve conflicting stakeholder requests under a fixed budget, and produce a production-grade release plan with risk matrices, rollback strategies, and monitoring specs. No application code required.
+
+---
+
+### [Challenge 9: Bonus -- Cross-Functional Team Sprint (CityPulse)](./challenges/challenge-9-team-sprint/) ([Track](./tracks/bonus-team-sprint-track.md))
+
+**Team**: Cross-functional team of 4-6 (Product Owner, Backend Dev, Frontend Dev, QA, DevOps, optional BA)
+**Duration**: 8 hours (team bonus challenge)
+**Skills**: GitHub Spark, GitHub Issues/Projects, Express.js/FastAPI, React/Vue, Playwright, Docker, Azure, Terraform
+**Copilot Focus**: Every role uses Copilot -- PO for user stories and planning, developers for code generation, QA for test automation, DevOps for infrastructure
+
+Build CityPulse, a civic engagement platform, from scratch as a cross-functional team running a simulated agile sprint. The PO ideates with GitHub Spark and manages the backlog via GitHub Issues while developers, QA, and DevOps work in parallel across two sprints -- building a REST API, a frontend UI, automated tests, CI/CD pipelines, and deploying to Azure. Ends with a team demo and retrospective.
+
+> This challenge requires a team. It is not designed for solo participants.
 
 ---
 

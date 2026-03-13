@@ -2,7 +2,7 @@
 
 [Back to Data Science & ML Track](../data-science-ml-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 The dataset has class imbalance. Address it rigorously and explain your model to the business.
 

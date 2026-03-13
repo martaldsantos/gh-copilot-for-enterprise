@@ -2,7 +2,7 @@
 
 [Back to QA Tester Track](../qa-tester-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Real-world tests must work across browsers and handle network issues.
 

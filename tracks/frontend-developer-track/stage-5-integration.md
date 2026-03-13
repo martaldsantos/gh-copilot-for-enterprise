@@ -2,7 +2,7 @@
 
 [Back to Frontend Developer Track](../frontend-developer-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Connect the frontend to a real (or mocked) backend and write thorough tests.
 

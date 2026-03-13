@@ -2,7 +2,7 @@
 
 [Back to QA Tester Track](../qa-tester-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Build out the test infrastructure for a complete shopping flow.
 

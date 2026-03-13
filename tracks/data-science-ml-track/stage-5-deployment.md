@@ -2,7 +2,7 @@
 
 [Back to Data Science & ML Track](../data-science-ml-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 A model that exists only in a notebook is not deployed. Make it usable.
 

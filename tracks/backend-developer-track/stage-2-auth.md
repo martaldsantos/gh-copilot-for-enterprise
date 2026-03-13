@@ -2,7 +2,7 @@
 
 [Back to Backend Developer Track](../backend-developer-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-75 min
+**Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 Add user management and protect all task endpoints.
 

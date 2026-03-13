@@ -2,7 +2,7 @@
 
 **Duration:** 6-8 hours
 
-**Difficulty:** ★★☆ to ★★★ (progressive stages)
+**Difficulty:** ⭐⭐ to ⭐⭐⭐ (progressive stages)
 
 **Focus:** Data analysis, machine learning, and AI development with GitHub Copilot
 
@@ -61,11 +61,11 @@ Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip insta
 
 | Stage | Name | Difficulty | Est. Time | Key Deliverable |
 |-------|------|------------|-----------|----------------|
-| 1 | [Data Discovery and Cleaning](data-science-ml-track/stage-1-data-discovery.md) | ★★☆ | 60-75 min | Data quality report documenting all 7+ issues |
-| 2 | [Exploratory Analysis and Feature Engineering](data-science-ml-track/stage-2-exploratory-analysis.md) | ★★☆ | 60-90 min | 8+ visualizations with interpretation, hypothesis tests, feature selection |
-| 3 | [Model Development and Rigorous Evaluation](data-science-ml-track/stage-3-model-development.md) | ★★★ | 60-90 min | 4+ models with pipelines, cross-validation, cost-sensitive scoring |
-| 4 | [Class Imbalance and Interpretability](data-science-ml-track/stage-4-class-imbalance.md) | ★★★ | 60-90 min | Imbalance comparison table, SHAP analysis, business recommendations |
-| 5 | [Deployment Pipeline and Monitoring](data-science-ml-track/stage-5-deployment.md) | ★★★ | 60-90 min | Prediction API, drift detection, model card |
+| 1 | [Data Discovery and Cleaning](data-science-ml-track/stage-1-data-discovery.md) | ⭐⭐ | 60-75 min | Data quality report documenting all 7+ issues |
+| 2 | [Exploratory Analysis and Feature Engineering](data-science-ml-track/stage-2-exploratory-analysis.md) | ⭐⭐ | 60-90 min | 8+ visualizations with interpretation, hypothesis tests, feature selection |
+| 3 | [Model Development and Rigorous Evaluation](data-science-ml-track/stage-3-model-development.md) | ⭐⭐⭐ | 60-90 min | 4+ models with pipelines, cross-validation, cost-sensitive scoring |
+| 4 | [Class Imbalance and Interpretability](data-science-ml-track/stage-4-class-imbalance.md) | ⭐⭐⭐ | 60-90 min | Imbalance comparison table, SHAP analysis, business recommendations |
+| 5 | [Deployment Pipeline and Monitoring](data-science-ml-track/stage-5-deployment.md) | ⭐⭐⭐ | 60-90 min | Prediction API, drift detection, model card |
 
 The dataset is intentionally messy. Copilot can generate pandas and scikit-learn code efficiently, but discovering subtle data quality issues, interpreting SHAP values for business decisions, and building drift detection require your analytical judgment.
 

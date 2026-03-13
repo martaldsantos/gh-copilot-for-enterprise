@@ -2,7 +2,7 @@
 
 [Back to Data Science & ML Track](../data-science-ml-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Reproducibility matters. Use sklearn Pipelines for all preprocessing and training.
 

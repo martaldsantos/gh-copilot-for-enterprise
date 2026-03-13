@@ -2,7 +2,7 @@
 
 [Back to Product Owner & Business Analyst Track](../product-owner-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Real product work involves trade-offs, conflicting priorities, and imperfect information. This stage introduces all three.
 

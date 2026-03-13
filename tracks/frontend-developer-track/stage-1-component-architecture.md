@@ -2,7 +2,7 @@
 
 [Back to Frontend Developer Track](../frontend-developer-track.md)
 
-**Difficulty:** ★☆☆ | **Time:** 60-75 min
+**Difficulty:** ⭐ | **Time:** 60-75 min
 
 Build the visual foundation with static data. Focus on component composition and responsive design.
 

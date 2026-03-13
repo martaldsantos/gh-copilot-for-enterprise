@@ -2,7 +2,7 @@
 
 [Back to Backend Developer Track](../backend-developer-track.md)
 
-**Difficulty:** ★☆☆ | **Time:** 60-75 min
+**Difficulty:** ⭐ | **Time:** 60-75 min
 
 Build the core task management endpoints using the in-memory data store.
 

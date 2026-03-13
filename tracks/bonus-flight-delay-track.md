@@ -2,7 +2,7 @@
 
 **Duration:** 8-12 hours
 
-**Difficulty:** ★★★
+**Difficulty:** ⭐⭐⭐
 
 **Focus:** Full-stack application development -- data science, API engineering, and frontend -- with GitHub Copilot
 

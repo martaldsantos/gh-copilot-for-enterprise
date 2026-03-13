@@ -2,7 +2,7 @@
 
 [Back to DevOps & Platform Engineering Track](../devops-platform-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Deploy the application to Kubernetes with production-grade configuration.
 

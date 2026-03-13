@@ -2,7 +2,7 @@
 
 [Back to Product Owner & Business Analyst Track](../product-owner-track.md)
 
-**Difficulty:** ★☆☆ | **Time:** 60-90 min
+**Difficulty:** ⭐ | **Time:** 60-90 min
 
 This stage establishes the foundation. You need a product brief that goes beyond generic descriptions and demonstrates real market understanding.
 

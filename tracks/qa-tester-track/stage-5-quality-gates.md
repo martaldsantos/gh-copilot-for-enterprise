@@ -2,7 +2,7 @@
 
 [Back to QA Tester Track](../qa-tester-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Production-grade test infrastructure with CI integration and analysis.
 

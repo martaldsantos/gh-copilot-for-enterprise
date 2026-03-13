@@ -2,7 +2,7 @@
 
 [Back to Backend Developer Track](../backend-developer-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 This stage introduces a broken v2 API module and advanced features.
 

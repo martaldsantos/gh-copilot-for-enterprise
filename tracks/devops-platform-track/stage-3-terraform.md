@@ -2,7 +2,7 @@
 
 [Back to DevOps & Platform Engineering Track](../devops-platform-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Provision Azure infrastructure using Terraform with proper variable management.
 

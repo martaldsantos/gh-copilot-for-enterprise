@@ -2,7 +2,7 @@
 
 [Back to Product Owner & Business Analyst Track](../product-owner-track.md)
 
-**Difficulty:** ★★☆ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Writing user stories is easy. Writing good ones is harder. This stage tests whether you can tell the difference.
 

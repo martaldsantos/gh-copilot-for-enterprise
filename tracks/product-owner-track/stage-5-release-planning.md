@@ -2,7 +2,7 @@
 
 [Back to Product Owner & Business Analyst Track](../product-owner-track.md)
 
-**Difficulty:** ★★★ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 A release plan is not just a list of features and dates. It is a risk management document, a communication tool, and a rollback strategy.
 

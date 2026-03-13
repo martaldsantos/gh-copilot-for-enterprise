@@ -2,7 +2,7 @@
 
 **Duration:** 8-12 hours (Advanced)
 
-**Difficulty:** ★★★
+**Difficulty:** ⭐⭐⭐
 
 **Focus:** Building a GitHub Copilot Extension from scratch using the Copilot Extensions SDK
 
