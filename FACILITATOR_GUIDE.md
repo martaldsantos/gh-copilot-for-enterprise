@@ -353,8 +353,8 @@ Around lunch, gather everyone:
 
 - Challenge 3: DevOps (full stack)
 - Challenge 5: QA (advanced automation patterns)
-- Challenge 6: Copilot SDK (building SDK applications)
-- Challenge 7: Flight Delay Predictor (full-stack ML app)
+- Bonus 1: Copilot SDK (building SDK applications)
+- Bonus 2: Flight Delay Predictor (full-stack ML app)
 
 ## Metrics to Track
 

@@ -57,7 +57,7 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open the Challenge
 
-Navigate to `challenges/challenge-7-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/challenge-7-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS.
+Navigate to `challenges/bonus-2-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/bonus-2-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS.
 
 ---
 

@@ -64,7 +64,7 @@ Follow the [common setup steps](getting-started.md) for the clean start, custom 
 
 ### Open the Challenge
 
-Navigate to `challenges/challenge-8-product-planning/`. This is where your starter files live (templates, sample docs, and exercises).
+Navigate to `challenges/challenge-0-product-planning/`. This is where your starter files live (templates, sample docs, and exercises).
 
 ---
 

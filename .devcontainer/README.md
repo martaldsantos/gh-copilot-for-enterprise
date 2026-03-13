@@ -6,6 +6,13 @@ This folder contains dedicated DevContainer configurations for each challenge in
 
 Select the configuration that matches the challenge you are working on.
 
+### [Challenge 0: Product Planning](./challenge-0-product-planning/)
+
+**For:** Product Owners, Business Analysts, Project Managers.
+
+- **Tools:** GitHub CLI, Node.js LTS
+- **Extensions:** Markdown All in One, Mermaid, markdownlint
+
 ### [Challenge 1: Backend Developer](./challenge-1-backend/)
 
 **For:** Node.js or Python API development.

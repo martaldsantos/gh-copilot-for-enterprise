@@ -1,5 +1,5 @@
 {
-	"name": "Challenge 8 - Product Planning",
+	"name": "Challenge 0 - Product Planning",
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},

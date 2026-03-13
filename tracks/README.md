@@ -4,7 +4,19 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ## Choose Your Track
 
-### 🔧 [Backend Developer Track](./backend-developer-track.md)
+### � [Product Owner & Business Analyst Track](./product-owner-track.md)
+
+**Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
+
+**Focus:** Product planning, backlog management, documentation, and GitHub collaboration -- no code required
+
+**Your Challenge:** Challenge 0 - Product Planning (TaskFlow v2.0)
+
+**Duration:** 6-8 hours (5 progressive stages)
+
+---
+
+### �🔧 [Backend Developer Track](./backend-developer-track.md)
 
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
@@ -64,18 +76,6 @@ Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus track
 
 ---
 
-### 📋 [Product Owner & Business Analyst Track](./product-owner-track.md)
-
-**Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
-
-**Focus:** Product planning, backlog management, documentation, and GitHub collaboration -- no code required
-
-**Your Challenge:** Challenge 8 - Product Planning (TaskFlow v2.0)
-
-**Duration:** 6-8 hours (5 progressive stages)
-
----
-
 ## Bonus Tracks
 
 Completed your main track? These advanced tracks go deeper.
@@ -86,7 +86,7 @@ Completed your main track? These advanced tracks go deeper.
 
 **Focus:** Building a Release Notes Agent using the GitHub Copilot SDK
 
-**Your Challenge:** Challenge 6 - Copilot SDK
+**Your Challenge:** Bonus 1 - Copilot SDK
 
 **Duration:** 8-12 hours (Advanced)
 
@@ -98,7 +98,7 @@ Completed your main track? These advanced tracks go deeper.
 
 **Focus:** End-to-end application -- data science, backend API, and frontend UI
 
-**Your Challenge:** Challenge 7 - Flight Delay Predictor
+**Your Challenge:** Bonus 2 - Flight Delay Predictor
 
 **Duration:** 8-12 hours (Advanced)
 
@@ -110,7 +110,7 @@ Completed your main track? These advanced tracks go deeper.
 
 **Focus:** End-to-end agile sprint -- ideation with GitHub Spark, parallel development, deployment to Azure
 
-**Your Challenge:** Challenge 9 - CityPulse Team Sprint
+**Your Challenge:** Bonus 3 - CityPulse Team Sprint
 
 **Duration:** 8 hours (Team, Advanced)
 
@@ -157,15 +157,15 @@ Completed your main track? These advanced tracks go deeper.
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
-| 🔧 **Backend** | ⭐ -- ⭐⭐⭐ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
+| � **Product Owner & BA** | ⭐ -- ⭐⭐⭐ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 0 |
+| �🔧 **Backend** | ⭐ -- ⭐⭐⭐ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
 | 📊 **Data Science** | ⭐ -- ⭐⭐⭐ | 6-8h | Python, pandas, ML | Challenge 2 |
 | ☁️ **DevOps** | ⭐ -- ⭐⭐⭐ | 6-8h | Terraform, Docker, K8s | Challenge 3 |
 | 🎨 **Frontend** | ⭐ -- ⭐⭐⭐ | 6-8h | React, TypeScript | Challenge 4 |
 | 🔍 **QA Tester** | ⭐ -- ⭐⭐⭐ | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
-| 📋 **Product Owner & BA** | ⭐ -- ⭐⭐⭐ | 6-8h | Markdown, GitHub Issues, Projects | Challenge 8 |
-| 🧩 **Bonus: Copilot SDK** | ⭐⭐⭐ | 8-12h | Node.js, TypeScript, Copilot SDK | Challenge 6 |
-| ✈️ **Bonus: Flight Delay** | ⭐⭐⭐ | 8-12h | Python, scikit-learn, React/Vite | Challenge 7 |
-| 🏢 **Bonus: Team Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Challenge 9 |
+| 🧩 **Bonus: Copilot SDK** | ⭐⭐⭐ | 8-12h | Node.js, TypeScript, Copilot SDK | Bonus 1 |
+| ✈️ **Bonus: Flight Delay** | ⭐⭐⭐ | 8-12h | Python, scikit-learn, React/Vite | Bonus 2 |
+| 🏢 **Bonus: Team Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Bonus 3 |
 
 ## What You'll Learn in Every Track
 
@@ -333,12 +333,12 @@ Track your progress across any track:
 
 ### Track Guides
 
+- [Product Owner & BA Track](./product-owner-track.md)
 - [Backend Developer Track](./backend-developer-track.md)
 - [Data Science & ML Track](./data-science-ml-track.md)
 - [DevOps & Platform Track](./devops-platform-track.md)
 - [Frontend Developer Track](./frontend-developer-track.md)
 - [QA Tester Track](./qa-tester-track.md)
-- [Product Owner & BA Track](./product-owner-track.md)
 - [Bonus: Copilot SDK Track](./bonus-copilot-sdk-track.md)
 - [Bonus: Flight Delay Predictor Track](./bonus-flight-delay-track.md)
 

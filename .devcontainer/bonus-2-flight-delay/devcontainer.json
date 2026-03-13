@@ -1,5 +1,5 @@
 {
-	"name": "Challenge 7 - Flight Delay Predictor (Bonus)",
+	"name": "Bonus 2 - Flight Delay Predictor",
 	"image": "mcr.microsoft.com/devcontainers/python:3.11",
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
@@ -20,6 +20,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "pip install pandas numpy scikit-learn matplotlib seaborn jupyter flask fastapi uvicorn && cd challenges/challenge-7-flight-delay/client && npm install",
+	"postCreateCommand": "pip install pandas numpy scikit-learn matplotlib seaborn jupyter flask fastapi uvicorn && cd challenges/bonus-2-flight-delay/client && npm install",
 	"remoteUser": "vscode"
 }

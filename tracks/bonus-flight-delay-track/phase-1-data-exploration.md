@@ -39,7 +39,7 @@ The dataset (`data/flights.csv`) contains ~272,000 records of US flights from 20
 
 ## Getting Started
 
-1. Navigate to `challenges/challenge-7-flight-delay/`.
+1. Navigate to `challenges/bonus-2-flight-delay/`.
 2. Install requirements: `pip install -r requirements.txt`.
 3. Open `flight_delay_analysis.ipynb` and follow the guided cells.
 4. Use Copilot Agent Mode to help you write each cell.

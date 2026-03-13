@@ -10,12 +10,12 @@ This hackathon is organized into **role-based tracks** for different team types,
 
 ### Choose Your Track
 
+- � **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
 - 🔧 **[Backend Developer Track](./tracks/backend-developer-track.md)** - REST APIs, authentication, testing
 - 📊 **[Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
 - ☁️ **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
 - 🎨 **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
 - 🔍 **[QA Tester Track](./tracks/qa-tester-track.md)** - Test automation, quality assurance, end-to-end testing
-- 📋 **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
 - 🧩 **[Bonus: Copilot SDK Track](./tracks/bonus-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced)
 - ✈️ **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
 - 🏢 **[Bonus: Cross-Functional Team Sprint](./tracks/bonus-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people)
@@ -155,6 +155,16 @@ Throughout these challenges, you'll master:
 
 All 7 challenges are available, and each track has a dedicated challenge:
 
+### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/product-owner-track.md))
+
+**Team**: Product Owners, Business Analysts, Project Managers
+**Skills**: Markdown, GitHub Issues, GitHub Projects, Pull Requests
+**Copilot Focus**: Long-form writing, brainstorming, GitHub MCP server for issue/PR management
+
+Plan the next major release of a task management platform across 5 progressive stages. Start with competitive analysis and quantified personas, then write and critique user stories, build feature specs aligned to real API endpoints, resolve conflicting stakeholder requests under a fixed budget, and produce a production-grade release plan with risk matrices, rollback strategies, and monitoring specs. No application code required.
+
+---
+
 ### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/) ([Track](./tracks/backend-developer-track.md))
 
 **Team**: Backend/Web Developers
@@ -205,7 +215,7 @@ Test the eShop application across 5 stages: debug 3 intentional bugs in the star
 
 ---
 
-### [Bonus Challenge 6: Copilot SDK -- Release Notes Agent](./challenges/challenge-6-copilot-sdk/) ([Track](./tracks/bonus-copilot-sdk-track.md))
+### [Bonus 1: Copilot SDK -- Release Notes Agent](./challenges/bonus-1-copilot-sdk/) ([Track](./tracks/bonus-copilot-sdk-track.md))
 
 **Team**: Experienced developers (any role) who finished a standard track
 **Duration**: 8-12 hours (Advanced)
@@ -218,7 +228,7 @@ Build a Release Notes Agent powered by the GitHub Copilot SDK. The agent fetches
 
 ---
 
-### [Challenge 7: Bonus -- Full-Stack Flight Delay Predictor](./challenges/challenge-7-flight-delay/) ([Track](./tracks/bonus-flight-delay-track.md))
+### [Bonus 2: Full-Stack Flight Delay Predictor](./challenges/bonus-2-flight-delay/) ([Track](./tracks/bonus-flight-delay-track.md))
 
 **Team**: Full-Stack Developers, Advanced Participants
 **Duration**: 8-12 hours (extended bonus challenge)
@@ -229,17 +239,7 @@ Build a complete application that predicts flight delay probability. Explore a r
 
 ---
 
-### [Challenge 8: Product Planning -- TaskFlow v2.0](./challenges/challenge-8-product-planning/) ([Track](./tracks/product-owner-track.md))
-
-**Team**: Product Owners, Business Analysts, Project Managers
-**Skills**: Markdown, GitHub Issues, GitHub Projects, Pull Requests
-**Copilot Focus**: Long-form writing, brainstorming, GitHub MCP server for issue/PR management
-
-Plan the next major release of a task management platform across 5 progressive stages. Start with competitive analysis and quantified personas, then write and critique user stories, build feature specs aligned to real API endpoints, resolve conflicting stakeholder requests under a fixed budget, and produce a production-grade release plan with risk matrices, rollback strategies, and monitoring specs. No application code required.
-
----
-
-### [Challenge 9: Bonus -- Cross-Functional Team Sprint (CityPulse)](./challenges/challenge-9-team-sprint/) ([Track](./tracks/bonus-team-sprint-track.md))
+### [Bonus 3: Cross-Functional Team Sprint (CityPulse)](./challenges/bonus-3-team-sprint/) ([Track](./tracks/bonus-team-sprint-track.md))
 
 **Team**: Cross-functional team of 4-6 (Product Owner, Backend Dev, Frontend Dev, QA, DevOps, optional BA)
 **Duration**: 8 hours (team bonus challenge)

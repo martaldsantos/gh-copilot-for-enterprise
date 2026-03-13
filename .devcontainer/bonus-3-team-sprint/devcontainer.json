@@ -1,5 +1,5 @@
 {
-	"name": "Challenge 9 - Cross-Functional Team Sprint (Bonus)",
+	"name": "Bonus 3 - Cross-Functional Team Sprint",
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:lts",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {

@@ -2,7 +2,7 @@
   "name": "ship-it-release-agent",
   "version": "1.0.0",
   "type": "module",
-  "description": "ship-it: Release Notes Agent - GitHub Copilot SDK Application (Bonus Challenge 6)",
+  "description": "ship-it: Release Notes Agent - GitHub Copilot SDK Application (Bonus 1)",
   "main": "index.ts",
   "scripts": {
     "start": "npx tsx index.ts",

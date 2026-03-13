@@ -29,7 +29,7 @@ Using Playwright's API testing or a separate framework:
 
 ### Exploratory Testing and Bug Reports
 
-As features become available, do exploratory testing. File bugs as GitHub Issues using the template in `challenges/challenge-9-team-sprint/templates/bug-report-issue.md`. Include:
+As features become available, do exploratory testing. File bugs as GitHub Issues using the template in `challenges/bonus-3-team-sprint/templates/bug-report-issue.md`. Include:
 
 - Steps to reproduce
 - Expected vs. actual behavior

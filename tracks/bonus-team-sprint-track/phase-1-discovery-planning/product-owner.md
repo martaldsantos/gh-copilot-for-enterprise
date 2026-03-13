@@ -6,7 +6,7 @@
 
 ## Tasks
 
-1. **Read the stakeholder brief** -- Open `challenges/challenge-9-team-sprint/docs/stakeholder-brief.md` and internalize the requirements. This is your specification from the "client."
+1. **Read the stakeholder brief** -- Open `challenges/bonus-3-team-sprint/docs/stakeholder-brief.md` and internalize the requirements. This is your specification from the "client."
 
 2. **Prototype with GitHub Spark** -- Go to [github.com/spark](https://github.com/spark) (requires GitHub Copilot Enterprise license) and use GitHub Spark to create a quick interactive prototype of CityPulse. Describe screens in natural language:
    - A form where residents submit issue reports (title, description, category, location)
@@ -23,7 +23,7 @@
    - **Dashboard** -- viewing neighborhood statistics
    - **User Accounts** -- registration and authentication (stretch goal for Sprint 2)
 
-5. **Create GitHub Issues** -- Convert each story into a GitHub Issue. Use the template in `challenges/challenge-9-team-sprint/templates/user-story-issue.md`. For each:
+5. **Create GitHub Issues** -- Convert each story into a GitHub Issue. Use the template in `challenges/bonus-3-team-sprint/templates/user-story-issue.md`. For each:
    - Add a descriptive title and body with acceptance criteria
    - Label by epic (`epic:reporting`, `epic:events`, `epic:dashboard`, `epic:accounts`)
    - Label by priority (`priority:must`, `priority:should`, `priority:could`)

@@ -1,5 +1,5 @@
 // ship-it: Release Notes Agent - Copilot SDK Application
-// GitHub Copilot Hackathon - Bonus Challenge 6
+// GitHub Copilot Hackathon - Bonus 1
 //
 // This application uses the GitHub Copilot SDK to build an interactive agent that:
 // - Fetches merged PRs between two git refs (tag, date, or commit SHA)

@@ -39,7 +39,7 @@ Create a REST API that serves the trained model and the list of airports so the 
 
 ## Getting Started
 
-1. Navigate to `challenges/challenge-7-flight-delay/server/`.
+1. Navigate to `challenges/bonus-2-flight-delay/server/`.
 2. Open `app.py` -- it contains a description of what to build.
 3. Copy your `model.pkl` and `airports.csv` (from Phase 1) into the `server/` folder.
 4. Install dependencies: `pip install -r requirements.txt`.

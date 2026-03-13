@@ -20,7 +20,7 @@ Create a user-facing web application that allows someone to select a day of the 
 
 ## Getting Started
 
-1. Navigate to `challenges/challenge-7-flight-delay/client/`.
+1. Navigate to `challenges/bonus-2-flight-delay/client/`.
 2. Review the starter files: `index.html`, `package.json`, `src/main.ts`.
 3. Choose your framework:
    - **Vanilla TypeScript** -- build directly in `src/main.ts`.

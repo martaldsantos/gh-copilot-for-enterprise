@@ -74,7 +74,7 @@ Your team is building **CityPulse** -- a civic engagement platform. A fictional 
 - **Track report status** (submitted, acknowledged, in progress, resolved)
 - **View a dashboard** with neighborhood statistics (open reports, events this week, response times)
 
-The stakeholder brief is in `challenges/challenge-9-team-sprint/docs/stakeholder-brief.md`. Read it as a team before sprint planning.
+The stakeholder brief is in `challenges/bonus-3-team-sprint/docs/stakeholder-brief.md`. Read it as a team before sprint planning.
 
 ## Getting Started
 
@@ -104,9 +104,9 @@ Agree on shared agents during sprint planning so everyone benefits from the same
 
 ### Open the Challenge
 
-Navigate to `challenges/challenge-9-team-sprint/`. Read `docs/stakeholder-brief.md` as a team before starting Phase 1.
+Navigate to `challenges/bonus-3-team-sprint/`. Read `docs/stakeholder-brief.md` as a team before starting Phase 1.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, Docker, GitHub CLI, Azure CLI, Terraform, and Playwright.
+A dedicated devcontainer is provided at `.devcontainer/bonus-3-team-sprint/` with Node.js LTS, Python 3.11, Docker, GitHub CLI, Azure CLI, Terraform, and Playwright.
 
 ---
 

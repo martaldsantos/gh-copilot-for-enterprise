@@ -41,14 +41,14 @@ This is the kind of repetitive-but-judgement-requiring task where an agent with 
 
 ### 1. Open the Challenge
 
-Open the folder `challenges/challenge-6-copilot-sdk/` in your workspace.
+Open the folder `challenges/bonus-1-copilot-sdk/` in your workspace.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-6-copilot-sdk/`. It includes Node.js LTS, Copilot CLI, and GitHub CLI. Open the command palette (`F1` > **Dev Containers: Reopen in Container**) and select **challenge-6-copilot-sdk** when prompted.
+A dedicated devcontainer is provided at `.devcontainer/bonus-1-copilot-sdk/`. It includes Node.js LTS, Copilot CLI, and GitHub CLI. Open the command palette (`F1` > **Dev Containers: Reopen in Container**) and select **bonus-1-copilot-sdk** when prompted.
 
 ### 2. Install and Run
 
 ```bash
-cd challenges/challenge-6-copilot-sdk
+cd challenges/bonus-1-copilot-sdk
 npm install
 npx tsx index.ts
 ```

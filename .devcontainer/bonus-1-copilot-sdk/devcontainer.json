@@ -1,5 +1,5 @@
 {
-	"name": "Challenge 6 - Copilot SDK (Bonus)",
+	"name": "Bonus 1 - Copilot SDK",
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
@@ -18,6 +18,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/challenge-6-copilot-sdk && npm install",
+	"postCreateCommand": "cd challenges/bonus-1-copilot-sdk && npm install",
 	"remoteUser": "vscode"
 }
